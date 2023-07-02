@@ -39,6 +39,9 @@
         <Button DockPanel.Dock="Left" HorizontalAlignment="Center" Content="Resend email confirmation" Command="{Binding ResendConfirmationPressed}"/>
     </DockPanel>
 
+    <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Bottom" Name="UnauthLoginResultText"
+            Text="" />
+
     <Button DockPanel.Dock="Bottom" Classes="BigButton" Margin="0 4" HorizontalAlignment="Center"
             Content="Continue without login (most servers won't permit this)" Command="{Binding SkipLoginPressed}"
             IsEnabled="{Binding !Busy}" />

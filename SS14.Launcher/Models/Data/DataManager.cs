@@ -408,6 +408,9 @@ public sealed class DataManager : ReactiveObject
 
     private void ChangeLogin(ChangeReason reason, LoginInfo login)
     {
+        if (login.AuthServer == LoginInfo.CommonAuthServers.Offline.ToString())
+            return; // TODO - saving/loading offline usernames
+
         // Make immutable copy to avoid race condition bugs.
         var data = new
         {

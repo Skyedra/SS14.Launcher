@@ -25,4 +25,9 @@ public partial class LoginView : UserControl
             vm.OnLogInButtonPressed();
         }
     }
+
+    public void SetUnauthLoginResultText(string resultText)
+    {
+        this.FindControl<TextBlock>("UnauthLoginResultText").Text = resultText;
+    }
 }

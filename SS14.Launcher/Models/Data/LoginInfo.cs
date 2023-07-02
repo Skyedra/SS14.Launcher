@@ -13,6 +13,15 @@ public class LoginInfo : ReactiveObject
     [Reactive]
     public LoginToken Token { get; set; }
 
+    public enum CommonAuthServers
+    {
+        WizDen,
+        Offline
+    };
+
+    [Reactive]
+    public string AuthServer { get; set; }
+
     public override string ToString()
     {
         return $"{Username}/{UserId}";

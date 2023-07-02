@@ -64,8 +64,18 @@ public class AccountDropDownViewModel : ViewModelBase
         return l => l != selected;
     }
 
-    public string LoginText => _loginMgr.ActiveAccount?.Username ??
-                               (EnableMultiAccounts ? "No account selected" : "Not logged in");
+    public string LoginText
+    {
+        get
+        {
+            if (_loginMgr.ActiveAccount != null)
+            {
+                return _loginMgr.ActiveAccount.Username + " - " + _loginMgr.ActiveAccount.AuthServer;
+            } else {
+                return EnableMultiAccounts ? "No account selected" : "Not logged in";
+            }
+        }
+    }
 
     public string LogoutText => _cfg.Logins.Count == 1 ? "Log out" : $"Log out of {_loginMgr.ActiveAccount?.Username}";
 
@@ -112,12 +122,12 @@ public sealed class AvailableAccountViewModel : ViewModelBase
     {
         Account = account;
 
-        this.WhenAnyValue<AvailableAccountViewModel, AccountLoginStatus, string>(p => p.Account.Status, p => p.Account.Username)
+        this.WhenAnyValue<AvailableAccountViewModel, AccountLoginStatus, string, string>(p => p.Account.Status, p => p.Account.Username, p => p.Account.AuthServer)
             .Select(p => p.Item1 switch
             {
-                AccountLoginStatus.Available => $"{p.Item2}",
-                AccountLoginStatus.Expired => $"{p.Item2} (!)",
-                _ => $"{p.Item2} (?)"
+                AccountLoginStatus.Available => $"{p.Item2} - {p.Item3}",
+                AccountLoginStatus.Expired => $"{p.Item2} (!) - {p.Item3}",
+                _ => $"{p.Item2} (?) - {p.Item3}"
             })
             .ToPropertyEx(this, x => x.StatusText);
     }
