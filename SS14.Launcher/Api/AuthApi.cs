@@ -211,6 +211,11 @@ public sealed class AuthApi
             Log.Error(jsonE, "JsonException in ResendConfirmationAsync");
             throw new AuthApiException("JsonException thrown", jsonE);
         }
+        catch (TaskCanceledException jsonE)
+        {
+            Log.Error(jsonE, "Timeout (TaskCanceledException) in ResendConfirmationAsync");
+            throw new AuthApiException("TaskCanceledException thrown", jsonE);
+        }
     }
 
     public async Task LogoutTokenAsync(string token)

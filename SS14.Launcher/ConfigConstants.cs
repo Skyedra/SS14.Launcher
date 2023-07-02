@@ -24,6 +24,8 @@ public static class ConfigConstants
     public const int LauncherCommandsNamedPipeTimeout = 150;
     // Amount of time to wait to let a redialling client properly die
     public const int LauncherCommandsRedialWaitTimeout = 1000;
+    // How long to wait on various web queries.  Note that the launcher makes two of these sequentially on startup, so probably don't want this to be too long if main servers are down
+    public const int MaxWebTimeout = 2000;
 
     public static readonly string AuthUrl = "https://central.spacestation14.io/auth/";
     public static readonly string[] DefaultHubUrls = { "https://central.spacestation14.io/hub/" };

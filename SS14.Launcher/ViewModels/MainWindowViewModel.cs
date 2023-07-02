@@ -42,6 +42,8 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         _loginMgr = Locator.Current.GetRequiredService<LoginManager>();
         _http = Locator.Current.GetRequiredService<HttpClient>();
 
+        _http.Timeout = TimeSpan.FromMilliseconds(ConfigConstants.MaxWebTimeout);
+
         ServersTab = new ServerListTabViewModel(this);
         NewsTab = new NewsTabViewModel();
         HomeTab = new HomePageViewModel(this);
@@ -179,6 +181,11 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         catch (HttpRequestException e)
         {
             Log.Warning(e, "Unable to check for launcher update due to error, assuming up-to-date.");
+            OutOfDate = false;
+        }
+        catch (TaskCanceledException e)
+        {
+            Log.Warning(e, "Unable to check for launcher update due to network timeout, assuming up-to-date.");
             OutOfDate = false;
         }
     }
