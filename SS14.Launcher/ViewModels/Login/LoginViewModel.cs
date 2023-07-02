@@ -103,9 +103,34 @@ public class LoginViewModel : BaseLoginViewModel
         Helpers.OpenUri(ConfigConstants.AccountRegisterUrl);
     }
 
+    public void SkipLoginPressed()
+    {
+        // Registration is purely via website now, sorry.
+        //Helpers.OpenUri(ConfigConstants.AccountRegisterUrl);
+        DoPlaceboLogin();
+    }
+
     public void ResendConfirmationPressed()
     {
         // Registration is purely via website now, sorry.
         Helpers.OpenUri(ConfigConstants.AccountResendConfirmationUrl);
+    }
+
+    private void DoPlaceboLogin()
+    {
+        var loginInfo = new LoginInfo();
+        loginInfo.UserId = Guid.Empty;
+        loginInfo.Username = "<No Auth>";
+        loginInfo.Token = new Models.LoginToken("", DateTimeOffset.UtcNow.AddHours(2));
+
+        var oldLogin = _loginMgr.Logins.Lookup(loginInfo.UserId);
+        if (oldLogin.HasValue)
+        {
+            _loginMgr.ActiveAccountId = loginInfo.UserId;
+            _loginMgr.UpdateToNewToken(_loginMgr.ActiveAccount!, loginInfo.Token);
+        } else {
+            _loginMgr.AddFreshLogin(loginInfo);
+            _loginMgr.ActiveAccountId = loginInfo.UserId;
+        }
     }
 }

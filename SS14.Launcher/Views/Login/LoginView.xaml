@@ -40,6 +40,10 @@
     </DockPanel>
 
     <Button DockPanel.Dock="Bottom" Classes="BigButton" Margin="0 4" HorizontalAlignment="Center"
+            Content="Continue without login (most servers won't permit this)" Command="{Binding SkipLoginPressed}"
+            IsEnabled="{Binding !Busy}" />
+
+    <Button DockPanel.Dock="Bottom" Classes="BigButton" Margin="0 4" HorizontalAlignment="Center"
             Content="Don't have an account? Register!" Command="{Binding RegisterPressed}"
             IsEnabled="{Binding !Busy}" />
   </DockPanel>
