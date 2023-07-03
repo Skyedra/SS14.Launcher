@@ -16,6 +16,7 @@ Differences versus current upstream version:
 
  * To connect to a server without an account, the server must be configured for auth to be optional.  (At some point, I may try to figure out multi-auth)
  * If main hub is down, you will need to add your servers to your favorites list or direct connect.
+ * Modules are not mirrored, so if you don't already have modules downloaded, try connecting to a server that requires WebView and Centcomm is down, connection won't work.  I don't think most servers use WebView though.
 
 ## Demo
 
