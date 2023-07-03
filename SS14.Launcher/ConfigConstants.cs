@@ -37,7 +37,7 @@ public static class ConfigConstants
     public const string WebsiteUrl = "https://spacestation14.io";
     public const string DownloadUrl = "https://spacestation14.io/about/nightlies/";
     public const string LauncherVersionUrl = "https://central.spacestation14.io/launcher_version.txt";
-    public const string RobustBuildsManifest = "https://central.spacestation14.io/builds/robust/manifest.json";
+    public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
     public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
 
     public const string UrlOverrideAssets = "https://central.spacestation14.io/launcher/override_assets.json";
