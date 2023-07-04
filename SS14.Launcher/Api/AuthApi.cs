@@ -282,6 +282,11 @@ public sealed class AuthApi
             Log.Error(httpE, "HttpRequestException in CheckTokenAsync");
             throw new AuthApiException("HttpRequestException thrown", httpE);
         }
+        catch (Exception e)
+        {
+            Log.Error(e, "Exception in CheckTokenAsync");
+            throw new AuthApiException("HttpRequestException thrown", e);
+        }
     }
 
     public sealed record AuthenticateRequest(string? Username, Guid? UserId, string Password, string? TfaCode = null)
