@@ -97,6 +97,6 @@ public static class LauncherPaths
         if (!string.IsNullOrEmpty(envVar))
             return envVar;
 
-        return "launcher";
+        return "launcher-skyedra";
     }
 }
