@@ -11,13 +11,16 @@
   </Design.DataContext>
 
   <DockPanel LastChildFill="False">
+    <TextBlock DockPanel.Dock="Top" VerticalAlignment="Center" HorizontalAlignment="Center"
+               TextWrapping="Wrap"
+               Text="Optional account over at WizDen (you can come back here later if preferred)." />
     <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Top" Classes="NanoHeadingMedium" Text="Log in" />
 
     <TextBox DockPanel.Dock="Top" Name="NameBox" MaxWidth="300" Margin="0, 10, 0, 0"
              Watermark="Username or email"
              Text="{Binding EditingUsername, Mode=TwoWay}" IsEnabled="{Binding !Busy}" />
 
-    <TextBox DockPanel.Dock="Top" Name="PasswordBox" MaxWidth="300" Margin="0, 4, 0, 0" Watermark="Password"
+    <TextBox DockPanel.Dock="Top" Name="PasswordBox" MaxWidth="300" Margin="0, 4, 0, 0" Watermark="WizDen Password"
              Text="{Binding EditingPassword, Mode=TwoWay}" PasswordChar="•" IsEnabled="{Binding !Busy}" />
 
     <DockPanel DockPanel.Dock="Top" LastChildFill="False" MaxWidth="300" Margin="0 20 0 0">
@@ -43,10 +46,10 @@
             Text="" />
 
     <Button DockPanel.Dock="Bottom" Classes="BigButton" Margin="0 4" HorizontalAlignment="Center"
-            Content="Continue without login (most servers won't permit this)" Command="{Binding SkipLoginPressed}"
+            Content="Continue without account" Command="{Binding SkipLoginPressed}"
             IsEnabled="{Binding !Busy}" />
 
-    <Button DockPanel.Dock="Bottom" Classes="BigButton" Margin="0 4" HorizontalAlignment="Center"
+    <Button DockPanel.Dock="Bottom" Margin="0 4" HorizontalAlignment="Center"
             Content="Don't have an account? Register!" Command="{Binding RegisterPressed}"
             IsEnabled="{Binding !Busy}" />
   </DockPanel>
