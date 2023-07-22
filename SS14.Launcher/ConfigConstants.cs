@@ -4,7 +4,7 @@ namespace SS14.Launcher;
 
 public static class ConfigConstants
 {
-    public const string CurrentLauncherVersion = "38";
+    public const string CurrentLauncherVersion = "1";
     public static readonly bool DoVersionCheck = true;
 
     // Refresh login tokens if they're within <this much> of expiry.
@@ -32,14 +32,14 @@ public static class ConfigConstants
         "https://central.spacestation14.io/hub/",
         "https://cdn.blepstation.com/hub/"
     };
-    public const string DiscordUrl = "https://discord.ss14.io/";
+    public const string DiscordUrl = "https://blepstation.com/discord/";
     public const string AccountBaseUrl = "https://central.spacestation14.io/web/Identity/Account/";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
     public const string AccountRegisterUrl = $"{AccountBaseUrl}Register";
     public const string AccountResendConfirmationUrl = $"{AccountBaseUrl}ResendEmailConfirmation";
-    public const string WebsiteUrl = "https://spacestation14.io";
-    public const string DownloadUrl = "https://spacestation14.io/about/nightlies/";
-    public const string LauncherVersionUrl = "https://central.spacestation14.io/launcher_version.txt";
+    public const string WebsiteUrl = "https://blepstation.com";
+    public const string DownloadUrl = "https://blepstation.com/download";
+    public const string LauncherVersionUrl = "https://cdn.blepstation.com/launcher_version.txt";
     public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
     public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
 
