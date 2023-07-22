@@ -28,7 +28,10 @@ public static class ConfigConstants
     public const int MaxWebTimeout = 2500;
 
     public static readonly string AuthUrl = "https://central.spacestation14.io/auth/";
-    public static readonly string[] DefaultHubUrls = { "https://central.spacestation14.io/hub/" };
+    public static readonly string[] DefaultHubUrls = {
+        "https://central.spacestation14.io/hub/",
+        "https://cdn.blepstation.com/hub/"
+    };
     public const string DiscordUrl = "https://discord.ss14.io/";
     public const string AccountBaseUrl = "https://central.spacestation14.io/web/Identity/Account/";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
