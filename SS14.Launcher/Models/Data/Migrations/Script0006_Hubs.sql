@@ -8,5 +8,6 @@ CREATE TABLE Hub (
     CONSTRAINT PriorityNotNegative CHECK (Priority >= 0)
 );
 
--- Set Space Wizards hub as default
-INSERT INTO Hub (Address, Priority) VALUES ('https://central.spacestation14.io/hub/', 0);
+-- (In multiverse, hubs are reset via c# so they only have to be managed in one location.
+-- So the following upstream default is not necessary here as it's included in ConfigDefaults)
+-- INSERT INTO Hub (Address, Priority) VALUES ('https://central.spacestation14.io/hub/', 0);

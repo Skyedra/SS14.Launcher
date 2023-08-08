@@ -215,6 +215,22 @@ public sealed class DataManager : ReactiveObject
     }
 
     /// <summary>
+    /// Overwrites hubs in database with default list of hubs.
+    /// </summary>
+    public void ResetHubs()
+    {
+        Hubs.Clear();
+
+        long priority = 0;
+        foreach (string url in ConfigConstants.DefaultHubUrls)
+        {
+            Hubs.Add(new Hub(new Uri(url), priority++));
+        }
+
+        CommitConfig();
+    }
+
+    /// <summary>
     ///     Loads config file from disk, or resets the loaded config to default if the config doesn't exist on disk.
     /// </summary>
     public void Load()
@@ -232,14 +248,22 @@ public sealed class DataManager : ReactiveObject
 
         Log.Debug("Did migrations in {MigrationTime}", sw.Elapsed);
 
+        // Load from SQLite DB.
+        // (Even on first run, some of the db sql init scripts include useful configs like for 18+ filter flag,
+        // so be sure to load these.)
+        LoadSqliteConfig(connection);
+
         if (connection.ExecuteScalar<bool>("SELECT COUNT(*) > 0 FROM Config"))
         {
-            // Load from SQLite DB.
-            LoadSqliteConfig(connection);
         }
         else
         {
             // SQLite DB empty, fresh launcher!
+
+            // Reset hubs to default on first run
+            // (Specifying here instead of SQL so the default values don't have to be managed in two locations)
+            ResetHubs();
+
             // Add an unused config key so the above count check is always correct.
             AddDbCommand(con => con.Execute("INSERT INTO Config VALUES ('Populated', TRUE)"));
         }

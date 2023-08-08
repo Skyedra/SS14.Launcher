@@ -204,8 +204,6 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     {
         Cfg.SetCVar(CVars.HasDismissedEarlyAccessWarning, true);
         Cfg.CommitConfig();
-
-        Control?.Close(); // TEMP workaround for bug
     }
 
     public void SelectTabServers()
