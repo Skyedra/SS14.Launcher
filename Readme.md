@@ -1,8 +1,13 @@
-# Skye's Launcher Fork (name TBD)
+# Space Station Multiverse Launcher
 
 This is a customized, experimental, non-official version of the [Space Station 14](https://spacestation14.io/) launcher.
 
 Basically it is a version of the official launcher with more features (and bugs).
+
+[![](https://dcbadge.vercel.app/api/server/x88ymx6vBx?compact=true&style=plastic)](https://discord.gg/x88ymx6vBx) <- Discord if you would like to discuss alternate infrastructure projects or fork development :)
+
+## Download
+[Download binaries for Windows, Mac, and Linux](https://blepstation.com/download/).
 
 ## Features
 Differences versus current upstream version:
