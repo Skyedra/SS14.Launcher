@@ -25,6 +25,7 @@ cp "SS14.Launcher.Bootstrap/bin/Release/net45/publish/Space Station 14 Launcher.
 cp "SS14.Launcher.Bootstrap/console.bat" bin/publish/Windows
 cp SS14.Launcher/bin/Release/net7.0/win-x64/publish/* bin/publish/Windows/bin
 cp SS14.Loader/bin/Release/net7.0/win-x64/publish/* bin/publish/Windows/bin/loader
+cp LICENSE.txt bin/publish/Windows/
 
 pushd bin/publish/Windows
 zip -r ../../../SS14.Launcher_Windows.zip *

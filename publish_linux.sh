@@ -20,6 +20,7 @@ cp PublishFiles/SS14.Launcher PublishFiles/SS14.desktop bin/publish/Linux/
 cp SS14.Launcher/bin/Release/net7.0/linux-x64/publish/* bin/publish/Linux/bin/
 cp SS14.Loader/bin/Release/net7.0/linux-x64/publish/* bin/publish/Linux/bin/loader
 cp -r Dependencies/dotnet/linux/* bin/publish/Linux/dotnet/
+cp LICENSE.txt bin/publish/Linux/
 
 cd bin/publish/Linux
 zip -r ../../../SS14.Launcher_Linux.zip *
