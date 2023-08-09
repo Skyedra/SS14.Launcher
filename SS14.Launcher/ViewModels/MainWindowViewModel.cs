@@ -14,6 +14,7 @@ using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
+using SS14.Launcher.ViewModels.IdentityTabs;
 using SS14.Launcher.ViewModels.Login;
 using SS14.Launcher.ViewModels.MainWindowTabs;
 using SS14.Launcher.Views;
@@ -31,16 +32,21 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     public DataManager Cfg => _cfg;
     [Reactive] public bool OutOfDate { get; private set; }
 
+    // Main Tabs
+
     public HomePageViewModel HomeTab { get; }
     public ServerListTabViewModel ServersTab { get; }
     public NewsTabViewModel NewsTab { get; }
     public OptionsTabViewModel OptionsTab { get; }
+
 
     public MainWindowViewModel()
     {
         _cfg = Locator.Current.GetRequiredService<DataManager>();
         _loginMgr = Locator.Current.GetRequiredService<LoginManager>();
         _http = Locator.Current.GetRequiredService<HttpClient>();
+
+        // Main Window Tabs
 
         ServersTab = new ServerListTabViewModel(this);
         NewsTab = new NewsTabViewModel();
@@ -56,7 +62,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         };
 
         AccountDropDown = new AccountDropDownViewModel(this);
-        LoginViewModel = new MainWindowLoginViewModel();
+        IdentityViewModel = new MainWindowIdentityViewModel();
 
         this.WhenAnyValue(x => x._loginMgr.ActiveAccount)
             .Subscribe(s =>
@@ -83,7 +89,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
                 }
                 else
                 {
-                    LoginViewModel.SwitchToLogin();
+                    IdentityViewModel.WizardsDenLoginTab.SwitchToLogin();
                 }
             });
     }
@@ -100,7 +106,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
     public AccountDropDownViewModel AccountDropDown { get; }
 
-    public MainWindowLoginViewModel LoginViewModel { get; }
+    public MainWindowIdentityViewModel IdentityViewModel { get; }
 
     [Reactive] public ConnectingViewModel? ConnectingVM { get; set; }
 
@@ -223,7 +229,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
             case AccountLoginStatus.Expired:
                 _loginMgr.ActiveAccount = null;
-                LoginViewModel.SwitchToExpiredLogin(account);
+                IdentityViewModel.WizardsDenLoginTab.SwitchToExpiredLogin(account);
                 break;
         }
     }

@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.IdentityTabs.GuestTabView"
+             Name="GuestTab">
+  <Design.DataContext>
+    <identityTabs:GuestTabViewModel />
+  </Design.DataContext>
+
+  <DockPanel LastChildFill="False">
+    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="Guest" Classes="NanoHeadingMedium" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5">A guest identity does not require any centralized authentication.  However, your playtime may not be tracked.</TextBlock>
+
+     <TextBox  DockPanel.Dock="Top" Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
+             Watermark="Name"
+             Text="{Binding EditingUsername, Mode=TwoWay}" IsEnabled="{Binding !Busy}" />
+
+      <Button DockPanel.Dock="Top" Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="Continue without account" Command="{Binding SkipLoginPressed}"
+              IsEnabled="{Binding !Busy}" />
+
+
+
+  </DockPanel>
+</UserControl>

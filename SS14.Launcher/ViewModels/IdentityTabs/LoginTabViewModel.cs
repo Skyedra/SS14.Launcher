@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using CodeHollow.FeedReader;
 using ReactiveUI;
 using Splat;
 using SS14.Launcher.Api;
@@ -6,36 +10,32 @@ using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
 using SS14.Launcher.ViewModels.Login;
 
-namespace SS14.Launcher.ViewModels;
+namespace SS14.Launcher.ViewModels.IdentityTabs;
 
-public class MainWindowLoginViewModel : ViewModelBase
+public class LoginTabViewModel : IdentityTabViewModel
 {
     private readonly DataManager _cfg;
     private readonly AuthApi _authApi;
     private readonly LoginManager _loginMgr;
     private BaseLoginViewModel _screen;
 
-    public BaseLoginViewModel Screen
-    {
-        get => _screen;
-        set
-        {
-            this.RaiseAndSetIfChanged(ref _screen, value);
-            value.Activated();
-        }
-    }
-
-    public MainWindowLoginViewModel()
+    public LoginTabViewModel()
     {
         _cfg = Locator.Current.GetRequiredService<DataManager>();
         _authApi = Locator.Current.GetRequiredService<AuthApi>();
         _loginMgr = Locator.Current.GetRequiredService<LoginManager>();
 
         _screen = default!;
+    }
+
+    public override void Selected()
+    {
+        base.Selected();
         SwitchToLogin();
     }
 
-    public string Version => $"v{LauncherVersion.Version}";
+    // TODO: Change based on auth provider
+    public override string Name => "Wizard's Den";
 
     public void SwitchToLogin()
     {
@@ -72,14 +72,13 @@ public class MainWindowLoginViewModel : ViewModelBase
         Screen = new RegisterNeedsConfirmationViewModel(this, _authApi, username, password, _loginMgr, _cfg);
     }
 
-    public bool LogLauncher
+    public BaseLoginViewModel Screen
     {
-        // This not a clean solution, replace it with something better.
-        get => _cfg.GetCVar(CVars.LogLauncher);
+        get => _screen;
         set
         {
-            _cfg.SetCVar(CVars.LogLauncher, value);
-            _cfg.CommitConfig();
+            this.RaiseAndSetIfChanged(ref _screen, value);
+            value.Activated();
         }
     }
 }

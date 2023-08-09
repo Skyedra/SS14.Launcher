@@ -4,6 +4,7 @@ using ReactiveUI.Fody.Helpers;
 using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
+using SS14.Launcher.ViewModels.IdentityTabs;
 
 namespace SS14.Launcher.ViewModels.Login;
 
@@ -19,7 +20,7 @@ public sealed class AuthTfaViewModel : BaseLoginViewModel
     [Reactive] public bool IsInputValid { get; private set; }
 
     public AuthTfaViewModel(
-        MainWindowLoginViewModel parentVm,
+        LoginTabViewModel parentVm,
         AuthApi.AuthenticateRequest request,
         LoginManager loginMgr,
         AuthApi authApi,

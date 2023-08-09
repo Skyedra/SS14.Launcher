@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace SS14.Launcher.Views;
 
-public partial class MainWindowLogin : UserControl
+public partial class MainWindowIdentity : UserControl
 {
-    public MainWindowLogin()
+    public MainWindowIdentity()
     {
         InitializeComponent();
     }

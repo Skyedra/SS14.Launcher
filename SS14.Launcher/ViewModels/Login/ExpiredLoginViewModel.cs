@@ -2,6 +2,7 @@ using ReactiveUI.Fody.Helpers;
 using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
+using SS14.Launcher.ViewModels.IdentityTabs;
 
 namespace SS14.Launcher.ViewModels.Login;
 
@@ -12,7 +13,7 @@ public class ExpiredLoginViewModel : BaseLoginViewModel
     private readonly LoginManager _loginMgr;
 
     public ExpiredLoginViewModel(
-        MainWindowLoginViewModel parentVm,
+        LoginTabViewModel parentVm,
         DataManager cfg,
         AuthApi authApi,
         LoginManager loginMgr,

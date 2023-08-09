@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mainWindowTabs="clr-namespace:SS14.Launcher.ViewModels.MainWindowTabs"
+        xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
         xmlns:v="clr-namespace:SS14.Launcher.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         MinWidth="800" MinHeight="500"
@@ -66,23 +67,24 @@
           </TabControl.ItemTemplate>
         </TabControl>
         <!-- Login interface when not logged in -->
-        <v:MainWindowLogin
+        <v:MainWindowIdentity
           IsVisible="{Binding !$parent.DataContext.LoggedIn}"
-          DataContext="{Binding LoginViewModel}" />
+          DataContext="{Binding IdentityViewModel}"
+         />
       </Grid>
     </DockPanel>
 
     <ContentControl Classes="OverlayBox"
-                    IsVisible="{Binding LoginViewModel.Screen.OverlayControl, Converter={x:Static ObjectConverters.IsNotNull}}">
-      <ContentControl Content="{Binding LoginViewModel.Screen.OverlayControl}" />
+                    IsVisible="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.OverlayControl, Converter={x:Static ObjectConverters.IsNotNull}}">
+      <ContentControl Content="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.OverlayControl}" />
     </ContentControl>
 
-    <ContentControl Classes="OverlayBox" IsVisible="{Binding LoginViewModel.Screen.Busy}">
+    <ContentControl Classes="OverlayBox" IsVisible="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.Busy}">
       <StackPanel Orientation="Vertical" VerticalAlignment="Center">
         <Viewbox Width="72" Height="72" HorizontalAlignment="Center">
           <v:DungSpinner DockPanel.Dock="Top" />
         </Viewbox>
-        <TextBlock Text="{Binding LoginViewModel.Screen.BusyText}" HorizontalAlignment="Center" />
+        <TextBlock Text="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.BusyText}" HorizontalAlignment="Center" />
       </StackPanel>
     </ContentControl>
 

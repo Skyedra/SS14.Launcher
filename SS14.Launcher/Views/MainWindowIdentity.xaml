@@ -5,10 +5,11 @@
              xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
              xmlns:vl="clr-namespace:SS14.Launcher.Views.Login;assembly=SS14.Launcher"
              xmlns:views="clr-namespace:SS14.Launcher.Views"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="SS14.Launcher.Views.MainWindowLogin">
+             x:Class="SS14.Launcher.Views.MainWindowIdentity">
   <Design.DataContext>
-    <vm:MainWindowLoginViewModel />
+    <vm:MainWindowIdentityViewModel />
   </Design.DataContext>
 
   <DockPanel LastChildFill="True">
@@ -23,6 +24,16 @@
     </DockPanel>
     <Panel Background="{DynamicResource ThemeStripebackEdgeBrush}" MinHeight="2" DockPanel.Dock="Bottom" />
 
-    <ContentControl Content="{Binding Screen}" />
+    <!-- <ContentControl Content="{Binding Screen}" /> -->
+
+   <!-- IsVisible="{Binding !$parent.DataContext.LoggedIn}" -->
+    <TabControl Items="{Binding IdentityTabs}" TabStripPlacement="Left"
+                    SelectedIndex="{Binding SelectedIndex,Mode=TwoWay}" Margin="0 0 0 0">
+          <TabControl.ItemTemplate>
+            <DataTemplate DataType="identityTabs:IdentityTabViewModel">
+              <TextBlock Text="{Binding Name}" />
+            </DataTemplate>
+          </TabControl.ItemTemplate>
+        </TabControl>
   </DockPanel>
 </UserControl>

@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.IdentityTabs.InformationTabView"
+             Name="InformationTab">
+  <Design.DataContext>
+    <identityTabs:InformationTabViewModel />
+  </Design.DataContext>
+
+  <DockPanel>
+    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="Welcome" Classes="NanoHeadingMedium" />
+
+    <Panel Background="{DynamicResource StripeBackBrush}">
+      <TextBlock TextWrapping="Wrap" Margin="4, 4">Let's set up your identity!
+
+From this screen, you can create an identity on one of the established authentication providers, or just use a guest login.
+
+Different servers accept different ways to authenticate you, and not all servers accept all authentication providers.
+
+It is possible to manage multiple identities using this launcher, just revisit this page to establish them as needed.  (Though you probably do not want to create more than one identity per provider).
+
+Start by choosing an identity provider on the left.  You can revisit this screen later to create identities at other providers, should you wish to do so.
+      </TextBlock>
+    </Panel>
+
+
+  </DockPanel>
+</UserControl>

@@ -1,5 +1,6 @@
 using ReactiveUI.Fody.Helpers;
 using SS14.Launcher.Api;
+using SS14.Launcher.ViewModels.IdentityTabs;
 
 namespace SS14.Launcher.ViewModels.Login;
 
@@ -11,7 +12,7 @@ public class ResendConfirmationViewModel : BaseLoginViewModel
 
     private bool _errored;
 
-    public ResendConfirmationViewModel(MainWindowLoginViewModel parentVM, AuthApi authApi) : base(parentVM)
+    public ResendConfirmationViewModel(LoginTabViewModel parentVM, AuthApi authApi) : base(parentVM)
     {
         _authApi = authApi;
     }

@@ -7,6 +7,7 @@ using Robust.Shared.AuthLib;
 using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
+using SS14.Launcher.ViewModels.IdentityTabs;
 
 namespace SS14.Launcher.ViewModels.Login;
 
@@ -27,7 +28,7 @@ public class RegisterViewModel : BaseLoginViewModel
     [Reactive] public bool Is13OrOlder { get; set; }
 
 
-    public RegisterViewModel(MainWindowLoginViewModel parentVm, DataManager cfg, AuthApi authApi, LoginManager loginMgr)
+    public RegisterViewModel(LoginTabViewModel parentVm, DataManager cfg, AuthApi authApi, LoginManager loginMgr)
         : base(parentVm)
     {
         _cfg = cfg;

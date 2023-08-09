@@ -5,6 +5,7 @@ using ReactiveUI.Fody.Helpers;
 using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
+using SS14.Launcher.ViewModels.IdentityTabs;
 
 namespace SS14.Launcher.ViewModels.Login;
 
@@ -38,7 +39,7 @@ public class RegisterNeedsConfirmationViewModel : BaseLoginViewModel
     [Reactive] private int TimeoutSecondsLeft { get; set; }
 
     public RegisterNeedsConfirmationViewModel(
-        MainWindowLoginViewModel parentVm,
+        LoginTabViewModel parentVm,
         AuthApi authApi, string username, string password, LoginManager loginMgr, DataManager dataManager)
         : base(parentVm)
     {

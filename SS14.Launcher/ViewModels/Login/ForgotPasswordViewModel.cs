@@ -1,6 +1,7 @@
 using ReactiveUI.Fody.Helpers;
 using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
+using SS14.Launcher.ViewModels.IdentityTabs;
 
 namespace SS14.Launcher.ViewModels.Login;
 
@@ -13,7 +14,7 @@ public sealed class ForgotPasswordViewModel : BaseLoginViewModel
     private bool _errored;
 
     public ForgotPasswordViewModel(
-        MainWindowLoginViewModel parentVM,
+        LoginTabViewModel parentVM,
         AuthApi authApi)
         : base(parentVM)
     {
