@@ -16,7 +16,7 @@ public class LoginInfo : ReactiveObject
     public enum CommonAuthServers
     {
         WizDen,
-        Offline
+        Guest
     };
 
     [Reactive]
