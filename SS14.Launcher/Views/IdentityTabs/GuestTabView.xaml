@@ -14,15 +14,21 @@
   <DockPanel LastChildFill="False">
     <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="Guest" Classes="NanoHeadingMedium" />
 
-    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5">A guest identity does not require any centralized authentication.  However, your playtime may not be tracked.</TextBlock>
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5">A guest identity does not require any centralized authentication.  However, the game server may not be able to track your playtime.</TextBlock>
 
      <TextBox  DockPanel.Dock="Top" Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
              Watermark="Name"
              Text="{Binding EditingUsername, Mode=TwoWay}" IsEnabled="{Binding !Busy}" />
 
       <Button DockPanel.Dock="Top" Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
-              Content="Continue without account" Command="{Binding SkipLoginPressed}"
-              IsEnabled="{Binding !Busy}" />
+              Content="Continue without account" Command="{Binding SkipLoginPressed}">
+        <Button.IsEnabled>
+          <MultiBinding Converter="{x:Static BoolConverters.And}">
+            <Binding Path="IsInputValid" />
+            <Binding Path="!Busy" />
+          </MultiBinding>
+        </Button.IsEnabled>
+      </Button>
 
 
 

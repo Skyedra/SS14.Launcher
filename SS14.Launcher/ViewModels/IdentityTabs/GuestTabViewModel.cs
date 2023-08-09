@@ -10,18 +10,21 @@ using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
+using SS14.Launcher.ViewModels.Login;
 
 namespace SS14.Launcher.ViewModels.IdentityTabs;
 
-public class GuestTabViewModel : IdentityTabViewModel
+public class GuestTabViewModel : IdentityTabViewModel, IErrorOverlayOwner
 {
     private readonly AuthApi _authApi;
     private readonly LoginManager _loginMgr;
-    private readonly DataManager _dataManager;
 
     [Reactive] public string EditingUsername { get; set; } = "";
 
     [Reactive] public bool IsInputValid { get; private set; }
+
+    [Reactive] public string? BusyText { get; protected set; }
+    [Reactive] public ViewModelBase? OverlayControl { get; set; }
 
     public GuestTabViewModel()
     {
@@ -46,17 +49,15 @@ public class GuestTabViewModel : IdentityTabViewModel
         string username = EditingUsername.Trim();
         if (String.IsNullOrWhiteSpace(username) || username.Length == 0)
         {
-            // TODO Overlay
-            // this.OverlayControl = new AuthErrorsOverlayViewModel(this, "Username needed",
-            //     new string[]{"Even though no account will be created, servers will still need a username to call you by.  Please enter a username in the username field.  (No password is needed)"});
+            this.OverlayControl = new AuthErrorsOverlayViewModel(this, "Username needed",
+                 new string[]{"Even though no account will be created, servers will still need a username to call you by.  Please enter a username in the username field.  (No password is needed)"});
             return;
         }
 
         if (!username.All(x => char.IsLetterOrDigit(x) || x == '_'))
         {
-            // TODO Overlay
-            // this.OverlayControl = new AuthErrorsOverlayViewModel(this, "Username bad characters",
-            //     new string[]{"Username can only contain 0-9 a-z A-Z and _"});
+            this.OverlayControl = new AuthErrorsOverlayViewModel(this, "Username bad characters",
+                 new string[]{"Username can only contain 0-9 a-z A-Z and _"});
             return;
         }
 
@@ -64,7 +65,7 @@ public class GuestTabViewModel : IdentityTabViewModel
         loginInfo.UserId = Guid.NewGuid(); // Guid.Empty;
         loginInfo.Username = EditingUsername;
         loginInfo.Token = new Models.LoginToken("", DateTimeOffset.UtcNow.AddHours(2));
-        loginInfo.AuthServer = LoginInfo.CommonAuthServers.Offline.ToString();
+        loginInfo.AuthServer = LoginInfo.CommonAuthServers.Guest.ToString();
 
         var oldLogin = _loginMgr.Logins.Lookup(loginInfo.UserId);
         if (oldLogin.HasValue)
@@ -75,6 +76,11 @@ public class GuestTabViewModel : IdentityTabViewModel
             _loginMgr.AddFreshLogin(loginInfo);
             _loginMgr.ActiveAccountId = loginInfo.UserId;
         }
+    }
+
+    public virtual void OverlayOk()
+    {
+        OverlayControl = null;
     }
 
     public override void Selected()

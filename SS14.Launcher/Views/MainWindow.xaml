@@ -74,9 +74,16 @@
       </Grid>
     </DockPanel>
 
+    <!-- Login overlay alert control -->
     <ContentControl Classes="OverlayBox"
                     IsVisible="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.OverlayControl, Converter={x:Static ObjectConverters.IsNotNull}}">
       <ContentControl Content="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.OverlayControl}" />
+    </ContentControl>
+
+    <!-- Guest tab overlay alert control (probably this and above should be combined somehow?)-->
+    <ContentControl Classes="OverlayBox"
+                    IsVisible="{Binding IdentityViewModel.GuestTab.OverlayControl, Converter={x:Static ObjectConverters.IsNotNull}}">
+      <ContentControl Content="{Binding IdentityViewModel.GuestTab.OverlayControl}" />
     </ContentControl>
 
     <ContentControl Classes="OverlayBox" IsVisible="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.Busy}">
