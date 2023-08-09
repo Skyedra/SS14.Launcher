@@ -130,12 +130,16 @@ public sealed class DataManager : ReactiveObject
     public ICollection<ServerFilter> Filters { get; }
     public ICollection<Hub> Hubs { get; }
 
-    public bool ActuallyMultiAccounts =>
+    public bool ActuallyMultiAccounts => true;
+    /*
+        I should probably change this to be a default on but cvar'able off, I guess.
+        But just doing this quick for now.
 #if DEBUG
         true;
 #else
             GetCVar(CVars.MultiAccounts);
 #endif
+*/
 
     public void AddFavoriteServer(FavoriteServer server)
     {
