@@ -12,10 +12,11 @@ Basically it is a version of the official launcher with more features (and bugs)
 ## Features
 Differences versus current upstream version:
 
- * **No auth required / Offline mode** - ability to view & connect to servers as guest, even when SS14's official auth server is down.
- * **Engine build mirror** - engine downloads in this build are routed through a global CDN service.  These builds are populated by a simple script on BlepStation.com, which mirrors recent engine builds.  (This means you should still be able to connect to servers, even if you do not have engines already downloaded and the central server is down).
+ * **Guest mode** - No auth server / registration required, works offline.  Ability to view & connect to servers as guest, even when SS14's official auth server is down.
+ * **Engine build mirror** - Engine downloads in this build are routed through a global CDN service.  These builds are populated by a simple script on BlepStation.com, which mirrors recent engine builds.  (This means you should still be able to connect to servers, even if you do not have engines already downloaded and the central server is down).
  * **Timeouts** - Set to faster values so you don't sit waiting for a full minute (!) during downtime.
  * **Multihub** - Manage multiple hubs, in case main hub is down.  Borrowed from [Visne's branch](https://github.com/Visne/SS14.Launcher/tree/multihub).
+ * **Manage multiple identities** - By default it is set up to allow you to manage multiple identities.
 
 ## Limitations
 
@@ -25,7 +26,15 @@ Differences versus current upstream version:
 
  The launcher uses its own data path, so it should not interfere with the official launcher if you have it installed.
 
+## Screenshots of Identity Setup
+
+![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/206b45bc-6626-4465-8242-d49680d3d74a)
+
+![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/2ca7b5fe-cb4e-4163-8323-b5c72e535b36)
+
 ## Demo of Offline Mode
+
+(This video is a bit older, shows UI before the new identity setup layout was done)
 
 https://github.com/Skyedra/SS14.Launcher/assets/22365940/f182fd58-ccb8-4387-9f7a-198f957fc71d
 
