@@ -34,7 +34,7 @@ Differences versus current upstream version:
 
 ## Demo of Offline Mode
 
-(This video is a bit older, shows UI before the new identity setup layout was done and when WizDen was offline)
+This video demonstrates offline mode working even when WizDen was offline.  (This video is a bit older, shows UI before the new identity setup layout was done)
 
 https://github.com/Skyedra/SS14.Launcher/assets/22365940/f182fd58-ccb8-4387-9f7a-198f957fc71d
 
