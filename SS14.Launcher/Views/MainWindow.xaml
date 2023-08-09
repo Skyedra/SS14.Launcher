@@ -37,7 +37,7 @@
             <Button Grid.Row="0" Grid.Column="0" MinWidth="90"
                     Command="{Binding OnDiscordButtonPressed}" Classes="OpenBoth"
                     Margin="0, 6, 2, 2">
-              <v:IconLabel Icon="{DynamicResource InfoIcon-discord}" Content="Discord" />
+              <v:IconLabel Icon="{DynamicResource InfoIcon-discord}" Content="SSMV Discord" />
             </Button>
 
             <!-- Website link -->
