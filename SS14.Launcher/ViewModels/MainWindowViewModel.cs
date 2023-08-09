@@ -42,8 +42,6 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         _loginMgr = Locator.Current.GetRequiredService<LoginManager>();
         _http = Locator.Current.GetRequiredService<HttpClient>();
 
-        _http.Timeout = TimeSpan.FromMilliseconds(ConfigConstants.MaxWebTimeout);
-
         ServersTab = new ServerListTabViewModel(this);
         NewsTab = new NewsTabViewModel();
         HomeTab = new HomePageViewModel(this);

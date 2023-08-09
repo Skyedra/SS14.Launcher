@@ -203,6 +203,8 @@ internal static class Program
         http.DefaultRequestHeaders.UserAgent.Add(
             new ProductInfoHeaderValue(LauncherVersion.Name, LauncherVersion.Version?.ToString()));
         http.DefaultRequestHeaders.Add("SS14-Launcher-Fingerprint", cfg.Fingerprint.ToString());
+        http.Timeout = TimeSpan.FromMilliseconds(ConfigConstants.MaxWebTimeout);
+
         Locator.CurrentMutable.RegisterConstant(http);
 
         var authApi = new AuthApi(http);
