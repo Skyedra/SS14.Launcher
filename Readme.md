@@ -22,7 +22,7 @@ Differences versus current upstream version:
 
  * To connect to a server without an account, the server must be configured for auth to be optional.  (At some point, I may try to figure out multi-auth).  This should work on blep and a few others.
  * There are a number of bugs yet and imperfect work arounds to make things functional.
- * Modules are not mirrored yet, so if you don't already have modules downloaded, try connecting to a server that requires WebView and Centcomm is down, connection won't work.  I don't think most servers use WebView though.
+ * Modules are not mirrored yet, so if you don't already have modules downloaded, try connecting to a server that requires WebView and WizDen's Centcomm is down, connection won't work.  I don't think most servers use WebView though.
 
  The launcher uses its own data path, so it should not interfere with the official launcher if you have it installed.
 
@@ -34,7 +34,7 @@ Differences versus current upstream version:
 
 ## Demo of Offline Mode
 
-(This video is a bit older, shows UI before the new identity setup layout was done)
+(This video is a bit older, shows UI before the new identity setup layout was done and when WizDen was offline)
 
 https://github.com/Skyedra/SS14.Launcher/assets/22365940/f182fd58-ccb8-4387-9f7a-198f957fc71d
 
