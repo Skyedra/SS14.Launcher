@@ -12,7 +12,8 @@ Basically it is a version of the official launcher with more features (and bugs)
 ## Features
 Differences versus current upstream version:
 
- * **Guest mode** - No auth server / registration required, works offline.  Ability to view & connect to servers as guest, even when SS14's official auth server is down.
+ * **Guest mode** - No auth server / registration required, but backwards compatible with WizDen accounts.  (Plans for more account modes in future)
+ * **Offline support** - Ability to view & connect to servers as guest, even when SS14's official auth server is down.
  * **Engine build mirror** - Engine downloads in this build are routed through a global CDN service.  These builds are populated by a simple script on BlepStation.com, which mirrors recent engine builds.  (This means you should still be able to connect to servers, even if you do not have engines already downloaded and the central server is down).
  * **Timeouts** - Set to faster values so you don't sit waiting for a full minute (!) during downtime.
  * **Multihub** - Manage multiple hubs, in case main hub is down.  Borrowed from [Visne's branch](https://github.com/Visne/SS14.Launcher/tree/multihub).
