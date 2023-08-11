@@ -30,15 +30,19 @@ Differences versus current upstream version:
 
 ## Screenshots of Identity Setup
 
-![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/206b45bc-6626-4465-8242-d49680d3d74a)
+![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/bc6a9c80-278d-4e2b-b2af-450645a3c0b4)
 
-![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/2ca7b5fe-cb4e-4163-8323-b5c72e535b36)
+![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/abebd5ee-1898-4d44-b2f5-7fdaa6f17409)
 
 ## Demo of Offline Mode
 
 This video demonstrates offline mode working even when WizDen was offline.  (This video is a bit older, shows UI before the new identity setup layout was done)
 
 https://github.com/Skyedra/SS14.Launcher/assets/22365940/f182fd58-ccb8-4387-9f7a-198f957fc71d
+
+## More Screenshots
+
+![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/786a1765-32ab-42f5-9358-316a7ad4498a)
 
 
 ---
