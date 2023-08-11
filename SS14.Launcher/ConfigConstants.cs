@@ -43,8 +43,8 @@ public static class ConfigConstants
     public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
     public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
 
-    public const string UrlOverrideAssets = "https://central.spacestation14.io/launcher/override_assets.json";
-    public const string UrlAssetsBase = "https://central.spacestation14.io/launcher/assets/";
+    public const string UrlOverrideAssets = "https://cdn.spacestationmultiverse.com/launcher-assets/override_assets.json";
+    public const string UrlAssetsBase = "https://cdn.spacestationmultiverse.com/launcher-assets/";
 
     public const string FallbackUsername = "JoeGenero";
 
