@@ -8,7 +8,8 @@ namespace SS14.Launcher.ViewModels.MainWindowTabs;
 
 public class NewsTabViewModel : MainWindowTabViewModel
 {
-    private const string FeedUrl = "https://spacestation14.io/index.xml";
+    private const string FeedUrl = "https://spacestationmultiverse.com/rss";
+        // WizDen's is "https://spacestation14.io/index.xml" for future reference
 
     private bool _startedPullingNews;
     private bool _newsPulled;
