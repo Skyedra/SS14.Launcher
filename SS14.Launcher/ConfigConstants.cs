@@ -32,13 +32,13 @@ public static class ConfigConstants
         "https://central.spacestation14.io/hub/",
         "https://cdn.blepstation.com/hub/"
     };
-    public const string DiscordUrl = "https://blepstation.com/discord/";
+    public const string DiscordUrl = "https://SpaceStationMultiverse.com/discord/";
     public const string AccountBaseUrl = "https://central.spacestation14.io/web/Identity/Account/";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
     public const string AccountRegisterUrl = $"{AccountBaseUrl}Register";
     public const string AccountResendConfirmationUrl = $"{AccountBaseUrl}ResendEmailConfirmation";
-    public const string WebsiteUrl = "https://github.com/Skyedra/SS14.Launcher/";
-    public const string DownloadUrl = "https://blepstation.com/download";
+    public const string WebsiteUrl = "https://SpaceStationMultiverse.com/";
+    public const string DownloadUrl = "https://SpaceStationMultiverse.com/downloads/";
     public const string LauncherVersionUrl = "https://cdn.blepstation.com/launcher_version.txt";
     public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
     public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
