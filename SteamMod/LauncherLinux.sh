@@ -32,6 +32,7 @@ else
     unzip SS14.Launcher_Linux.zip
     rm SS14.Launcher_Linux.zip
     touch .multiverse
+    ./SS14.Launcher
 
     echo "Script execution complete."
 fi
