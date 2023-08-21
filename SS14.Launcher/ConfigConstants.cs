@@ -29,6 +29,7 @@ public static class ConfigConstants
 
     public static readonly string AuthUrl = "https://central.spacestation14.io/auth/";
     public static readonly string[] DefaultHubUrls = {
+        "https://cdn.spacestationmultiverse.com/hub/",
         "https://central.spacestation14.io/hub/",
         "https://cdn.blepstation.com/hub/"
     };
