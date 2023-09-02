@@ -22,7 +22,7 @@ public static class IconsLoader
 
         foreach (var (path, resource) in Icons)
         {
-            using var file = loader.Open(new Uri($"avares://SS14.Launcher/Assets/{path}"));
+            using var file = loader.Open(new Uri($"avares://SSMV.Launcher/Assets/{path}"));
             var bitmap = new Bitmap(file);
             app.Resources.Add(resource, bitmap);
         }

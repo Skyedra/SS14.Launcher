@@ -1,4 +1,4 @@
 #!/bin/sh
 cd "$(dirname "$(readlink -f "$0")")"
 export DOTNET_ROOT="$(pwd)/dotnet"
-exec ./bin/SS14.Launcher "$@"
+exec ./bin/SSMV.Launcher "$@"

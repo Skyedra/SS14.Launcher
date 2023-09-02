@@ -52,7 +52,7 @@ public class App : Application
 
         foreach (var (name, (path, type)) in AssetDefs)
         {
-            using var dataStream = loader.Open(new Uri($"avares://SS14.Launcher/Assets/{path}"));
+            using var dataStream = loader.Open(new Uri($"avares://SSMV.Launcher/Assets/{path}"));
 
             var asset = LoadAsset(type, dataStream);
 

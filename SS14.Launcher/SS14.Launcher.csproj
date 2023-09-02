@@ -10,6 +10,7 @@
     <DefineConstants Condition="'$(FullRelease)' == 'True'">FULL_RELEASE;$(DefineConstants)</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <NoWarn>CA1416</NoWarn>
+    <AssemblyName>SSMV.Launcher</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="**\*.xaml.cs">
@@ -66,7 +67,7 @@
     <EmbeddedResource Include="Models\OverrideAssets\Migrations\*.sql" />
   </ItemGroup>
   <ItemGroup>
-    <RobustLinkRoots Include="SS14.Launcher" />
+    <RobustLinkRoots Include="SSMV.Launcher" />
     <RobustLinkAssemblies Include="TerraFX.Interop.Windows" />
   </ItemGroup>
   <ItemGroup>
