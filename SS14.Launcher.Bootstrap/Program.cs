@@ -13,7 +13,7 @@ namespace SS14.Launcher.Bootstrap
             Debug.Assert(ourDir != null);
 
             var dotnetDir = Path.Combine(ourDir, "dotnet");
-            var exeDir = Path.Combine(ourDir, "bin", "SS14.Launcher.exe");
+            var exeDir = Path.Combine(ourDir, "bin", "SSMV.Launcher.exe");
 
             Environment.SetEnvironmentVariable("DOTNET_ROOT", dotnetDir);
             Process.Start(new ProcessStartInfo(exeDir));

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net45</TargetFramework>
-    <TargetName>Space Station 14 Launcher</TargetName>
+    <TargetName>Space Station Multiverse Launcher</TargetName>
     <ApplicationIcon>../SS14.Launcher/Assets/icon.ico</ApplicationIcon>
   </PropertyGroup>
 
