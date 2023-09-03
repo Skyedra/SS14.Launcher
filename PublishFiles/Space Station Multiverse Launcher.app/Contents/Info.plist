@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleName</key>
-    <string>SS14LO</string>
+    <string>SSMV</string>
     <key>CFBundleDisplayName</key>
-    <string>Space Station 14</string>
+    <string>Space Station Multiverse Launcher</string>
     <key>CFBundleExecutable</key>
     <string>SS14</string>
     <!--

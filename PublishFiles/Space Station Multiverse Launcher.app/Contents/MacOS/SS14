@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# cd to file containing script or something?
+BASEDIR=$(dirname "$0")
+echo "$BASEDIR"
+cd "$BASEDIR"
+
+mkdir -p "$HOME/Library/Application Support/Space Station Multiverse"
+
+export DOTNET_ROOT="$(pwd)/../Resources/dotnet"
+
+exec ../Resources/bin/SSMV.Launcher "$@" > "$HOME/Library/Application Support/Space Station Multiverse/launcher.log"
