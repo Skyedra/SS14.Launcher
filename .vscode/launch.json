@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/SS14.Launcher/bin/Debug/net7.0/SS14.Launcher.dll",
+            "program": "${workspaceFolder}/SS14.Launcher/bin/Debug/net7.0/SSMV.Launcher.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SS14.Launcher",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
