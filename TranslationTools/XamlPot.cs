@@ -38,17 +38,19 @@ class XamlPot
 				if (string.IsNullOrEmpty(context))
 					key = msgId;
 
+				string sourceReference = file + ":" + GetLineNumberFromCharacterPosition(xaml, match.Groups[1].Index);
+
 				if (messages.ContainsKey(key))
 				{
 					// Add an occurance
-					if (! messages[key].sourceReferences.Contains(file))
-						messages[key].sourceReferences.Add(file);
+					if (! messages[key].sourceReferences.Contains(sourceReference))
+						messages[key].sourceReferences.Add(sourceReference);
 				} else {
 					var translationDefinition = new TranslationDefinition();
 					if (!string.IsNullOrEmpty(context))
 						translationDefinition.context = context;
 					translationDefinition.msgId = msgId;
-					translationDefinition.sourceReferences.Add(file);
+					translationDefinition.sourceReferences.Add(sourceReference);
 					messages.Add(key, translationDefinition);
 				}
 			} else {
@@ -101,5 +103,25 @@ class XamlPot
 		return input
 			.Replace("\\,", ",") // comma escape is a xaml specific thing
 			.Replace("\"", "\\\""); // this allows for quotes
+	}
+
+	/// <summary>
+	/// Assuming a full file is put into a string fullFileString, count the newlines before characterPosition reached.
+	/// Useful for getting line number.
+	/// </summary>
+	/// <param name="fullFileString"></param>
+	/// <param name="characterPosition"></param>
+	/// <returns></returns>
+	private int GetLineNumberFromCharacterPosition(string fullFileString, int characterPosition)
+	{
+		int lineNumber = 1;
+		int checkCharacter = 0;
+		while (checkCharacter < fullFileString.Length && checkCharacter < characterPosition)
+		{
+			if (fullFileString[checkCharacter] == '\n')
+				lineNumber++;
+			checkCharacter++;
+		}
+		return lineNumber;
 	}
 }
