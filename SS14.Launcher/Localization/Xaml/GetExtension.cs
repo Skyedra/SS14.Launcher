@@ -5,9 +5,9 @@ using Avalonia.Markup.Xaml.MarkupExtensions;
 
 namespace SS14.Launcher.Localization.Xaml;
 
-public class GetStringExtension : MarkupExtension
+public class GetExtension : MarkupExtension
 {
-    public GetStringExtension(string key)
+    public GetExtension(string key)
     {
         this.Key = key;
     }
