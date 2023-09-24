@@ -1,0 +1,8 @@
+{
+    "editor.rulers": [
+        120
+    ],
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+    "editor.detectIndentation": false
+}
