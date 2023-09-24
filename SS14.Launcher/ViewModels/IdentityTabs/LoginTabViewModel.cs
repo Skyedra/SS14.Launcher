@@ -5,6 +5,7 @@ using CodeHollow.FeedReader;
 using ReactiveUI;
 using Splat;
 using SS14.Launcher.Api;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
@@ -35,7 +36,7 @@ public class LoginTabViewModel : IdentityTabViewModel
     }
 
     // TODO: Change based on auth provider
-    public override string Name => "Wizard's Den";
+    public override string Name => Loc.GetParticularString("Create Identity Tab", "Wizard's Den");
 
     public void SwitchToLogin()
     {

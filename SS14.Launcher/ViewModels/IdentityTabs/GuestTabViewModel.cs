@@ -7,6 +7,7 @@ using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 using Splat;
 using SS14.Launcher.Api;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
@@ -88,5 +89,5 @@ public class GuestTabViewModel : IdentityTabViewModel, IErrorOverlayOwner
         base.Selected();
     }
 
-    public override string Name => "Guest";
+    public override string Name => Loc.GetParticularString("Create Identity Tab", "Guest");
 }

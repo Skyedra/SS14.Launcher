@@ -40,6 +40,7 @@
     <PackageReference Include="DynamicData" />
     <PackageReference Include="Microsoft.Data.Sqlite" />
     <PackageReference Include="Microsoft.Toolkit.Mvvm" />
+    <PackageReference Include="NGettext" />
     <PackageReference Include="ReactiveUI" />
     <PackageReference Include="ReactiveUI.Fody" />
     <PackageReference Include="Robust.Shared.AuthLib" />

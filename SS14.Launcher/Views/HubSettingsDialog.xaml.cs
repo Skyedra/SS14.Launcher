@@ -4,6 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.LogicalTree;
+using SS14.Launcher.Localization;
 using SS14.Launcher.ViewModels;
 using static SS14.Launcher.ViewModels.HubSettingsViewModel;
 
@@ -67,11 +68,11 @@ public partial class HubSettingsDialog : Window
         DoneButton.IsEnabled = anyHubs && allValid && noDupes;
 
         if (!anyHubs)
-            Warning.Text = "Specify at least one hub";
+            Warning.Text = Loc.GetString("Specify at least one hub");
         else if (!allValid)
-            Warning.Text = "Invalid hub (don't forget http(s)://)";
+            Warning.Text = Loc.GetString("Invalid hub (don't forget http(s)://)");
         else if (!noDupes)
-            Warning.Text = "Duplicate hubs";
+            Warning.Text = Loc.GetString("Duplicate hubs");
         else
             Warning.Text = "";
     }

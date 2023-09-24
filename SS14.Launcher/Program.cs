@@ -24,6 +24,7 @@ using SS14.Launcher.ViewModels;
 using SS14.Launcher.Views;
 using TerraFX.Interop.Windows;
 using LogEventLevel = Serilog.Events.LogEventLevel;
+using SS14.Launcher.Localization;
 
 namespace SS14.Launcher;
 
@@ -198,6 +199,8 @@ internal static class Program
     private static AppBuilder BuildAvaloniaApp(DataManager cfg)
     {
         var locator = Locator.CurrentMutable;
+
+        locator.RegisterConstant(new LocalizationManager());
 
         var http = HappyEyeballsHttp.CreateHttpClient();
         http.DefaultRequestHeaders.UserAgent.Add(
