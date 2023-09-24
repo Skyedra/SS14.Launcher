@@ -64,20 +64,20 @@ class XamlPot
 		string outputText = "#, fuzzy\n";
 		outputText += "msgid \"\"\n";
 		outputText += "msgstr \"\"\n";
-		outputText += "\"Project-Id-Version: SSMV Launcher\"\n";
-		outputText += "\"POT-Creation-Date: " + DateTime.Now.ToString("yyyy-MM-dd HH:mmzz00") + "\"\n";  // 2023-09-23 20:48-0700
-		outputText += "\"PO-Revision-Date: " + DateTime.Now.ToString("yyyy-MM-dd HH:mmzz00") + "\"\n";
-		outputText += "\"Last-Translator: \"\n";
-		outputText += "\"Language-Team: \"\n";
-		outputText += "\"Language: en_US\"\n";
-		outputText += "\"MIME-Version: 1.0\"\n";
-		outputText += "\"Content-Type: text/plain; charset=UTF-8\"\n";
-		outputText += "\"Content-Transfer-Encoding: 8bit\"\n";
-		outputText += "\"Plural-Forms: nplurals=2; plural=(n != 1);\"\n";
-		outputText += "\"X-Generator: TranslationTools\"\n";
-		outputText += "\"X-Poedit-Basepath: ../../../..\"\n";
-		outputText += "\"X-Poedit-SearchPath-0: .\"\n";
-		outputText += "\"X-Poedit-SearchPathExcluded-0: Assets\"\n";
+		outputText += "\"Project-Id-Version: SSMV Launcher\\n\"\n";
+		outputText += "\"POT-Creation-Date: " + DateTime.Now.ToString("yyyy-MM-dd HH:mmzz00") + "\\n\"\n";  // 2023-09-23 20:48-0700
+		outputText += "\"PO-Revision-Date: " + DateTime.Now.ToString("yyyy-MM-dd HH:mmzz00") + "\\n\"\n";
+		outputText += "\"Last-Translator: \\n\"\n";
+		outputText += "\"Language-Team: \\n\"\n";
+		outputText += "\"Language: en_US\\n\"\n";
+		outputText += "\"MIME-Version: 1.0\\n\"\n";
+		outputText += "\"Content-Type: text/plain; charset=UTF-8\\n\"\n";
+		outputText += "\"Content-Transfer-Encoding: 8bit\\n\"\n";
+		outputText += "\"Plural-Forms: nplurals=2; plural=(n != 1);\\n\"\n";
+		outputText += "\"X-Generator: TranslationTools\\n\"\n";
+		outputText += "\"X-Poedit-Basepath: ../../../..\\n\"\n";
+		outputText += "\"X-Poedit-SearchPath-0: .\\n\"\n";
+		outputText += "\"X-Poedit-SearchPathExcluded-0: Assets\\n\"\n";
 
 		foreach (var entry in messages)
 		{
