@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:mainWindowTabs="clr-namespace:SS14.Launcher.ViewModels.MainWindowTabs"
+             xmlns:views="clr-namespace:SS14.Launcher.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SS14.Launcher.Views.MainWindowTabs.OptionsTabView"
              Name="NewsTab">
@@ -21,6 +22,13 @@
               Command="{Binding OpenLogDirectory}"/>
 
       <StackPanel Orientation="Vertical">
+
+        <views:LanguageDropDown Margin="4" HorizontalAlignment="Left"
+                          DataContext="{Binding LanguageDropDown}" />
+        <TextBlock VerticalAlignment="Center" TextWrapping="Wrap"
+                   Text="Set launcher language.  This does not affect in-game language, which is up to the server you connect to."
+                   Margin="8" />
+
         <Button Content="Account Settings" Margin="4" Command="{Binding OpenAccountSettings}" HorizontalAlignment="Left" />
         <TextBlock VerticalAlignment="Center" TextWrapping="Wrap"
                    Text="You can manage your account settings, such as changing email or password, through our website."

@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels"
+             xmlns:v="clr-namespace:SS14.Launcher.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.LanguageDropDown">
+
+  <Design.DataContext>
+    <vm:LanguageDropDownViewModel />
+  </Design.DataContext>
+
+  <v:DropDown HeaderContent="{Binding CurrentLanguageButtonText}" IsDropDownOpen="{Binding IsDropDownOpen, Mode=TwoWay}" Classes="OpenRight">
+    <Panel>
+      <v:AngleBox Fill="{DynamicResource ThemeBackgroundBrush}" SideStyle="OpenRight" />
+      <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical">
+          <TextBlock Text="Languages..." Margin="4" />
+
+          <ItemsControl Name="Items" Items="{Binding availableLanguages}">
+            <ItemsControl.ItemTemplate>
+              <DataTemplate DataType="vm:AvailableLanguageViewModel">
+                <Button Content="{Binding displayText}" Margin="4"
+                        Command="{Binding #Items.DataContext.SwitchLanguageDueToButtonPress}"
+                        CommandParameter="{Binding language}"
+                         />
+
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ItemsControl>
+
+
+
+          <TextBlock Text="Help translate:" Margin="4 20 4 4" />
+          <Button Content="Contribute" Command="{Binding ContributePressed}" Margin="4" />
+        </StackPanel>
+      </StackPanel>
+    </Panel>
+  </v:DropDown>
+</UserControl>

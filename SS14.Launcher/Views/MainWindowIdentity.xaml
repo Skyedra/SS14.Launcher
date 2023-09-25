@@ -17,6 +17,13 @@
     <DockPanel Background="{DynamicResource ThemeStripeBackBrush}" DockPanel.Dock="Bottom"
                LastChildFill="False">
 
+      <!-- Languages drop down -->
+      <views:LanguageDropDown
+                          Margin="10 0 0 0"
+                          DataContext="{Binding LanguageDropDown}"
+                          DockPanel.Dock="Right"
+                          />
+
       <CheckBox DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4" IsChecked="{Binding LogLauncher}">Log Launcher</CheckBox>
 
       <TextBlock Text="{Binding Version}" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="4"

@@ -21,6 +21,8 @@ public class MainWindowIdentityViewModel : ViewModelBase
 
     public IReadOnlyList<IdentityTabViewModel> IdentityTabs { get; }
 
+    public LanguageDropDownViewModel LanguageDropDown { get; }
+
     public MainWindowIdentityViewModel()
     {
         _cfg = Locator.Current.GetRequiredService<DataManager>();
@@ -37,6 +39,8 @@ public class MainWindowIdentityViewModel : ViewModelBase
             GuestTab,
             WizardsDenLoginTab
         };
+
+        LanguageDropDown = new LanguageDropDownViewModel();
     }
 
     public string Version => $"v{LauncherVersion.Version}";

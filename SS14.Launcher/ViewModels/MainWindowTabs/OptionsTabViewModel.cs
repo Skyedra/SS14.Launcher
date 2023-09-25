@@ -18,6 +18,8 @@ public class OptionsTabViewModel : MainWindowTabViewModel
         Cfg = Locator.Current.GetRequiredService<DataManager>();
         _engineManager = Locator.Current.GetRequiredService<IEngineManager>();
         _contentManager = Locator.Current.GetRequiredService<ContentManager>();
+
+        LanguageDropDown = new LanguageDropDownViewModel();
     }
 
 #if RELEASE
@@ -27,6 +29,8 @@ public class OptionsTabViewModel : MainWindowTabViewModel
 #endif
 
     public override string Name => "Options";
+
+    public LanguageDropDownViewModel LanguageDropDown { get; }
 
     public bool CompatMode
     {

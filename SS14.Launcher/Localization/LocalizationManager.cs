@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Avalonia;
 using Avalonia.Platform;
+using DynamicData;
 using NGettext;
+using ReactiveUI;
 using Serilog;
 
 namespace SS14.Launcher.Localization;
@@ -11,9 +14,24 @@ namespace SS14.Launcher.Localization;
 /// Manages localization for the launcher, providing functionality for setting current language and looking up
 /// translated strings from GetText catalogs.
 /// </summary>
-public class LocalizationManager
+public class LocalizationManager : ReactiveObject
 {
-    private Catalog? activeCatalog;
+    private Catalog? _activeCatalog;
+    private Catalog? activeCatalog
+    {
+        get
+        {
+            return _activeCatalog;
+        }
+
+        set
+        {
+            _activeCatalog = value;
+
+            // Trigger language name to be updated, which can update UI if needed
+            UpdateCurrentLanguageDisplayString();
+        }
+    }
 
     public LocalizationManager()
     {
@@ -32,6 +50,14 @@ public class LocalizationManager
 
     public void LoadCulture(CultureInfo culture)
     {
+        if (culture == null)
+        {
+            // Intentionally going back to non-translated mode
+            activeCatalog = null;
+            Log.Information("Disabled translations / using default English (US) locale.");
+            return;
+        }
+
         var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
 
         if (assets == null)
@@ -106,5 +132,40 @@ public class LocalizationManager
         }
 
         return activeCatalog.GetString(sourceString);
+    }
+
+    public string currentLanguageDisplayString {
+        get
+        {
+            return _currentLanguageDisplayString;
+        }
+
+        private set
+        {
+            // this allows for the property to be updated on UI buttons
+            this.RaiseAndSetIfChanged(ref _currentLanguageDisplayString, value);
+        }
+    }
+    private string _currentLanguageDisplayString;
+
+    private void UpdateCurrentLanguageDisplayString()
+    {
+        if (activeCatalog != null)
+        {
+            currentLanguageDisplayString = activeCatalog.CultureInfo.DisplayName;
+            return;
+        }
+
+        currentLanguageDisplayString = "English"; // default / untranslated
+    }
+
+    public Dictionary<string, CultureInfo> GetAvailableLanguages()
+    {
+        // TODO: something to scan through and return available languages
+
+        return new Dictionary<string, CultureInfo> {
+            {"English (US)", null},
+            {"Sergal", new CultureInfo("sergal")}
+        };
     }
 }
