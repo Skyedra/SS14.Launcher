@@ -72,7 +72,7 @@ public class AccountDropDownViewModel : ViewModelBase
             {
                 return _loginMgr.ActiveAccount.Username + " - " + _loginMgr.ActiveAccount.AuthServer;
             } else {
-                return EnableMultiAccounts ? "No account selected" : "Not logged in";
+                return EnableMultiAccounts ? Loc.GetString("No account selected") : Loc.GetString("Not logged in");
             }
         }
     }

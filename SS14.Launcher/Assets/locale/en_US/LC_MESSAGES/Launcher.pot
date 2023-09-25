@@ -1,53 +1,83 @@
+# Space Station Multiverse Translation
+# Released under MIT License
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: SSMV Launcher\n"
-"POT-Creation-Date: 2023-09-23 22:19-0700\n"
-"PO-Revision-Date: 2023-09-23 20:48-0700\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: en_US\n"
+"Project-Id-Version: Space Station Multiverse Launcher\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-24 16:52-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
-"X-Poedit-Basepath: ../../../..\n"
-"X-Poedit-KeywordsList: {Loc\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: Assets\n"
 
-#: ViewModels/IdentityTabs/GuestTabViewModel.cs:92
-msgctxt "Create Identity Tab"
-msgid "Guest"
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:71
+msgid "Specify at least one hub"
 msgstr ""
 
-#: ViewModels/IdentityTabs/InformationTabViewModel.cs:21
-msgctxt "Create Identity Tab"
-msgid "(Information)"
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:73
+msgid "Invalid hub (don't forget http(s)://)"
 msgstr ""
 
-#: ViewModels/IdentityTabs/LoginTabViewModel.cs:39
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:75
+msgid "Duplicate hubs"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
 msgstr ""
 
-#: Views/HubSettingsDialog.xaml.cs:71
-msgid "Specify at least one hub"
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
+msgctxt "Create Identity Tab"
+msgid "Guest"
 msgstr ""
 
-#: Views/HubSettingsDialog.xaml.cs:73
-msgid "Invalid hub (don't forget http(s)://)"
+#: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:21
+msgctxt "Create Identity Tab"
+msgid "(Information)"
 msgstr ""
 
-#: Views/HubSettingsDialog.xaml.cs:75
-msgid "Duplicate hubs"
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:75
+msgid "No account selected"
 msgstr ""
 
-#: Views/IdentityTabs/InformationTabView.xaml:15
-msgid "Welcome"
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:75
+msgid "Not logged in"
 msgstr ""
 
-msgid "Welcome"
+#: ../SS14.Launcher/Views/MainWindow.xaml:42
+msgctxt "Header Buttons"
+msgid "SSMV Discord"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:49
+msgctxt "Header Buttons"
+msgid "Website"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:117
+msgid ""
+"This launcher is out of date.&#x0a;Please download a new version from our "
+"website."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:131
+msgid ""
+"Space Station is still in development. We hope you like what you see, but "
+"please keep your expectations modest for the time being."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:147
+msgctxt "Drag Drop Overlay"
+msgid "Drop to run game"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
+msgid "Welcome"
 msgstr ""
