@@ -8,7 +8,9 @@ using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using JetBrains.Annotations;
 using Serilog;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.OverrideAssets;
+using SS14.Launcher.Utility;
 
 namespace SS14.Launcher;
 
@@ -38,12 +40,21 @@ public class App : Application
 
     public override void Initialize()
     {
+        // Loc load must execute after avalonia asset loader is available, but should happen before the xaml is loaded
+        LoadLocalization();
+
         AvaloniaXamlLoader.Load(this);
 
         LoadBaseAssets();
         IconsLoader.Load(this);
 
         _overrideAssets.AssetsChanged += OnAssetsChanged;
+    }
+
+    private void LoadLocalization()
+    {
+        var localizationManager = Splat.Locator.Current.GetRequiredService<LocalizationManager>();
+        localizationManager.LoadDefault();
     }
 
     private void LoadBaseAssets()

@@ -1,6 +1,9 @@
 using System;
 using System.Globalization;
+using Avalonia;
+using Avalonia.Platform;
 using NGettext;
+using Serilog;
 
 namespace SS14.Launcher.Localization;
 
@@ -14,6 +17,10 @@ public class LocalizationManager
 
     public LocalizationManager()
     {
+    }
+
+    public void LoadDefault()
+    {
         LoadTestCulture();
     }
 
@@ -25,16 +32,54 @@ public class LocalizationManager
 
     public void LoadCulture(CultureInfo culture)
     {
-        activeCatalog = new Catalog("Launcher", "./Assets/locale", culture);
+        var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
+
+        if (assets == null)
+        {
+            Log.Warning("Unable to find asset loader, no localization will be done.");
+            return;
+        }
+
+        // This pathing logic mirrors ngettext FindTranslationFile
+        var possibleUris = new[] {
+            new Uri($"avares://SSMV.Launcher/Assets/locale/" + culture.Name.Replace('-', '_') + "/LC_MESSAGES/Launcher.mo"),
+            new Uri($"avares://SSMV.Launcher/Assets/locale/" + culture.Name + "/LC_MESSAGES/Launcher.mo"),
+            new Uri($"avares://SSMV.Launcher/Assets/locale/" + culture.TwoLetterISOLanguageName + "/LC_MESSAGES/Launcher.mo")
+        };
+
+        foreach (var possibleFileUri in possibleUris)
+        {
+            if (assets.Exists(possibleFileUri))
+            {
+                var stream = assets.Open(possibleFileUri);
+                activeCatalog = new Catalog(stream, culture);
+
+                if (activeCatalog != null)
+                {
+                    Log.Information("Loaded translation catalog for " + culture.Name);
+                    return;
+                }
+                else
+                    Log.Warning("Problem loading translation catalog at " + possibleFileUri.ToString());
+            }
+        }
+
+        Log.Warning("Could not find localization .po for culture: " + culture.Name);
     }
 
     public string GetString(string sourceString)
     {
+        if (activeCatalog == null)
+            return sourceString;
+
         return activeCatalog.GetString(sourceString);
     }
 
     public string GetParticularString(string context, string sourceString)
     {
+        if (activeCatalog == null)
+            return sourceString;
+
         return activeCatalog.GetParticularString(context, sourceString);
     }
 

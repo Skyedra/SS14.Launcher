@@ -200,8 +200,6 @@ internal static class Program
     {
         var locator = Locator.CurrentMutable;
 
-        locator.RegisterConstant(new LocalizationManager());
-
         var http = HappyEyeballsHttp.CreateHttpClient();
         http.DefaultRequestHeaders.UserAgent.Add(
             new ProductInfoHeaderValue(LauncherVersion.Name, LauncherVersion.Version?.ToString()));
@@ -223,6 +221,7 @@ internal static class Program
         locator.RegisterConstant(new ServerListCache());
         locator.RegisterConstant(loginManager);
         locator.RegisterConstant(overrideAssets);
+        locator.RegisterConstant(new LocalizationManager());
 
         return AppBuilder.Configure(() => new App(overrideAssets))
             .UsePlatformDetect()
