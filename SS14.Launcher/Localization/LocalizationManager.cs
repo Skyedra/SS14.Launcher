@@ -146,8 +146,8 @@ public class LocalizationManager : ReactiveObject
                 {
                     Log.Information("Loaded translation catalog for " + culture.Name);
 
-                    if (OnTranslationChanged != null)
-                        OnTranslationChanged();
+                    // if (OnTranslationChanged != null)
+                    //     OnTranslationChanged();
 
                     return true;
                 }
