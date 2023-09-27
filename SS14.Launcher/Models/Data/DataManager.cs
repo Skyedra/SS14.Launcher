@@ -123,6 +123,27 @@ public sealed class DataManager : ReactiveObject
         }
     }
 
+    public string? Locale
+    {
+        get
+        {
+            var value = GetCVar(CVars.Locale);
+            if (value == "")
+                return null;
+
+            return value;
+        }
+
+        set
+        {
+            if (value == null)
+                SetCVar(CVars.Locale, "");
+            else
+                SetCVar(CVars.Locale, value);
+            CommitConfig();
+        }
+    }
+
     public IObservableCache<FavoriteServer, string> FavoriteServers => _favoriteServers;
     public IObservableCache<LoginInfo, Guid> Logins => _logins;
     public IObservableCache<InstalledEngineVersion, string> EngineInstallations => _engineInstallations;

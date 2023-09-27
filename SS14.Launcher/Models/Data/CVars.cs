@@ -94,6 +94,12 @@ public static class CVars
     /// </summary>
     /// <seealso cref="ServerFilter.PlayerCountMax"/>
     public static readonly CVarDef<int> FilterPlayerCountMaxValue = CVarDef.Create("FilterPlayerCountMaxValue", 0);
+
+    /// <summary>
+    /// Stores the user's locale preference, if any has been set.
+    /// </summary>
+    /// <returns></returns>
+    public static readonly CVarDef<string> Locale = CVarDef.Create("Locale", "");
 }
 
 /// <summary>

@@ -60,7 +60,7 @@ public class LanguageDropDownViewModel : ViewModelBase
     {
         IsDropDownOpen = false;
 
-        localizationManager.LoadCulture(language);
+        localizationManager.SetCulture(language);
     }
 }
 

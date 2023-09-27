@@ -54,7 +54,8 @@ public class App : Application
     private void LoadLocalization()
     {
         var localizationManager = Splat.Locator.Current.GetRequiredService<LocalizationManager>();
-        localizationManager.LoadDefault();
+        localizationManager.LoadInferred();
+        //localizationManager.OnTranslationChanged += HandleTranslationChanged;
     }
 
     private void LoadBaseAssets()
@@ -113,4 +114,9 @@ public class App : Application
         Bitmap,
         WindowIcon
     }
+
+    // private void HandleTranslationChanged()
+    // {
+    //     //AvaloniaXamlLoader.Load(this);
+    // }
 }

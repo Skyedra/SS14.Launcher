@@ -7,6 +7,9 @@ using DynamicData;
 using NGettext;
 using ReactiveUI;
 using Serilog;
+using Splat;
+using SS14.Launcher.Models.Data;
+using SS14.Launcher.Utility;
 
 namespace SS14.Launcher.Localization;
 
@@ -16,6 +19,8 @@ namespace SS14.Launcher.Localization;
 /// </summary>
 public class LocalizationManager : ReactiveObject
 {
+    private readonly DataManager dataManager;
+
     private Catalog? _activeCatalog;
     private Catalog? activeCatalog
     {
@@ -35,11 +40,37 @@ public class LocalizationManager : ReactiveObject
 
     public LocalizationManager()
     {
+        dataManager = Locator.Current.GetRequiredService<DataManager>();
     }
 
-    public void LoadDefault()
+    /// <summary>
+    /// Infer the best culture to use based on either the saved locale setting, or if none available, then the default
+    /// one based on system settings.  Intended to be run on start up.
+    /// </summary>
+    public void LoadInferred()
     {
-        LoadTestCulture();
+        string? localePreference = dataManager.Locale;
+
+        if (!String.IsNullOrEmpty(localePreference))
+        {
+            var localeCulture = new CultureInfo(localePreference);
+            bool result = LoadCulture(localeCulture);
+            if (result)
+                return;
+            // If load failed, fall back and use system default culture
+        }
+
+        // Try to use system default culture
+        LoadSystemDefault();
+    }
+
+    /// <summary>
+    /// Load a default culture based on system settings
+    /// </summary>
+    private bool LoadSystemDefault()
+    {
+        // TODO - pull from OS or Steam
+        return LoadCulture(null);
     }
 
     private void LoadTestCulture()
@@ -48,14 +79,45 @@ public class LocalizationManager : ReactiveObject
         LoadCulture(sergalTextCultureInfo);
     }
 
-    public void LoadCulture(CultureInfo culture)
+    /// <summary>
+    /// Loads culture and updates stored preferences to that culture.
+    /// </summary>
+    /// <param name="culture"></param>
+    /// <returns></returns>
+    public bool SetCulture(CultureInfo culture)
+    {
+        bool result = LoadCulture(culture);
+        if (result)
+        {
+            if (culture != null)
+                dataManager.Locale = culture.Name;
+            else
+                dataManager.Locale = null;
+
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Loads target culture.
+    /// </summary>
+    /// <param name="culture">Culture to load -- can be null to use developer/english US culture.</param>
+    /// <returns>True is culture was changed successfully (even if changed to no culture successfully).  False if
+    /// failed to load culture.</returns>
+    private bool LoadCulture(CultureInfo culture)
     {
         if (culture == null)
         {
             // Intentionally going back to non-translated mode
             activeCatalog = null;
             Log.Information("Disabled translations / using default English (US) locale.");
-            return;
+
+            //if (OnTranslationChanged != null)
+            //    OnTranslationChanged();
+
+            return true;
         }
 
         var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
@@ -63,7 +125,7 @@ public class LocalizationManager : ReactiveObject
         if (assets == null)
         {
             Log.Warning("Unable to find asset loader, no localization will be done.");
-            return;
+            return false;
         }
 
         // This pathing logic mirrors ngettext FindTranslationFile
@@ -83,7 +145,11 @@ public class LocalizationManager : ReactiveObject
                 if (activeCatalog != null)
                 {
                     Log.Information("Loaded translation catalog for " + culture.Name);
-                    return;
+
+                    if (OnTranslationChanged != null)
+                        OnTranslationChanged();
+
+                    return true;
                 }
                 else
                     Log.Warning("Problem loading translation catalog at " + possibleFileUri.ToString());
@@ -91,6 +157,7 @@ public class LocalizationManager : ReactiveObject
         }
 
         Log.Warning("Could not find localization .po for culture: " + culture.Name);
+        return false;
     }
 
     public string GetString(string sourceString)
@@ -168,4 +235,6 @@ public class LocalizationManager : ReactiveObject
             {"Sergal", new CultureInfo("sergal")}
         };
     }
+
+    //public Action OnTranslationChanged;
 }
