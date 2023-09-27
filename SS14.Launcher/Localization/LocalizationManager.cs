@@ -6,6 +6,7 @@ using Avalonia.Platform;
 using DynamicData;
 using NGettext;
 using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 using Serilog;
 using Splat;
 using SS14.Launcher.Models.Data;
@@ -93,6 +94,10 @@ public class LocalizationManager : ReactiveObject
                 dataManager.Locale = culture.Name;
             else
                 dataManager.Locale = null;
+
+            // Displays message which forces user to restart on language change.
+            // Just a quick, temporary workaround until proper reloading of all strings is properly implemented.
+            RequiresRestart = true;
 
             return true;
         }
@@ -236,5 +241,15 @@ public class LocalizationManager : ReactiveObject
         };
     }
 
-    //public Action OnTranslationChanged;
+    public bool RequiresRestart
+    {
+        get { return _requiresRestart; }
+
+        private set
+        {
+            this.RaiseAndSetIfChanged(ref _requiresRestart, value);
+            this.RaisePropertyChanged(nameof(RequiresRestart));
+        }
+    }
+    private bool _requiresRestart = false;
 }

@@ -133,6 +133,15 @@
       </StackPanel>
     </ContentControl>
 
+    <ContentControl Classes="OverlayBox" IsVisible="{Binding ShowLanguageChangedPopup}">
+      <StackPanel Orientation="Vertical">
+        <TextBlock HorizontalAlignment="Center" Classes="NanoHeadingMedium" Text="{Binding LanguageChangedPopupHeaderText}" />
+        <TextBlock Margin="0, 10" TextAlignment="Center" MaxWidth="450" TextWrapping="Wrap"
+                   Text="{Binding LanguageChangedPopupMessageText}" />
+        <Button Content="{Binding LanguageChangedPopupButtonText}" Command="{Binding OnLanguageChangedPopupPressed}" HorizontalAlignment="Center" />
+      </StackPanel>
+    </ContentControl>
+
     <!--
     Literally just keep piling them on it doesn't matter.
     This is way easier than coming up with some horribly over-engineered solution.

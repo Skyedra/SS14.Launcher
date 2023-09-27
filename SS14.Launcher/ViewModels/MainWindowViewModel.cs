@@ -11,6 +11,7 @@ using ReactiveUI.Fody.Helpers;
 using Serilog;
 using Splat;
 using SS14.Launcher.Api;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
@@ -26,6 +27,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     private readonly DataManager _cfg;
     private readonly LoginManager _loginMgr;
     private readonly HttpClient _http;
+    private readonly LocalizationManager localizationManager;
 
     private int _selectedIndex;
 
@@ -45,6 +47,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         _cfg = Locator.Current.GetRequiredService<DataManager>();
         _loginMgr = Locator.Current.GetRequiredService<LoginManager>();
         _http = Locator.Current.GetRequiredService<HttpClient>();
+        localizationManager = Locator.Current.GetRequiredService<LocalizationManager>();
 
         // Main Window Tabs
 
@@ -92,6 +95,15 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
                     IdentityViewModel.WizardsDenLoginTab.SwitchToLogin();
                 }
             });
+
+        this.WhenAnyValue(x => x.localizationManager.RequiresRestart)
+            .Subscribe(s =>
+            {
+                this.RaisePropertyChanged(nameof(ShowLanguageChangedPopup));
+                this.RaisePropertyChanged(nameof(LanguageChangedPopupHeaderText));
+                this.RaisePropertyChanged(nameof(LanguageChangedPopupMessageText));
+                this.RaisePropertyChanged(nameof(LanguageChangedPopupButtonText));
+            });
     }
 
     public MainWindow? Control { get; set; }
@@ -112,6 +124,12 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
     [Reactive] public string? BusyTask { get; private set; }
     [Reactive] public ViewModelBase? OverlayViewModel { get; private set; }
+
+    public bool ShowLanguageChangedPopup => localizationManager.RequiresRestart;
+    public string LanguageChangedPopupHeaderText => localizationManager.GetParticularString("Language Changed Restart Popup - Header", "Restart Required");
+    public string LanguageChangedPopupMessageText => localizationManager.GetParticularString("Language Changed Restart Popup - Message", "Language has been changed.  Please start the launcher again for changes to take effect.");
+    public string LanguageChangedPopupButtonText => localizationManager.GetParticularString("Language Changed Restart Popup - Button", "Close Application");
+
 
     public int SelectedIndex
     {
@@ -284,5 +302,14 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         Debug.Assert(IsContentBundleDropValid(fileName));
 
         ConnectingViewModel.StartContentBundle(this, fileName);
+    }
+
+    public void OnLanguageChangedPopupPressed()
+    {
+        // Forces user to restart on language change.
+        // Just a quick, temporary workaround until proper reloading of all strings is properly implemented.
+
+        // Quit app
+        Control?.Close();
     }
 }

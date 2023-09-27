@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SSMV Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:52-0700\n"
-"PO-Revision-Date: 2023-09-23 22:20-0700\n"
+"POT-Creation-Date: 2023-09-27 04:38-0700\n"
+"PO-Revision-Date: 2023-09-27 04:40-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sergal\n"
@@ -28,6 +28,23 @@ msgstr "Merp merp (merp merp http(s)://)"
 msgid "Duplicate hubs"
 msgstr "Duplicate merps"
 
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
+msgctxt "Language Changed Restart Popup - Header"
+msgid "Restart Required"
+msgstr "Merps Required"
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
+msgctxt "Language Changed Restart Popup - Message"
+msgid ""
+"Language has been changed.  Please start the launcher again for changes to "
+"take effect."
+msgstr "Merping shall commence after restart."
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
+msgctxt "Language Changed Restart Popup - Button"
+msgid "Close Application"
+msgstr "MERPP"
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
@@ -43,11 +60,11 @@ msgctxt "Create Identity Tab"
 msgid "(Information)"
 msgstr "(Merpation)"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:75
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:75
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "Not logged in"
 msgstr ""
 
@@ -73,7 +90,7 @@ msgid ""
 "please keep your expectations modest for the time being."
 msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:147
+#: ../SS14.Launcher/Views/MainWindow.xaml:156
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr ""
