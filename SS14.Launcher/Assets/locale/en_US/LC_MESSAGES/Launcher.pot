@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-27 04:38-0700\n"
+"POT-Creation-Date: 2023-09-29 16:35-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,6 +44,29 @@ msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr ""
 
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
+msgctxt "Tab"
+msgid "Servers"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/OptionsTabViewModel.cs:32
+msgctxt "Tab"
+msgid "Options"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
+msgctxt "Tab"
+msgid "News"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+msgid "Remove Favorite"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+msgid "Add Favorite"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
@@ -65,6 +88,33 @@ msgstr ""
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "Not logged in"
+msgstr ""
+
+#: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
+msgid "Direct Connect..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/DirectConnectDialog.xaml:16
+msgid "Enter server address to connect:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/DirectConnectDialog.xaml:19
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:19
+msgid "Connect"
+msgstr ""
+
+#: ../SS14.Launcher/Views/DirectConnectDialog.xaml:20
+#: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
+msgid "Address is invalid"
+msgstr ""
+
+#: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
+msgid "Add Favorite Server"
+msgstr ""
+
+#: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:23
+msgctxt "Example server name"
+msgid "Honk Station"
 msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:42
@@ -94,7 +144,184 @@ msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr ""
 
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:18
+msgctxt "Description of WizDen login method"
+msgid "The original central authentication server for SS14."
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:20
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:31
+msgid "Log in"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:23
+msgctxt "Login field"
+msgid "Username or email"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:26
+msgid "WizDen Password"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:40
+msgid "Forgot your password?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:45
+msgid "Resend email confirmation"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:53
+msgid "Register"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:61
+msgid "Don't have an account? Register!"
+msgstr ""
+
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
 msgid "Welcome"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:16
+msgctxt "Header for wizden login tab"
+msgid "Wizard's Den"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
+msgctxt "Guest Tab Header"
+msgid "Guest"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
+msgctxt "Name entry field on guest tab"
+msgid "Name"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:25
+msgctxt "Button on guest tab"
+msgid "Continue without account"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:17
+msgid "*flip"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:18
+msgid "Clear installed engines"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:20
+msgid "Clear installed server content"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
+msgid "Open log directory"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:30
+msgid ""
+"Set launcher language.  This does not affect in-game language, which is up "
+"to the server you connect to."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
+msgid "Account Settings"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
+msgid ""
+"You can manage your account settings, such as changing email or password, "
+"through our website."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+msgid "Hub Settings"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
+msgid ""
+"Change what hub server or servers you would like to use to fetch the server "
+"list."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
+msgid ""
+"This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
+"suffer from driver bugs. Try this if you are experiencing graphical issues "
+"or crashes."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
+msgid ""
+"Experimental .NET 6 environment variables that enable full Dynamic PGO. "
+"Disable if you experience issues."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
+msgid "Enables logging of any game client output. Useful for developers."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
+msgid ""
+"Enables logging of the launcher. Useful for developers. (requires launcher "
+"restart)"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
+msgid ""
+"For when the developers are *very* stumped with your problem. (requires "
+"launcher restart)"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
+msgid "Whatever temporally relevant icons and logos we can come up with."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
+msgid ""
+"[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
+"YOU KNOW EXACTLY WHAT YOU'RE DOING."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:19
+msgid "Favorite Servers:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:20
+msgctxt "Button"
+msgid "Add Favorite..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:21
+msgctxt "Button"
+msgid "Refresh"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:26
+msgctxt "Button"
+msgid "Direct Connect To Server..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:29
+msgctxt "Button"
+msgid "Run content bundle/replay"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:43
+msgctxt "Button"
+msgid "Go to the servers tab"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:51
+msgid "Mark servers as favorite for easy access here."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
+msgid "Raise to top"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
+msgid "Recent News:"
 msgstr ""

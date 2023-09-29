@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Messaging;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.ServerStatus;
 
@@ -64,7 +65,7 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
     }
 
     public string Name => Favorite?.Name ?? _cacheData.Name ?? _fallbackName;
-    public string FavoriteButtonText => IsFavorite ? "Remove Favorite" : "Add Favorite";
+    public string FavoriteButtonText => IsFavorite ? Loc.GetString("Remove Favorite") : Loc.GetString("Add Favorite");
     private bool IsFavorite => _cfg.FavoriteServers.Lookup(Address).HasValue;
 
     public bool ViewedInFavoritesPane { get; set; }

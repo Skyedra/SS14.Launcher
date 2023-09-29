@@ -5,6 +5,7 @@ using System.Collections.Specialized;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 using Splat;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.ServerStatus;
 using SS14.Launcher.Utility;
 
@@ -19,7 +20,7 @@ public class ServerListTabViewModel : MainWindowTabViewModel
 
     private string? _searchString;
 
-    public override string Name => "Servers";
+    public override string Name => Loc.GetParticularString("Tab", "Servers");
 
     public string? SearchString
     {
