@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: SSMV Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-27 04:38-0700\n"
-"PO-Revision-Date: 2023-09-29 11:13+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"PO-Revision-Date: 2023-09-29 11:24+0000\n"
+"Last-Translator: Test Translator <TestUser@users.noreply.weblate."
+"spacestationmultiverse.com>\n"
 "Language-Team: Sergal (test language) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/sergal/>\n"
 "Language: sergal\n"
@@ -68,7 +68,7 @@ msgstr "No merp selected"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "Not logged in"
-msgstr ""
+msgstr "Not merped in"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:42
 msgctxt "Header Buttons"
