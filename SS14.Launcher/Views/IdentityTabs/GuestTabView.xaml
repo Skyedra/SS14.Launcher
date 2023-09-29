@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
              xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SS14.Launcher.Views.IdentityTabs.GuestTabView"
              Name="GuestTab">
@@ -12,16 +13,16 @@
   </Design.DataContext>
 
   <DockPanel LastChildFill="False">
-    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="Guest" Classes="NanoHeadingMedium" />
+    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Guest, Context=Guest Tab Header}" Classes="NanoHeadingMedium" />
 
     <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5">A guest identity does not require any centralized authentication.  However, the game server may not be able to track your playtime.</TextBlock>
 
      <TextBox  DockPanel.Dock="Top" Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
-             Watermark="Name"
+             Watermark="{loc:Get Name, Context=Name entry field on guest tab}"
              Text="{Binding EditingUsername, Mode=TwoWay}" IsEnabled="{Binding !Busy}" />
 
       <Button DockPanel.Dock="Top" Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
-              Content="Continue without account" Command="{Binding SkipLoginPressed}">
+              Content="{loc:Get Continue without account, Context=Button on guest tab}" Command="{Binding SkipLoginPressed}">
         <Button.IsEnabled>
           <MultiBinding Converter="{x:Static BoolConverters.And}">
             <Binding Path="IsInputValid" />

@@ -6,13 +6,14 @@
              xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SS14.Launcher.Views.IdentityTabs.LoginTabView"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
              Name="LoginTab">
   <Design.DataContext>
     <identityTabs:LoginTabViewModel />
   </Design.DataContext>
 
   <DockPanel>
-    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="Wizard's Den" Classes="NanoHeadingMedium" />
+    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Wizard\'s Den, Context=Header for wizden login tab}" Classes="NanoHeadingMedium" />
 
     <Panel Background="{DynamicResource StripeBackBrush}">
       <ContentControl Content="{Binding Screen}" />

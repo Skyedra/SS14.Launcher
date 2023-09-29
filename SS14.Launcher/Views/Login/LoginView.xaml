@@ -5,6 +5,7 @@
              xmlns:vml="clr-namespace:SS14.Launcher.ViewModels.Login;assembly=SS14.Launcher"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SS14.Launcher.Views.Login.LoginView"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
              Name="Login">
   <Design.DataContext>
     <vml:LoginViewModel />
@@ -14,20 +15,20 @@
 
     <TextBlock DockPanel.Dock="Top" VerticalAlignment="Center" HorizontalAlignment="Left"
                TextWrapping="Wrap"
-               Text="The original central authentication server for SS14." Margin="5 5 5 5" />
+               Text="{loc:Get The original central authentication server for SS14., Context=Description of WizDen login method}" Margin="5 5 5 5" />
 
-    <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Top" Classes="NanoHeadingMedium" Text="Log in" Margin="0 20 0 0"/>
+    <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Top" Classes="NanoHeadingMedium" Text="{loc:Get Log in}" Margin="0 20 0 0"/>
 
     <TextBox DockPanel.Dock="Top" Name="NameBox" MaxWidth="300" Margin="0, 10, 0, 0"
-             Watermark="Username or email"
+             Watermark="{loc:Get Username or email, Context=Login field}"
              Text="{Binding EditingUsername, Mode=TwoWay}" IsEnabled="{Binding !Busy}" />
 
-    <TextBox DockPanel.Dock="Top" Name="PasswordBox" MaxWidth="300" Margin="0, 4, 0, 0" Watermark="WizDen Password"
+    <TextBox DockPanel.Dock="Top" Name="PasswordBox" MaxWidth="300" Margin="0, 4, 0, 0" Watermark="{loc:Get WizDen Password}"
              Text="{Binding EditingPassword, Mode=TwoWay}" PasswordChar="•" IsEnabled="{Binding !Busy}" />
 
     <DockPanel DockPanel.Dock="Top" LastChildFill="False" MaxWidth="300" Margin="0 20 0 0">
       <Button DockPanel.Dock="Right" HorizontalAlignment="Center"
-              Content="Log in" Command="{Binding OnLogInButtonPressed}">
+              Content="{loc:Get Log in}" Command="{Binding OnLogInButtonPressed}">
         <Button.IsEnabled>
           <MultiBinding Converter="{x:Static BoolConverters.And}">
             <Binding Path="IsInputValid" />
@@ -36,12 +37,12 @@
         </Button.IsEnabled>
       </Button>
 
-      <Button DockPanel.Dock="Left" HorizontalAlignment="Center" Content="Forgot your password?"
+      <Button DockPanel.Dock="Left" HorizontalAlignment="Center" Content="{loc:Get Forgot your password?}"
               Command="{Binding ParentVM.SwitchToForgotPassword}" IsEnabled="{Binding !Busy}" />
     </DockPanel>
 
     <DockPanel DockPanel.Dock="Top" LastChildFill="False" MaxWidth="300">
-        <Button DockPanel.Dock="Left" HorizontalAlignment="Center" Content="Resend email confirmation" Command="{Binding ResendConfirmationPressed}"/>
+        <Button DockPanel.Dock="Left" HorizontalAlignment="Center" Content="{loc:Get Resend email confirmation}" Command="{Binding ResendConfirmationPressed}"/>
     </DockPanel>
 
 <!--
@@ -49,7 +50,7 @@
             Text="" />
             -->
 
-    <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Top" Classes="NanoHeadingMedium" Text="Register" Margin="0 20 0 0"/>
+    <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Top" Classes="NanoHeadingMedium" Text="{loc:Get Register}" Margin="0 20 0 0"/>
 
 <!--
     <Button DockPanel.Dock="Bottom" Classes="BigButton" Margin="0 4" HorizontalAlignment="Center"
@@ -57,7 +58,7 @@
             IsEnabled="{Binding !Busy}" />
 -->
     <Button DockPanel.Dock="Top" Margin="0 4" HorizontalAlignment="Center"
-            Content="Don't have an account? Register!" Command="{Binding RegisterPressed}"
+            Content="{loc:Get Don\'t have an account? Register!}" Command="{Binding RegisterPressed}"
             IsEnabled="{Binding !Busy}" />
   </DockPanel>
 </UserControl>
