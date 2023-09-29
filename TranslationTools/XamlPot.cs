@@ -102,6 +102,7 @@ class XamlPot
 	{
 		return input
 			.Replace("\\,", ",") // comma escape is a xaml specific thing
+			.Replace("\\'", "'") // apostrophe escape is a xaml specific thing
 			.Replace("\"", "\\\""); // this allows for quotes
 	}
 
