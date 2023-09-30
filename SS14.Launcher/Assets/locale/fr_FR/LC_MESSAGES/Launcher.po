@@ -4,108 +4,130 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
 "POT-Creation-Date: 2023-09-29 18:35-0700\n"
-"PO-Revision-Date: 2023-09-27 22:44-0700\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2023-09-30 04:18+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
+"Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
+"space-station-multiverse/launcher/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:71
+#, fuzzy
 msgid "Specify at least one hub"
-msgstr ""
+msgstr "Spécifiez au moins un hub"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:73
+#, fuzzy
 msgid "Invalid hub (don't forget http(s)://)"
-msgstr ""
+msgstr "Hub non valide (n'oubliez pas http(s)://)"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:75
+#, fuzzy
 msgid "Duplicate hubs"
-msgstr ""
+msgstr "Hubs dupliqués"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
+#, fuzzy
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
-msgstr ""
+msgstr "Redémarrage requis"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
+#, fuzzy
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
 "take effect."
 msgstr ""
+"La langue a été modifiée.  Veuillez redémarrer le lanceur pour que les "
+"modifications prennent effet."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
+#, fuzzy
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
-msgstr ""
+msgstr "Fermer l'application"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
+#, fuzzy
 msgctxt "Tab"
 msgid "Servers"
-msgstr ""
+msgstr "Serveurs"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/OptionsTabViewModel.cs:32
+#, fuzzy
 msgctxt "Tab"
 msgid "Options"
-msgstr ""
+msgstr "Des options"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:59
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:60
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:64
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:65
+#, fuzzy
 msgctxt "Server Filters"
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:69
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
-msgstr ""
+msgstr "Les serveurs sans joueurs ne seront pas affichés"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Hide empty"
-msgstr ""
+msgstr "Masquer le vide"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
-msgstr ""
+msgstr "Les serveurs pleins ne seront pas affichés"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Hide full"
-msgstr ""
+msgstr "Masquer complètement"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
-msgstr ""
+msgstr "Les serveurs avec moins de joueurs ne seront pas affichés"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Minimum: "
-msgstr ""
+msgstr "Minimum : "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
-msgstr ""
+msgstr "Les serveurs avec plus de joueurs ne seront pas affichés"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:89
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Maximum: "
-msgstr ""
+msgstr "Maximum : "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:189
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:190
@@ -113,39 +135,47 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:194
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:197
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:198
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Unspecified"
-msgstr ""
+msgstr "Non précisé"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
+#, fuzzy
 msgctxt "Tab"
 msgid "News"
-msgstr ""
+msgstr "Actualités"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+#, fuzzy
 msgid "Remove Favorite"
-msgstr ""
+msgstr "Supprimer le favori"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+#, fuzzy
 msgid "Add Favorite"
-msgstr ""
+msgstr "Ajouter un favori"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
-msgstr ""
+msgstr "Le repaire du magicien"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "Guest"
-msgstr ""
+msgstr "Invité"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:21
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "(Information)"
-msgstr ""
+msgstr "(Informations)"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:27
+#, fuzzy
 msgid ""
 "Let's set up your identity!\n"
 "\n"
@@ -163,326 +193,439 @@ msgid ""
 "screen later to create identities at other providers, should you wish to do "
 "so."
 msgstr ""
+"Configurez votre identité !\n"
+"\n"
+"À partir de cet écran, vous pouvez créer une identité auprès de l'un des "
+"fournisseurs d'authentification établis ou simplement utiliser un "
+"identifiant d'invité.\n"
+"\n"
+"Les différents serveurs acceptent différentes manières de vous authentifier, "
+"et tous les serveurs n'acceptent pas tous les fournisseurs "
+"d'authentification.\n"
+"\n"
+"Il est possible de gérer plusieurs identités à l'aide de ce lanceur, il "
+"suffit de consulter cette page pour les établir selon les besoins. (Bien que "
+"vous ne souhaitiez probablement pas créer plus d'une identité par "
+"fournisseur).\n"
+"\n"
+"Commencez par choisir un fournisseur d'identité sur la gauche. Vous pouvez "
+"revenir sur cet écran ultérieurement pour créer des identités chez d'autres "
+"fournisseurs, si vous le souhaitez."
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
+#, fuzzy
 msgid "No account selected"
-msgstr ""
+msgstr "Aucun compte sélectionné"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
+#, fuzzy
 msgid "Not logged in"
-msgstr ""
+msgstr "Non connecté"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+#, fuzzy
 msgid "Switch account:"
-msgstr ""
+msgstr "Changer de compte :"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+#, fuzzy
 msgid "Select account:"
-msgstr ""
+msgstr "Sélectionnez un compte :"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
+#, fuzzy
 msgid "Log Launcher"
-msgstr ""
+msgstr "Lanceur de journaux"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
+#, fuzzy
 msgid "Direct Connect..."
-msgstr ""
+msgstr "Connexion directe..."
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:16
+#, fuzzy
 msgid "Enter server address to connect:"
-msgstr ""
+msgstr "Entrez l'adresse du serveur pour vous connecter :"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:19
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:19
+#, fuzzy
 msgid "Connect"
-msgstr ""
+msgstr "Connectez"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:20
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
+#, fuzzy
 msgid "Address is invalid"
-msgstr ""
+msgstr "L'adresse n'est pas valide"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
+#, fuzzy
 msgid "Add Favorite Server"
-msgstr ""
+msgstr "Ajouter un serveur favori"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:23
+#, fuzzy
 msgctxt "Example server name"
 msgid "Honk Station"
-msgstr ""
+msgstr "Gare de Klaxon"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:42
+#, fuzzy
 msgctxt "Header Buttons"
 msgid "SSMV Discord"
-msgstr ""
+msgstr "SSMV Discord"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:49
+#, fuzzy
 msgctxt "Header Buttons"
 msgid "Website"
-msgstr ""
+msgstr "Site Web"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:117
+#, fuzzy
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
 msgstr ""
+"Ce lanceur n'est plus à jour. Veuillez télécharger une nouvelle version sur "
+"notre site Web."
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:131
+#, fuzzy
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
 msgstr ""
+"La station spatiale est toujours en développement. Nous espérons que vous "
+"aimerez ce que vous verrez, mais veuillez garder vos attentes modestes pour "
+"le moment."
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:156
+#, fuzzy
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
-msgstr ""
+msgstr "Jeu Drop to Run"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:18
+#, fuzzy
 msgctxt "Description of WizDen login method"
 msgid "The original central authentication server for SS14."
-msgstr ""
+msgstr "Le serveur d'authentification central d'origine pour SS14."
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:20
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:31
+#, fuzzy
 msgid "Log in"
-msgstr ""
+msgstr "Connectez-vous"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:23
+#, fuzzy
 msgctxt "Login field"
 msgid "Username or email"
-msgstr ""
+msgstr "Nom d'utilisateur ou e-mail"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:26
+#, fuzzy
 msgid "WizDen Password"
-msgstr ""
+msgstr "Mot de passe WizDen"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:40
+#, fuzzy
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Vous avez oublié votre mot de passe ?"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:45
+#, fuzzy
 msgid "Resend email confirmation"
-msgstr ""
+msgstr "Renvoyer un e-mail de confirmation"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:53
+#, fuzzy
 msgid "Register"
-msgstr ""
+msgstr "S'inscrire"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:61
+#, fuzzy
 msgid "Don't have an account? Register!"
-msgstr ""
+msgstr "Vous n'avez pas de compte ? Inscrivez-vous !"
 
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
+#, fuzzy
 msgctxt "Greeting Header"
 msgid "Welcome"
-msgstr ""
+msgstr "Bienvenue"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:16
+#, fuzzy
 msgctxt "Header for wizden login tab"
 msgid "Wizard's Den"
-msgstr ""
+msgstr "Le repaire du magicien"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
+#, fuzzy
 msgctxt "Guest Tab Header"
 msgid "Guest"
-msgstr ""
+msgstr "Invité"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
+#, fuzzy
 msgctxt "Name entry field on guest tab"
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:25
+#, fuzzy
 msgctxt "Button on guest tab"
 msgid "Continue without account"
-msgstr ""
+msgstr "Continuer sans compte"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:17
+#, fuzzy
 msgid "*flip"
-msgstr ""
+msgstr "*retourner"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:18
+#, fuzzy
 msgid "Clear installed engines"
-msgstr ""
+msgstr "Nettoyez les moteurs installés"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:20
+#, fuzzy
 msgid "Clear installed server content"
-msgstr ""
+msgstr "Effacer le contenu du serveur installé"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
+#, fuzzy
 msgid "Open log directory"
-msgstr ""
+msgstr "Ouvrir le répertoire des journaux"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:30
+#, fuzzy
 msgid ""
 "Set launcher language.  This does not affect in-game language, which is up "
 "to the server you connect to."
 msgstr ""
+"Définissez la langue du lanceur. Cela n'affecte pas la langue du jeu, qui "
+"dépend du serveur auquel vous vous connectez."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
+#, fuzzy
 msgid "Account Settings"
-msgstr ""
+msgstr "Paramètres du compte"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
+#, fuzzy
 msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through our website."
 msgstr ""
+"Vous pouvez gérer les paramètres de votre compte, tels que la modification "
+"de votre adresse e-mail ou de votre mot de passe, via notre site Web."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+#, fuzzy
 msgid "Hub Settings"
-msgstr ""
+msgstr "Réglages du hub"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
+#, fuzzy
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
 msgstr ""
+"Modifiez le ou les serveurs hub que vous souhaitez utiliser pour récupérer "
+"la liste des serveurs."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
+#, fuzzy
 msgid "Compatibility Mode"
-msgstr ""
+msgstr "Mode de compatibilité"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
+#, fuzzy
 msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
 "or crashes."
 msgstr ""
+"Cela utilise OpenGL ES 2 (via ANGLE si nécessaire), qui est moins "
+"susceptible de souffrir de bogues de pilote. Essayez cette solution si vous "
+"rencontrez des problèmes graphiques ou si vous tombez en panne."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
+#, fuzzy
 msgid "Experimental Performance Options"
-msgstr ""
+msgstr "Options de performance expérimentales"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
+#, fuzzy
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
 msgstr ""
+"Variables d'environnement .NET 6 expérimentales qui activent un PGO "
+"dynamique complet. Désactivez-la si vous rencontrez des problèmes."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
+#, fuzzy
 msgid "Log Client"
-msgstr ""
+msgstr "Client de journal"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
+#, fuzzy
 msgid "Enables logging of any game client output. Useful for developers."
 msgstr ""
+"Permet de consigner les sorties de n'importe quel client de jeu. Utile pour "
+"les développeurs."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
+#, fuzzy
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
 msgstr ""
+"Active la journalisation du lanceur. Utile pour les développeurs. (nécessite "
+"le redémarrage du lanceur)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
+#, fuzzy
 msgid "Verbose Launcher Logging"
-msgstr ""
+msgstr "Journalisation détaillée du lanceur"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
+#, fuzzy
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
 msgstr ""
+"Lorsque les développeurs sont *très* perplexes face à votre problème. ("
+"nécessite le redémarrage du lanceur)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
+#, fuzzy
 msgid "Seasonal Branding"
-msgstr ""
+msgstr "Branding saisonnier"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
+#, fuzzy
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr ""
+"Quelles que soient les icônes et logos temporellement pertinents que nous "
+"pouvons créer."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
+#, fuzzy
 msgid "Disable Engine Signature Checks"
-msgstr ""
+msgstr "Désactiver les vérifications de signature du moteur"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
+#, fuzzy
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
 msgstr ""
+"[DEV UNIQUEMENT] Désactive la vérification des signatures du moteur. NE "
+"L'ACTIVEZ QUE SI VOUS SAVEZ EXACTEMENT CE QUE VOUS FAITES."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:19
+#, fuzzy
 msgid "Favorite Servers:"
-msgstr ""
+msgstr "Serveurs favoris :"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:20
+#, fuzzy
 msgctxt "Button"
 msgid "Add Favorite..."
-msgstr ""
+msgstr "Ajouter un favori..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:21
+#, fuzzy
 msgctxt "Button"
 msgid "Refresh"
-msgstr ""
+msgstr "Actualiser"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:26
+#, fuzzy
 msgctxt "Button"
 msgid "Direct Connect To Server..."
-msgstr ""
+msgstr "Connexion directe au serveur..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:29
+#, fuzzy
 msgctxt "Button"
 msgid "Run content bundle/replay"
-msgstr ""
+msgstr "Exécuter un bundle de contenu/une rediffusion"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:43
+#, fuzzy
 msgctxt "Button"
 msgid "Go to the servers tab"
-msgstr ""
+msgstr "Accédez à l'onglet serveurs"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:51
+#, fuzzy
 msgid "Mark servers as favorite for easy access here."
-msgstr ""
+msgstr "Marquez les serveurs comme favoris pour un accès facile ici."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
+#, fuzzy
 msgid "Raise to top"
-msgstr ""
+msgstr "Relevez vers le haut"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:18
+#, fuzzy
 msgid "Refresh"
-msgstr ""
+msgstr "Actualiser"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:21
+#, fuzzy
 msgid "Filters ({0"
-msgstr ""
+msgstr "Filtres ({0)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:27
+#, fuzzy
 msgid "Search For Servers..."
-msgstr ""
+msgstr "Rechercher des serveurs..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
+#, fuzzy
 msgid "Recent News:"
-msgstr ""
+msgstr "Nouvelles récentes :"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:32
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:37
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Region"
-msgstr ""
+msgstr "Région"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:42
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Role-play level"
-msgstr ""
+msgstr "Niveau de jeu de rôle"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:47
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Player count"
-msgstr ""
+msgstr "Nombre de joueurs"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:56
+#, fuzzy
 msgctxt "Server Filters"
 msgid "18+"
-msgstr ""
+msgstr "18 ans et plus"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Hub"
-msgstr ""
+msgstr "Hub"
