@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
 "POT-Creation-Date: 2023-09-29 22:32-0700\n"
-"PO-Revision-Date: 2023-09-30 09:35+0000\n"
+"PO-Revision-Date: 2023-10-01 00:37+0000\n"
 "Last-Translator: DEATHB4DEFEAT <DEATHB4DEFEAT@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
 "Language-Team: Spanish (Mexico) <http://weblate.spacestationmultiverse.com/"
@@ -590,7 +590,7 @@ msgstr "Estación de Bocina"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:15
 msgid "Space Station Multiverse Launcher"
-msgstr "Lanzador Multiverso de Estación Espacial"
+msgstr "Space Station Multiverse Launcher"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:42
 msgctxt "Header Buttons"
