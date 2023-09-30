@@ -126,7 +126,7 @@ msgstr ""
 #: ../SS14.Launcher/Views/MainWindow.xaml:49
 msgctxt "Header Buttons"
 msgid "Website"
-msgstr ""
+msgstr "Merpsite"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:117
 msgid ""
