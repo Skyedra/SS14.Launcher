@@ -15,6 +15,11 @@ public static class Loc
         return localizationManager.GetString(sourceString);
     }
 
+    public static string GetString(string sourceString, params object[] args)
+    {
+        return localizationManager.GetString(sourceString, args);
+    }
+
     public static string GetParticularString(string context, string sourceString)
     {
         return localizationManager.GetParticularString(context, sourceString);

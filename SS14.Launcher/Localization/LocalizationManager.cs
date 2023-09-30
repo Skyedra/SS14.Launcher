@@ -173,6 +173,14 @@ public class LocalizationManager : ReactiveObject
         return activeCatalog.GetString(sourceString);
     }
 
+    public string GetString(string sourceString, params object[] args)
+    {
+        if (activeCatalog == null)
+            return sourceString;
+
+        return activeCatalog.GetString(sourceString, args);
+    }
+
     public string GetParticularString(string context, string sourceString)
     {
         if (activeCatalog == null)
@@ -243,8 +251,11 @@ public class LocalizationManager : ReactiveObject
     {
         // TODO: something to scan through and return available languages
 
+        var french = new CultureInfo("fr_FR");
+
         return new Dictionary<string, CultureInfo> {
             {"English (US)", null},
+            {french.DisplayName, french},
             {"Sergal", new CultureInfo("sergal")}
         };
     }
