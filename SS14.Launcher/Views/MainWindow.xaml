@@ -12,7 +12,7 @@
         Width="650" Height="400"
         x:Class="SS14.Launcher.Views.MainWindow"
         Icon="{DynamicResource WindowIcon}"
-        Title="Space Station Multiverse Launcher"
+        Title="{loc:Get Space Station Multiverse Launcher}"
         DragDrop.AllowDrop="True">
 
   <Design.DataContext>

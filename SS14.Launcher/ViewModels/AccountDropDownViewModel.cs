@@ -79,7 +79,7 @@ public class AccountDropDownViewModel : ViewModelBase
         }
     }
 
-    public string LogoutText => _cfg.Logins.Count == 1 ? "Log out" : $"Log out of {_loginMgr.ActiveAccount?.Username}";
+    public string LogoutText => _cfg.Logins.Count == 1 ? Loc.GetString("Log out") : Loc.GetString("Log out of {0}", _loginMgr.ActiveAccount?.Username);
 
     public bool AccountSwitchVisible => _cfg.Logins.Count > 1 || _loginMgr.ActiveAccount == null;
     public string AccountSwitchText => _loginMgr.ActiveAccount != null ? Loc.GetString("Switch account:") : Loc.GetString("Select account:");

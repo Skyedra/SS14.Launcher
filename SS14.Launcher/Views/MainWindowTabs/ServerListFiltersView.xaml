@@ -24,7 +24,7 @@
   </UserControl.Resources>
 
   <DockPanel>
-    <TextBlock DockPanel.Dock="Top" Text="Filters" Classes="SubText" Margin="4 4 4 8" />
+    <TextBlock DockPanel.Dock="Top" Text="{loc:Get Filters}" Classes="SubText" Margin="4 4 4 8" />
 
     <ScrollViewer>
       <StackPanel Orientation="Vertical">

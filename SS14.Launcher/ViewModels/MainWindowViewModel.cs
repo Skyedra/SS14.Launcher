@@ -111,8 +111,8 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     public IReadOnlyList<MainWindowTabViewModel> Tabs { get; }
 
     public bool LoggedIn => _loginMgr.ActiveAccount != null;
-    public string LoginText => LoggedIn ? $"'Logged in' as {Username}." : "Not logged in.";
-    public string ManageAccountText => LoggedIn ? "Change Account..." : "Log in...";
+    public string LoginText => LoggedIn ? Loc.GetString("'Logged in' as {0}.", Username) : Loc.GetString("Not logged in.");
+    public string ManageAccountText => LoggedIn ? Loc.GetString("Change Account...") : Loc.GetString("Log in...");
     private string? Username => _loginMgr.ActiveAccount?.Username;
     public bool AccountDropDownVisible => _loginMgr.Logins.Count != 0;
 

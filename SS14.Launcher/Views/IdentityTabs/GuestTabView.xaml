@@ -15,7 +15,7 @@
   <DockPanel LastChildFill="False">
     <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Guest, Context=Guest Tab Header}" Classes="NanoHeadingMedium" />
 
-    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5">A guest identity does not require any centralized authentication.  However, the game server may not be able to track your playtime.</TextBlock>
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get A guest identity does not require any centralized authentication.  However\, the game server may not be able to track your playtime.}" />
 
      <TextBox  DockPanel.Dock="Top" Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
              Watermark="{loc:Get Name, Context=Name entry field on guest tab}"

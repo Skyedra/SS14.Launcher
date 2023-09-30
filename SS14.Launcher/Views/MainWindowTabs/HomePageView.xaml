@@ -50,7 +50,7 @@
                       Orientation="Vertical" VerticalAlignment="Center">
             <TextBlock Text="{loc:Get Mark servers as favorite for easy access here.}" HorizontalAlignment="Center"
                        Margin="0 0 0 10" />
-            <Button Content="Go to the servers tab" Command="{Binding MainWindowViewModel.SelectTabServers}"
+            <Button Content="{loc:Get Go to the servers tab, Context=Button}" Command="{Binding MainWindowViewModel.SelectTabServers}"
                     HorizontalAlignment="Center" />
           </StackPanel>
         </Panel>
