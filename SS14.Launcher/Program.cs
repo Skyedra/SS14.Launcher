@@ -139,8 +139,22 @@ internal static class Program
         if (!OperatingSystem.IsWindows() || Environment.OSVersion.Version.Build >= 9600)
             return;
 
-        var text = Loc.GetString("You are using an old version of Windows that is no longer supported by Space Station 14.\n\nIf anything breaks, DO NOT ASK FOR HELP OR SUPPORT.");
-        var caption = Loc.GetString("Unsupported Windows version");
+        // TODO - Localization is not yet loaded since it depends on Avalonia -- this function is called before Avalonia
+        // load.  Could give up on loading assets using the asset loader and then have early access to loc?
+
+        var text =
+            "You are using an old version of Windows that is no longer supported by Space Station 14.\n\n" +
+            "If anything breaks, DO NOT ASK FOR HELP OR SUPPORT.";
+
+        var caption = "Unsupported Windows version";
+
+        if (Language.UserHasLanguage("ru"))
+        {
+            text = "Вы используете старую версию Windows которая больше не поддерживается Space Station 14.\n\n" +
+                   "При возникновении ошибок НЕ БУДЕТ ОКАЗАНО НИКАКОЙ ПОДДЕРЖКИ.";
+
+            caption = "Неподдерживаемая версия Windows";
+        }
 
         fixed (char* pText = text)
         fixed (char* pCaption = caption)
@@ -173,6 +187,9 @@ internal static class Program
             return;
 
         var (shortName, longName) = badPrograms[badFound];
+
+        // TODO - Localization is not yet loaded since it depends on Avalonia -- this function is called before Avalonia
+        // load.  Could give up on loading assets using the asset loader and then have early access to loc?
 
         var text = $"{longName} is detected on your system.\n\n{shortName} is known to cause the game to crash while loading. If the game fails to start, uninstall {shortName}.\n\nThis is {shortName}'s fault, do not ask us for help or support.";
         var caption = $"{longName} detected!";
