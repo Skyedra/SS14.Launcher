@@ -69,6 +69,17 @@ public class ServerListTabViewModel : MainWindowTabViewModel
     [Reactive] public bool FiltersVisible { get; set; }
 
     public ServerListFiltersViewModel Filters { get; }
+    public string FiltersButtonText
+    {
+        get
+        {
+            return Loc.GetParticularString(
+                "Filter Button that shows current servers out of total servers",
+                "Filters ({0} / {1})",
+                Filters.FilteredServers,
+                Filters.TotalServers);
+        }
+    }
 
     public ServerListTabViewModel(MainWindowViewModel windowVm)
     {
@@ -91,6 +102,17 @@ public class ServerListTabViewModel : MainWindowTabViewModel
                     break;
             }
         };
+
+        /*Filters.FilterPlayerCountMaximum.PropertyChanged += (_, args) =>
+        {
+            this.RaisePropertyChanged(nameof(FiltersButtonText));
+        };*/
+
+        Filters.WhenAnyValue(x => x.FilteredServers)
+            .Subscribe(x => this.RaisePropertyChanged(nameof(FiltersButtonText)));
+
+        Filters.WhenAnyValue(x => x.TotalServers)
+            .Subscribe(x => this.RaisePropertyChanged(nameof(FiltersButtonText)));
     }
 
     private void FiltersOnFiltersUpdated()

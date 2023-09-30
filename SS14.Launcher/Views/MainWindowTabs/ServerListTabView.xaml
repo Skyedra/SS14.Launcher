@@ -16,14 +16,7 @@
 
     <DockPanel DockPanel.Dock="Bottom" Margin="4 4 4 0">
       <Button DockPanel.Dock="Right" Content="{loc:Get Refresh}" Command="{Binding RefreshPressed}"  Classes="OpenLeft" />
-      <ToggleButton DockPanel.Dock="Right" IsChecked="{Binding FiltersVisible}" Classes="OpenRight">
-        <ToggleButton.Content>
-          <MultiBinding StringFormat="{loc:Get Filters ({0} / {1})}">
-            <Binding Path="Filters.FilteredServers" />
-            <Binding Path="Filters.TotalServers" />
-          </MultiBinding>
-        </ToggleButton.Content>
-      </ToggleButton>
+      <ToggleButton DockPanel.Dock="Right" IsChecked="{Binding FiltersVisible}" Classes="OpenRight" Content="{Binding FiltersButtonText}>" />
       <TextBox DockPanel.Dock="Right" Text="{Binding SearchString, Mode=TwoWay}" Watermark="{loc:Get Search For Servers...}"
                UseFloatingWatermark="False"
                Margin="0 0 8 0" />
