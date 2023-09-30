@@ -252,10 +252,22 @@ public class LocalizationManager : ReactiveObject
         // TODO: something to scan through and return available languages
 
         var french = new CultureInfo("fr_FR");
+        var italian = new CultureInfo("it");
+        var german = new CultureInfo("de");
+        var spanish = new CultureInfo("es");
+        var ptBr = new CultureInfo("pt_BR");
+        var zhHans = new CultureInfo("zh_Hans");
+        var ruRu = new CultureInfo("ru_RU");
 
         return new Dictionary<string, CultureInfo> {
             {"English (US)", null},
+            {ruRu.DisplayName, ruRu},
             {french.DisplayName, french},
+            {italian.DisplayName, italian},
+            {german.DisplayName, german},
+            {spanish.DisplayName, spanish},
+            {ptBr.DisplayName, ptBr},
+            {zhHans.DisplayName, zhHans},
             {"Sergal", new CultureInfo("sergal")}
         };
     }
