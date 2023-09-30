@@ -5,6 +5,7 @@ using System.Collections.Specialized;
 using System.Globalization;
 using System.Linq;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.ServerStatus;
 using SS14.Launcher.Utility;
@@ -54,33 +55,38 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
     {
         _dataManager = dataManager;
 
-        FiltersEighteenPlus.Add(new ServerFilterViewModel("Yes", "Yes",
+        FiltersEighteenPlus.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "Yes"),
+            Loc.GetParticularString("Server Filters", "Yes"),
             new ServerFilter(ServerFilterCategory.EighteenPlus, ServerFilter.DataTrue), this));
-        FiltersEighteenPlus.Add(new ServerFilterViewModel("No", "No",
+
+        FiltersEighteenPlus.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "No"),
+            Loc.GetParticularString("Server Filters", "No"),
             new ServerFilter(ServerFilterCategory.EighteenPlus, ServerFilter.DataFalse), this));
 
         FilterPlayerCountHideEmpty = new ServerFilterViewModel(
-            "Servers with no players will not be shown",
-            "Hide empty",
+            Loc.GetParticularString("Server Filters", "Servers with no players will not be shown"),
+            Loc.GetParticularString("Server Filters", "Hide empty"),
             ServerFilter.PlayerCountHideEmpty,
             this);
 
         FilterPlayerCountHideFull = new ServerFilterViewModel(
-            "Servers that are full will not be shown",
-            "Hide full",
+            Loc.GetParticularString("Server Filters", "Servers that are full will not be shown"),
+            Loc.GetParticularString("Server Filters", "Hide full"),
             ServerFilter.PlayerCountHideFull,
             this);
 
         FilterPlayerCountMinimum = new ServerFilterCounterViewModel(
-            "Servers with less players will not be shown",
-            "Minimum: ",
+            Loc.GetParticularString("Server Filters", "Servers with less players will not be shown"),
+            Loc.GetParticularString("Server Filters", "Minimum: "),
             ServerFilter.PlayerCountMin,
             _dataManager.GetCVarEntry(CVars.FilterPlayerCountMinValue),
             this);
 
         FilterPlayerCountMaximum = new ServerFilterCounterViewModel(
-            "Servers with more players will not be shown",
-            "Maximum: ",
+            Loc.GetParticularString("Server Filters", "Servers with more players will not be shown"),
+            Loc.GetParticularString("Server Filters", "Maximum: "),
             ServerFilter.PlayerCountMax,
             _dataManager.GetCVarEntry(CVars.FilterPlayerCountMaxValue),
             this);
@@ -179,11 +185,17 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
         filtersHub.Sort(ServerFilterShortNameComparer.Instance);
 
         // Unspecified always comes last.
-        filtersLanguage.Add(new ServerFilterViewModel("Unspecified", "Unspecified",
+        filtersLanguage.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "Unspecified"),
+            Loc.GetParticularString("Server Filters", "Unspecified"),
             new ServerFilter(ServerFilterCategory.Language, ServerFilter.DataUnspecified), this));
-        filtersRegion.Add(new ServerFilterViewModel("Unspecified", "Unspecified",
+        filtersRegion.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "Unspecified"),
+            Loc.GetParticularString("Server Filters", "Unspecified"),
             new ServerFilter(ServerFilterCategory.Region, ServerFilter.DataUnspecified), this));
-        filtersRolePlay.Add(new ServerFilterViewModel("Unspecified", "Unspecified",
+        filtersRolePlay.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "Unspecified"),
+            Loc.GetParticularString("Server Filters", "Unspecified"),
             new ServerFilter(ServerFilterCategory.RolePlay, ServerFilter.DataUnspecified), this));
 
         // Set.

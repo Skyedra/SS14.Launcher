@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:mainWindowTabs="clr-namespace:SS14.Launcher.ViewModels.MainWindowTabs"
              xmlns:mwtv="clr-namespace:SS14.Launcher.Views.MainWindowTabs"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SS14.Launcher.Views.MainWindowTabs.ServerListFiltersView">
   <Design.DataContext>
@@ -28,22 +29,22 @@
     <ScrollViewer>
       <StackPanel Orientation="Vertical">
         <DockPanel Classes="ServerFilterGroup">
-          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="Language" />
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Language, Context=Server Filters}" />
           <ItemsControl Items="{Binding FiltersLanguage}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
-          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="Region" />
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Region, Context=Server Filters}" />
           <ItemsControl Items="{Binding FiltersRegion}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
-          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="Role-play level" />
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Role-play level, Context=Server Filters}" />
           <ItemsControl Items="{Binding FiltersRolePlay}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
-          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="Player count" />
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Player count, Context=Server Filters}" />
           <WrapPanel>
             <mwtv:ServerFilterCounterView DataContext="{Binding FilterPlayerCountMinimum}" />
             <mwtv:ServerFilterCounterView DataContext="{Binding FilterPlayerCountMaximum}" />
@@ -52,13 +53,13 @@
           </WrapPanel>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
-          <TextBlock MinWidth="150" DockPanel.Dock="Left" VerticalAlignment="Center" Classes="SubText" Text="18+" />
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" VerticalAlignment="Center" Classes="SubText" Text="{loc:Get 18+, Context=Server Filters}" />
           <ItemsControl Items="{Binding FiltersEighteenPlus}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
 
         <DockPanel Classes="ServerFilterGroup">
-          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="Hub" />
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Hub, Context=Server Filters}" />
           <ItemsControl Items="{Binding FiltersHub}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource WideFilterTemplate}">
           </ItemsControl>

@@ -139,19 +139,8 @@ internal static class Program
         if (!OperatingSystem.IsWindows() || Environment.OSVersion.Version.Build >= 9600)
             return;
 
-        var text =
-            "You are using an old version of Windows that is no longer supported by Space Station 14.\n\n" +
-            "If anything breaks, DO NOT ASK FOR HELP OR SUPPORT.";
-
-        var caption = "Unsupported Windows version";
-
-        if (Language.UserHasLanguage("ru"))
-        {
-            text = "Вы используете старую версию Windows которая больше не поддерживается Space Station 14.\n\n" +
-                   "При возникновении ошибок НЕ БУДЕТ ОКАЗАНО НИКАКОЙ ПОДДЕРЖКИ.";
-
-            caption = "Неподдерживаемая версия Windows";
-        }
+        var text = Loc.GetString("You are using an old version of Windows that is no longer supported by Space Station 14.\n\nIf anything breaks, DO NOT ASK FOR HELP OR SUPPORT.");
+        var caption = Loc.GetString("Unsupported Windows version");
 
         fixed (char* pText = text)
         fixed (char* pCaption = caption)
