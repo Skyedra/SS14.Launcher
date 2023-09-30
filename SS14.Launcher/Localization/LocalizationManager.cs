@@ -76,8 +76,8 @@ public class LocalizationManager : ReactiveObject
 
     private void LoadTestCulture()
     {
-        var sergalTextCultureInfo = new Language("sergal", "Sergal");
-        LoadLanguage(sergalTextCultureInfo);
+        var sergalLanguage = new Language("sergal", "Sergal");
+        LoadLanguage(sergalLanguage);
     }
 
     /// <summary>
@@ -253,6 +253,8 @@ public class LocalizationManager : ReactiveObject
     {
         if (activeCatalog != null)
         {
+            // TODO - replace with some kind of lookup or something, since this doesn't work for test languages
+            // (it shows Invariant culture)
             currentLanguageDisplayString = activeCatalog.CultureInfo.DisplayName;
             return;
         }
