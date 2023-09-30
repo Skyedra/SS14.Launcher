@@ -4,11 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
-"POT-Creation-Date: 2023-09-29 18:35-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-29 21:59-0700\n"
 "PO-Revision-Date: 2023-09-30 04:18+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/fr/>\n"
 "Language: fr_FR\n"
@@ -32,6 +32,23 @@ msgstr "Hub non valide (n'oubliez pas http(s)://)"
 #, fuzzy
 msgid "Duplicate hubs"
 msgstr "Hubs dupliqués"
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
+#, csharp-format
+msgid "'Logged in' as {0}."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
+msgid "Not logged in."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
+msgid "Change Account..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
+msgid "Log in..."
+msgstr ""
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 #, fuzzy
@@ -60,6 +77,12 @@ msgstr "Fermer l'application"
 msgctxt "Tab"
 msgid "Servers"
 msgstr "Serveurs"
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
+#, csharp-format
+msgctxt "Filter Button that shows current servers out of total servers"
+msgid "Filters ({0} / {1})"
+msgstr ""
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/OptionsTabViewModel.cs:32
 #, fuzzy
@@ -139,6 +162,236 @@ msgstr "Maximum : "
 msgctxt "Server Filters"
 msgid "Unspecified"
 msgstr "Non précisé"
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:12
+msgctxt "Region - Long Name"
+msgid "Africa Central"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:13
+msgctxt "Region - Long Name"
+msgid "Africa North"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:14
+msgctxt "Region - Long Name"
+msgid "Africa South"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:15
+msgctxt "Region - Long Name"
+msgid "Antarctica"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:16
+msgctxt "Region - Long Name"
+msgid "Asia East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:17
+msgctxt "Region - Long Name"
+msgid "Asia North"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:18
+msgctxt "Region - Long Name"
+msgid "Asia South East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:19
+msgctxt "Region - Long Name"
+msgid "Central America"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:20
+msgctxt "Region - Long Name"
+msgid "Europe East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:21
+msgctxt "Region - Long Name"
+msgid "Europe West"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:22
+msgctxt "Region - Long Name"
+msgid "Greenland"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:23
+msgctxt "Region - Long Name"
+msgid "India"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:24
+msgctxt "Region - Long Name"
+msgid "Middle East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:25
+msgctxt "Region - Long Name"
+msgid "The Moon"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:26
+msgctxt "Region - Long Name"
+msgid "North America Central"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:27
+msgctxt "Region - Long Name"
+msgid "North America East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:28
+msgctxt "Region - Long Name"
+msgid "North America West"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:29
+msgctxt "Region - Long Name"
+msgid "Oceania"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:30
+msgctxt "Region - Long Name"
+msgid "South America East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:31
+msgctxt "Region - Long Name"
+msgid "South America South"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:32
+msgctxt "Region - Long Name"
+msgid "South America West"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:39
+msgctxt "Region - Short Name"
+msgid "Africa Central"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:40
+msgctxt "Region - Short Name"
+msgid "Africa North"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:41
+msgctxt "Region - Short Name"
+msgid "Africa South"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:42
+msgctxt "Region - Short Name"
+msgid "Antarctica"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:43
+msgctxt "Region - Short Name"
+msgid "Asia East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:44
+msgctxt "Region - Short Name"
+msgid "Asia North"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:45
+msgctxt "Region - Short Name"
+msgid "Asia South East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:46
+msgctxt "Region - Short Name"
+msgid "Central America"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:47
+msgctxt "Region - Short Name"
+msgid "Europe East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:48
+msgctxt "Region - Short Name"
+msgid "Europe West"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:49
+msgctxt "Region - Short Name"
+msgid "Greenland"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:50
+msgctxt "Region - Short Name"
+msgid "India"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:51
+msgctxt "Region - Short Name"
+msgid "Middle East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:52
+msgctxt "Region - Short Name"
+msgid "The Moon"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:53
+msgctxt "Region - Short Name"
+msgid "NA Central"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:54
+msgctxt "Region - Short Name"
+msgid "NA East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:55
+msgctxt "Region - Short Name"
+msgid "NA West"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:56
+msgctxt "Region - Short Name"
+msgid "Oceania"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:57
+msgctxt "Region - Short Name"
+msgid "SA East"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:58
+msgctxt "Region - Short Name"
+msgid "SA South"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:59
+msgctxt "Region - Short Name"
+msgid "SA West"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:66
+msgctxt "Roleplay Level Filter"
+msgid "None"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:67
+msgctxt "Roleplay Level Filter"
+msgid "Low"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:68
+msgctxt "Roleplay Level Filter"
+msgid "Medium"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:69
+msgctxt "Roleplay Level Filter"
+msgid "High"
+msgstr ""
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
 #, fuzzy
@@ -222,6 +475,16 @@ msgstr "Aucun compte sélectionné"
 msgid "Not logged in"
 msgstr "Non connecté"
 
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
+#: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:32
+msgid "Log out"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
+#, csharp-format
+msgid "Log out of {0}"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
 #, fuzzy
 msgid "Switch account:"
@@ -271,6 +534,10 @@ msgctxt "Example server name"
 msgid "Honk Station"
 msgstr "Gare de Klaxon"
 
+#: ../SS14.Launcher/Views/MainWindow.xaml:15
+msgid "Space Station Multiverse Launcher"
+msgstr ""
+
 #: ../SS14.Launcher/Views/MainWindow.xaml:42
 #, fuzzy
 msgctxt "Header Buttons"
@@ -308,17 +575,31 @@ msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Jeu Drop to Run"
 
-#: ../SS14.Launcher/Views/Login/LoginView.xaml:18
-#, fuzzy
-msgctxt "Description of WizDen login method"
-msgid "The original central authentication server for SS14."
-msgstr "Le serveur d'authentification central d'origine pour SS14."
+#: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:15
+msgid "Login expired"
+msgstr ""
 
+#: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:18
+msgid ""
+"The session for this account has expired.&#x0a;Please re-enter your password."
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:23
+msgid "Password"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:28
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:20
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:31
 #, fuzzy
 msgid "Log in"
 msgstr "Connectez-vous"
+
+#: ../SS14.Launcher/Views/Login/LoginView.xaml:18
+#, fuzzy
+msgctxt "Description of WizDen login method"
+msgid "The original central authentication server for SS14."
+msgstr "Le serveur d'authentification central d'origine pour SS14."
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:23
 #, fuzzy
@@ -368,6 +649,12 @@ msgstr "Le repaire du magicien"
 msgctxt "Guest Tab Header"
 msgid "Guest"
 msgstr "Invité"
+
+#: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:18
+msgid ""
+"A guest identity does not require any centralized authentication.  However, "
+"the game server may not be able to track your playtime."
+msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
 #, fuzzy
@@ -500,8 +787,8 @@ msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
 msgstr ""
-"Lorsque les développeurs sont *très* perplexes face à votre problème. ("
-"nécessite le redémarrage du lanceur)"
+"Lorsque les développeurs sont *très* perplexes face à votre problème. "
+"(nécessite le redémarrage du lanceur)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
 #, fuzzy
@@ -559,6 +846,7 @@ msgid "Run content bundle/replay"
 msgstr "Exécuter un bundle de contenu/une rediffusion"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:53
 #, fuzzy
 msgctxt "Button"
 msgid "Go to the servers tab"
@@ -579,12 +867,7 @@ msgstr "Relevez vers le haut"
 msgid "Refresh"
 msgstr "Actualiser"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:21
-#, fuzzy
-msgid "Filters ({0"
-msgstr "Filtres ({0)"
-
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:27
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:20
 #, fuzzy
 msgid "Search For Servers..."
 msgstr "Rechercher des serveurs..."
@@ -593,6 +876,10 @@ msgstr "Rechercher des serveurs..."
 #, fuzzy
 msgid "Recent News:"
 msgstr "Nouvelles récentes :"
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:27
+msgid "Filters"
+msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:32
 #, fuzzy
@@ -629,3 +916,7 @@ msgstr "18 ans et plus"
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "Hub"
+
+#, fuzzy
+#~ msgid "Filters ({0"
+#~ msgstr "Filtres ({0)"
