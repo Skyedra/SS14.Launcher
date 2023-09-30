@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 22:08-0700\n"
+"POT-Creation-Date: 2023-09-29 22:28-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,6 +59,26 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
+msgid "Checking for launcher update..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
+msgid "Refreshing login status..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
+msgid "Checking account status"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
+msgid "Error connecting to authentication server"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
+msgid "Unknown error occured"
 msgstr ""
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
@@ -382,6 +402,35 @@ msgstr ""
 msgid "Add Favorite"
 msgstr ""
 
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
+msgid "OFFLINE"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
+msgid "Fetching..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
+msgid "Unable to contact server"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+msgid "Fetching server status..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
+msgid "Fetching server description..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+msgid "Error while fetching server description"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+msgid "No server description provided"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
@@ -440,6 +489,53 @@ msgstr ""
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
 msgid "Select account:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+msgid "Hub Settings"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:34
+msgid "Done"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:35
+#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:27
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:39
+msgid "Cancel"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
+msgid "Reset"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
+msgid "Reset to default settings"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:38
+msgid "Add hub"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:77
+msgid "Remove hub"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:89
+msgid "Increase priority"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:105
+msgid "Decrease priority"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:15
+msgid "Connecting..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/AccountDropDown.xaml:21
+msgid "Add account"
 msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
@@ -505,6 +601,21 @@ msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr ""
 
+#: ../SS14.Launcher/Views/LanguageDropDown.xaml:20
+msgctxt "Language select drop-down"
+msgid "Languages..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/LanguageDropDown.xaml:36
+msgctxt "Language select drop-down text"
+msgid "Help translate:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/LanguageDropDown.xaml:37
+msgctxt "Language select drop-down button"
+msgid "Contribute"
+msgstr ""
+
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:15
 msgid "Login expired"
 msgstr ""
@@ -522,6 +633,22 @@ msgstr ""
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:20
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:31
 msgid "Log in"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:14
+msgid "2-factor authentication required"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:17
+msgid "Please enter the authentication code from your app."
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:20
+msgid "Authentication code"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:34
+msgid "Recovery code"
 msgstr ""
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:18
@@ -615,10 +742,6 @@ msgstr ""
 msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through our website."
-msgstr ""
-
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
-msgid "Hub Settings"
 msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40

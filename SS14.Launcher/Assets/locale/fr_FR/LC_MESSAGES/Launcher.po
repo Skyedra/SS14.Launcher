@@ -4,11 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
-"POT-Creation-Date: 2023-09-29 21:59-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-29 22:28-0700\n"
 "PO-Revision-Date: 2023-09-30 05:10+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/fr/>\n"
 "Language: fr_FR\n"
@@ -34,7 +34,7 @@ msgid "Duplicate hubs"
 msgstr "Hubs dupliqués"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "« Connecté » en tant que {0}."
 
@@ -75,6 +75,26 @@ msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "Fermer l'application"
 
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
+msgid "Checking for launcher update..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
+msgid "Refreshing login status..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
+msgid "Checking account status"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
+msgid "Error connecting to authentication server"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
+msgid "Unknown error occured"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 #, fuzzy
 msgctxt "Tab"
@@ -82,7 +102,7 @@ msgid "Servers"
 msgstr "Serveurs"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Filter Button that shows current servers out of total servers"
 msgid "Filters ({0} / {1})"
 msgstr "Filtres ({0}/{1})"
@@ -458,6 +478,35 @@ msgstr "Supprimer le favori"
 msgid "Add Favorite"
 msgstr "Ajouter un favori"
 
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
+msgid "OFFLINE"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
+msgid "Fetching..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
+msgid "Unable to contact server"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+msgid "Fetching server status..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
+msgid "Fetching server description..."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+msgid "Error while fetching server description"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+msgid "No server description provided"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 #, fuzzy
 msgctxt "Create Identity Tab"
@@ -531,7 +580,7 @@ msgid "Log out"
 msgstr "Déconnectez-vous"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Log out of {0}"
 msgstr "Déconnectez-vous de {0}"
 
@@ -544,6 +593,54 @@ msgstr "Changer de compte :"
 #, fuzzy
 msgid "Select account:"
 msgstr "Sélectionnez un compte :"
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+#, fuzzy
+msgid "Hub Settings"
+msgstr "Réglages du hub"
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:34
+msgid "Done"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:35
+#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:27
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:39
+msgid "Cancel"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
+msgid "Reset"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
+msgid "Reset to default settings"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:38
+msgid "Add hub"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:77
+msgid "Remove hub"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:89
+msgid "Increase priority"
+msgstr ""
+
+#: ../SS14.Launcher/Views/HubSettingsDialog.xaml:105
+msgid "Decrease priority"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:15
+msgid "Connecting..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/AccountDropDown.xaml:21
+msgid "Add account"
+msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
@@ -626,6 +723,21 @@ msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Jeu Drop to Run"
 
+#: ../SS14.Launcher/Views/LanguageDropDown.xaml:20
+msgctxt "Language select drop-down"
+msgid "Languages..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/LanguageDropDown.xaml:36
+msgctxt "Language select drop-down text"
+msgid "Help translate:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/LanguageDropDown.xaml:37
+msgctxt "Language select drop-down button"
+msgid "Contribute"
+msgstr ""
+
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:15
 #, fuzzy
 msgid "Login expired"
@@ -650,6 +762,22 @@ msgstr "Mot de passe"
 #, fuzzy
 msgid "Log in"
 msgstr "Connectez-vous"
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:14
+msgid "2-factor authentication required"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:17
+msgid "Please enter the authentication code from your app."
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:20
+msgid "Authentication code"
+msgstr ""
+
+#: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:34
+msgid "Recovery code"
+msgstr ""
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:18
 #, fuzzy
@@ -770,11 +898,6 @@ msgid ""
 msgstr ""
 "Vous pouvez gérer les paramètres de votre compte, tels que la modification "
 "de votre adresse e-mail ou de votre mot de passe, via notre site Web."
-
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
-#, fuzzy
-msgid "Hub Settings"
-msgstr "Réglages du hub"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 #, fuzzy
