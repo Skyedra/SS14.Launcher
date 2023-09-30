@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 22:28-0700\n"
+"POT-Creation-Date: 2023-09-29 22:32-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -857,6 +857,14 @@ msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:20
 msgid "Search For Servers..."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:34
+msgid "Players"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:36
+msgid "Server Name"
 msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16

@@ -4,11 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
-"POT-Creation-Date: 2023-09-29 22:28-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-29 22:32-0700\n"
 "PO-Revision-Date: 2023-09-30 05:30+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/fr/>\n"
 "Language: fr_FR\n"
@@ -1083,6 +1083,14 @@ msgstr "Actualiser"
 #, fuzzy
 msgid "Search For Servers..."
 msgstr "Rechercher des serveurs..."
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:34
+msgid "Players"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:36
+msgid "Server Name"
+msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
 #, fuzzy
