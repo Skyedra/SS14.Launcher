@@ -54,8 +54,8 @@ public class LocalizationManager : ReactiveObject
 
         if (!String.IsNullOrEmpty(localePreference))
         {
-            var localeCulture = new CultureInfo(localePreference);
-            bool result = LoadCulture(localeCulture);
+            var localeCulture = Language.FromLocale(localePreference);
+            bool result = LoadLanguage(localeCulture);
             if (result)
                 return;
             // If load failed, fall back and use system default culture
@@ -71,13 +71,13 @@ public class LocalizationManager : ReactiveObject
     private bool LoadSystemDefault()
     {
         // TODO - pull from OS or Steam
-        return LoadCulture(null);
+        return LoadLanguage(null);
     }
 
     private void LoadTestCulture()
     {
-        var sergalTextCultureInfo = new CultureInfo("sergal");
-        LoadCulture(sergalTextCultureInfo);
+        var sergalTextCultureInfo = new Language("sergal", "Sergal");
+        LoadLanguage(sergalTextCultureInfo);
     }
 
     /// <summary>
@@ -85,13 +85,13 @@ public class LocalizationManager : ReactiveObject
     /// </summary>
     /// <param name="culture"></param>
     /// <returns></returns>
-    public bool SetCulture(CultureInfo culture)
+    public bool SetLanguage(Language language)
     {
-        bool result = LoadCulture(culture);
+        bool result = LoadLanguage(language);
         if (result)
         {
-            if (culture != null)
-                dataManager.Locale = culture.Name;
+            if (language != null)
+                dataManager.Locale = language.translationFileName;
             else
                 dataManager.Locale = null;
 
@@ -108,12 +108,13 @@ public class LocalizationManager : ReactiveObject
     /// <summary>
     /// Loads target culture.
     /// </summary>
-    /// <param name="culture">Culture to load -- can be null to use developer/english US culture.</param>
+    /// <param name="language">Language to load -- can be null to use developer/english US language.</param>
+    /// <param name="culture">System Culture to load -- can be null to use default culture.</param>
     /// <returns>True is culture was changed successfully (even if changed to no culture successfully).  False if
     /// failed to load culture.</returns>
-    private bool LoadCulture(CultureInfo culture)
+    private bool LoadLanguage(Language language)
     {
-        if (culture == null)
+        if (language == null)
         {
             // Intentionally going back to non-translated mode
             activeCatalog = null;
@@ -133,11 +134,20 @@ public class LocalizationManager : ReactiveObject
             return false;
         }
 
-        // This pathing logic mirrors ngettext FindTranslationFile
-        var possibleUris = new[] {
-            new Uri($"avares://SSMV.Launcher/Assets/locale/" + culture.Name.Replace('-', '_') + "/LC_MESSAGES/Launcher.mo"),
-            new Uri($"avares://SSMV.Launcher/Assets/locale/" + culture.Name + "/LC_MESSAGES/Launcher.mo"),
-            new Uri($"avares://SSMV.Launcher/Assets/locale/" + culture.TwoLetterISOLanguageName + "/LC_MESSAGES/Launcher.mo")
+
+        var possibleUris = new List<Uri>() {
+            new Uri($"avares://SSMV.Launcher/Assets/locale/" + language.translationFileName + "/LC_MESSAGES/Launcher.mo")
+        };
+
+        CultureInfo? cultureInfo = language.cultureInfo;
+
+        // If there's a system cultureinfo, then there's more information on possible places to check
+        if (cultureInfo != null)
+        {
+            // This pathing logic mirrors ngettext FindTranslationFile
+            possibleUris.Add(new Uri($"avares://SSMV.Launcher/Assets/locale/" + cultureInfo.Name.Replace('-', '_') + "/LC_MESSAGES/Launcher.mo"));
+            possibleUris.Add(new Uri($"avares://SSMV.Launcher/Assets/locale/" + cultureInfo.Name + "/LC_MESSAGES/Launcher.mo"));
+            possibleUris.Add(new Uri($"avares://SSMV.Launcher/Assets/locale/" + cultureInfo.TwoLetterISOLanguageName + "/LC_MESSAGES/Launcher.mo"));
         };
 
         foreach (var possibleFileUri in possibleUris)
@@ -145,11 +155,14 @@ public class LocalizationManager : ReactiveObject
             if (assets.Exists(possibleFileUri))
             {
                 var stream = assets.Open(possibleFileUri);
-                activeCatalog = new Catalog(stream, culture);
+                if (cultureInfo != null)
+                    activeCatalog = new Catalog(stream, cultureInfo);
+                else
+                    activeCatalog = new Catalog(stream);
 
                 if (activeCatalog != null)
                 {
-                    Log.Information("Loaded translation catalog for " + culture.Name);
+                    Log.Information("Loaded translation catalog for " + language.displayName);
 
                     // if (OnTranslationChanged != null)
                     //     OnTranslationChanged();
@@ -161,7 +174,7 @@ public class LocalizationManager : ReactiveObject
             }
         }
 
-        Log.Warning("Could not find localization .po for culture: " + culture.Name);
+        Log.Warning("Could not find localization .po for culture: " + language.displayName);
         return false;
     }
 
@@ -247,28 +260,32 @@ public class LocalizationManager : ReactiveObject
         currentLanguageDisplayString = "English"; // default / untranslated
     }
 
-    public Dictionary<string, CultureInfo> GetAvailableLanguages()
+    public Dictionary<string, Language> GetAvailableLanguages()
     {
-        // TODO: something to scan through and return available languages
+        // TODO: something to scan through and return available languages, maybe manage languages centrally instead
+        // of recreating them in various places.
 
-        var french = new CultureInfo("fr_FR");
-        var italian = new CultureInfo("it");
-        var german = new CultureInfo("de");
-        var spanish = new CultureInfo("es");
-        var ptBr = new CultureInfo("pt_BR");
-        var zhHans = new CultureInfo("zh_Hans");
-        var ruRu = new CultureInfo("ru_RU");
+        var french = Language.FromLocale("fr_FR");
+        var italian = Language.FromLocale("it");
+        var german = Language.FromLocale("de");
+        var spanishSpain = Language.FromLocale("es");
+        var spanishMexico = Language.FromLocale("es_MX");
+        var ptBr = Language.FromLocale("pt_BR");
+        var zhHans = Language.FromLocale("zh_Hans");
+        var ruRu = Language.FromLocale("ru_RU");
+        var sergal = new Language("sergal", "Sergal");
 
-        return new Dictionary<string, CultureInfo> {
+        return new Dictionary<string, Language> {
             {"English (US)", null},
-            {ruRu.DisplayName, ruRu},
-            {french.DisplayName, french},
-            {italian.DisplayName, italian},
-            {german.DisplayName, german},
-            {spanish.DisplayName, spanish},
-            {ptBr.DisplayName, ptBr},
-            {zhHans.DisplayName, zhHans},
-            {"Sergal", new CultureInfo("sergal")}
+            {ruRu.displayName, ruRu},
+            {french.displayName, french},
+            {italian.displayName, italian},
+            {german.displayName, german},
+            {spanishMexico.displayName, spanishMexico},
+            //{"Spanish (Spain)", spanishSpain},
+            {ptBr.displayName, ptBr},
+            {zhHans.displayName, zhHans},
+            {"Sergal", new Language("sergal", "Sergal")}
         };
     }
 

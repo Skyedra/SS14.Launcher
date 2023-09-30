@@ -24,7 +24,6 @@ using SS14.Launcher.ViewModels;
 using SS14.Launcher.Views;
 using TerraFX.Interop.Windows;
 using LogEventLevel = Serilog.Events.LogEventLevel;
-using SS14.Launcher.Localization;
 
 namespace SS14.Launcher;
 
@@ -148,7 +147,7 @@ internal static class Program
 
         var caption = "Unsupported Windows version";
 
-        if (Language.UserHasLanguage("ru"))
+        if (Utility.Language.UserHasLanguage("ru"))
         {
             text = "Вы используете старую версию Windows которая больше не поддерживается Space Station 14.\n\n" +
                    "При возникновении ошибок НЕ БУДЕТ ОКАЗАНО НИКАКОЙ ПОДДЕРЖКИ.";
@@ -227,7 +226,7 @@ internal static class Program
         locator.RegisterConstant(new ServerListCache());
         locator.RegisterConstant(loginManager);
         locator.RegisterConstant(overrideAssets);
-        locator.RegisterConstant(new LocalizationManager());
+        locator.RegisterConstant(new Localization.LocalizationManager());
 
         return AppBuilder.Configure(() => new App(overrideAssets))
             .UsePlatformDetect()

@@ -56,20 +56,20 @@ public class LanguageDropDownViewModel : ViewModelBase
     [Reactive] public bool IsDropDownOpen { get; set; }
 
 
-    public void SwitchLanguageDueToButtonPress(CultureInfo language)
+    public void SwitchLanguageDueToButtonPress(Localization.Language language)
     {
         IsDropDownOpen = false;
 
-        localizationManager.SetCulture(language);
+        localizationManager.SetLanguage(language);
     }
 }
 
 public sealed class AvailableLanguageViewModel : ViewModelBase
 {
-    public CultureInfo language { get; private set; }
+    public Localization.Language language { get; private set; }
     public string displayText { get; private set; }
 
-    public AvailableLanguageViewModel(CultureInfo language, string displayText)
+    public AvailableLanguageViewModel(Localization.Language language, string displayText)
     {
         this.language = language;
         this.displayText = displayText;
