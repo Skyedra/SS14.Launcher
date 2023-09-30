@@ -4,49 +4,54 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
 "POT-Creation-Date: 2023-09-29 22:32-0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-09-30 21:38+0000\n"
+"Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
+"Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
+"space-station-multiverse/launcher/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:71
 msgid "Specify at least one hub"
-msgstr ""
+msgstr "Укажите хотя бы один URL хаба"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:73
 msgid "Invalid hub (don't forget http(s)://)"
-msgstr ""
+msgstr "Недопустимый URL хаба (не забудьте http(s)://)"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:75
 msgid "Duplicate hubs"
-msgstr ""
+msgstr "Дублирование URL хаба"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
 #, csharp-format
 msgid "'Logged in' as {0}."
-msgstr ""
+msgstr "'Вошли' как {0}."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
 msgid "Not logged in."
-msgstr ""
+msgstr "Не авторизован."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
 msgid "Change Account..."
-msgstr ""
+msgstr "Поменять аккаунт..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
 msgid "Log in..."
-msgstr ""
+msgstr "Войти..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
-msgstr ""
+msgstr "Требуется перезапуск приложения"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgctxt "Language Changed Restart Popup - Message"
@@ -54,99 +59,100 @@ msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
 "take effect."
 msgstr ""
+"Язык был изменен.  Чтобы изменения вступили в силу, перезапустите лаунчер."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
-msgstr ""
+msgstr "Закрыть приложение"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
 msgid "Checking for launcher update..."
-msgstr ""
+msgstr "Проверка на обновления лаунчера..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
 msgid "Refreshing login status..."
-msgstr ""
+msgstr "Обновление статуса авторизации..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
 msgid "Checking account status"
-msgstr ""
+msgstr "Проверка статуса аккаунта"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
 msgid "Error connecting to authentication server"
-msgstr ""
+msgstr "Ошибка при подключении к серверу аутентификации"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
 msgid "Unknown error occured"
-msgstr ""
+msgstr "Произошла неизвестная ошибка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 msgctxt "Tab"
 msgid "Servers"
-msgstr ""
+msgstr "Сервера"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
 #, csharp-format
 msgctxt "Filter Button that shows current servers out of total servers"
 msgid "Filters ({0} / {1})"
-msgstr ""
+msgstr "Фильтры ({0} / {1})"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/OptionsTabViewModel.cs:32
 msgctxt "Tab"
 msgid "Options"
-msgstr ""
+msgstr "Настройки"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:59
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:60
 msgctxt "Server Filters"
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:64
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:65
 msgctxt "Server Filters"
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:69
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
-msgstr ""
+msgstr "Серверы, на которых нет игроков, не будут показаны"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
 msgctxt "Server Filters"
 msgid "Hide empty"
-msgstr ""
+msgstr "Скрыть пустые сервера"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
-msgstr ""
+msgstr "Серверы, которые заполнены, не будут показаны"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
 msgctxt "Server Filters"
 msgid "Hide full"
-msgstr ""
+msgstr "Скрыть полные сервера"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
-msgstr ""
+msgstr "Серверы с меньшим количеством игроков не будут показаны"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
 msgctxt "Server Filters"
 msgid "Minimum: "
-msgstr ""
+msgstr "Минимум: "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
-msgstr ""
+msgstr "Серверы с большим количеством игроков не будут показаны"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:89
 msgctxt "Server Filters"
 msgid "Maximum: "
-msgstr ""
+msgstr "Максимум: "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:189
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:190
@@ -156,294 +162,294 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:198
 msgctxt "Server Filters"
 msgid "Unspecified"
-msgstr ""
+msgstr "Не указано"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:12
 msgctxt "Region - Long Name"
 msgid "Africa Central"
-msgstr ""
+msgstr "Центральная Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:13
 msgctxt "Region - Long Name"
 msgid "Africa North"
-msgstr ""
+msgstr "Северная Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:14
 msgctxt "Region - Long Name"
 msgid "Africa South"
-msgstr ""
+msgstr "Южная Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:15
 msgctxt "Region - Long Name"
 msgid "Antarctica"
-msgstr ""
+msgstr "Антарктика"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:16
 msgctxt "Region - Long Name"
 msgid "Asia East"
-msgstr ""
+msgstr "Восточная Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:17
 msgctxt "Region - Long Name"
 msgid "Asia North"
-msgstr ""
+msgstr "Северная Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:18
 msgctxt "Region - Long Name"
 msgid "Asia South East"
-msgstr ""
+msgstr "Юго-Восточная Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:19
 msgctxt "Region - Long Name"
 msgid "Central America"
-msgstr ""
+msgstr "Центральная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:20
 msgctxt "Region - Long Name"
 msgid "Europe East"
-msgstr ""
+msgstr "Восточная Европа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:21
 msgctxt "Region - Long Name"
 msgid "Europe West"
-msgstr ""
+msgstr "Западная Европа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:22
 msgctxt "Region - Long Name"
 msgid "Greenland"
-msgstr ""
+msgstr "Гренландия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:23
 msgctxt "Region - Long Name"
 msgid "India"
-msgstr ""
+msgstr "Индия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:24
 msgctxt "Region - Long Name"
 msgid "Middle East"
-msgstr ""
+msgstr "Ближний Восток"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:25
 msgctxt "Region - Long Name"
 msgid "The Moon"
-msgstr ""
+msgstr "Луна"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:26
 msgctxt "Region - Long Name"
 msgid "North America Central"
-msgstr ""
+msgstr "Центральная Северная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:27
 msgctxt "Region - Long Name"
 msgid "North America East"
-msgstr ""
+msgstr "Восточная часть Северной Америки"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:28
 msgctxt "Region - Long Name"
 msgid "North America West"
-msgstr ""
+msgstr "Западная часть Северной Америки"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:29
 msgctxt "Region - Long Name"
 msgid "Oceania"
-msgstr ""
+msgstr "Океания"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:30
 msgctxt "Region - Long Name"
 msgid "South America East"
-msgstr ""
+msgstr "Восточная часть Южной Америки"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:31
 msgctxt "Region - Long Name"
 msgid "South America South"
-msgstr ""
+msgstr "Южная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:32
 msgctxt "Region - Long Name"
 msgid "South America West"
-msgstr ""
+msgstr "Западная часть Южной Америки"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:39
 msgctxt "Region - Short Name"
 msgid "Africa Central"
-msgstr ""
+msgstr "Центральная Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:40
 msgctxt "Region - Short Name"
 msgid "Africa North"
-msgstr ""
+msgstr "Северная Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:41
 msgctxt "Region - Short Name"
 msgid "Africa South"
-msgstr ""
+msgstr "Южная Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:42
 msgctxt "Region - Short Name"
 msgid "Antarctica"
-msgstr ""
+msgstr "Антарктика"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:43
 msgctxt "Region - Short Name"
 msgid "Asia East"
-msgstr ""
+msgstr "Восточная Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:44
 msgctxt "Region - Short Name"
 msgid "Asia North"
-msgstr ""
+msgstr "Северная Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:45
 msgctxt "Region - Short Name"
 msgid "Asia South East"
-msgstr ""
+msgstr "Юго-Восточная Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:46
 msgctxt "Region - Short Name"
 msgid "Central America"
-msgstr ""
+msgstr "Центральная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:47
 msgctxt "Region - Short Name"
 msgid "Europe East"
-msgstr ""
+msgstr "Восточная Европа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:48
 msgctxt "Region - Short Name"
 msgid "Europe West"
-msgstr ""
+msgstr "Западная Европа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:49
 msgctxt "Region - Short Name"
 msgid "Greenland"
-msgstr ""
+msgstr "Гренландия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:50
 msgctxt "Region - Short Name"
 msgid "India"
-msgstr ""
+msgstr "Индия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:51
 msgctxt "Region - Short Name"
 msgid "Middle East"
-msgstr ""
+msgstr "Ближний Восток"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:52
 msgctxt "Region - Short Name"
 msgid "The Moon"
-msgstr ""
+msgstr "Луна"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:53
 msgctxt "Region - Short Name"
 msgid "NA Central"
-msgstr ""
+msgstr "Северо-Центральная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:54
 msgctxt "Region - Short Name"
 msgid "NA East"
-msgstr ""
+msgstr "Северо-Восточная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:55
 msgctxt "Region - Short Name"
 msgid "NA West"
-msgstr ""
+msgstr "Северо-Западная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:56
 msgctxt "Region - Short Name"
 msgid "Oceania"
-msgstr ""
+msgstr "Океания"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:57
 msgctxt "Region - Short Name"
 msgid "SA East"
-msgstr ""
+msgstr "Юго-Восточная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:58
 msgctxt "Region - Short Name"
 msgid "SA South"
-msgstr ""
+msgstr "Южная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:59
 msgctxt "Region - Short Name"
 msgid "SA West"
-msgstr ""
+msgstr "Юго-Западная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:66
 msgctxt "Roleplay Level Filter"
 msgid "None"
-msgstr ""
+msgstr "Нету"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:67
 msgctxt "Roleplay Level Filter"
 msgid "Low"
-msgstr ""
+msgstr "Легкое"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:68
 msgctxt "Roleplay Level Filter"
 msgid "Medium"
-msgstr ""
+msgstr "Среднее"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:69
 msgctxt "Roleplay Level Filter"
 msgid "High"
-msgstr ""
+msgstr "Строгое"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
 msgctxt "Tab"
 msgid "News"
-msgstr ""
+msgstr "Новости"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
 msgid "Remove Favorite"
-msgstr ""
+msgstr "Убрать из избранного"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
 msgid "Add Favorite"
-msgstr ""
+msgstr "Добавить в избранное"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
 msgid "OFFLINE"
-msgstr ""
+msgstr "Не в сети"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
 msgid "Fetching..."
-msgstr ""
+msgstr "Загрузка..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
 msgid "Unable to contact server"
-msgstr ""
+msgstr "Невозможно связаться с сервером"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
 msgid "Fetching server status..."
-msgstr ""
+msgstr "Получение состояния сервера..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
 msgid "Fetching server description..."
-msgstr ""
+msgstr "Получение описания сервера..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
 msgid "Error while fetching server description"
-msgstr ""
+msgstr "Ошибка при получении описания сервера"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
 msgid "No server description provided"
-msgstr ""
+msgstr "Описание сервера не представлено"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
-msgstr ""
+msgstr "Wizard's Den"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 msgctxt "Create Identity Tab"
 msgid "Guest"
-msgstr ""
+msgstr "Гость"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:21
 msgctxt "Create Identity Tab"
 msgid "(Information)"
-msgstr ""
+msgstr "(Информация)"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:27
 msgid ""
@@ -463,295 +469,326 @@ msgid ""
 "screen later to create identities at other providers, should you wish to do "
 "so."
 msgstr ""
+"Давайте настроим ваш аккаунт для игры!\n"
+"\n"
+"На этом экране вы можете создать аккаунт или войти как гость.\n"
+"\n"
+"Разные сервера используют различные способы аутентификации, и не все серверы "
+"принимают гостевой вход.\n"
+"\n"
+"С помощью этого лаунчера можно управлять несколькими аккаунтами, просто "
+"возвращайтесь на эту страницу для их создания по мере необходимости.  (Хотя, "
+"скорее всего, не стоит создавать более одного аккаунта ибо в случае бана они "
+"так же могут получат блокировку, используйте другие аккаунты для "
+"тестирования!).\n"
+"\n"
+"Начните с выбора способа входа в лаунчер слева.  При желании вы можете "
+"вернуться к этому экрану позже, чтобы создать новый аккаунт или войти в "
+"другой."
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
-msgstr ""
+msgstr "Не выбран аккаунт"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "Not logged in"
-msgstr ""
+msgstr "Не авторизован"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:32
 msgid "Log out"
-msgstr ""
+msgstr "Выйти из аккаунта"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
 #, csharp-format
 msgid "Log out of {0}"
-msgstr ""
+msgstr "Выход из {0}"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
 msgid "Switch account:"
-msgstr ""
+msgstr "Переключить аккаунт:"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
 msgid "Select account:"
-msgstr ""
+msgstr "Выберите аккаунт:"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
 msgid "Hub Settings"
-msgstr ""
+msgstr "Настройки хаба"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:34
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:35
 #: ../SS14.Launcher/Views/ConnectingOverlay.xaml:27
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:39
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
 msgid "Reset"
-msgstr ""
+msgstr "Сброс"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
 msgid "Reset to default settings"
-msgstr ""
+msgstr "Сброс к настройкам по умолчанию"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:38
 msgid "Add hub"
-msgstr ""
+msgstr "Добавить хаб"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:77
 msgid "Remove hub"
-msgstr ""
+msgstr "Удалить хаб"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:89
 msgid "Increase priority"
-msgstr ""
+msgstr "Повысить приоритет"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:105
 msgid "Decrease priority"
-msgstr ""
+msgstr "Понизить приоритет"
 
 #: ../SS14.Launcher/Views/ConnectingOverlay.xaml:15
 msgid "Connecting..."
-msgstr ""
+msgstr "Подключение..."
 
 #: ../SS14.Launcher/Views/AccountDropDown.xaml:21
 msgid "Add account"
-msgstr ""
+msgstr "Добавить аккаунт"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
 msgid "Log Launcher"
-msgstr ""
+msgstr "Логи лаунчера"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
 msgid "Direct Connect..."
-msgstr ""
+msgstr "Прямое подключение..."
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:16
 msgid "Enter server address to connect:"
-msgstr ""
+msgstr "Введите адрес сервера для подключения:"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:19
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:19
 msgid "Connect"
-msgstr ""
+msgstr "Подключиться"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:20
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
 msgid "Address is invalid"
-msgstr ""
+msgstr "Адрес недействителен"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
 msgid "Add Favorite Server"
-msgstr ""
+msgstr "Добавить сервер в избранное"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:23
 msgctxt "Example server name"
 msgid "Honk Station"
-msgstr ""
+msgstr "Хонк Станция"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:15
 msgid "Space Station Multiverse Launcher"
-msgstr ""
+msgstr "Space Station Multiverse Launcher"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:42
 msgctxt "Header Buttons"
 msgid "SSMV Discord"
-msgstr ""
+msgstr "SSMV Discord"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:49
 msgctxt "Header Buttons"
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:117
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
 msgstr ""
+"Данный лаунчер устарел.&#x0a;Пожалуйста, загрузите новую версию с нашего "
+"сайта."
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:131
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
 msgstr ""
+"Космическая станция 14 находится в стадии разработки. Мы надеемся, что вам "
+"понравится то, что вы увидите, но пока, пожалуйста, сдерживайте свои "
+"ожидания."
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:156
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
-msgstr ""
+msgstr "Нажмите, чтобы запустить игру"
 
 #: ../SS14.Launcher/Views/LanguageDropDown.xaml:20
 msgctxt "Language select drop-down"
 msgid "Languages..."
-msgstr ""
+msgstr "Языки..."
 
 #: ../SS14.Launcher/Views/LanguageDropDown.xaml:36
 msgctxt "Language select drop-down text"
 msgid "Help translate:"
-msgstr ""
+msgstr "Помочь с переводом:"
 
 #: ../SS14.Launcher/Views/LanguageDropDown.xaml:37
 msgctxt "Language select drop-down button"
 msgid "Contribute"
-msgstr ""
+msgstr "Внести вклад"
 
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:15
 msgid "Login expired"
-msgstr ""
+msgstr "Срок сессии истёк"
 
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:18
 msgid ""
 "The session for this account has expired.&#x0a;Please re-enter your password."
 msgstr ""
+"Сессия для этой учетной записи истекла.&#x0a;Пожалуйста, введите пароль "
+"повторно."
 
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:23
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:28
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:20
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:31
 msgid "Log in"
-msgstr ""
+msgstr "Войти"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:14
 msgid "2-factor authentication required"
-msgstr ""
+msgstr "Требуется двухфакторная аутентификация"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:17
 msgid "Please enter the authentication code from your app."
-msgstr ""
+msgstr "Введите код аутентификации из приложения."
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:20
 msgid "Authentication code"
-msgstr ""
+msgstr "Код аутентификации"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:34
 msgid "Recovery code"
-msgstr ""
+msgstr "Код восстановления"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:18
 msgctxt "Description of WizDen login method"
 msgid "The original central authentication server for SS14."
-msgstr ""
+msgstr "Оригинальный центральный сервер аутентификации для SS14."
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:23
 msgctxt "Login field"
 msgid "Username or email"
-msgstr ""
+msgstr "Имя пользователя или e-mail"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:26
 msgid "WizDen Password"
-msgstr ""
+msgstr "WizDen Пароль"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:40
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Забыли пароль?"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:45
 msgid "Resend email confirmation"
-msgstr ""
+msgstr "Повторная отправка подтверждения по e-mail"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:53
 msgid "Register"
-msgstr ""
+msgstr "Зарегистрироваться"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:61
 msgid "Don't have an account? Register!"
-msgstr ""
+msgstr "Нету учетной записи? Зарегистрируйтесь!"
 
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
 msgid "Welcome"
-msgstr ""
+msgstr "Добро пожаловать"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:16
 msgctxt "Header for wizden login tab"
 msgid "Wizard's Den"
-msgstr ""
+msgstr "Wizard's Den"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
 msgctxt "Guest Tab Header"
 msgid "Guest"
-msgstr ""
+msgstr "Гость"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:18
 msgid ""
 "A guest identity does not require any centralized authentication.  However, "
 "the game server may not be able to track your playtime."
 msgstr ""
+"Гостевой идентификатор не требует централизованной аутентификации.  Однако "
+"игровой сервер не сможет отследить ваше игровое время."
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
 msgctxt "Name entry field on guest tab"
 msgid "Name"
-msgstr ""
+msgstr "Ник"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:25
 msgctxt "Button on guest tab"
 msgid "Continue without account"
-msgstr ""
+msgstr "Продолжить без аккаунта"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:17
 msgid "*flip"
-msgstr ""
+msgstr "*поворот на 360"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:18
 msgid "Clear installed engines"
-msgstr ""
+msgstr "Очистка установленных движков"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:20
 msgid "Clear installed server content"
-msgstr ""
+msgstr "Очистка контента серверов"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
-msgstr ""
+msgstr "Открыть папку с логами"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:30
 msgid ""
 "Set launcher language.  This does not affect in-game language, which is up "
 "to the server you connect to."
 msgstr ""
+"Установить язык лаунчера.  Это не влияет на язык в игре, который зависит от "
+"сервера, к которому вы подключаетесь."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
 msgid "Account Settings"
-msgstr ""
+msgstr "Настройки аккаунта"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
 msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through our website."
 msgstr ""
+"Вы можете управлять настройками своей учетной записи, например, изменять "
+"электронную почту или пароль, через наш сайт."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
 msgstr ""
+"Измените, какой сервер или серверы-хаба вы хотите использовать для получения "
+"списка серверов."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
 msgid "Compatibility Mode"
-msgstr ""
+msgstr "Режим совместимости"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 msgid ""
@@ -759,147 +796,159 @@ msgid ""
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
 "or crashes."
 msgstr ""
+"Использовать OpenGL ES 2 (при необходимости через ANGLE), который менее "
+"подвержен ошибкам драйверов. Попробуйте этот вариант, если у вас наблюдаются "
+"проблемы с графикой или вылеты."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
 msgid "Experimental Performance Options"
-msgstr ""
+msgstr "Экспериментальные настройки производительности"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
 msgstr ""
+"Экспериментальные переменные окружения .NET 6, позволяющие использовать "
+"полный динамический PGO. Отключите их, если возникнут проблемы."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
 msgid "Log Client"
-msgstr ""
+msgstr "Логи клиента игры"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 msgid "Enables logging of any game client output. Useful for developers."
-msgstr ""
+msgstr "Включает логи игрового клиента. Полезно для разработчиков."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
 msgstr ""
+"Включает логи лаунчера. Полезно для разработчиков. (требуется перезапуск "
+"лаунчера)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
 msgid "Verbose Launcher Logging"
-msgstr ""
+msgstr "Подробные логи лаунчера"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
 msgstr ""
+"Для случаев, когда разработчики *очень* озадачены вашей проблемой. ("
+"требуется перезапуск лаунчера)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
 msgid "Seasonal Branding"
-msgstr ""
+msgstr "Сезонное брендирование"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr ""
+"Какие только иконки и логотипы мы не придумаем, соответствующие времени."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
 msgid "Disable Engine Signature Checks"
-msgstr ""
+msgstr "Отключить проверку подписи движка"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
 msgstr ""
+"[ТОЛЬКО ДЛЯ РАЗРАБОТЧИКОВ] Отключает проверку подписи движка. НЕ ВКЛЮЧАТЬ, "
+"ЕСЛИ ВЫ НЕ ЗНАЕТЕ, ЧТО ИМЕННО ДЕЛАЕТЕ."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:19
 msgid "Favorite Servers:"
-msgstr ""
+msgstr "Избранные сервера:"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:20
 msgctxt "Button"
 msgid "Add Favorite..."
-msgstr ""
+msgstr "Добавить в избранное..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:21
 msgctxt "Button"
 msgid "Refresh"
-msgstr ""
+msgstr "Обновить"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:26
 msgctxt "Button"
 msgid "Direct Connect To Server..."
-msgstr ""
+msgstr "Прямое подключение к серверу..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:29
 msgctxt "Button"
 msgid "Run content bundle/replay"
-msgstr ""
+msgstr "Запуск архива с повтором игры"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:43
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:53
 msgctxt "Button"
 msgid "Go to the servers tab"
-msgstr ""
+msgstr "Перейти на вкладку серверов"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:51
 msgid "Mark servers as favorite for easy access here."
-msgstr ""
+msgstr "Пометьте серверы как избранные, чтобы иметь к ним удобный доступ."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
 msgid "Raise to top"
-msgstr ""
+msgstr "Поднять выше"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:18
 msgid "Refresh"
-msgstr ""
+msgstr "Обновить"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:20
 msgid "Search For Servers..."
-msgstr ""
+msgstr "Поиск по серверам..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:34
 msgid "Players"
-msgstr ""
+msgstr "Игроков"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:36
 msgid "Server Name"
-msgstr ""
+msgstr "Название сервера"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
 msgid "Recent News:"
-msgstr ""
+msgstr "Последние новости:"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:27
 msgid "Filters"
-msgstr ""
+msgstr "Фильтры"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:32
 msgctxt "Server Filters"
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:37
 msgctxt "Server Filters"
 msgid "Region"
-msgstr ""
+msgstr "Регион"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:42
 msgctxt "Server Filters"
 msgid "Role-play level"
-msgstr ""
+msgstr "Уровень ролевой игры"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:47
 msgctxt "Server Filters"
 msgid "Player count"
-msgstr ""
+msgstr "Количество игроков"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:56
 msgctxt "Server Filters"
 msgid "18+"
-msgstr ""
+msgstr "18+"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
 msgctxt "Server Filters"
 msgid "Hub"
-msgstr ""
+msgstr "Хаб"
