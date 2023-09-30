@@ -4,11 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
 "POT-Creation-Date: 2023-09-29 22:28-0700\n"
-"PO-Revision-Date: 2023-09-30 05:10+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2023-09-30 05:30+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/fr/>\n"
 "Language: fr_FR\n"
@@ -76,24 +76,29 @@ msgid "Close Application"
 msgstr "Fermer l'application"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
+#, fuzzy
 msgid "Checking for launcher update..."
-msgstr ""
+msgstr "Vérification de la mise à jour du lanceur..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
+#, fuzzy
 msgid "Refreshing login status..."
-msgstr ""
+msgstr "Actualisation de l'état de connexion..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
+#, fuzzy
 msgid "Checking account status"
-msgstr ""
+msgstr "Vérification de l'état du compte"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
+#, fuzzy
 msgid "Error connecting to authentication server"
-msgstr ""
+msgstr "Erreur lors de la connexion au serveur d'authentification"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
+#, fuzzy
 msgid "Unknown error occured"
-msgstr ""
+msgstr "Une erreur inconnue s'est produite"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 #, fuzzy
@@ -479,33 +484,40 @@ msgid "Add Favorite"
 msgstr "Ajouter un favori"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
+#, fuzzy
 msgid "OFFLINE"
-msgstr ""
+msgstr "HORS LIGNE"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
+#, fuzzy
 msgid "Fetching..."
-msgstr ""
+msgstr "Je vais chercher..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
+#, fuzzy
 msgid "Unable to contact server"
-msgstr ""
+msgstr "Impossible de contacter le serveur"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+#, fuzzy
 msgid "Fetching server status..."
-msgstr ""
+msgstr "Récupération de l'état du serveur..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
+#, fuzzy
 msgid "Fetching server description..."
-msgstr ""
+msgstr "Récupération de la description du serveur..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+#, fuzzy
 msgid "Error while fetching server description"
-msgstr ""
+msgstr "Erreur lors de la récupération de la description du serveur"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+#, fuzzy
 msgid "No server description provided"
-msgstr ""
+msgstr "Aucune description du serveur n'est fournie"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 #, fuzzy
@@ -601,46 +613,56 @@ msgid "Hub Settings"
 msgstr "Réglages du hub"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:34
+#, fuzzy
 msgid "Done"
-msgstr ""
+msgstr "Terminé"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:35
 #: ../SS14.Launcher/Views/ConnectingOverlay.xaml:27
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:39
+#, fuzzy
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
+#, fuzzy
 msgid "Reset"
-msgstr ""
+msgstr "Réinitialiser"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
+#, fuzzy
 msgid "Reset to default settings"
-msgstr ""
+msgstr "Rétablir les paramètres par défaut"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:38
+#, fuzzy
 msgid "Add hub"
-msgstr ""
+msgstr "Ajouter un hub"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:77
+#, fuzzy
 msgid "Remove hub"
-msgstr ""
+msgstr "Supprimer le hub"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:89
+#, fuzzy
 msgid "Increase priority"
-msgstr ""
+msgstr "Accroître la priorité"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:105
+#, fuzzy
 msgid "Decrease priority"
-msgstr ""
+msgstr "Diminuer la priorité"
 
 #: ../SS14.Launcher/Views/ConnectingOverlay.xaml:15
+#, fuzzy
 msgid "Connecting..."
-msgstr ""
+msgstr "Connexion..."
 
 #: ../SS14.Launcher/Views/AccountDropDown.xaml:21
+#, fuzzy
 msgid "Add account"
-msgstr ""
+msgstr "Ajouter un compte"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
@@ -724,19 +746,22 @@ msgid "Drop to run game"
 msgstr "Jeu Drop to Run"
 
 #: ../SS14.Launcher/Views/LanguageDropDown.xaml:20
+#, fuzzy
 msgctxt "Language select drop-down"
 msgid "Languages..."
-msgstr ""
+msgstr "Langues..."
 
 #: ../SS14.Launcher/Views/LanguageDropDown.xaml:36
+#, fuzzy
 msgctxt "Language select drop-down text"
 msgid "Help translate:"
-msgstr ""
+msgstr "Aidez à traduire :"
 
 #: ../SS14.Launcher/Views/LanguageDropDown.xaml:37
+#, fuzzy
 msgctxt "Language select drop-down button"
 msgid "Contribute"
-msgstr ""
+msgstr "Contribuer"
 
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:15
 #, fuzzy
@@ -764,20 +789,24 @@ msgid "Log in"
 msgstr "Connectez-vous"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:14
+#, fuzzy
 msgid "2-factor authentication required"
-msgstr ""
+msgstr "Authentification à 2 facteurs requise"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:17
+#, fuzzy
 msgid "Please enter the authentication code from your app."
-msgstr ""
+msgstr "Entrez le code d'authentification de votre application."
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:20
+#, fuzzy
 msgid "Authentication code"
-msgstr ""
+msgstr "Code d'authentification"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:34
+#, fuzzy
 msgid "Recovery code"
-msgstr ""
+msgstr "Code de récupération"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:18
 #, fuzzy
