@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:SS14.Launcher.ViewModels"
              xmlns:v="clr-namespace:SS14.Launcher.Views"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SS14.Launcher.Views.LanguageDropDown">
 
@@ -16,7 +17,7 @@
       <v:AngleBox Fill="{DynamicResource ThemeBackgroundBrush}" SideStyle="OpenRight" />
       <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Vertical">
-          <TextBlock Text="Languages..." Margin="4" />
+          <TextBlock Text="{loc:Get Languages..., Context=Language select drop-down}" Margin="4" />
 
           <ItemsControl Name="Items" Items="{Binding availableLanguages}">
             <ItemsControl.ItemTemplate>
@@ -32,8 +33,8 @@
 
 
 
-          <TextBlock Text="Help translate:" Margin="4 20 4 4" />
-          <Button Content="Contribute" Command="{Binding ContributePressed}" Margin="4" />
+          <TextBlock Text="{loc:Get Help translate:, Context=Language select drop-down text}" Margin="4 20 4 4" />
+          <Button Content="{loc:Get Contribute, Context=Language select drop-down button}" Command="{Binding ContributePressed}" Margin="4" />
         </StackPanel>
       </StackPanel>
     </Panel>

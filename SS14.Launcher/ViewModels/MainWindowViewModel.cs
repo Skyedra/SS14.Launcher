@@ -156,9 +156,9 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
     public async void OnWindowInitialized()
     {
-        BusyTask = "Checking for launcher update...";
+        BusyTask = Loc.GetString("Checking for launcher update...");
         await CheckLauncherUpdate();
-        BusyTask = "Refreshing login status...";
+        BusyTask = Loc.GetString("Refreshing login status...");
         await CheckAccounts();
         BusyTask = null;
 
@@ -254,7 +254,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
     private async void TrySelectUnsureAccount(LoggedInAccount account)
     {
-        BusyTask = "Checking account status";
+        BusyTask = Loc.GetString("Checking account status");
         try
         {
             await _loginMgr.UpdateSingleAccountStatus(account);
@@ -266,10 +266,10 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         catch (AuthApiException e)
         {
             Log.Warning(e, "AuthApiException while trying to refresh account {login}", account.LoginInfo);
-            OverlayViewModel = new AuthErrorsOverlayViewModel(this, "Error connecting to authentication server",
+            OverlayViewModel = new AuthErrorsOverlayViewModel(this, Loc.GetString("Error connecting to authentication server"),
                 new[]
                 {
-                    e.InnerException?.Message ?? "Unknown error occured"
+                    e.InnerException?.Message ?? Loc.GetString("Unknown error occured")
                 });
         }
         finally

@@ -3,12 +3,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:SS14.Launcher.ViewModels"
+        xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
         mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="100"
         MinWidth="600" MinHeight="130"
         Width="600" Height="250"
         x:Class="SS14.Launcher.Views.HubSettingsDialog"
         Icon="{DynamicResource WindowIcon}"
-        Title="Hub Settings"
+        Title="{loc:Get Hub Settings}"
         Padding="4"
         WindowStartupLocation="CenterOwner">
   <Design.DataContext>
@@ -30,13 +31,11 @@
   </Window.Styles>
   <DockPanel>
     <DockPanel Height="30" Margin="0 4 0 0" DockPanel.Dock="Bottom" LastChildFill="False">
-      <Button DockPanel.Dock="Right" Name="DoneButton" Click="Done" Content="Done" Classes="OpenLeft" />
-      <Button DockPanel.Dock="Right" Click="Cancel" Content="Cancel" Classes="OpenBoth" />
-      <Button DockPanel.Dock="Right" Command="{Binding Reset}" Content="Reset" Classes="OpenRight">
-        <ToolTip.Tip>Reset to default settings</ToolTip.Tip>
+      <Button DockPanel.Dock="Right" Name="DoneButton" Click="Done" Content="{loc:Get Done}" Classes="OpenLeft" />
+      <Button DockPanel.Dock="Right" Click="Cancel" Content="{loc:Get Cancel}" Classes="OpenBoth" />
+      <Button DockPanel.Dock="Right" Command="{Binding Reset}" Content="{loc:Get Reset}" Classes="OpenRight" ToolTip.Tip="{loc:Get Reset to default settings}">
       </Button>
-      <Button DockPanel.Dock="Left" Command="{Binding Add}" Classes="OpenRight" Padding="0 9 10 9">
-        <ToolTip.Tip>Add hub</ToolTip.Tip>
+      <Button DockPanel.Dock="Left" Command="{Binding Add}" Classes="OpenRight" Padding="0 9 10 9" ToolTip.Tip="{loc:Get Add hub}">
         <Path Fill="{DynamicResource ThemeForegroundBrush}"
               HorizontalAlignment="Center"
               VerticalAlignment="Center"
@@ -74,8 +73,8 @@ take precedence.
                       Classes="OpenLeft"
                       Width="30"
                       Padding="8 0 0 0"
-                      Command="{Binding Remove}">
-                <ToolTip.Tip>Remove hub</ToolTip.Tip>
+                      Command="{Binding Remove}"
+                      ToolTip.Tip="{loc:Get Remove hub}">
                 <Path Fill="{DynamicResource ThemeForegroundBrush}"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"
@@ -86,8 +85,8 @@ take precedence.
                       Classes="OpenBoth"
                       Width="30"
                       Name="UpButton"
-                      Command="{Binding Up}">
-                <ToolTip.Tip>Increase priority</ToolTip.Tip>
+                      Command="{Binding Up}"
+                      ToolTip.Tip="{loc:Get Increase priority}">
                 <Path Fill="{DynamicResource ThemeForegroundBrush}"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"
@@ -102,8 +101,8 @@ take precedence.
                       Classes="OpenRight"
                       Width="30"
                       Name="DownButton"
-                      Command="{Binding Down}">
-                <ToolTip.Tip>Decrease priority</ToolTip.Tip>
+                      Command="{Binding Down}"
+                      ToolTip.Tip="{loc:Get Decrease priority}">
                 <Path Fill="{DynamicResource ThemeForegroundBrush}"
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"

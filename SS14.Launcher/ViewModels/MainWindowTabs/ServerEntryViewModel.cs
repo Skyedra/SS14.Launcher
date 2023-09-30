@@ -77,7 +77,7 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
             switch (_cacheData.Status)
             {
                 case ServerStatusCode.Offline:
-                    return "OFFLINE";
+                    return Loc.GetString("OFFLINE");
                 case ServerStatusCode.Online:
                     // Give a ratio for servers with a defined player count, or just a current number for those without.
                     if (_cacheData.SoftMaxPlayerCount > 0)
@@ -89,7 +89,7 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
                         return $"{_cacheData.PlayerCount} / ∞";
                     }
                 case ServerStatusCode.FetchingStatus:
-                    return "Fetching...";
+                    return Loc.GetString("Fetching...");
                 default:
                     throw new NotSupportedException();
             }
@@ -103,17 +103,17 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
             switch (_cacheData.Status)
             {
                 case ServerStatusCode.Offline:
-                    return "Unable to contact server";
+                    return Loc.GetString("Unable to contact server");
                 case ServerStatusCode.FetchingStatus:
-                    return "Fetching server status...";
+                    return Loc.GetString("Fetching server status...");
             }
 
             return _cacheData.StatusInfo switch
             {
-                ServerStatusInfoCode.NotFetched => "Fetching server description...",
-                ServerStatusInfoCode.Fetching => "Fetching server description...",
-                ServerStatusInfoCode.Error => "Error while fetching server description",
-                ServerStatusInfoCode.Fetched => _cacheData.Description ?? "No server description provided",
+                ServerStatusInfoCode.NotFetched => Loc.GetString("Fetching server description..."),
+                ServerStatusInfoCode.Fetching => Loc.GetString("Fetching server description..."),
+                ServerStatusInfoCode.Error => Loc.GetString("Error while fetching server description"),
+                ServerStatusInfoCode.Fetched => _cacheData.Description ?? Loc.GetString("No server description provided"),
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
