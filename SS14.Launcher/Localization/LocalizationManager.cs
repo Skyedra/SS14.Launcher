@@ -176,7 +176,7 @@ public class LocalizationManager : ReactiveObject
     public string GetString(string sourceString, params object[] args)
     {
         if (activeCatalog == null)
-            return sourceString;
+            return String.Format(sourceString, args);
 
         return activeCatalog.GetString(sourceString, args);
     }
@@ -192,7 +192,7 @@ public class LocalizationManager : ReactiveObject
     public string GetParticularString(string context, string sourceString, params object[] args)
     {
         if (activeCatalog == null)
-            return sourceString;
+            return String.Format(sourceString, args);
 
         return activeCatalog.GetParticularString(context, sourceString, args);
     }
