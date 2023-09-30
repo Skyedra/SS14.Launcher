@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 16:35-0700\n"
+"POT-Creation-Date: 2023-09-29 18:35-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,6 +54,68 @@ msgctxt "Tab"
 msgid "Options"
 msgstr ""
 
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:59
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:60
+msgctxt "Server Filters"
+msgid "Yes"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:64
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:65
+msgctxt "Server Filters"
+msgid "No"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:69
+msgctxt "Server Filters"
+msgid "Servers with no players will not be shown"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
+msgctxt "Server Filters"
+msgid "Hide empty"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
+msgctxt "Server Filters"
+msgid "Servers that are full will not be shown"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
+msgctxt "Server Filters"
+msgid "Hide full"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
+msgctxt "Server Filters"
+msgid "Servers with less players will not be shown"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+msgctxt "Server Filters"
+msgid "Minimum: "
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
+msgctxt "Server Filters"
+msgid "Servers with more players will not be shown"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:89
+msgctxt "Server Filters"
+msgid "Maximum: "
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:189
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:190
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:193
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:194
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:197
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:198
+msgctxt "Server Filters"
+msgid "Unspecified"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
 msgctxt "Tab"
 msgid "News"
@@ -82,12 +144,44 @@ msgctxt "Create Identity Tab"
 msgid "(Information)"
 msgstr ""
 
+#: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:27
+msgid ""
+"Let's set up your identity!\n"
+"\n"
+"From this screen, you can create an identity on one of the established "
+"authentication providers, or just use a guest login.\n"
+"\n"
+"Different servers accept different ways to authenticate you, and not all "
+"servers accept all authentication providers.\n"
+"\n"
+"It is possible to manage multiple identities using this launcher, just "
+"revisit this page to establish them as needed.  (Though you probably do not "
+"want to create more than one identity per provider).\n"
+"\n"
+"Start by choosing an identity provider on the left.  You can revisit this "
+"screen later to create identities at other providers, should you wish to do "
+"so."
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
 msgstr ""
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "Not logged in"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+msgid "Switch account:"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+msgid "Select account:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
+msgid "Log Launcher"
 msgstr ""
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
@@ -246,6 +340,10 @@ msgid ""
 "list."
 msgstr ""
 
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
+msgid "Compatibility Mode"
+msgstr ""
+
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
@@ -253,10 +351,18 @@ msgid ""
 "or crashes."
 msgstr ""
 
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
+msgid "Experimental Performance Options"
+msgstr ""
+
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
+msgid "Log Client"
 msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
@@ -269,14 +375,26 @@ msgid ""
 "restart)"
 msgstr ""
 
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
+msgid "Verbose Launcher Logging"
+msgstr ""
+
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
 msgstr ""
 
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
+msgid "Seasonal Branding"
+msgstr ""
+
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Whatever temporally relevant icons and logos we can come up with."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
+msgid "Disable Engine Signature Checks"
 msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
@@ -322,6 +440,48 @@ msgstr ""
 msgid "Raise to top"
 msgstr ""
 
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:18
+msgid "Refresh"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:21
+msgid "Filters ({0"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:27
+msgid "Search For Servers..."
+msgstr ""
+
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
 msgid "Recent News:"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:32
+msgctxt "Server Filters"
+msgid "Language"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:37
+msgctxt "Server Filters"
+msgid "Region"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:42
+msgctxt "Server Filters"
+msgid "Role-play level"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:47
+msgctxt "Server Filters"
+msgid "Player count"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:56
+msgctxt "Server Filters"
+msgid "18+"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
+msgctxt "Server Filters"
+msgid "Hub"
 msgstr ""
