@@ -181,6 +181,14 @@ public class LocalizationManager : ReactiveObject
         return activeCatalog.GetParticularString(context, sourceString);
     }
 
+    public string GetParticularString(string context, string sourceString, params object[] args)
+    {
+        if (activeCatalog == null)
+            return sourceString;
+
+        return activeCatalog.GetParticularString(context, sourceString, args);
+    }
+
     /// <summary>
     /// This custom function allows to attempt looking up a context-specific string, and if it fails, to fallback to
     /// a non-context generic string.

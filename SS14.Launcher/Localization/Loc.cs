@@ -20,6 +20,11 @@ public static class Loc
         return localizationManager.GetParticularString(context, sourceString);
     }
 
+    public static string GetParticularString(string context, string sourceString, params object[] args)
+    {
+        return localizationManager.GetParticularString(context, sourceString, args);
+    }
+
     public static string GetParticularStringWithFallback(string context, string sourceString)
     {
         return localizationManager.GetParticularStringWithFallback(context, sourceString);
