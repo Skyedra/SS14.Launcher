@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 20:16-0700\n"
-"PO-Revision-Date: 2023-09-30 06:10+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2023-10-02 03:19+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Italian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/it/>\n"
 "Language: it\n"
@@ -520,9 +520,10 @@ msgid "No server description provided"
 msgstr "Nessuna descrizione del server fornita"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
+#, fuzzy
 msgctxt "Tab"
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 #, fuzzy
@@ -531,26 +532,33 @@ msgid "Wizard's Den"
 msgstr "La tana del mago"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
-msgstr ""
+msgstr "Nome utente necessario"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Description"
 msgid ""
 "Even though no account will be created, servers will still need a username "
 "to call you by.  Please enter a username in the username field."
 msgstr ""
+"Anche se non verrà creato alcun account, i server avranno comunque bisogno "
+"di un nome utente con cui chiamarti. Inserisci un nome utente nel campo nome "
+"utente."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
-msgstr ""
+msgstr "Nome utente caratteri non validi"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Description"
 msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr ""
+msgstr "Il nome utente può contenere solo 0-9 a-z A-Z e _"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 #, fuzzy
