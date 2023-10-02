@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 20:16-0700\n"
-"PO-Revision-Date: 2023-10-01 00:37+0000\n"
+"PO-Revision-Date: 2023-10-03 04:24+0000\n"
 "Last-Translator: DEATHB4DEFEAT <DEATHB4DEFEAT@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
 "Language-Team: Spanish (Mexico) <http://weblate.spacestationmultiverse.com/"
@@ -439,7 +439,7 @@ msgstr "El servidor no tiene descripción"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
 msgctxt "Tab"
 msgid "Home"
-msgstr ""
+msgstr "Casa"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
@@ -449,7 +449,7 @@ msgstr "Wizard's Den"
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
-msgstr ""
+msgstr "Nombre de usuario requerido"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
 msgctxt "Guest Mode Auth Error - Description"
@@ -457,16 +457,19 @@ msgid ""
 "Even though no account will be created, servers will still need a username "
 "to call you by.  Please enter a username in the username field."
 msgstr ""
+"Aunque no se creará ninguna cuenta, los servidores todavía necesitan un "
+"nombre de usuario para llamarlo. Por favor inserto un nombre de usuario en "
+"el campo de nombre de usuario."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
-msgstr ""
+msgstr "Nombre de usuario contiene carácteres malos"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
 msgctxt "Guest Mode Auth Error - Description"
 msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr ""
+msgstr "Nombre de usuario solo puede contener 0-9, a-z, A-Z y _"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 msgctxt "Create Identity Tab"
