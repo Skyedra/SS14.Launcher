@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 20:16-0700\n"
-"PO-Revision-Date: 2023-09-30 21:38+0000\n"
+"PO-Revision-Date: 2023-10-03 04:24+0000\n"
 "Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
@@ -439,7 +439,7 @@ msgstr "Описание сервера не представлено"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
 msgctxt "Tab"
 msgid "Home"
-msgstr ""
+msgstr "Избранное"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
@@ -449,7 +449,7 @@ msgstr "Wizard's Den"
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
-msgstr ""
+msgstr "Требуется имя пользователя"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
 msgctxt "Guest Mode Auth Error - Description"
@@ -457,16 +457,19 @@ msgid ""
 "Even though no account will be created, servers will still need a username "
 "to call you by.  Please enter a username in the username field."
 msgstr ""
+"Несмотря на то, что учетная запись не будет создана, серверам все равно "
+"потребуется имя пользователя, по которому они будут обращаться к вам.  "
+"Пожалуйста, введите имя пользователя в поле для имени."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
-msgstr ""
+msgstr "Имя пользователя использует недопустимые символы"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
 msgctxt "Guest Mode Auth Error - Description"
 msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr ""
+msgstr "Имя пользователя может содержать только 0-9 a-z A-Z и _"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 msgctxt "Create Identity Tab"
@@ -505,8 +508,8 @@ msgstr ""
 "\n"
 "С помощью этого лаунчера можно управлять несколькими аккаунтами, просто "
 "возвращайтесь на эту страницу для их создания по мере необходимости.  (Хотя, "
-"скорее всего, не стоит создавать более одного аккаунта ибо в случае бана они "
-"так же могут получат блокировку, используйте другие аккаунты для "
+"скорее всего, не стоит создавать более одного аккаунта ибо в случае бана, "
+"они так же могут получить блокировку, используйте другие аккаунты для "
 "тестирования!).\n"
 "\n"
 "Начните с выбора способа входа в лаунчер слева.  При желании вы можете "
