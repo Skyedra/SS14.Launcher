@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 20:16-0700\n"
-"PO-Revision-Date: 2023-09-30 05:56+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2023-10-02 03:19+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -518,9 +518,10 @@ msgid "No server description provided"
 msgstr "未提供服务器描述"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
+#, fuzzy
 msgctxt "Tab"
 msgid "Home"
-msgstr ""
+msgstr "主页"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 #, fuzzy
@@ -529,26 +530,31 @@ msgid "Wizard's Den"
 msgstr "巫师的巢穴"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
-msgstr ""
+msgstr "需要用户名"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Description"
 msgid ""
 "Even though no account will be created, servers will still need a username "
 "to call you by.  Please enter a username in the username field."
-msgstr ""
+msgstr "即使不会创建任何帐户，服务器仍需要一个用户名来呼叫您。请在用户名字段中输入用"
+"户名。"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
-msgstr ""
+msgstr "用户名错误字符"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+#, fuzzy
 msgctxt "Guest Mode Auth Error - Description"
 msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr ""
+msgstr "用户名只能包含 0-9 a-z A-Z 和 _"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 #, fuzzy
