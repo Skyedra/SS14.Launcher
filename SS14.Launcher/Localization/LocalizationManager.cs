@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Threading;
 using Avalonia;
 using Avalonia.Platform;
 using DynamicData;
@@ -21,6 +22,11 @@ namespace SS14.Launcher.Localization;
 public class LocalizationManager : ReactiveObject
 {
     private readonly DataManager dataManager;
+
+    /// <summary>
+    /// Locale code to interpret as not having any translation loaded (ie, source language.)
+    /// </summary>
+    private const string DEFAULT_UNTRANSLATED_LOCALE = "en_US";
 
     private Catalog? _activeCatalog;
     private Catalog? activeCatalog
@@ -70,8 +76,55 @@ public class LocalizationManager : ReactiveObject
     /// </summary>
     private bool LoadSystemDefault()
     {
-        // TODO - pull from OS or Steam
-        return LoadLanguage(null);
+        Log.Information($"Inferring user's language from system, which is set to UI: {Thread.CurrentThread.CurrentUICulture.DisplayName} and Thread: {Thread.CurrentThread.CurrentCulture.DisplayName}.");
+
+        bool uiMatched = LoadLanguageFromCulture(Thread.CurrentThread.CurrentUICulture);
+        if (uiMatched)
+            return true;
+
+        bool threadMatched = LoadLanguageFromCulture(Thread.CurrentThread.CurrentCulture);
+        if (threadMatched)
+            return true;
+
+        // Couldn't find a language combo for this user
+        return false;
+    }
+
+    private bool LoadLanguageFromCulture(CultureInfo targetCulture)
+    {
+        // Special case for developer language
+        if (targetCulture.TwoLetterISOLanguageName == "en" || targetCulture.TwoLetterISOLanguageName == "iv")
+        {
+            return LoadLanguage(null);
+        }
+
+        var potentialLanguages = GetAvailableLanguages();
+
+        // First search for exact culture match (ie: ru_RU)
+        foreach (var language in potentialLanguages)
+        {
+            if (language.Value != null &&
+                language.Value.cultureInfo != null &&
+                language.Value.cultureInfo.Name == targetCulture.Name) // this compares region code also
+            {
+                if (LoadLanguage(language.Value))
+                    return true;
+            }
+        }
+
+        // No exact match, but is there a language match?
+        foreach (var language in potentialLanguages)
+        {
+            if (language.Value != null &&
+                language.Value.cultureInfo != null &&
+                language.Value.cultureInfo.TwoLetterISOLanguageName == targetCulture.TwoLetterISOLanguageName) // this compares only language code
+            {
+                if (LoadLanguage(language.Value))
+                    return true;
+            }
+        }
+
+        return false;
     }
 
     private void LoadTestCulture()
@@ -93,7 +146,7 @@ public class LocalizationManager : ReactiveObject
             if (language != null)
                 dataManager.Locale = language.translationFileName;
             else
-                dataManager.Locale = null;
+                dataManager.Locale = DEFAULT_UNTRANSLATED_LOCALE;
 
             // Displays message which forces user to restart on language change.
             // Just a quick, temporary workaround until proper reloading of all strings is properly implemented.
@@ -112,9 +165,9 @@ public class LocalizationManager : ReactiveObject
     /// <param name="culture">System Culture to load -- can be null to use default culture.</param>
     /// <returns>True is culture was changed successfully (even if changed to no culture successfully).  False if
     /// failed to load culture.</returns>
-    private bool LoadLanguage(Language language)
+    private bool LoadLanguage(Language? language)
     {
-        if (language == null)
+        if (language == null || language.translationFileName == DEFAULT_UNTRANSLATED_LOCALE)
         {
             // Intentionally going back to non-translated mode
             activeCatalog = null;
