@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 19:18-0700\n"
+"POT-Creation-Date: 2023-10-01 20:16-0700\n"
 "PO-Revision-Date: 2023-09-30 06:10+0000\n"
 "Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
@@ -519,6 +519,11 @@ msgstr "Errore durante il recupero della descrizione del server"
 msgid "No server description provided"
 msgstr "Nessuna descrizione del server fornita"
 
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
+msgctxt "Tab"
+msgid "Home"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 #, fuzzy
 msgctxt "Create Identity Tab"
@@ -701,6 +706,7 @@ msgstr "Inserisci l'indirizzo del server per la connessione:"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:19
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:19
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:39
 #, fuzzy
 msgid "Connect"
 msgstr "Connetti"
@@ -1102,12 +1108,12 @@ msgstr "Aggiorna"
 msgid "Search For Servers..."
 msgstr "Cerca server..."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:34
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:41
 #, fuzzy
 msgid "Players"
 msgstr "Giocatori"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:36
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:43
 #, fuzzy
 msgid "Server Name"
 msgstr "Nome server"

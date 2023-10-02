@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 19:18-0700\n"
+"POT-Creation-Date: 2023-10-01 20:16-0700\n"
 "PO-Revision-Date: 2023-10-01 00:37+0000\n"
 "Last-Translator: DEATHB4DEFEAT <DEATHB4DEFEAT@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
@@ -436,6 +436,11 @@ msgstr "Error al obtener la descripción del servidor"
 msgid "No server description provided"
 msgstr "El servidor no tiene descripción"
 
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
+msgctxt "Tab"
+msgid "Home"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
@@ -593,6 +598,7 @@ msgstr "Inserte la dirección del servidor al que conectarse:"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:19
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:19
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:39
 msgid "Connect"
 msgstr "Conectar"
 
@@ -929,11 +935,11 @@ msgstr "Refrescar"
 msgid "Search For Servers..."
 msgstr "Buscar Servidores..."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:34
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:41
 msgid "Players"
 msgstr "Jugadores"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:36
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:43
 msgid "Server Name"
 msgstr "Nombre del Servidor"
 

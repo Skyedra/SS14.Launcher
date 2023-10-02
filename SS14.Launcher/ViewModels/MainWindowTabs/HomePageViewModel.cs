@@ -13,6 +13,7 @@ using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.ServerStatus;
 using SS14.Launcher.Utility;
 using SS14.Launcher.Views;
+using SS14.Launcher.Localization;
 
 namespace SS14.Launcher.ViewModels.MainWindowTabs;
 
@@ -61,7 +62,7 @@ public class HomePageViewModel : MainWindowTabViewModel
 
     [Reactive] public bool FavoritesEmpty { get; private set; } = true;
 
-    public override string Name => "Home";
+    public override string Name => Loc.GetParticularString("Tab", "Home");
     public Control? Control { get; set; }
 
     public async void DirectConnectPressed()
