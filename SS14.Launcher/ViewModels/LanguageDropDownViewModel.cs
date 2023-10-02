@@ -62,6 +62,11 @@ public class LanguageDropDownViewModel : ViewModelBase
 
         localizationManager.SetLanguage(language);
     }
+
+    public void ContributePressed()
+    {
+        Helpers.OpenUri(new Uri(ConfigConstants.ContributeLocalizationUrl));
+    }
 }
 
 public sealed class AvailableLanguageViewModel : ViewModelBase

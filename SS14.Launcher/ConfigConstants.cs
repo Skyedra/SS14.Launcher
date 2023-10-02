@@ -34,6 +34,7 @@ public static class ConfigConstants
         "https://cdn.spacestationmultiverse.com/wizden-hub-mirror/"
     };
     public const string DiscordUrl = "https://SpaceStationMultiverse.com/discord/";
+    public const string ContributeLocalizationUrl = "https://spacestationmultiverse.com/contribute-translation/";
     public const string AccountBaseUrl = "https://central.spacestation14.io/web/Identity/Account/";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
     public const string AccountRegisterUrl = $"{AccountBaseUrl}Register";
