@@ -16,10 +16,10 @@
       <WrapPanel />
     </ItemsPanelTemplate>
     <DataTemplate x:Key="FilterTemplate" DataType="mainWindowTabs:ServerFilterViewModel">
-      <mwtv:ServerFilterView DataContext="{Binding}" Width="150" />
+      <mwtv:ServerFilterView DataContext="{Binding}" MinWidth="150" />
     </DataTemplate>
     <DataTemplate x:Key="WideFilterTemplate" DataType="mainWindowTabs:ServerFilterViewModel">
-      <mwtv:ServerFilterView DataContext="{Binding}" Width="300" />
+      <mwtv:ServerFilterView DataContext="{Binding}" MinWidth="300" />
     </DataTemplate>
   </UserControl.Resources>
 
