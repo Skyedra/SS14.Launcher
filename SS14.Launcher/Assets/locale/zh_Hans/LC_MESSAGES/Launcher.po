@@ -4,11 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
-"POT-Creation-Date: 2023-09-29 22:32-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-01 19:18-0700\n"
 "PO-Revision-Date: 2023-09-30 05:56+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -34,7 +34,7 @@ msgid "Duplicate hubs"
 msgstr "重复的集线器"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "以 {0} 的身份'登录'。"
 
@@ -105,7 +105,7 @@ msgid "Servers"
 msgstr "服务器"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Filter Button that shows current servers out of total servers"
 msgid "Filters ({0} / {1})"
 msgstr "过滤器 ({0}/{1})"
@@ -523,6 +523,28 @@ msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
 msgstr "巫师的巢穴"
 
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+msgctxt "Guest Mode Auth Error - Header"
+msgid "Username needed"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
+msgctxt "Guest Mode Auth Error - Description"
+msgid ""
+"Even though no account will be created, servers will still need a username "
+"to call you by.  Please enter a username in the username field."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+msgctxt "Guest Mode Auth Error - Header"
+msgid "Username bad characters"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+msgctxt "Guest Mode Auth Error - Description"
+msgid "Username can only contain 0-9 a-z A-Z and _"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 #, fuzzy
 msgctxt "Create Identity Tab"
@@ -559,8 +581,8 @@ msgstr ""
 "在此屏幕上，您可以在已建立的身份验证提供商之一上创建身份，也可以只使用访客登"
 "录。\n"
 "\n"
-"不同的服务器接受不同的身份验证方式，并非所有服务器都接受所有身份验证提供商。"
-"\n"
+"不同的服务器接受不同的身份验证方式，并非所有服务器都接受所有身份验证提供"
+"商。\n"
 "\n"
 "使用此启动器可以管理多个身份，只需重新访问此页面即可根据需要建立它们。（尽管"
 "您可能不想为每个提供商创建多个身份）。\n"
@@ -585,7 +607,7 @@ msgid "Log out"
 msgstr "登出"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Log out of {0}"
 msgstr "登出 {0}"
 
@@ -854,7 +876,8 @@ msgstr "客人"
 msgid ""
 "A guest identity does not require any centralized authentication.  However, "
 "the game server may not be able to track your playtime."
-msgstr "访客身份不需要任何集中身份验证。但是，游戏服务器可能无法跟踪您的游戏时间。"
+msgstr ""
+"访客身份不需要任何集中身份验证。但是，游戏服务器可能无法跟踪您的游戏时间。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
 #, fuzzy
@@ -925,8 +948,9 @@ msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
 "or crashes."
-msgstr "它使用 OpenGL ES 2（必要时通过 "
-"ANGLE），它不太可能出现驱动程序错误。如果您遇到图形问题或崩溃，请尝试此方法。"
+msgstr ""
+"它使用 OpenGL ES 2（必要时通过 ANGLE），它不太可能出现驱动程序错误。如果您遇"
+"到图形问题或崩溃，请尝试此方法。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
 #, fuzzy
@@ -989,7 +1013,8 @@ msgstr "禁用引擎签名检查"
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
-msgstr "[仅限开发人员] 禁用引擎签名的验证。除非你确切知道自己在做什么，否则不要启用。"
+msgstr ""
+"[仅限开发人员] 禁用引擎签名的验证。除非你确切知道自己在做什么，否则不要启用。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:19
 #, fuzzy

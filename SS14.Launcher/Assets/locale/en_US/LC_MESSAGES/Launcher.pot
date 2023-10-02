@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 22:32-0700\n"
+"POT-Creation-Date: 2023-10-01 19:18-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -434,6 +434,28 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+msgctxt "Guest Mode Auth Error - Header"
+msgid "Username needed"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
+msgctxt "Guest Mode Auth Error - Description"
+msgid ""
+"Even though no account will be created, servers will still need a username "
+"to call you by.  Please enter a username in the username field."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+msgctxt "Guest Mode Auth Error - Header"
+msgid "Username bad characters"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+msgctxt "Guest Mode Auth Error - Description"
+msgid "Username can only contain 0-9 a-z A-Z and _"
 msgstr ""
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92

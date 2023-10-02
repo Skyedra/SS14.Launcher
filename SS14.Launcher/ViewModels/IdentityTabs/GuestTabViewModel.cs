@@ -50,15 +50,15 @@ public class GuestTabViewModel : IdentityTabViewModel, IErrorOverlayOwner
         string username = EditingUsername.Trim();
         if (String.IsNullOrWhiteSpace(username) || username.Length == 0)
         {
-            this.OverlayControl = new AuthErrorsOverlayViewModel(this, "Username needed",
-                 new string[]{"Even though no account will be created, servers will still need a username to call you by.  Please enter a username in the username field.  (No password is needed)"});
+            this.OverlayControl = new AuthErrorsOverlayViewModel(this, Loc.GetParticularString("Guest Mode Auth Error - Header", "Username needed"),
+                 new string[]{Loc.GetParticularString("Guest Mode Auth Error - Description", "Even though no account will be created, servers will still need a username to call you by.  Please enter a username in the username field.")});
             return;
         }
 
         if (!username.All(x => char.IsLetterOrDigit(x) || x == '_'))
         {
-            this.OverlayControl = new AuthErrorsOverlayViewModel(this, "Username bad characters",
-                 new string[]{"Username can only contain 0-9 a-z A-Z and _"});
+            this.OverlayControl = new AuthErrorsOverlayViewModel(this, Loc.GetParticularString("Guest Mode Auth Error - Header", "Username bad characters"),
+                 new string[]{Loc.GetParticularString("Guest Mode Auth Error - Description", "Username can only contain 0-9 a-z A-Z and _")});
             return;
         }
 

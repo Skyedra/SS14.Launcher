@@ -4,11 +4,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
-"Report-Msgid-Bugs-To: skye@spacestationmultiverse.com\n"
-"POT-Creation-Date: 2023-09-29 22:32-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-01 19:18-0700\n"
 "PO-Revision-Date: 2023-09-30 05:56+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -34,7 +34,7 @@ msgid "Duplicate hubs"
 msgstr "Hubs duplicados"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "'Conectado” como {0}."
 
@@ -107,7 +107,7 @@ msgid "Servers"
 msgstr "Servidores"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Filter Button that shows current servers out of total servers"
 msgid "Filters ({0} / {1})"
 msgstr "Filtros ({0}/{1})"
@@ -525,6 +525,28 @@ msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
 msgstr "Covil do feiticeiro"
 
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+msgctxt "Guest Mode Auth Error - Header"
+msgid "Username needed"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
+msgctxt "Guest Mode Auth Error - Description"
+msgid ""
+"Even though no account will be created, servers will still need a username "
+"to call you by.  Please enter a username in the username field."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+msgctxt "Guest Mode Auth Error - Header"
+msgid "Username bad characters"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+msgctxt "Guest Mode Auth Error - Description"
+msgid "Username can only contain 0-9 a-z A-Z and _"
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 #, fuzzy
 msgctxt "Create Identity Tab"
@@ -589,7 +611,7 @@ msgid "Log out"
 msgstr "Sair"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Log out of {0}"
 msgstr "Sair de {0}"
 
