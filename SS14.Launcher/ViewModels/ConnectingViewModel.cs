@@ -3,6 +3,7 @@ using System.Reactive.Linq;
 using System.Threading;
 using ReactiveUI;
 using Splat;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models;
 using SS14.Launcher.Utility;
 
@@ -150,32 +151,34 @@ public class ConnectingViewModel : ViewModelBase
     public string StatusText =>
         _connectorStatus switch
         {
-            Connector.ConnectionStatus.None => "Starting connection..." + _reasonSuffix,
+            Connector.ConnectionStatus.None =>
+                Loc.GetParticularString("Connecting", "Starting connection... {0}", _reasonSuffix ?? ""),
             Connector.ConnectionStatus.UpdateError =>
-                "There was an error while downloading server content. Please ask on Discord for support if the problem persists.",
-            Connector.ConnectionStatus.Updating => ("Updating: " + _updaterStatus switch
+                Loc.GetParticularString("Connecting",
+                "There was an error while downloading server content. Please ask on Discord for support if the problem persists."),
+            Connector.ConnectionStatus.Updating => Loc.GetParticularString("Connecting", "Updating: {0} {1}", _updaterStatus switch
             {
-                Updater.UpdateStatus.CheckingClientUpdate => "Checking for server content update...",
-                Updater.UpdateStatus.DownloadingEngineVersion => "Downloading server content...",
-                Updater.UpdateStatus.DownloadingClientUpdate => "Downloading server content...",
-                Updater.UpdateStatus.FetchingClientManifest => "Fetching server manifest...",
-                Updater.UpdateStatus.Verifying => "Verifying download integrity...",
-                Updater.UpdateStatus.CullingEngine => "Clearing old content...",
-                Updater.UpdateStatus.CullingContent => "Clearing old server content...",
-                Updater.UpdateStatus.Ready => "Update done!",
-                Updater.UpdateStatus.CheckingEngineModules => "Checking for additional dependencies...",
-                Updater.UpdateStatus.DownloadingEngineModules => "Downloading extra dependencies...",
-                Updater.UpdateStatus.CommittingDownload => "Synchronizing to disk...",
-                Updater.UpdateStatus.LoadingIntoDb => "Storing assets in database...",
-                Updater.UpdateStatus.LoadingContentBundle => "Loading content bundle...",
-                _ => "You shouldn't see this"
-            }) + _reasonSuffix,
-            Connector.ConnectionStatus.Connecting => "Fetching connection info from server..." + _reasonSuffix,
-            Connector.ConnectionStatus.ConnectionFailed => "Failed to connect to server!",
-            Connector.ConnectionStatus.StartingClient => "Starting client..." + _reasonSuffix,
-            Connector.ConnectionStatus.NotAContentBundle => "File is not a valid content bundle!",
+                Updater.UpdateStatus.CheckingClientUpdate => Loc.GetParticularString("Connecting", "Checking for server content update..."),
+                Updater.UpdateStatus.DownloadingEngineVersion => Loc.GetParticularString("Connecting", "Downloading server content..."),
+                Updater.UpdateStatus.DownloadingClientUpdate => Loc.GetParticularString("Connecting", "Downloading server content..."),
+                Updater.UpdateStatus.FetchingClientManifest => Loc.GetParticularString("Connecting", "Fetching server manifest..."),
+                Updater.UpdateStatus.Verifying => Loc.GetParticularString("Connecting", "Verifying download integrity..."),
+                Updater.UpdateStatus.CullingEngine => Loc.GetParticularString("Connecting", "Clearing old content..."),
+                Updater.UpdateStatus.CullingContent => Loc.GetParticularString("Connecting", "Clearing old server content..."),
+                Updater.UpdateStatus.Ready => Loc.GetParticularString("Connecting", "Update done!"),
+                Updater.UpdateStatus.CheckingEngineModules => Loc.GetParticularString("Connecting", "Checking for additional dependencies..."),
+                Updater.UpdateStatus.DownloadingEngineModules => Loc.GetParticularString("Connecting", "Downloading extra dependencies..."),
+                Updater.UpdateStatus.CommittingDownload => Loc.GetParticularString("Connecting", "Synchronizing to disk..."),
+                Updater.UpdateStatus.LoadingIntoDb => Loc.GetParticularString("Connecting", "Storing assets in database..."),
+                Updater.UpdateStatus.LoadingContentBundle => Loc.GetParticularString("Connecting", "Loading content bundle..."),
+                _ => Loc.GetParticularString("Connecting", "You shouldn't see this")
+            }, _reasonSuffix ?? ""),
+            Connector.ConnectionStatus.Connecting => Loc.GetParticularString("Connecting", "Fetching connection info from server... {0}", _reasonSuffix ?? ""),
+            Connector.ConnectionStatus.ConnectionFailed => Loc.GetParticularString("Connecting", "Failed to connect to server!"),
+            Connector.ConnectionStatus.StartingClient => Loc.GetParticularString("Connecting", "Starting client... {0}", _reasonSuffix ?? ""),
+            Connector.ConnectionStatus.NotAContentBundle => Loc.GetParticularString("Connecting", "File is not a valid content bundle!"),
             Connector.ConnectionStatus.ClientExited => _connector.ClientExitedBadly
-                ? "Client seems to have crashed while starting. If this persists, please ask on Discord or GitHub for support."
+                ? Loc.GetParticularString("Connecting", "Client seems to have crashed while starting. If this persists, please ask on Discord or GitHub for support.")
                 : "",
             _ => ""
         };
