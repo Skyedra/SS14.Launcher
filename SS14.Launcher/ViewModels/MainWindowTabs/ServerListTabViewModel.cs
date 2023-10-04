@@ -43,23 +43,23 @@ public class ServerListTabViewModel : MainWindowTabViewModel
             switch (status)
             {
                 case RefreshListStatus.Error:
-                    return "There was an error fetching the master server lists.";
+                    return Loc.GetParticularString("Server List Status Text", "There was an error fetching the master server lists.");
                 case RefreshListStatus.PartialError:
-                    return "Failed to fetch some or all server lists. Ensure your hub configuration is correct.";
+                    return Loc.GetParticularString("Server List Status Text", "Failed to fetch some or all server lists. Ensure your hub configuration is correct.");
                 case RefreshListStatus.UpdatingMaster:
-                    return "Fetching master server list...";
+                    return Loc.GetParticularString("Server List Status Text", "Fetching master server list...");
                 case RefreshListStatus.Updating:
-                    return "Discovering servers...";
+                    return Loc.GetParticularString("Server List Status Text", "Discovering servers...");
                 case RefreshListStatus.NotUpdated:
                     return "";
                 case RefreshListStatus.Updated:
                 default:
                     if (SearchedServers.Count == 0 && _serverListCache.AllServers.Count != 0)
                         // TODO: Actually make this show up or just remove it entirely
-                        return "No servers match your search or filter settings.";
+                        return Loc.GetParticularString("Server List Status Text", "No servers match your search or filter settings.");
 
                     if (_serverListCache.AllServers.Count == 0)
-                        return "There are no public servers. Ensure your hub configuration is correct.";
+                        return Loc.GetParticularString("Server List Status Text", "There are no public servers. Ensure your hub configuration is correct.");
 
                     return "";
             }
