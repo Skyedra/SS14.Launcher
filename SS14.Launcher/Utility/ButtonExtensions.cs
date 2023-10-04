@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Avalonia.Controls;
+using SS14.Launcher.Localization;
 
 namespace SS14.Launcher.Utility;
 
@@ -9,8 +10,11 @@ public static class ButtonExtensions
     /// Sets the content of a button to a specified message ("Done!" by default) for a specified duration (2s by
     /// default), and disabled the button for this duration.
     /// </summary>
-    public static async Task DisplayDoneMessage(this Button button, string message = "Done!", int duration = 2000)
+    public static async Task DisplayDoneMessage(this Button button, string? message = null, int duration = 2000)
     {
+        if (message == null)
+            message = Loc.GetString("Done!");
+
         var previousContent = button.Content;
         button.Content = message;
         button.IsEnabled = false;
