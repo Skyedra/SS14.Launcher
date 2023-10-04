@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 20:16-0700\n"
-"PO-Revision-Date: 2023-10-03 04:24+0000\n"
+"PO-Revision-Date: 2023-10-04 06:53+0000\n"
 "Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
@@ -51,7 +51,7 @@ msgstr "Войти..."
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
-msgstr "Требуется перезапуск приложения"
+msgstr "Требуется перезапуск"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgctxt "Language Changed Restart Popup - Message"
@@ -64,7 +64,7 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
-msgstr "Закрыть приложение"
+msgstr "Закрыть программу"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
 msgid "Checking for launcher update..."
@@ -122,7 +122,7 @@ msgstr "Серверы, на которых нет игроков, не буду
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
 msgctxt "Server Filters"
 msgid "Hide empty"
-msgstr "Скрыть пустые сервера"
+msgstr "Скрыть пустые"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
 msgctxt "Server Filters"
@@ -132,7 +132,7 @@ msgstr "Серверы, которые заполнены, не будут по�
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
 msgctxt "Server Filters"
 msgid "Hide full"
-msgstr "Скрыть полные сервера"
+msgstr "Скрыть заполненные"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
 msgctxt "Server Filters"
@@ -237,17 +237,17 @@ msgstr "Луна"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:26
 msgctxt "Region - Long Name"
 msgid "North America Central"
-msgstr "Центральная Северная Америка"
+msgstr "Северо-Центральная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:27
 msgctxt "Region - Long Name"
 msgid "North America East"
-msgstr "Восточная часть Северной Америки"
+msgstr "Северо-Восточная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:28
 msgctxt "Region - Long Name"
 msgid "North America West"
-msgstr "Западная часть Северной Америки"
+msgstr "Северо-Западная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:29
 msgctxt "Region - Long Name"
@@ -257,7 +257,7 @@ msgstr "Океания"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:30
 msgctxt "Region - Long Name"
 msgid "South America East"
-msgstr "Восточная часть Южной Америки"
+msgstr "Юго-Восточная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:31
 msgctxt "Region - Long Name"
@@ -267,7 +267,7 @@ msgstr "Южная Америка"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:32
 msgctxt "Region - Long Name"
 msgid "South America West"
-msgstr "Западная часть Южной Америки"
+msgstr "Юго-Западная Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:39
 msgctxt "Region - Short Name"
@@ -302,7 +302,7 @@ msgstr "Северная Азия"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:45
 msgctxt "Region - Short Name"
 msgid "Asia South East"
-msgstr "Юго-Восточная Азия"
+msgstr "ЮВ Азия"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:46
 msgctxt "Region - Short Name"
@@ -342,17 +342,17 @@ msgstr "Луна"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:53
 msgctxt "Region - Short Name"
 msgid "NA Central"
-msgstr "Северо-Центральная Америка"
+msgstr "СЦ Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:54
 msgctxt "Region - Short Name"
 msgid "NA East"
-msgstr "Северо-Восточная Америка"
+msgstr "СВ Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:55
 msgctxt "Region - Short Name"
 msgid "NA West"
-msgstr "Северо-Западная Америка"
+msgstr "СЗ Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:56
 msgctxt "Region - Short Name"
@@ -362,7 +362,7 @@ msgstr "Океания"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:57
 msgctxt "Region - Short Name"
 msgid "SA East"
-msgstr "Юго-Восточная Америка"
+msgstr "ЮВ Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:58
 msgctxt "Region - Short Name"
@@ -372,27 +372,27 @@ msgstr "Южная Америка"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:59
 msgctxt "Region - Short Name"
 msgid "SA West"
-msgstr "Юго-Западная Америка"
+msgstr "ЮЗ Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:66
 msgctxt "Roleplay Level Filter"
 msgid "None"
-msgstr "Нету"
+msgstr "Нет"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:67
 msgctxt "Roleplay Level Filter"
 msgid "Low"
-msgstr "Легкое"
+msgstr "Легкий"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:68
 msgctxt "Roleplay Level Filter"
 msgid "Medium"
-msgstr "Среднее"
+msgstr "Средний"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:69
 msgctxt "Roleplay Level Filter"
 msgid "High"
-msgstr "Строгое"
+msgstr "Строгий"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
 msgctxt "Tab"
@@ -600,7 +600,7 @@ msgstr "Прямое подключение..."
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:16
 msgid "Enter server address to connect:"
-msgstr "Введите адрес сервера для подключения:"
+msgstr "Введите адрес сервера:"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:19
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:19
@@ -775,7 +775,7 @@ msgstr "Продолжить без аккаунта"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:17
 msgid "*flip"
-msgstr "*поворот на 360"
+msgstr "*переворот"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:18
 msgid "Clear installed engines"
@@ -806,8 +806,8 @@ msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through our website."
 msgstr ""
-"Вы можете управлять настройками своей учетной записи, например, изменять "
-"электронную почту или пароль, через наш сайт."
+"Вы можете управлять настройками своей учетной записи, например, изменить "
+"электронную почту или пароль, через официальный сайт."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 msgid ""
@@ -815,7 +815,7 @@ msgid ""
 "list."
 msgstr ""
 "Измените, какой сервер или серверы-хаба вы хотите использовать для получения "
-"списка серверов."
+"списка игровых серверов."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
 msgid "Compatibility Mode"
@@ -841,7 +841,8 @@ msgid ""
 "Disable if you experience issues."
 msgstr ""
 "Экспериментальные переменные окружения .NET 6, позволяющие использовать "
-"полный динамический PGO. Отключите их, если возникнут проблемы."
+"полностью динамический PGO. Отключите настройку, если у вас возникнут "
+"проблемы."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
 msgid "Log Client"
@@ -849,15 +850,15 @@ msgstr "Логи клиента игры"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 msgid "Enables logging of any game client output. Useful for developers."
-msgstr "Включает логи игрового клиента. Полезно для разработчиков."
+msgstr "Включает логирование игрового клиента. Полезно для разработчиков."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
 msgstr ""
-"Включает логи лаунчера. Полезно для разработчиков. (требуется перезапуск "
-"лаунчера)"
+"Включает логирование лаунчера. Полезно для разработчиков. (требуется "
+"перезапуск лаунчера)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
 msgid "Verbose Launcher Logging"
@@ -967,12 +968,12 @@ msgstr "Регион"
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:42
 msgctxt "Server Filters"
 msgid "Role-play level"
-msgstr "Уровень ролевой игры"
+msgstr "Уровень РП"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:47
 msgctxt "Server Filters"
 msgid "Player count"
-msgstr "Количество игроков"
+msgstr "Кол-во игроков"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:56
 msgctxt "Server Filters"
