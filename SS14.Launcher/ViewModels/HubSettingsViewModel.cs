@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using DynamicData;
 using Splat;
+using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Utility;
 
@@ -81,6 +82,13 @@ public class HubSettingsViewModel : ViewModelBase
 
         return uri.AbsoluteUri;
     }
+
+    public string InfoButtonToolTip => Loc.GetParticularString("Hub Settings Info Tooltip",
+@"Here you can add extra hubs to fetch game servers from.
+You should only add hubs that you trust, as they can 'spoof' game servers
+from other hubs. The order of the hubs matters; if two hubs advertise the
+same game server the hub with the higher priority (higher in the list) will
+take precedence.");
 }
 
 public class HubViewModel : ViewModelBase

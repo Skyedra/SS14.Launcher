@@ -46,16 +46,8 @@
           </Path.RenderTransform>
         </Path>
       </Button>
-      <Button DockPanel.Dock="Left" Content="?" Classes="InfoButton OpenLeft">
-        <ToolTip.Tip>
-Here you can add extra hubs to fetch game servers from.
-You should only add hubs that you trust, as they can 'spoof' game servers
-from other hubs. The order of the hubs matters; if two hubs advertise the
-same game server the hub with the higher priority (higher in the list) will
-take precedence.
-        </ToolTip.Tip>
-        <ToolTip.ShowDelay>0</ToolTip.ShowDelay>
-      </Button>
+      <Button DockPanel.Dock="Left" Content="?" Classes="InfoButton OpenLeft" ToolTip.Tip="{Binding InfoButtonToolTip}"
+        ToolTip.ShowDelay="0" />
       <TextBlock DockPanel.Dock="Left" Text="" Name="Warning" Margin="4 0 0 0" Height="30" Foreground="Gray" FontSize="15" Padding="4" />
     </DockPanel>
     <ScrollViewer DockPanel.Dock="Top">
