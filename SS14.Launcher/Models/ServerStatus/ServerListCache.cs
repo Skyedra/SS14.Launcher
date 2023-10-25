@@ -90,6 +90,13 @@ public sealed class ServerListCache : ReactiveObject, IServerSource
             // Process responses
             foreach (var (request, hub) in requests.OrderBy(x => x.Hub.Priority))
             {
+                if (request.IsCanceled) // handle timeouts
+                {
+                    Log.Warning("Request to hub {HubAddress} cancelled: {Message}", hub.Address);
+                    allSucceeded = false;
+                    continue;
+                }
+
                 if (request.IsFaulted)
                 {
                     // request.Exception is non-null, see https://learn.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.isfaulted?view=net-7.0#remarks
