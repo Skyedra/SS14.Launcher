@@ -92,7 +92,7 @@ public sealed class ServerListCache : ReactiveObject, IServerSource
             {
                 if (request.IsCanceled) // handle timeouts
                 {
-                    Log.Warning("Request to hub {HubAddress} cancelled: {Message}", hub.Address);
+                    Log.Warning("Request to hub {HubAddress} cancelled (timeout?)", hub.Address);
                     allSucceeded = false;
                     continue;
                 }
