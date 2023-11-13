@@ -409,8 +409,12 @@ public class Connector : ReactiveObject
         IEnumerable<string> extraArgs,
         List<(string, string)> env)
     {
-        var pubKey = LauncherPaths.PathPublicKey;
         var engineVersion = launchInfo.ModuleInfo.Single(x => x.Module == "Robust").Version;
+        var pubKey = LauncherPaths.PathPublicKey;
+
+        if (engineVersion.StartsWith("mv-")) // use multiverse engine signing key for multiverse builds
+            pubKey = LauncherPaths.PathPublicKeyMultiverse;
+
         var binPath = _engineManager.GetEnginePath(engineVersion);
         var sig = _engineManager.GetEngineSignature(engineVersion);
 

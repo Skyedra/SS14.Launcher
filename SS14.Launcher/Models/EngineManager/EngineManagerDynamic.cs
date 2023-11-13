@@ -65,10 +65,15 @@ public sealed class EngineManagerDynamic : IEngineManager
 
         Log.Information("Installing engine version {version}...", engineVersion);
 
-        Log.Debug("Loading manifest from {manifestUrl}...", ConfigConstants.RobustBuildsManifest);
+        string manifestPath = ConfigConstants.RobustBuildsManifest; // Default to Wiz Den engine builds
+
+        if (engineVersion.StartsWith("mv-")) // multiverse engine requested
+            manifestPath = ConfigConstants.MultiverseEngineBuildsManifest;
+
+        Log.Debug("Loading manifest from {manifestUrl}...", manifestPath);
         var manifest =
             await _http.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
-                ConfigConstants.RobustBuildsManifest, cancellationToken: cancel);
+                manifestPath, cancellationToken: cancel);
 
         if (!manifest!.TryGetValue(engineVersion, out var versionInfo))
         {

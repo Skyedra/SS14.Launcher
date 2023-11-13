@@ -44,6 +44,7 @@ public static class ConfigConstants
     public const string LauncherVersionUrl = "https://cdn.blepstation.com/launcher_version.txt";
     public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
     public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
+    public const string MultiverseEngineBuildsManifest = "https://spacestationmultiverse.com/ssmv-engine-manifest";
 
     public const string UrlOverrideAssets = "https://cdn.spacestationmultiverse.com/launcher-assets/override_assets.json";
     public const string UrlAssetsBase = "https://cdn.spacestationmultiverse.com/launcher-assets/";
