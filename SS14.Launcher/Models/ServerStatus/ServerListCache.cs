@@ -118,7 +118,7 @@ public sealed class ServerListCache : ReactiveObject, IServerSource
                     }
                     else
                     {
-                        Log.Debug("Not adding {Entry} from {ThisHub} because it was already provided by {PreviousHub}",
+                        Log.Verbose("Not adding {Entry} from {ThisHub} because it was already provided by {PreviousHub}",
                             entry.Address,
                             hub.Address.AbsoluteUri,
                             existingEntry.HubAddress);
