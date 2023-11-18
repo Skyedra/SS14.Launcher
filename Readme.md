@@ -1,17 +1,18 @@
 # Space Station Multiverse Launcher
 
-This is a customized, experimental, non-official version of the [Space Station 14](https://spacestation14.io/) launcher.
-
-Basically it is a version of the official launcher with more features (and bugs).
+Community-driven launcher for Space Station 14 forks.
 
 [![](https://dcbadge.vercel.app/api/server/x88ymx6vBx?compact=true&style=plastic)](https://discord.gg/x88ymx6vBx) <- Discord if you would like to discuss alternate infrastructure projects or fork development :)
 
 ## Download
-[Download binaries for Windows, Mac, and Linux](https://blepstation.com/download/).
+[Download binaries for Windows, Mac, and Linux](https://blepstation.com/download/)
+
+[Download on Steam](https://store.steampowered.com/app/2585480/Space_Station_Multiverse/)
 
 ## Features
 Differences versus current upstream version:
 
+ * **Translation** - Translated into multiple languages ([contribute translation](https://spacestationmultiverse.com/contribute-translation/)).
  * **Guest mode** - No auth server / registration required, but also compatible with WizDen accounts.  (Plans for more account providers in future)
  * **Offline support** - Ability to view & connect to servers as guest, even when WizDen auth server is down.
  * **Engine build mirror** - Engine downloads in this build are routed through a global CDN service, making them faster, more scalable, and less likely to have downtime.  These builds are populated by a simple script on BlepStation.com, which mirrors recent engine builds.  (This means you should still be able to connect to servers, even if you do not have engines already downloaded and the central server is down).
@@ -19,7 +20,8 @@ Differences versus current upstream version:
  * **Multihub** - Manage multiple hubs, adding more reliability.  (Borrowed from [Visne's branch](https://github.com/Visne/SS14.Launcher/tree/multihub).)
  * **Hub mirror** - Mirrors WizDen hub's primary API call so you can get a list of servers, even if WizDen is down (this is also routed through a real CDN for reliability & scalability.)
  * **Manage multiple identities** - By default it is set up to allow you to manage multiple identities.
-
+ * **Multiverse Engine** - Supports servers that run our [Multiverse engine fork](https://github.com/Space-Station-Multiverse/RobustToolbox).
+ 
 ## Limitations
 
  * To connect to a server without an account, the server must be configured for auth to be optional.  (At some point, I may try to figure out multi-auth).  This should work on blep and a few others.
