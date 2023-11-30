@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-03 23:53-0700\n"
-"PO-Revision-Date: 2023-10-14 06:59+0000\n"
-"Last-Translator: sTiKyt <sTiKyt@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2023-11-30 17:50+0000\n"
+"Last-Translator: Валентин Кокуца <Valentyi@users.noreply.weblate."
+"spacestationmultiverse.com>\n"
 "Language-Team: Ukrainian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/uk/>\n"
 "Language: uk\n"
@@ -29,61 +29,61 @@ msgstr "Недійсний хаб (не забудьте http(s)://)"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:75
 msgid "Duplicate hubs"
-msgstr ""
+msgstr "Дублікат хаба"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
 #, csharp-format
 msgid "'Logged in' as {0}."
-msgstr ""
+msgstr "'Увійшли' як {0}."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
 msgid "Not logged in."
-msgstr ""
+msgstr "Не авторизований."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
 msgid "Change Account..."
-msgstr ""
+msgstr "Змінити акаунт..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
 msgid "Log in..."
-msgstr ""
+msgstr "Увійти..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
-msgstr ""
+msgstr "Потрібен перезапуск"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
 "take effect."
-msgstr ""
+msgstr "Мова була змінена. Щоб зміни набули чинності, перезавантажте лаунчер."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
-msgstr ""
+msgstr "Закрити програму"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
 msgid "Checking for launcher update..."
-msgstr ""
+msgstr "Перевірка наявності оновлення лаунчера..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
 msgid "Refreshing login status..."
-msgstr ""
+msgstr "Оновлення статусу авторизації..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
 msgid "Checking account status"
-msgstr ""
+msgstr "Перевірка статусу акаунта"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
 msgid "Error connecting to authentication server"
-msgstr ""
+msgstr "Помилка при підключенні до серверу автентифікації"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
 msgid "Unknown error occured"
-msgstr ""
+msgstr "Сталася невідома помилка"
 
 #: ../SS14.Launcher/ViewModels/HubSettingsViewModel.cs:87
 msgctxt "Hub Settings Info Tooltip"
@@ -94,16 +94,22 @@ msgid ""
 "same game server the hub with the higher priority (higher in the list) will\n"
 "take precedence."
 msgstr ""
+"Тут ви можете додати додаткові хаби для отримання ігрових серверів.\n"
+"Вам слід додавати лише хаби, яким ви довіряєте, оскільки вони можуть "
+"«підробляти» ігрові сервери\n"
+"з інших хабів.\n"
+"Порядок хабів має значення; якщо два хаби рекламують\n"
+"той самий ігровий сервер хаб вище у списку має пріоритет."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 msgctxt "Tab"
 msgid "Servers"
-msgstr ""
+msgstr "Сервера"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:46
 msgctxt "Server List Status Text"
 msgid "There was an error fetching the master server lists."
-msgstr ""
+msgstr "Виникла помилка при отриманні списків серверів."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:48
 msgctxt "Server List Status Text"
@@ -111,89 +117,93 @@ msgid ""
 "Failed to fetch some or all server lists. Ensure your hub configuration is "
 "correct."
 msgstr ""
+"Не вдалося отримати деякі або всі списки серверів. Переконайтеся, що ваша "
+"конфігурація хаба є правильною."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:50
 msgctxt "Server List Status Text"
 msgid "Fetching master server list..."
-msgstr ""
+msgstr "Отримання списків серверів..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:52
 msgctxt "Server List Status Text"
 msgid "Discovering servers..."
-msgstr ""
+msgstr "Пошук серверів..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:59
 msgctxt "Server List Status Text"
 msgid "No servers match your search or filter settings."
-msgstr ""
+msgstr "Жоден з серверів не відповідає параметрам пошуку або фільтрів."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:62
 msgctxt "Server List Status Text"
 msgid "There are no public servers. Ensure your hub configuration is correct."
 msgstr ""
+"Немає публічних серверів. Переконайтеся, що ваша конфігурація хаба є "
+"правильною."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
 #, csharp-format
 msgctxt "Filter Button that shows current servers out of total servers"
 msgid "Filters ({0} / {1})"
-msgstr ""
+msgstr "Фільтри ({0} / {1})"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/OptionsTabViewModel.cs:32
 msgctxt "Tab"
 msgid "Options"
-msgstr ""
+msgstr "Параметри"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:59
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:60
 msgctxt "Server Filters"
 msgid "Yes"
-msgstr ""
+msgstr "Так"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:64
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:65
 msgctxt "Server Filters"
 msgid "No"
-msgstr ""
+msgstr "Ні"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:69
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
-msgstr ""
+msgstr "Сервери без гравців не будуть відображатися"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
 msgctxt "Server Filters"
 msgid "Hide empty"
-msgstr ""
+msgstr "Сховати порожні"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
-msgstr ""
+msgstr "Сервери, які заповнені, не будуть відображатися"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
 msgctxt "Server Filters"
 msgid "Hide full"
-msgstr ""
+msgstr "Сховати заповнені"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
-msgstr ""
+msgstr "Сервери з меншою кількістю гравців не будуть відображатися"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
 msgctxt "Server Filters"
 msgid "Minimum: "
-msgstr ""
+msgstr "Мінімум: "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
-msgstr ""
+msgstr "Сервери з більшою кількістю гравців не будуть відображатися"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:89
 msgctxt "Server Filters"
 msgid "Maximum: "
-msgstr ""
+msgstr "Максимум: "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:189
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:190
@@ -203,294 +213,294 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:198
 msgctxt "Server Filters"
 msgid "Unspecified"
-msgstr ""
+msgstr "Не вказано"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:12
 msgctxt "Region - Long Name"
 msgid "Africa Central"
-msgstr ""
+msgstr "Центральна Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:13
 msgctxt "Region - Long Name"
 msgid "Africa North"
-msgstr ""
+msgstr "Північна Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:14
 msgctxt "Region - Long Name"
 msgid "Africa South"
-msgstr ""
+msgstr "Південна Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:15
 msgctxt "Region - Long Name"
 msgid "Antarctica"
-msgstr ""
+msgstr "Антарктида"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:16
 msgctxt "Region - Long Name"
 msgid "Asia East"
-msgstr ""
+msgstr "Східна Азія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:17
 msgctxt "Region - Long Name"
 msgid "Asia North"
-msgstr ""
+msgstr "Північна Азія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:18
 msgctxt "Region - Long Name"
 msgid "Asia South East"
-msgstr ""
+msgstr "Південно-Східна Азія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:19
 msgctxt "Region - Long Name"
 msgid "Central America"
-msgstr ""
+msgstr "Центральна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:20
 msgctxt "Region - Long Name"
 msgid "Europe East"
-msgstr ""
+msgstr "Східна Європа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:21
 msgctxt "Region - Long Name"
 msgid "Europe West"
-msgstr ""
+msgstr "Західна Європа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:22
 msgctxt "Region - Long Name"
 msgid "Greenland"
-msgstr ""
+msgstr "Гренландія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:23
 msgctxt "Region - Long Name"
 msgid "India"
-msgstr ""
+msgstr "Індія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:24
 msgctxt "Region - Long Name"
 msgid "Middle East"
-msgstr ""
+msgstr "Близький Схід"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:25
 msgctxt "Region - Long Name"
 msgid "The Moon"
-msgstr ""
+msgstr "Місяць"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:26
 msgctxt "Region - Long Name"
 msgid "North America Central"
-msgstr ""
+msgstr "Центрально-Північна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:27
 msgctxt "Region - Long Name"
 msgid "North America East"
-msgstr ""
+msgstr "Північно-Східна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:28
 msgctxt "Region - Long Name"
 msgid "North America West"
-msgstr ""
+msgstr "Північно-Західна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:29
 msgctxt "Region - Long Name"
 msgid "Oceania"
-msgstr ""
+msgstr "Океанія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:30
 msgctxt "Region - Long Name"
 msgid "South America East"
-msgstr ""
+msgstr "Південно-Східна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:31
 msgctxt "Region - Long Name"
 msgid "South America South"
-msgstr ""
+msgstr "Південно-Південна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:32
 msgctxt "Region - Long Name"
 msgid "South America West"
-msgstr ""
+msgstr "Південно-Західна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:39
 msgctxt "Region - Short Name"
 msgid "Africa Central"
-msgstr ""
+msgstr "Центральна Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:40
 msgctxt "Region - Short Name"
 msgid "Africa North"
-msgstr ""
+msgstr "Північна Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:41
 msgctxt "Region - Short Name"
 msgid "Africa South"
-msgstr ""
+msgstr "Південна Африка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:42
 msgctxt "Region - Short Name"
 msgid "Antarctica"
-msgstr ""
+msgstr "Антарктида"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:43
 msgctxt "Region - Short Name"
 msgid "Asia East"
-msgstr ""
+msgstr "Східна Азія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:44
 msgctxt "Region - Short Name"
 msgid "Asia North"
-msgstr ""
+msgstr "Північна Азія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:45
 msgctxt "Region - Short Name"
 msgid "Asia South East"
-msgstr ""
+msgstr "Південно-Східна Азія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:46
 msgctxt "Region - Short Name"
 msgid "Central America"
-msgstr ""
+msgstr "Центральна Америка"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:47
 msgctxt "Region - Short Name"
 msgid "Europe East"
-msgstr ""
+msgstr "Східна Європа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:48
 msgctxt "Region - Short Name"
 msgid "Europe West"
-msgstr ""
+msgstr "Західна Європа"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:49
 msgctxt "Region - Short Name"
 msgid "Greenland"
-msgstr ""
+msgstr "Гренландія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:50
 msgctxt "Region - Short Name"
 msgid "India"
-msgstr ""
+msgstr "Індія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:51
 msgctxt "Region - Short Name"
 msgid "Middle East"
-msgstr ""
+msgstr "Близький Схід"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:52
 msgctxt "Region - Short Name"
 msgid "The Moon"
-msgstr ""
+msgstr "Місяць"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:53
 msgctxt "Region - Short Name"
 msgid "NA Central"
-msgstr ""
+msgstr "Центр ПА (Північ)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:54
 msgctxt "Region - Short Name"
 msgid "NA East"
-msgstr ""
+msgstr "Схід ПА (Північ)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:55
 msgctxt "Region - Short Name"
 msgid "NA West"
-msgstr ""
+msgstr "Захід ПА (Північ)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:56
 msgctxt "Region - Short Name"
 msgid "Oceania"
-msgstr ""
+msgstr "Океанія"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:57
 msgctxt "Region - Short Name"
 msgid "SA East"
-msgstr ""
+msgstr "Схід ПА (Південь)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:58
 msgctxt "Region - Short Name"
 msgid "SA South"
-msgstr ""
+msgstr "Південь ПА (Південь)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:59
 msgctxt "Region - Short Name"
 msgid "SA West"
-msgstr ""
+msgstr "Захід ПА (Південь)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:66
 msgctxt "Roleplay Level Filter"
 msgid "None"
-msgstr ""
+msgstr "Немає"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:67
 msgctxt "Roleplay Level Filter"
 msgid "Low"
-msgstr ""
+msgstr "Легкий"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:68
 msgctxt "Roleplay Level Filter"
 msgid "Medium"
-msgstr ""
+msgstr "Середній"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:69
 msgctxt "Roleplay Level Filter"
 msgid "High"
-msgstr ""
+msgstr "Суворий"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
 msgctxt "Tab"
 msgid "News"
-msgstr ""
+msgstr "Новини"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
 msgid "Remove Favorite"
-msgstr ""
+msgstr "Прибрати з обраного"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
 msgid "Add Favorite"
-msgstr ""
+msgstr "Добавити в обране"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
 msgid "OFFLINE"
-msgstr ""
+msgstr "Офлайн"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
 msgid "Fetching..."
-msgstr ""
+msgstr "Завантаження..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
 msgid "Unable to contact server"
-msgstr ""
+msgstr "Неможливо з'єднатися с сервером"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
 msgid "Fetching server status..."
-msgstr ""
+msgstr "Отримання статусу сервера..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
 msgid "Fetching server description..."
-msgstr ""
+msgstr "Отримання опису сервера..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
 msgid "Error while fetching server description"
-msgstr ""
+msgstr "Помилка при отриманні опису сервера"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
 msgid "No server description provided"
-msgstr ""
+msgstr "Опис сервера не отримано"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
 msgctxt "Tab"
 msgid "Home"
-msgstr ""
+msgstr "Обране"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
-msgstr ""
+msgstr "Wizard's Den"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
-msgstr ""
+msgstr "Потрібно ім'я користувача"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
 msgctxt "Guest Mode Auth Error - Description"
@@ -498,26 +508,29 @@ msgid ""
 "Even though no account will be created, servers will still need a username "
 "to call you by.  Please enter a username in the username field."
 msgstr ""
+"Незважаючи на те, що обліковий запис не буде створено, серверам все ще "
+"потрібно ім’я користувача, за якими вони звертатимуться до вас. Будь ласка, "
+"введіть ім’я користувача в поле імені користувача."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
-msgstr ""
+msgstr "Ім'я користувача використовує заборонені символи"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
 msgctxt "Guest Mode Auth Error - Description"
 msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr ""
+msgstr "Ім'я користувача може використовувати лише 0-9 a-z A-Z та _"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
 msgctxt "Create Identity Tab"
 msgid "Guest"
-msgstr ""
+msgstr "Гість"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:21
 msgctxt "Create Identity Tab"
 msgid "(Information)"
-msgstr ""
+msgstr "(Інформація)"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:27
 msgid ""
