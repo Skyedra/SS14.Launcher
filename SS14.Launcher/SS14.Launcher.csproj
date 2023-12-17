@@ -54,6 +54,7 @@
     <PackageReference Include="Mono.Posix.NETStandard" />
     <PackageReference Include="SharpZstd.Interop" />
     <PackageReference Include="SpaceWizards.Sodium" />
+    <PackageReference Include="JetBrains.Annotations" />
     <PackageReference Include="Microsoft.NET.ILLink.Tasks" />
   </ItemGroup>
   <ItemGroup>
