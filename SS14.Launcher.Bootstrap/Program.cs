@@ -45,7 +45,7 @@ namespace SS14.Launcher.Bootstrap
                 if (val is not string s)
                     return;
 
-                if (!s.Contains("Space Station 14") && !s.Contains("SS14.Launcher"))
+                if (!s.Contains("Space Station Multiverse") && !s.Contains("SSMV.Launcher"))
                     return;
 
                 envKey.DeleteValue("DOTNET_ROOT");
