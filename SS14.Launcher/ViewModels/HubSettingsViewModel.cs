@@ -47,7 +47,7 @@ public class HubSettingsViewModel : ViewModelBase
         HubList.Add(new HubViewModel("", this));
     }
 
-    private void Reset()
+    public void Reset()
     {
         HubList.Clear();
         foreach (var url in ConfigConstants.DefaultHubUrls)
