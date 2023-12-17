@@ -56,8 +56,11 @@ public class LanguageDropDownViewModel : ViewModelBase
     [Reactive] public bool IsDropDownOpen { get; set; }
 
 
-    public void SwitchLanguageDueToButtonPress(Localization.Language language)
+    public void SwitchLanguageDueToButtonPress(object languageObject)
     {
+        // perfectly normal for this to come through as null to reset back to EN
+        Localization.Language language = (Localization.Language) languageObject;
+
         IsDropDownOpen = false;
 
         localizationManager.SetLanguage(language);
