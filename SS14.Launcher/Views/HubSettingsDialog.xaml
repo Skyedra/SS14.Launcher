@@ -51,7 +51,7 @@
       <TextBlock DockPanel.Dock="Left" Text="" Name="Warning" Margin="4 0 0 0" Height="30" Foreground="Gray" FontSize="15" Padding="4" />
     </DockPanel>
     <ScrollViewer DockPanel.Dock="Top">
-      <ItemsControl Items="{Binding HubList}" Name="Hubs">
+      <ItemsControl ItemsSource="{Binding HubList}" Name="Hubs">
         <ItemsControl.ItemsPanel>
           <ItemsPanelTemplate>
             <StackPanel Spacing="2" />

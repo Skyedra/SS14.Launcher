@@ -30,17 +30,17 @@
       <StackPanel Orientation="Vertical">
         <DockPanel Classes="ServerFilterGroup">
           <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Language, Context=Server Filters}" />
-          <ItemsControl Items="{Binding FiltersLanguage}"
+          <ItemsControl ItemsSource="{Binding FiltersLanguage}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
           <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Region, Context=Server Filters}" />
-          <ItemsControl Items="{Binding FiltersRegion}"
+          <ItemsControl ItemsSource="{Binding FiltersRegion}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
           <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Role-play level, Context=Server Filters}" />
-          <ItemsControl Items="{Binding FiltersRolePlay}"
+          <ItemsControl ItemsSource="{Binding FiltersRolePlay}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
@@ -54,13 +54,13 @@
         </DockPanel>
         <DockPanel Classes="ServerFilterGroup">
           <TextBlock MinWidth="150" DockPanel.Dock="Left" VerticalAlignment="Center" Classes="SubText" Text="{loc:Get 18+, Context=Server Filters}" />
-          <ItemsControl Items="{Binding FiltersEighteenPlus}"
+          <ItemsControl ItemsSource="{Binding FiltersEighteenPlus}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
         </DockPanel>
 
         <DockPanel Classes="ServerFilterGroup">
           <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Hub, Context=Server Filters}" />
-          <ItemsControl Items="{Binding FiltersHub}"
+          <ItemsControl ItemsSource="{Binding FiltersHub}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource WideFilterTemplate}">
           </ItemsControl>
         </DockPanel>

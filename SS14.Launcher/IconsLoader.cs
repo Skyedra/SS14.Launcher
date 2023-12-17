@@ -18,11 +18,9 @@ public static class IconsLoader
 
     public static void Load(App app)
     {
-        var loader = AvaloniaLocator.Current.GetService<IAssetLoader>()!;
-
         foreach (var (path, resource) in Icons)
         {
-            using var file = loader.Open(new Uri($"avares://SSMV.Launcher/Assets/{path}"));
+            using var file = AssetLoader.Open(new Uri($"avares://SSMV.Launcher/Assets/{path}"));
             var bitmap = new Bitmap(file);
             app.Resources.Add(resource, bitmap);
         }
