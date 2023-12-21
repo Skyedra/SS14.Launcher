@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-03 23:53-0700\n"
-"PO-Revision-Date: 2023-12-03 11:59+0000\n"
+"PO-Revision-Date: 2023-12-22 20:59+0000\n"
 "Last-Translator: Randomm <Valentyi@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
 "Language-Team: Ukrainian <http://weblate.spacestationmultiverse.com/projects/"
@@ -877,122 +877,130 @@ msgstr "Ввійти"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:14
 msgid "2-factor authentication required"
-msgstr ""
+msgstr "Потрібна двофакторна автентифікація"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:17
 msgid "Please enter the authentication code from your app."
-msgstr ""
+msgstr "Введіть код автентифікації з програми."
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:20
 msgid "Authentication code"
-msgstr ""
+msgstr "Код автентифікації"
 
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:34
 msgid "Recovery code"
-msgstr ""
+msgstr "Код відновлення"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:18
 msgctxt "Description of WizDen login method"
 msgid "The original central authentication server for SS14."
-msgstr ""
+msgstr "Оригінальний центральний сервер автентифікації для SS14."
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:23
 msgctxt "Login field"
 msgid "Username or email"
-msgstr ""
+msgstr "Ім'я користувача або e-mail"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:26
 msgid "WizDen Password"
-msgstr ""
+msgstr "WizDen Пароль"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:40
 msgid "Forgot your password?"
-msgstr ""
+msgstr "Забули пароль?"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:45
 msgid "Resend email confirmation"
-msgstr ""
+msgstr "Повторна відправка підтвердження по e-mail"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:53
 msgid "Register"
-msgstr ""
+msgstr "Зареєструватися"
 
 #: ../SS14.Launcher/Views/Login/LoginView.xaml:61
 msgid "Don't have an account? Register!"
-msgstr ""
+msgstr "У вас немає облікового запису? Зареєструватися!"
 
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
 msgid "Welcome"
-msgstr ""
+msgstr "Ласкаво просимо"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:16
 msgctxt "Header for wizden login tab"
 msgid "Wizard's Den"
-msgstr ""
+msgstr "Wizard's Den"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
 msgctxt "Guest Tab Header"
 msgid "Guest"
-msgstr ""
+msgstr "Гість"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:18
 msgid ""
 "A guest identity does not require any centralized authentication.  However, "
 "the game server may not be able to track your playtime."
 msgstr ""
+"Ідентифікатор гостя не потребує централізованої автентифікації.  Однак "
+"ігровий сервер не зможе відстежувати ваш ігровий час."
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
 msgctxt "Name entry field on guest tab"
 msgid "Name"
-msgstr ""
+msgstr "Ім'я"
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:25
 msgctxt "Button on guest tab"
 msgid "Continue without account"
-msgstr ""
+msgstr "Продовжити без акаунта"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:17
 msgid "*flip"
-msgstr ""
+msgstr "*фліп"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:18
 msgid "Clear installed engines"
-msgstr ""
+msgstr "Очищення встановлених двигунів"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:20
 msgid "Clear installed server content"
-msgstr ""
+msgstr "Очищення вмісту сервера"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
-msgstr ""
+msgstr "Відкрити папку с логами"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:30
 msgid ""
 "Set launcher language.  This does not affect in-game language, which is up "
 "to the server you connect to."
 msgstr ""
+"Встановити мову лаунчера.  Це не впливає на внутрішньо ігрову мову, яка "
+"залежить від сервера, до якого ви підключаєтеся."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
 msgid "Account Settings"
-msgstr ""
+msgstr "Налаштування акаунту"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
 msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through our website."
 msgstr ""
+"Ви можете керувати налаштуваннями свого облікового запису, такими як зміна "
+"електронної пошти або пароля, через наш веб-сайт."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
 msgstr ""
+"Виберіть, які сервери або сервери-хаба ви хочете використовувати, щоб "
+"отримати список ігрових серверів."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
 msgid "Compatibility Mode"
-msgstr ""
+msgstr "Режим сумісності"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 msgid ""
@@ -1000,147 +1008,158 @@ msgid ""
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
 "or crashes."
 msgstr ""
+"Використовуйте OpenGL ES 2 (за потреби через ANGLE), який менш схильний до "
+"помилок драйверів. Спробуйте цей варіант, якщо у вас виникли проблеми з "
+"графікою або збої."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
 msgid "Experimental Performance Options"
-msgstr ""
+msgstr "Експериментальні налаштування продуктивності"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
 msgstr ""
+"Експериментальні змінні середовища .NET 6, які дозволяють створювати "
+"повністю динамічні PGO. Вимкніть налаштування, якщо у вас виникнуть проблеми."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
 msgid "Log Client"
-msgstr ""
+msgstr "Логи клієнта гри"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 msgid "Enables logging of any game client output. Useful for developers."
-msgstr ""
+msgstr "Включає в себе ведення логів ігрового клієнта. Корисно для розробників."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
 msgstr ""
+"Вмикає ведення логів лаунчеру. Корисно для розробників. (Потрібен перезапуск "
+"лаунчера)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
 msgid "Verbose Launcher Logging"
-msgstr ""
+msgstr "Детальні логи лаунчера"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
 msgstr ""
+"Для тих випадків, коли розробники *дуже* спантеличені вашою проблемою. ("
+"Потрібен перезапуск лаунчера)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
 msgid "Seasonal Branding"
-msgstr ""
+msgstr "Сезонний брендинг"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Whatever temporally relevant icons and logos we can come up with."
-msgstr ""
+msgstr "Ми будемо придумувати всілякі іконки і логотипи, які відповідають часу."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
 msgid "Disable Engine Signature Checks"
-msgstr ""
+msgstr "Вимкніть перевірку сигнатур двигуна"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
 msgstr ""
+"[ТІЛЬКИ РОЗРОБНИКИ] Вимикає перевірку сигнатури двигуна. НЕ ВМИКАЙТЕ ЙОГО, "
+"ЯКЩО ВИ ТОЧНО НЕ ЗНАЄТЕ, ЩО РОБИТЕ."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:19
 msgid "Favorite Servers:"
-msgstr ""
+msgstr "Обрані сервери:"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:20
 msgctxt "Button"
 msgid "Add Favorite..."
-msgstr ""
+msgstr "Додати в обрані..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:21
 msgctxt "Button"
 msgid "Refresh"
-msgstr ""
+msgstr "Оновити"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:26
 msgctxt "Button"
 msgid "Direct Connect To Server..."
-msgstr ""
+msgstr "Пряме підключення до сервера..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:29
 msgctxt "Button"
 msgid "Run content bundle/replay"
-msgstr ""
+msgstr "Запуск архіву з повтором гри"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:43
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:53
 msgctxt "Button"
 msgid "Go to the servers tab"
-msgstr ""
+msgstr "Перейти на вкладку серверів"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:51
 msgid "Mark servers as favorite for easy access here."
-msgstr ""
+msgstr "Позначте сервери як обраний, щоб мати до них легкий доступ."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
 msgid "Raise to top"
-msgstr ""
+msgstr "Підняти вище"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:18
 msgid "Refresh"
-msgstr ""
+msgstr "Оновити"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:20
 msgid "Search For Servers..."
-msgstr ""
+msgstr "Пошук по серверам..."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:41
 msgid "Players"
-msgstr ""
+msgstr "Гравців"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:43
 msgid "Server Name"
-msgstr ""
+msgstr "Ім'я сервера"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
 msgid "Recent News:"
-msgstr ""
+msgstr "Остані новини:"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:27
 msgid "Filters"
-msgstr ""
+msgstr "Фільтри"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:32
 msgctxt "Server Filters"
 msgid "Language"
-msgstr ""
+msgstr "Мова"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:37
 msgctxt "Server Filters"
 msgid "Region"
-msgstr ""
+msgstr "Регіон"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:42
 msgctxt "Server Filters"
 msgid "Role-play level"
-msgstr ""
+msgstr "Рівень Роле-Плей"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:47
 msgctxt "Server Filters"
 msgid "Player count"
-msgstr ""
+msgstr "Кількість гравців"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:56
 msgctxt "Server Filters"
 msgid "18+"
-msgstr ""
+msgstr "18+"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
 msgctxt "Server Filters"
 msgid "Hub"
-msgstr ""
+msgstr "Хаб"
