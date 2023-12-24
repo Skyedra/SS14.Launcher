@@ -56,13 +56,15 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         HomeTab = new HomePageViewModel(this);
         OptionsTab = new OptionsTabViewModel();
 
-        Tabs = new MainWindowTabViewModel[]
-        {
-            HomeTab,
-            ServersTab,
-            NewsTab,
-            OptionsTab
-        };
+        var tabs = new List<MainWindowTabViewModel>();
+        tabs.Add(HomeTab);
+        tabs.Add(ServersTab);
+        tabs.Add(NewsTab);
+        tabs.Add(OptionsTab);
+#if DEVELOPMENT
+        tabs.Add(new DevelopmentTabViewModel());
+#endif
+        Tabs = tabs;
 
         AccountDropDown = new AccountDropDownViewModel(this);
         IdentityViewModel = new MainWindowIdentityViewModel();
