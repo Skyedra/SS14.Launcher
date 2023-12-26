@@ -321,13 +321,13 @@ public class LocalizationManager : ReactiveObject
         var ruRu = Language.FromLocale("ru_RU");
         var sergal = new Language("sergal", "Sergal");
         //var ruUa = Language.FromLocale("ru_UA");
-        var ukranian = Language.FromLocale("uk");
+        var ukrainian = Language.FromLocale("uk");
 
         return new Dictionary<string, Language> {
             {"English (US)", null},
             {ruRu.displayName, ruRu},
             //{ruUa.displayName, ruUa},
-            {ukranian.displayName, ukranian},
+            {ukrainian.displayName, ukrainian},
             {french.displayName, french},
             {italian.displayName, italian},
             {german.displayName, german},
