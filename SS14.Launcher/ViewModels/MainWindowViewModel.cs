@@ -205,6 +205,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         catch (HttpRequestException e)
         {
             Log.Warning(e, "Unable to check for launcher update due to error, assuming up-to-date.");
+            HttpSelfTest.StartSelfTest();
             OutOfDate = false;
         }
         catch (TaskCanceledException e)
