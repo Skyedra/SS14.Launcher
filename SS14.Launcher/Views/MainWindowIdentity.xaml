@@ -35,7 +35,7 @@
     <!-- <ContentControl Content="{Binding Screen}" /> -->
 
    <!-- IsVisible="{Binding !$parent.DataContext.LoggedIn}" -->
-    <TabControl ItemsSource="{Binding IdentityTabs}" TabStripPlacement="Left"
+    <TabControl Items="{Binding IdentityTabs}" TabStripPlacement="Left"
                     SelectedIndex="{Binding SelectedIndex,Mode=TwoWay}" Margin="0 0 0 0">
           <TabControl.ItemTemplate>
             <DataTemplate DataType="identityTabs:IdentityTabViewModel">

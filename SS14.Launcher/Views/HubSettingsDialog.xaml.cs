@@ -18,6 +18,10 @@ public partial class HubSettingsDialog : Window
     {
         InitializeComponent();
 
+#if DEBUG
+        this.AttachDevTools();
+#endif
+
         _viewModel = (DataContext as HubSettingsViewModel)!; // Should have been set in XAML
         _viewModel.HubList.CollectionChanged += (_, _) => Verify();
     }

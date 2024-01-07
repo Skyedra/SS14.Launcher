@@ -26,7 +26,8 @@
                 MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
                 Name="PART_Popup"
                 PlacementTarget="{TemplateBinding}"
-                IsOpen="{TemplateBinding IsDropDownOpen,Mode=TwoWay}">
+                IsOpen="{TemplateBinding IsDropDownOpen,Mode=TwoWay}"
+                StaysOpen="False">
                 <ContentPresenter Content="{TemplateBinding Content}"
                                   ContentTemplate="{TemplateBinding ContentTemplate}" />
               </Popup>

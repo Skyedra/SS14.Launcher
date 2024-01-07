@@ -5,7 +5,6 @@ using DynamicData;
 using JetBrains.Annotations;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
-using Serilog;
 using Splat;
 using SS14.Launcher.Api;
 using SS14.Launcher.Localization;
@@ -100,16 +99,11 @@ public class AccountDropDownViewModel : ViewModelBase
     }
 
     [UsedImplicitly]
-    public void AccountButtonPressed(object account)
+    public void AccountButtonPressed(LoggedInAccount account)
     {
-        if (account is not LoggedInAccount loggedInAccount)
-        {
-            Log.Warning($"Tried to switch account but parameter was not of type {nameof(LoggedInAccount)}");
-            return;
-        }
-
         IsDropDownOpen = false;
-        _mainVm.TrySwitchToAccount(loggedInAccount);
+
+        _mainVm.TrySwitchToAccount(account);
     }
 
     public void AddAccountPressed()

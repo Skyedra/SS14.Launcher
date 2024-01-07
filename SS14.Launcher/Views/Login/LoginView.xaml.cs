@@ -11,8 +11,11 @@ public partial class LoginView : UserControl
     {
         InitializeComponent();
 
-        NameBox.KeyDown += InputBoxOnKeyDown;
-        PasswordBox.KeyDown += InputBoxOnKeyDown;
+        var nameBox = this.FindControl<TextBox>("NameBox");
+        var passwordBox = this.FindControl<TextBox>("PasswordBox");
+
+        nameBox.KeyDown += InputBoxOnKeyDown;
+        passwordBox.KeyDown += InputBoxOnKeyDown;
     }
 
     private void InputBoxOnKeyDown(object? sender, KeyEventArgs args)

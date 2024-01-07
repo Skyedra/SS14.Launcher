@@ -2,13 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Markup.Xaml;
-using Avalonia.VisualTree;
 using SS14.Launcher.ViewModels.Login;
-using YamlDotNet.Core;
 
 namespace SS14.Launcher.Views.Login;
 
-public sealed partial class AuthErrorsOverlayView : UserControl
+public sealed partial class AuthErrorsOverlayView : UserControl, IFocusScope
 {
     public AuthErrorsOverlayView()
     {
@@ -19,7 +17,7 @@ public sealed partial class AuthErrorsOverlayView : UserControl
     {
         base.OnAttachedToVisualTree(e);
 
-        OkButton.Focus();
+        FocusManager.Instance?.SetFocusScope(this);
     }
 
     protected override void OnKeyDown(KeyEventArgs e)

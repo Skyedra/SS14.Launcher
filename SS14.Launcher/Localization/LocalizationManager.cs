@@ -179,6 +179,15 @@ public class LocalizationManager : ReactiveObject
             return true;
         }
 
+        var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
+
+        if (assets == null)
+        {
+            Log.Warning("Unable to find asset loader, no localization will be done.");
+            return false;
+        }
+
+
         var possibleUris = new List<Uri>() {
             new Uri($"avares://SSMV.Launcher/Assets/locale/" + language.translationFileName + "/LC_MESSAGES/Launcher.mo")
         };
@@ -196,9 +205,9 @@ public class LocalizationManager : ReactiveObject
 
         foreach (var possibleFileUri in possibleUris)
         {
-            if (AssetLoader.Exists(possibleFileUri))
+            if (assets.Exists(possibleFileUri))
             {
-                var stream = AssetLoader.Open(possibleFileUri);
+                var stream = assets.Open(possibleFileUri);
                 if (cultureInfo != null)
                     activeCatalog = new Catalog(stream, cultureInfo);
                 else

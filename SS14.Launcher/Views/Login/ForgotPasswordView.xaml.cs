@@ -11,7 +11,9 @@ public sealed partial class ForgotPasswordView : UserControl
     {
         InitializeComponent();
 
-        EmailBox.KeyDown += InputBoxOnKeyDown;
+        var emailBox = this.FindControl<TextBox>("EmailBox");
+
+        emailBox.KeyDown += InputBoxOnKeyDown;
     }
 
     private void InputBoxOnKeyDown(object? sender, KeyEventArgs args)

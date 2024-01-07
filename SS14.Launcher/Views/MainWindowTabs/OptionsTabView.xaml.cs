@@ -15,7 +15,8 @@ public partial class OptionsTabView : UserControl
     {
         InitializeComponent();
 
-        Flip.Command = ReactiveCommand.Create(() =>
+        var flip = this.FindControl<Button>("Flip");
+        flip.Command = ReactiveCommand.Create(() =>
         {
             var window = (Window?) VisualRoot;
             if (window == null)

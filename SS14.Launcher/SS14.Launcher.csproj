@@ -24,7 +24,7 @@
       <SubType>Designer</SubType>
     </AvaloniaResource>
 
-    <AdditionalFiles Include="**\*.xaml" SourceItemGroup="AvaloniaXaml" />
+    <AdditionalFiles Include="**\*.xaml" />
 
     <Compile Update="Views\MainWindowTabs\ServerFilterView.xaml.cs">
       <DependentUpon>ServerFilterView.xaml</DependentUpon>
@@ -33,10 +33,8 @@
   <ItemGroup>
     <PackageReference Include="Avalonia" />
     <PackageReference Include="Avalonia.Desktop" />
-    <PackageReference Include="Avalonia.Fonts.Inter" />
     <PackageReference Include="Avalonia.ReactiveUI" />
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" />
-    <PackageReference Include="Avalonia.Themes.Simple" />
     <PackageReference Include="CodeHollow.FeedReader" />
     <PackageReference Include="Dapper" />
     <PackageReference Include="DynamicData" />
@@ -49,6 +47,7 @@
     <PackageReference Include="Serilog" />
     <PackageReference Include="Serilog.Sinks.Console" />
     <PackageReference Include="Serilog.Sinks.File" />
+    <PackageReference Include="XamlNameReferenceGenerator" />
     <PackageReference Include="YamlDotNet" />
     <PackageReference Include="TerraFX.Interop.Windows" />
     <PackageReference Include="NSec.Cryptography" />

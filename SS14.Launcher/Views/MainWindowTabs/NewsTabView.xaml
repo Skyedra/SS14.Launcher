@@ -17,7 +17,7 @@
 
     <Panel Background="{DynamicResource StripeBackBrush}">
       <ScrollViewer IsVisible="{Binding NewsPulled}">
-        <ItemsControl ItemsSource="{Binding NewsEntries}">
+        <ItemsControl Items="{Binding NewsEntries}">
           <ItemsControl.ItemTemplate>
             <DataTemplate DataType="mainWindowTabs:NewsEntryViewModel">
               <Button Margin="4, 4" Command="{Binding Open}">

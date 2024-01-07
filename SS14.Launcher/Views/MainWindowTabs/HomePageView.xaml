@@ -43,7 +43,7 @@
             <Button Content="{loc:Get Go to the servers tab, Context=Button}" Command="{Binding MainWindowViewModel.SelectTabServers}"
                     HorizontalAlignment="Center" />
             </StackPanel>
-            <ItemsControl ItemsSource="{Binding Favorites}"
+            <ItemsControl Items="{Binding Favorites}"
                           Classes="ServerList" />
           </DockPanel>
           <StackPanel IsVisible="{Binding FavoritesEmpty}"

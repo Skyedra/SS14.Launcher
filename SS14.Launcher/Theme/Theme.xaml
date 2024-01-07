@@ -39,19 +39,19 @@
   </Style>
 
   <!-- TabItem -->
-  <Style Selector="TabItem:pointerover /template/ ContentPresenter">
+  <Style Selector="TabItem:pointerover">
     <Setter Property="Background" Value="{DynamicResource ThemeTabItemHoveredBrush}" />
   </Style>
-  <Style Selector="TabItem:selected /template/ ContentPresenter">
+  <Style Selector="TabItem:selected">
     <Setter Property="Background" Value="{DynamicResource ThemeTabItemSelectedBrush}" />
   </Style>
-  <Style Selector="TabItem:selected:focus /template/ ContentPresenter">
+  <Style Selector="TabItem:selected:focus">
     <Setter Property="Background" Value="{DynamicResource ThemeTabItemSelectedBrush}" />
   </Style>
-  <Style Selector="TabItem:selected:pointerover /template/ ContentPresenter">
+  <Style Selector="TabItem:selected:pointerover">
     <Setter Property="Background" Value="{DynamicResource ThemeTabItemSelectedBrush}" />
   </Style>
-  <Style Selector="TabItem:selected:focus:pointerover /template/ ContentPresenter">
+  <Style Selector="TabItem:selected:focus:pointerover">
     <Setter Property="Background" Value="{DynamicResource ThemeTabItemSelectedBrush}" />
   </Style>
 

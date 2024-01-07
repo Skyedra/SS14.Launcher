@@ -19,7 +19,7 @@
         <StackPanel Orientation="Vertical">
           <TextBlock Text="{loc:Get Languages..., Context=Language select drop-down}" Margin="4" />
 
-          <ItemsControl Name="Items" ItemsSource="{Binding availableLanguages}">
+          <ItemsControl Name="Items" Items="{Binding availableLanguages}">
             <ItemsControl.ItemTemplate>
               <DataTemplate DataType="vm:AvailableLanguageViewModel">
                 <Button Content="{Binding displayText}" Margin="4"

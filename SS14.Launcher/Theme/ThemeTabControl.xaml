@@ -21,7 +21,9 @@ Taken & modified from Avalonia's git repo.
               Background="{DynamicResource ThemeStripeBackBrush}">
               <ItemsPresenter
                 Name="PART_ItemsPresenter"
-                ItemsPanel="{TemplateBinding ItemsPanel}"/>
+                Items="{TemplateBinding Items}"
+                ItemsPanel="{TemplateBinding ItemsPanel}"
+                ItemTemplate="{TemplateBinding ItemTemplate}" />
             </Panel>
             <Panel Name="PART_Edge" Background="{DynamicResource ThemeStripebackEdgeBrush}" />
             <ContentPresenter
