@@ -115,6 +115,11 @@ public static class CVars
     /// </summary>
     /// <returns></returns>
     public static readonly CVarDef<string> Locale = CVarDef.Create("Locale", "");
+
+    /// <summary>
+    /// Stores whether the user has seen the Wine warning.
+    /// </summary>
+    public static readonly CVarDef<bool> WineWarningShown = CVarDef.Create("WineWarningShown", false);
 }
 
 /// <summary>
