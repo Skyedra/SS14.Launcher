@@ -5,7 +5,7 @@ using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
-using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Dapper;
@@ -21,7 +21,7 @@ namespace SS14.Launcher.Models.EngineManager;
 /// <summary>
 ///     Downloads engine versions from the website.
 /// </summary>
-public sealed class EngineManagerDynamic : IEngineManager
+public sealed partial class EngineManagerDynamic : IEngineManager
 {
     private readonly DataManager _cfg;
     private readonly HttpClient _http;
@@ -52,40 +52,43 @@ public sealed class EngineManagerDynamic : IEngineManager
         return _cfg.EngineInstallations.Lookup(engineVersion).Value.Signature;
     }
 
-    public async Task<bool> DownloadEngineIfNecessary(
+    public async Task<EngineInstallationResult> DownloadEngineIfNecessary(
         string engineVersion,
         Helpers.DownloadProgressCallback? progress = null,
         CancellationToken cancel = default)
     {
-        if (_cfg.EngineInstallations.Lookup(engineVersion).HasValue)
+#if DEVELOPMENT
+        if (_cfg.GetCVar(CVars.EngineOverrideEnabled))
+        {
+            // Engine override means we don't need to download anything, we have it locally!
+            // At least, if we don't, we'll just blame the developer that enabled it.
+            return new EngineInstallationResult(engineVersion, false);
+        }
+#endif
+
+
+
+        var foundVersion = await GetVersionInfo(engineVersion, cancel: cancel);
+        if (foundVersion == null)
+            throw new UpdateException("Unable to find engine version in manifest!");
+
+        if (foundVersion.Info.Insecure)
+            throw new UpdateException("Specified engine version is insecure!");
+
+        Log.Debug(
+            "Requested engine version was {RequestedEngien}, redirected to {FoundVersion}",
+            engineVersion,
+            foundVersion.Version);
+
+        if (_cfg.EngineInstallations.Lookup(foundVersion.Version).HasValue)
         {
             // Already have the engine version, we're good.
-            return false;
+            return new EngineInstallationResult(foundVersion.Version, false);
         }
 
-        Log.Information("Installing engine version {version}...", engineVersion);
+        Log.Information("Installing engine version {version}...", foundVersion.Version);
 
-        string manifestPath = ConfigConstants.RobustBuildsManifest; // Default to Wiz Den engine builds
-
-        if (engineVersion.StartsWith("mv-")) // multiverse engine requested
-            manifestPath = ConfigConstants.MultiverseEngineBuildsManifest;
-
-        Log.Debug("Loading manifest from {manifestUrl}...", manifestPath);
-        var manifest =
-            await _http.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
-                manifestPath, cancellationToken: cancel);
-
-        if (!manifest!.TryGetValue(engineVersion, out var versionInfo))
-        {
-            throw new UpdateException("Unable to find engine version in manifest!");
-        }
-
-        if (versionInfo.Insecure)
-        {
-            throw new UpdateException("Specified engine version is insecure!");
-        }
-
-        var bestRid = RidUtility.FindBestRid(versionInfo.Platforms.Keys);
+        var bestRid = RidUtility.FindBestRid(foundVersion.Info.Platforms.Keys);
         if (bestRid == null)
         {
             throw new UpdateException("No engine version available for our platform!");
@@ -93,13 +96,13 @@ public sealed class EngineManagerDynamic : IEngineManager
 
         Log.Debug("Selecting RID {rid}", bestRid);
 
-        var buildInfo = versionInfo.Platforms[bestRid];
+        var buildInfo = foundVersion.Info.Platforms[bestRid];
 
         Log.Debug("Downloading engine: {EngineDownloadUrl}", buildInfo.Url);
 
         Helpers.EnsureDirectoryExists(LauncherPaths.DirEngineInstallations);
 
-        var downloadTarget = Path.Combine(LauncherPaths.DirEngineInstallations, $"{engineVersion}.zip");
+        var downloadTarget = Path.Combine(LauncherPaths.DirEngineInstallations, $"{foundVersion.Version}.zip");
         await using var file = File.Create(downloadTarget, 4096, FileOptions.Asynchronous);
 
         try
@@ -115,9 +118,9 @@ public sealed class EngineManagerDynamic : IEngineManager
             throw;
         }
 
-        _cfg.AddEngineInstallation(new InstalledEngineVersion(engineVersion, buildInfo.Signature));
+        _cfg.AddEngineInstallation(new InstalledEngineVersion(foundVersion.Version, buildInfo.Signature));
         _cfg.CommitConfig();
-        return true;
+        return new EngineInstallationResult(foundVersion.Version, true);
     }
 
     public async Task<bool> DownloadModuleIfNecessary(
@@ -269,9 +272,25 @@ public sealed class EngineManagerDynamic : IEngineManager
 
         // Cull main engine installations.
 
-        var modulesUsed = contenCon
+        var origModulesUsed = contenCon
             .Query<(string, string)>("SELECT DISTINCT ModuleName, ModuleVersion FROM ContentEngineDependency")
-            .ToHashSet();
+            .ToList();
+
+        // GOD DAMNIT more bodging everything together.
+        // The code sucks.
+        // My shitty hacks to do engine version redirection fall apart here as well.
+        var modulesUsed = new HashSet<(string, string)>();
+        foreach (var (name, version) in origModulesUsed)
+        {
+            if (name == "Robust" && await GetVersionInfo(version) is { } redirect)
+            {
+                modulesUsed.Add(("Robust", redirect.Version));
+            }
+            else
+            {
+                modulesUsed.Add((name, version));
+            }
+        }
 
         var toCull = _cfg.EngineInstallations.Items.Where(i => !modulesUsed.Contains(("Robust", i.Version))).ToArray();
 
@@ -326,26 +345,27 @@ public sealed class EngineManagerDynamic : IEngineManager
         _cfg.CommitConfig();
     }
 
-    private sealed class VersionInfo
+    private static string FindOverrideZip(string name, string dir)
     {
-        [JsonInclude] [JsonPropertyName("insecure")]
-#pragma warning disable CS0649
-        public bool Insecure;
-#pragma warning restore CS0649
+        var foundRids = new List<string>();
 
-        [JsonInclude] [JsonPropertyName("platforms")]
-        public Dictionary<string, BuildInfo> Platforms = default!;
-    }
+        var regex = new Regex(@$"^{Regex.Escape(name)}_([a-z\-\d]+)\.zip$");
+        foreach (var item in Directory.EnumerateFiles(dir))
+        {
+            var fileName = Path.GetFileName(item);
+            var match = regex.Match(fileName);
+            if (!match.Success)
+                continue;
 
-    private sealed class BuildInfo
-    {
-        [JsonInclude] [JsonPropertyName("url")]
-        public string Url = default!;
+            foundRids.Add(match.Groups[1].Value);
+        }
 
-        [JsonInclude] [JsonPropertyName("sha256")]
-        public string Sha256 = default!;
+        var rid = RidUtility.FindBestRid(foundRids);
+        if (rid == null)
+            throw new UpdateException($"Unable to find overriden {name} for current platform");
 
-        [JsonInclude] [JsonPropertyName("sig")]
-        public string Signature = default!;
+        var path = Path.Combine(dir, $"{name}_{rid}.zip");
+        Log.Warning("Using override for {Name}: {Path}", name, path);
+        return path;
     }
 }
