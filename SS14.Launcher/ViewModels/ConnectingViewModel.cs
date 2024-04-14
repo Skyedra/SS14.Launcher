@@ -14,6 +14,7 @@ public class ConnectingViewModel : ViewModelBase
     private readonly Connector _connector;
     private readonly Updater _updater;
     private readonly MainWindowViewModel _windowVm;
+    private readonly ConnectionType _connectionType;
 
     private readonly CancellationTokenSource _cancelSource = new CancellationTokenSource();
 
@@ -26,14 +27,18 @@ public class ConnectingViewModel : ViewModelBase
 
     public bool IsErrored => _connectorStatus == Connector.ConnectionStatus.ConnectionFailed ||
                              _connectorStatus == Connector.ConnectionStatus.UpdateError ||
+                             _connectorStatus == Connector.ConnectionStatus.NotAContentBundle ||
                              _connectorStatus == Connector.ConnectionStatus.ClientExited &&
                              _connector.ClientExitedBadly;
 
-    public ConnectingViewModel(Connector connector, MainWindowViewModel windowVm, string? givenReason)
+    public static event Action? StartedConnecting;
+
+    public ConnectingViewModel(Connector connector, MainWindowViewModel windowVm, string? givenReason, ConnectionType connectionType)
     {
         _updater = Locator.Current.GetRequiredService<Updater>();
         _connector = connector;
         _windowVm = windowVm;
+        _connectionType = connectionType;
         _reasonSuffix = (givenReason != null) ? ("\n" + givenReason) : "";
 
         this.WhenAnyValue(x => x._updater.Progress)
@@ -133,7 +138,8 @@ public class ConnectingViewModel : ViewModelBase
     public bool ProgressBarVisible => _connectorStatus != Connector.ConnectionStatus.ClientExited &&
                                       _connectorStatus != Connector.ConnectionStatus.ClientRunning &&
                                       _connectorStatus != Connector.ConnectionStatus.ConnectionFailed &&
-                                      _connectorStatus != Connector.ConnectionStatus.UpdateError;
+                                      _connectorStatus != Connector.ConnectionStatus.UpdateError &&
+                                      _connectorStatus != Connector.ConnectionStatus.NotAContentBundle;
 
     public bool SpeedIndeterminate => _connectorStatus != Connector.ConnectionStatus.Updating || _updaterSpeed == null;
 
@@ -183,10 +189,17 @@ public class ConnectingViewModel : ViewModelBase
             _ => ""
         };
 
+    public string TitleText => _connectionType switch
+    {
+        ConnectionType.Server => "Connecting...",
+        ConnectionType.ContentBundle => "Loading...",
+        _ => ""
+    };
+
     public static void StartConnect(MainWindowViewModel windowVm, string address, string? givenReason = null)
     {
         var connector = new Connector();
-        var vm = new ConnectingViewModel(connector, windowVm, givenReason);
+        var vm = new ConnectingViewModel(connector, windowVm, givenReason, ConnectionType.Server);
         windowVm.ConnectingVM = vm;
         vm.Start(address);
     }
@@ -194,7 +207,7 @@ public class ConnectingViewModel : ViewModelBase
     public static void StartContentBundle(MainWindowViewModel windowVm, string fileName)
     {
         var connector = new Connector();
-        var vm = new ConnectingViewModel(connector, windowVm, null);
+        var vm = new ConnectingViewModel(connector, windowVm, null, ConnectionType.ContentBundle);
         windowVm.ConnectingVM = vm;
         vm.StartContentBundle(fileName);
     }
@@ -222,5 +235,11 @@ public class ConnectingViewModel : ViewModelBase
     public void Cancel()
     {
         _cancelSource.Cancel();
+    }
+
+    public enum ConnectionType
+    {
+        Server,
+        ContentBundle
     }
 }
