@@ -68,6 +68,11 @@ public static class ConfigConstants
     public static readonly UrlFallbackSet UrlOverrideAssets = "https://cdn.spacestationmultiverse.com/launcher-assets/override_assets.json";
     public static readonly UrlFallbackSet UrlAssetsBase = "https://cdn.spacestationmultiverse.com/launcher-assets/";
 
+    // Currently contains server-set messages.
+    // In the future, planning to merge launcher version and override assets info,
+    // so we can coalesce all of that into a single HTTP request at startup.
+    public const string UrlLauncherInfo = "https://central.spacestation14.io/launcher/info.json";
+
     public const string FallbackUsername = "JoeGenero";
 
     static ConfigConstants()
