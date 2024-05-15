@@ -27,7 +27,7 @@ public static class ConfigConstants
     // How long to wait on various web queries.  Note that the launcher makes two of these sequentially on startup, so probably don't want this to be too long if main servers are down
     public const int MaxWebTimeout = 2500;
 
-    public static readonly string AuthUrl = "https://central.spacestation14.io/auth/";
+    public static readonly string AuthUrl = "https://auth.spacestation14.com/";
     public static readonly string[] DefaultHubUrls = {
         "https://cdn.spacestationmultiverse.com/hub/",
         "https://hub.spacestation14.com/",
@@ -35,7 +35,8 @@ public static class ConfigConstants
     };
     public const string DiscordUrl = "https://SpaceStationMultiverse.com/discord/";
     public const string ContributeLocalizationUrl = "https://spacestationmultiverse.com/contribute-translation/";
-    public const string AccountBaseUrl = "https://central.spacestation14.io/web/Identity/Account/";
+
+    public const string AccountBaseUrl = "https://account.spacestation14.com/Identity/Account/Manage";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
     public const string AccountRegisterUrl = $"{AccountBaseUrl}Register";
     public const string AccountResendConfirmationUrl = $"{AccountBaseUrl}ResendEmailConfirmation";
