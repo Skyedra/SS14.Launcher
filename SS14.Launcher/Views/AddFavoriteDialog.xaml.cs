@@ -41,7 +41,7 @@ public partial class AddFavoriteDialog : Window
 
     private void TrySubmit()
     {
-        Close((_nameBox.Text.Trim(), _addressBox.Text.Trim()));
+        Close((_nameBox.Text?.Trim() ?? "", _addressBox.Text?.Trim() ?? ""));
     }
 
     private void UpdateSubmitValid()

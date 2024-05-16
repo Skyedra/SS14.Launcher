@@ -72,7 +72,7 @@ public class HomePageViewModel : MainWindowTabViewModel
             return;
         }
 
-        var res = await new DirectConnectDialog().ShowDialog<string>(window);
+        var res = await new DirectConnectDialog().ShowDialog<string?>(window);
         if (res == null)
         {
             return;
@@ -102,7 +102,7 @@ public class HomePageViewModel : MainWindowTabViewModel
         }
     }
 
-    private bool TryGetWindow([MaybeNullWhen(false)] out Window? window)
+    private bool TryGetWindow([NotNullWhen(true)] out Window? window)
     {
         window = Control?.GetVisualRoot() as Window;
         return window != null;

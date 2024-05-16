@@ -55,7 +55,7 @@ public partial class HubSettingsDialog : Window
             else
                 t.Classes.Remove("Invalid");
 
-            if (dupes.Contains(NormalizeHubUri(t.Text)))
+            if (dupes.Contains(NormalizeHubUri(t.Text ?? "")))
                 t.Classes.Add("Duplicate");
             else
                 t.Classes.Remove("Duplicate");

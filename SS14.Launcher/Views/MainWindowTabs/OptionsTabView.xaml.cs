@@ -44,4 +44,9 @@ public partial class OptionsTabView : UserControl
         ((OptionsTabViewModel)DataContext!).ClearServerContent();
         await ClearServerContentButton.DisplayDoneMessage();
     }
+
+    private async void OpenHubSettings(object? sender, RoutedEventArgs args)
+    {
+        await new HubSettingsDialog().ShowDialog((Window)this.GetVisualRoot()!);
+    }
 }
