@@ -1,4 +1,5 @@
 using System;
+using SS14.Launcher.Utility;
 
 namespace SS14.Launcher;
 
@@ -44,9 +45,20 @@ public static class ConfigConstants
     public const string DownloadUrl = "https://SpaceStationMultiverse.com/downloads/";
     public const string NewsFeedUrl = "https://spacestationmultiverse.com/rss";
     public const string LauncherVersionUrl = "https://cdn.blepstation.com/launcher_version.txt";
-    public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
-    public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
-    public const string MultiverseEngineBuildsManifest = "https://spacestationmultiverse.com/ssmv-engine-manifest";
+    public static readonly UrlFallbackSet RobustBuildsManifest = new([
+        "https://cdn.blepstation.com/manifest/manifest.json",
+        "https://blepstation.com/manifest/manifest.json"
+    ]);
+
+    public static readonly UrlFallbackSet RobustModulesManifest = new([
+        "https://robust-builds.cdn.spacestation14.com/modules.json",
+        "https://robust-builds.fallback.cdn.spacestation14.com/modules.json"
+    ]);
+
+    public static readonly UrlFallbackSet MultiverseEngineBuildsManifest = new([
+        "https://cdn.spacestationmultiverse.com/ssmv-engine-manifest",
+        "https://spacestationmultiverse.com/ssmv-engine-manifest"
+    ]);
 
     // How long to keep cached copies of Robust manifests.
     // TODO: Take this from Cache-Control header responses instead.

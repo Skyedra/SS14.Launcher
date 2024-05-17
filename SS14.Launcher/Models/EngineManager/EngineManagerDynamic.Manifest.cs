@@ -68,14 +68,14 @@ public sealed partial class EngineManagerDynamic
     {
         // TODO: If-Modified-Since and If-None-Match request conditions.
 
-        Log.Debug("Loading Robust manifest from {manifestUrl}...", ConfigConstants.RobustBuildsManifest);
-        var freshRobustVersionInfo =
-            await _http.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
+        Log.Debug("Loading manifest from {manifestUrl}...", ConfigConstants.RobustBuildsManifest);
+        _cachedRobustVersionInfo =
+            await ConfigConstants.RobustBuildsManifest.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
                 ConfigConstants.RobustBuildsManifest, cancellationToken: cancel);
 
         Log.Debug("Loading Multiverse manifest from {manifestUrl}...", ConfigConstants.MultiverseEngineBuildsManifest);
         var freshMultiverseVersionInfo =
-            await _http.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
+            await ConfigConstants.RobustBuildsManifest.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
                 ConfigConstants.MultiverseEngineBuildsManifest, cancellationToken: cancel);
 
         if (freshRobustVersionInfo == null || freshMultiverseVersionInfo == null)
