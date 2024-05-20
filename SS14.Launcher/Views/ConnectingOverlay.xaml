@@ -41,7 +41,12 @@
         </DockPanel>
       </Panel>
 
-      <views:RandomMessage Name="Messages" Margin="0 6 0 0" MaxWidth="250" />
+      <!-- I can't get this to show up for some reason, and I haven't written loc support for it, either...
+            so I'm going to make it intentionally invisible for now... -->
+      <views:RandomMessage Name="Messages" Margin="0 6 0 0" MaxWidth="250"
+        IsVisible="false"
+      />
+
     </StackPanel>
   </ContentControl>
 </UserControl>
