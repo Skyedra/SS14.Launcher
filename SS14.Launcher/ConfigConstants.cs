@@ -71,7 +71,7 @@ public static class ConfigConstants
     // Currently contains server-set messages.
     // In the future, planning to merge launcher version and override assets info,
     // so we can coalesce all of that into a single HTTP request at startup.
-    public static readonly UrlFallbackSet UrlLauncherInfo = new (["https://spacestationmultiverse.com/launcher-assets/info.json"]);
+    public static readonly UrlFallbackSet UrlLauncherInfo = new (["https://cdn.spacestationmultiverse.com/launcher-assets/info.json"]);
 
     public const string FallbackUsername = "JoeGenero";
 
