@@ -9,9 +9,6 @@ namespace SS14.Launcher.ViewModels.MainWindowTabs;
 
 public class NewsTabViewModel : MainWindowTabViewModel
 {
-    private const string FeedUrl = "https://spacestationmultiverse.com/rss";
-        // WizDen's is "https://spacestation14.io/index.xml" for future reference
-
     private bool _startedPullingNews;
     private bool _newsPulled;
 
@@ -46,7 +43,7 @@ public class NewsTabViewModel : MainWindowTabViewModel
         }
 
         _startedPullingNews = true;
-        var feed = await FeedReader.ReadAsync(FeedUrl);
+        var feed = await FeedReader.ReadAsync(ConfigConstants.NewsFeedUrl);
 
         foreach (var feedItem in feed.Items)
         {

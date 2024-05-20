@@ -42,6 +42,7 @@ public static class ConfigConstants
     public const string AccountResendConfirmationUrl = $"{AccountBaseUrl}ResendEmailConfirmation";
     public const string WebsiteUrl = "https://SpaceStationMultiverse.com/";
     public const string DownloadUrl = "https://SpaceStationMultiverse.com/downloads/";
+    public const string NewsFeedUrl = "https://spacestationmultiverse.com/rss";
     public const string LauncherVersionUrl = "https://cdn.blepstation.com/launcher_version.txt";
     public const string RobustBuildsManifest = "https://cdn.blepstation.com/manifest/manifest.json";
     public const string RobustModulesManifest = "https://central.spacestation14.io/builds/robust/modules.json";
