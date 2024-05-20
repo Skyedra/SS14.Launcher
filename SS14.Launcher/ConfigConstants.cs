@@ -45,9 +45,11 @@ public static class ConfigConstants
     public const string DownloadUrl = "https://SpaceStationMultiverse.com/downloads/";
     public const string NewsFeedUrl = "https://spacestationmultiverse.com/rss";
     public const string LauncherVersionUrl = "https://cdn.blepstation.com/launcher_version.txt";
-    public static readonly UrlFallbackSet RobustBuildsManifest = new([
+    public static readonly UrlFallbackSet RobustBuildsManifest = new ([
         "https://cdn.blepstation.com/manifest/manifest.json",
-        "https://blepstation.com/manifest/manifest.json"
+        // Can fall back to wizden servers as the data will be the same:
+        "https://robust-builds.cdn.spacestation14.com/manifest.json",
+        "https://robust-builds.fallback.cdn.spacestation14.com/manifest.json"
     ]);
 
     public static readonly UrlFallbackSet RobustModulesManifest = new([
@@ -56,8 +58,7 @@ public static class ConfigConstants
     ]);
 
     public static readonly UrlFallbackSet MultiverseEngineBuildsManifest = new([
-        "https://cdn.spacestationmultiverse.com/ssmv-engine-manifest",
-        "https://spacestationmultiverse.com/ssmv-engine-manifest"
+        "https://cdn.spacestationmultiverse.com/ssmv-engine-manifest"
     ]);
 
     // How long to keep cached copies of Robust manifests.
