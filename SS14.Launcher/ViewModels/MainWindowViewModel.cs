@@ -136,6 +136,28 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     public string LanguageChangedPopupButtonText => localizationManager.GetParticularString("Language Changed Restart Popup - Button", "Close Application");
 
 
+    /// <summary>
+    /// Whether to show modal popup about having difficulty getting launcher info file from server
+    /// </summary>
+    /// <value></value>
+    public bool ShowLauncherInfoError
+    {
+        get => _showLauncherInfoError;
+        set => this.RaiseAndSetIfChanged(ref _showLauncherInfoError, value);
+    }
+    private bool _showLauncherInfoError = false;
+
+    /// <summary>
+    /// Text to be displayed in the launcher info error modal
+    /// </summary>
+    /// <value></value>
+    public string LauncherInfoError
+    {
+        get => _launcherInfoError;
+        set => this.RaiseAndSetIfChanged(ref _launcherInfoError, value);
+    }
+    private string _launcherInfoError;
+
     public int SelectedIndex
     {
         get => _selectedIndex;
@@ -205,6 +227,8 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
             // Error while loading.
             Log.Warning("Unable to check for launcher update due to error, assuming up-to-date.");
             OutOfDate = false;
+            ShowLauncherInfoError = true;
+            LauncherInfoError = Loc.GetString("There was an error getting launcher information from server.  You likely have a network/firewall issue.  More information is available in the log file.");
             return;
         }
 
@@ -311,5 +335,21 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
         // Quit app
         Control?.Close();
+    }
+
+    public void OnShowLauncherInfoErrorPopupPressed()
+    {
+        ShowLauncherInfoError = false;
+    }
+
+    public void OnShowLauncherInfoErrorOpenLogDirectoryPressed()
+    {
+        // TODO: Combine this and the options log directory into one common function?
+
+        Process.Start(new ProcessStartInfo
+        {
+            UseShellExecute = true,
+            FileName = LauncherPaths.DirLogs
+        });
     }
 }

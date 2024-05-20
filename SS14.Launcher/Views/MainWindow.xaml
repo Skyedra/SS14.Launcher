@@ -142,6 +142,17 @@
       </StackPanel>
     </ContentControl>
 
+    <ContentControl Classes="OverlayBox" IsVisible="{Binding ShowLauncherInfoError}">
+      <StackPanel Orientation="Vertical">
+        <TextBlock HorizontalAlignment="Center" Classes="NanoHeadingMedium" Text="{loc:Get Error}" />
+        <TextBlock Margin="0, 10" TextAlignment="Center" MaxWidth="450" TextWrapping="Wrap"
+                   Text="{Binding LauncherInfoError}" />
+        <Button Content="{loc:Get Open log directory}" DockPanel.Dock="Bottom" HorizontalAlignment="Center"
+              Command="{Binding OnShowLauncherInfoErrorOpenLogDirectoryPressed}"/>
+        <Button Content="{loc:Get Ok}" Command="{Binding OnShowLauncherInfoErrorPopupPressed}" HorizontalAlignment="Center" />
+      </StackPanel>
+    </ContentControl>
+
     <!--
     Literally just keep piling them on it doesn't matter.
     This is way easier than coming up with some horribly over-engineered solution.
