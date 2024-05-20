@@ -75,7 +75,7 @@ public sealed partial class EngineManagerDynamic
 
         Log.Debug("Loading Multiverse manifest from {manifestUrl}...", ConfigConstants.MultiverseEngineBuildsManifest);
         var freshMultiverseVersionInfo =
-            await ConfigConstants.RobustBuildsManifest.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
+            await ConfigConstants.MultiverseEngineBuildsManifest.GetFromJsonAsync<Dictionary<string, VersionInfo>>(
                 _http, cancel);
 
         if (freshRobustVersionInfo == null || freshMultiverseVersionInfo == null)
