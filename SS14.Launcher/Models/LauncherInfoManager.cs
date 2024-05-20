@@ -52,6 +52,11 @@ public sealed class LauncherInfoManager(HttpClient httpClient)
             Log.Warning(e, "Loading launcher info failed");
             return;
         }
+        catch (Exception e)
+        {
+            Log.Warning(e, "Loading launcher info failed");
+            return;
+        }
 
         // This is future-proofed to support multiple languages,
         // but for now the launcher only supports English so it'll have to do.
