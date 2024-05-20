@@ -191,8 +191,8 @@ public class ConnectingViewModel : ViewModelBase
 
     public string TitleText => _connectionType switch
     {
-        ConnectionType.Server => "Connecting...",
-        ConnectionType.ContentBundle => "Loading...",
+        ConnectionType.Server => Loc.GetString("Connecting..."),
+        ConnectionType.ContentBundle => Loc.GetString("Loading..."),
         _ => ""
     };
 
