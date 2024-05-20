@@ -36,7 +36,7 @@ public static class ConfigConstants
     public const string DiscordUrl = "https://SpaceStationMultiverse.com/discord/";
     public const string ContributeLocalizationUrl = "https://spacestationmultiverse.com/contribute-translation/";
 
-    public const string AccountBaseUrl = "https://account.spacestation14.com/Identity/Account/Manage";
+    public const string AccountBaseUrl = "https://account.spacestation14.com/Identity/Account/";
     public const string AccountManagementUrl = $"{AccountBaseUrl}Manage";
     public const string AccountRegisterUrl = $"{AccountBaseUrl}Register";
     public const string AccountResendConfirmationUrl = $"{AccountBaseUrl}ResendEmailConfirmation";
