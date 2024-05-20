@@ -244,7 +244,6 @@ internal static class Program
         var launcherInfo = new LauncherInfoManager(http);
         var overrideAssets = new OverrideAssetsManager(cfg, http, launcherInfo);
         var loginManager = new LoginManager(cfg, authApi);
-        var launcherInfo = new LauncherInfoManager(http);
 
         locator.RegisterConstant(new ContentManager());
         locator.RegisterConstant<IEngineManager>(new EngineManagerDynamic());

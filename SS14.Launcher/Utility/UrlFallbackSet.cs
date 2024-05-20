@@ -66,11 +66,13 @@ public sealed class UrlFallbackSet(ImmutableArray<string> urls)
         HttpRequestMessage message,
         CancellationToken cancel)
     {
+        /*
         if (new Random().Next(2) == 0)
         {
             Log.Error("Dropped the URL: {Message}", message);
             throw new InvalidOperationException("OOPS");
         }
+        */
 
         var response = await httpClient.SendAsync(
             message,

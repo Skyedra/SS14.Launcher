@@ -65,13 +65,13 @@ public static class ConfigConstants
     // TODO: Take this from Cache-Control header responses instead.
     public static readonly TimeSpan RobustManifestCacheTime = TimeSpan.FromMinutes(15);
 
-    public static readonly UrlFallbackSet UrlOverrideAssets = "https://cdn.spacestationmultiverse.com/launcher-assets/override_assets.json";
-    public static readonly UrlFallbackSet UrlAssetsBase = "https://cdn.spacestationmultiverse.com/launcher-assets/";
+    public static readonly UrlFallbackSet UrlOverrideAssets = new (["https://cdn.spacestationmultiverse.com/launcher-assets/override_assets.json"]);
+    public static readonly UrlFallbackSet UrlAssetsBase = new (["https://cdn.spacestationmultiverse.com/launcher-assets/"]);
 
     // Currently contains server-set messages.
     // In the future, planning to merge launcher version and override assets info,
     // so we can coalesce all of that into a single HTTP request at startup.
-    public const string UrlLauncherInfo = "https://central.spacestation14.io/launcher/info.json";
+    public static readonly UrlFallbackSet UrlLauncherInfo = new (["https://spacestationmultiverse.com/launcher-assets/info.json"]);
 
     public const string FallbackUsername = "JoeGenero";
 
