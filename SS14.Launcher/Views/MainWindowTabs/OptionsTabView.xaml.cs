@@ -28,11 +28,6 @@ public partial class OptionsTabView : UserControl
         });
     }
 
-    private async void OpenHubSettings(object? sender, RoutedEventArgs args)
-    {
-        await new HubSettingsDialog().ShowDialog(this.GetVisualRoot() as Window);
-    }
-
     public async void ClearEnginesPressed(object? _1, RoutedEventArgs _2)
     {
         ((OptionsTabViewModel)DataContext!).ClearEngines();
