@@ -56,7 +56,7 @@ public sealed class UrlFallbackSet(ImmutableArray<string> urls)
             AttemptDelay,
             cancel).ConfigureAwait(false);
 
-        Log.Verbose("Successfully connected to {Url}", Urls[index]);
+        Log.Debug("Successfully connected to {Url}", Urls[index]);
 
         return response;
     }
@@ -66,6 +66,8 @@ public sealed class UrlFallbackSet(ImmutableArray<string> urls)
         HttpRequestMessage message,
         CancellationToken cancel)
     {
+        Log.Debug("Attempting {Method} connection to {Url}", message.Method, message.RequestUri);
+
         /*
         if (new Random().Next(2) == 0)
         {
