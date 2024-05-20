@@ -30,7 +30,7 @@ public static class ConfigConstants
     public static readonly string AuthUrl = "https://central.spacestation14.io/auth/";
     public static readonly string[] DefaultHubUrls = {
         "https://cdn.spacestationmultiverse.com/hub/",
-        "https://central.spacestation14.io/hub/",
+        "https://hub.spacestation14.com/",
         "https://cdn.spacestationmultiverse.com/wizden-hub-mirror/"
     };
     public const string DiscordUrl = "https://SpaceStationMultiverse.com/discord/";
