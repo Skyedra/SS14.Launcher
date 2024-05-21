@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 23:53-0700\n"
+"POT-Creation-Date: 2024-05-20 20:47-0700\n"
 "PO-Revision-Date: 2023-10-02 03:19+0000\n"
 "Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
@@ -33,33 +33,33 @@ msgstr "集线器无效（别忘了 http (s) ://）"
 msgid "Duplicate hubs"
 msgstr "重复的集线器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
 #, fuzzy, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "以 {0} 的身份'登录'。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
 #, fuzzy
 msgid "Not logged in."
 msgstr "未登录。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
 #, fuzzy
 msgid "Change Account..."
 msgstr "更改账户..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
 #, fuzzy
 msgid "Log in..."
 msgstr "登录..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:134
 #, fuzzy
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
 msgstr "需要重新启动"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:135
 #, fuzzy
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
@@ -67,38 +67,45 @@ msgid ""
 "take effect."
 msgstr "语言已更改。请重新启动启动器以使更改生效。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:136
 #, fuzzy
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "关闭应用程序"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:186
 #, fuzzy
 msgid "Checking for launcher update..."
 msgstr "正在检查启动器更新..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:188
 #, fuzzy
 msgid "Refreshing login status..."
 msgstr "正在刷新登录状态..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:231
+msgid ""
+"There was an error getting launcher information from server.  You likely "
+"have a network/firewall issue.  More information is available in the log "
+"file."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
 #, fuzzy
 msgid "Checking account status"
 msgstr "查看账户状态"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:293
 #, fuzzy
 msgid "Error connecting to authentication server"
 msgstr "连接到身份验证服务器时出错"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:296
 #, fuzzy
 msgid "Unknown error occured"
 msgstr "发生了未知错误"
 
-#: ../SS14.Launcher/ViewModels/HubSettingsViewModel.cs:87
+#: ../SS14.Launcher/ViewModels/HubSettingsViewModel.cs:89
 msgctxt "Hub Settings Info Tooltip"
 msgid ""
 "Here you can add extra hubs to fetch game servers from.\n"
@@ -507,54 +514,54 @@ msgctxt "Roleplay Level Filter"
 msgid "High"
 msgstr "高"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:58
 #, fuzzy
 msgctxt "Tab"
 msgid "News"
 msgstr "新闻"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
 #, fuzzy
 msgid "Remove Favorite"
 msgstr "移除收藏夹"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
 #, fuzzy
 msgid "Add Favorite"
 msgstr "添加收藏"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:82
 #, fuzzy
 msgid "OFFLINE"
 msgstr "离线"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:94
 #, fuzzy
 msgid "Fetching..."
 msgstr "正在获取..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
 #, fuzzy
 msgid "Unable to contact server"
 msgstr "无法联系服务器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:110
 #, fuzzy
 msgid "Fetching server status..."
 msgstr "正在获取服务器状态..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
 #, fuzzy
 msgid "Fetching server description..."
 msgstr "正在获取服务器描述..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
 #, fuzzy
 msgid "Error while fetching server description"
 msgstr "获取服务器描述时出错"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:118
 #, fuzzy
 msgid "No server description provided"
 msgstr "未提供服务器描述"
@@ -644,118 +651,127 @@ msgstr ""
 "首先选择左边的身份提供商。如果您愿意，可以稍后重新访问此屏幕，在其他提供商处"
 "创建身份。"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:155
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
 #, csharp-format
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:158
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:164
 msgctxt "Connecting"
 msgid ""
 "There was an error while downloading server content. Please ask on Discord "
 "for support if the problem persists."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:167
 msgctxt "Connecting"
 msgid "Checking for server content update..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:162
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:163
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:168
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:169
 msgctxt "Connecting"
 msgid "Downloading server content..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:164
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
 msgctxt "Connecting"
 msgid "Fetching server manifest..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
 msgctxt "Connecting"
 msgid "Verifying download integrity..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:166
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
 msgctxt "Connecting"
 msgid "Clearing old content..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:167
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:173
 msgctxt "Connecting"
 msgid "Clearing old server content..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:168
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:174
 msgctxt "Connecting"
 msgid "Update done!"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:169
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:175
 msgctxt "Connecting"
 msgid "Checking for additional dependencies..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:176
 msgctxt "Connecting"
 msgid "Downloading extra dependencies..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:177
 msgctxt "Connecting"
 msgid "Synchronizing to disk..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:178
 msgctxt "Connecting"
 msgid "Storing assets in database..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:173
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:179
 msgctxt "Connecting"
 msgid "Loading content bundle..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:174
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:180
 msgctxt "Connecting"
 msgid "You shouldn't see this"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:159
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
 #, csharp-format
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:176
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
 #, csharp-format
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:177
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:183
 msgctxt "Connecting"
 msgid "Failed to connect to server!"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:178
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
 #, csharp-format
 msgctxt "Connecting"
 msgid "Starting client... {0}"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:179
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:185
 msgctxt "Connecting"
 msgid "File is not a valid content bundle!"
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:181
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:187
 msgctxt "Connecting"
 msgid ""
 "Client seems to have crashed while starting. If this persists, please ask on "
 "Discord or GitHub for support."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:194
+#, fuzzy
+msgid "Connecting..."
+msgstr "正在连接..."
+
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
+msgid "Loading..."
 msgstr ""
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
@@ -805,7 +821,7 @@ msgid "Done"
 msgstr "已完成"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:35
-#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:27
+#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:30
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:39
 #, fuzzy
 msgid "Cancel"
@@ -840,11 +856,6 @@ msgstr "提高优先级"
 #, fuzzy
 msgid "Decrease priority"
 msgstr "降低优先级"
-
-#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:15
-#, fuzzy
-msgid "Connecting..."
-msgstr "正在连接..."
 
 #: ../SS14.Launcher/Views/AccountDropDown.xaml:21
 #, fuzzy
@@ -932,7 +943,21 @@ msgid ""
 "please keep your expectations modest for the time being."
 msgstr "空间站仍在开发中。我们希望你喜欢你所看到的，但请暂时保持适度的期望。"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:156
+#: ../SS14.Launcher/Views/MainWindow.xaml:147
+msgid "Error"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:150
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
+#, fuzzy
+msgid "Open log directory"
+msgstr "打开日志目录"
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:152
+msgid "Ok"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:167
 #, fuzzy
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
@@ -1088,11 +1113,6 @@ msgstr "清除已安装的引擎"
 #, fuzzy
 msgid "Clear installed server content"
 msgstr "清除已安装的服务器内容"
-
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
-#, fuzzy
-msgid "Open log directory"
-msgstr "打开日志目录"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:30
 #, fuzzy

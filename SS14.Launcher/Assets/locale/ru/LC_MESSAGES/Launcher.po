@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 23:53-0700\n"
+"POT-Creation-Date: 2024-05-20 20:47-0700\n"
 "PO-Revision-Date: 2023-10-15 15:59+0000\n"
 "Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
@@ -31,29 +31,29 @@ msgstr "Недопустимый URL хаба (не забудьте http(s)://)
 msgid "Duplicate hubs"
 msgstr "Дублирование URL хаба"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
 #, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "'Вошли' как {0}."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
 msgid "Not logged in."
 msgstr "Не авторизован."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
 msgid "Change Account..."
 msgstr "Поменять аккаунт..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
 msgid "Log in..."
 msgstr "Войти..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:134
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
 msgstr "Требуется перезапуск"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:135
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
@@ -61,32 +61,39 @@ msgid ""
 msgstr ""
 "Язык был изменен.  Чтобы изменения вступили в силу, перезапустите лаунчер."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:131
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:136
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "Закрыть программу"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:159
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:186
 msgid "Checking for launcher update..."
 msgstr "Проверка на обновления лаунчера..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:161
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:188
 msgid "Refreshing login status..."
 msgstr "Обновление статуса авторизации..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:257
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:231
+msgid ""
+"There was an error getting launcher information from server.  You likely "
+"have a network/firewall issue.  More information is available in the log "
+"file."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
 msgid "Checking account status"
 msgstr "Проверка статуса аккаунта"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:269
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:293
 msgid "Error connecting to authentication server"
 msgstr "Ошибка при подключении к серверу аутентификации"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:272
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:296
 msgid "Unknown error occured"
 msgstr "Произошла неизвестная ошибка"
 
-#: ../SS14.Launcher/ViewModels/HubSettingsViewModel.cs:87
+#: ../SS14.Launcher/ViewModels/HubSettingsViewModel.cs:89
 msgctxt "Hub Settings Info Tooltip"
 msgid ""
 "Here you can add extra hubs to fetch game servers from.\n"
@@ -446,45 +453,45 @@ msgctxt "Roleplay Level Filter"
 msgid "High"
 msgstr "Строгий"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:58
 msgctxt "Tab"
 msgid "News"
 msgstr "Новости"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
 msgid "Remove Favorite"
 msgstr "Убрать из избранного"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:68
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
 msgid "Add Favorite"
 msgstr "Добавить в избранное"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:80
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:82
 msgid "OFFLINE"
 msgstr "Не в сети"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:92
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:94
 msgid "Fetching..."
 msgstr "Загрузка..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:106
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
 msgid "Unable to contact server"
 msgstr "Невозможно связаться с сервером"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:110
 msgid "Fetching server status..."
 msgstr "Получение состояния сервера..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:113
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
 msgid "Fetching server description..."
 msgstr "Получение описания сервера..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
 msgid "Error while fetching server description"
 msgstr "Ошибка при получении описания сервера"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:118
 msgid "No server description provided"
 msgstr "Описание сервера не представлено"
 
@@ -568,13 +575,13 @@ msgstr ""
 "вернуться к этому экрану позже, чтобы создать новый аккаунт или войти в "
 "другой."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:155
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
 #, csharp-format
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
 msgstr "Начало соединения... {0}"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:158
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:164
 msgctxt "Connecting"
 msgid ""
 "There was an error while downloading server content. Please ask on Discord "
@@ -583,101 +590,101 @@ msgstr ""
 "Произошла ошибка при загрузке ресурсов сервера. Пожалуйста, обратитесь в "
 "Discord за поддержкой, если проблема останется."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:167
 msgctxt "Connecting"
 msgid "Checking for server content update..."
 msgstr "Проверка обновления ресурсов сервера..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:162
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:163
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:168
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:169
 msgctxt "Connecting"
 msgid "Downloading server content..."
 msgstr "Скачивание ресурсов сервера..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:164
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
 msgctxt "Connecting"
 msgid "Fetching server manifest..."
 msgstr "Получение манифеста сервера..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
 msgctxt "Connecting"
 msgid "Verifying download integrity..."
 msgstr "Проверка целостности ресурсов..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:166
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
 msgctxt "Connecting"
 msgid "Clearing old content..."
 msgstr "Очистка старого контента..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:167
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:173
 msgctxt "Connecting"
 msgid "Clearing old server content..."
 msgstr "Очистка старого контента сервера..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:168
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:174
 msgctxt "Connecting"
 msgid "Update done!"
 msgstr "Обновление завершено!"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:169
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:175
 msgctxt "Connecting"
 msgid "Checking for additional dependencies..."
 msgstr "Проверка наличия дополнительных зависимостей..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:176
 msgctxt "Connecting"
 msgid "Downloading extra dependencies..."
 msgstr "Скачивание дополнительных зависимостей..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:177
 msgctxt "Connecting"
 msgid "Synchronizing to disk..."
 msgstr "Синхронизация на диск..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:178
 msgctxt "Connecting"
 msgid "Storing assets in database..."
 msgstr "Сохранение ресурсов игры в базе данных..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:173
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:179
 msgctxt "Connecting"
 msgid "Loading content bundle..."
 msgstr "Загрузка архива с контентом..."
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:174
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:180
 msgctxt "Connecting"
 msgid "You shouldn't see this"
 msgstr "Ты не должен видеть это"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:159
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
 #, csharp-format
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
 msgstr "Обновление: {0} {1}"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:176
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
 #, csharp-format
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
 msgstr "Получение информации о соединении с сервера... {0}"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:177
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:183
 msgctxt "Connecting"
 msgid "Failed to connect to server!"
 msgstr "Не удалось подключиться к серверу!"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:178
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
 #, csharp-format
 msgctxt "Connecting"
 msgid "Starting client... {0}"
 msgstr "Запуск клиента... {0}"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:179
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:185
 msgctxt "Connecting"
 msgid "File is not a valid content bundle!"
 msgstr "Файл не является действительным архивом!"
 
-#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:181
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:187
 msgctxt "Connecting"
 msgid ""
 "Client seems to have crashed while starting. If this persists, please ask on "
@@ -685,6 +692,14 @@ msgid ""
 msgstr ""
 "Похоже, что при запуске клиента произошел сбой. Если ситуация не изменилась, "
 "обратитесь за поддержкой в Discord или GitHub."
+
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:194
+msgid "Connecting..."
+msgstr "Подключение..."
+
+#: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
+msgid "Loading..."
+msgstr ""
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
@@ -726,7 +741,7 @@ msgid "Done"
 msgstr "Готово"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:35
-#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:27
+#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:30
 #: ../SS14.Launcher/Views/Login/AuthTfaView.xaml:39
 msgid "Cancel"
 msgstr "Отмена"
@@ -754,10 +769,6 @@ msgstr "Повысить приоритет"
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:97
 msgid "Decrease priority"
 msgstr "Понизить приоритет"
-
-#: ../SS14.Launcher/Views/ConnectingOverlay.xaml:15
-msgid "Connecting..."
-msgstr "Подключение..."
 
 #: ../SS14.Launcher/Views/AccountDropDown.xaml:21
 msgid "Add account"
@@ -837,7 +848,20 @@ msgstr ""
 "понравится то, что вы увидите, но пока, пожалуйста, сдерживайте свои "
 "ожидания."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:156
+#: ../SS14.Launcher/Views/MainWindow.xaml:147
+msgid "Error"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:150
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
+msgid "Open log directory"
+msgstr "Открыть папку с логами"
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:152
+msgid "Ok"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindow.xaml:167
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Нажмите, чтобы запустить игру"
@@ -968,10 +992,6 @@ msgstr "Очистка установленных движков"
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:20
 msgid "Clear installed server content"
 msgstr "Очистка контента серверов"
-
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
-msgid "Open log directory"
-msgstr "Открыть папку с логами"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:30
 msgid ""
