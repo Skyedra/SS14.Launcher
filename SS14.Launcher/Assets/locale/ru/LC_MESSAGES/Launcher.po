@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-20 20:47-0700\n"
-"PO-Revision-Date: 2023-10-15 15:59+0000\n"
+"PO-Revision-Date: 2024-05-23 06:00+0000\n"
 "Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
@@ -80,6 +80,9 @@ msgid ""
 "have a network/firewall issue.  More information is available in the log "
 "file."
 msgstr ""
+"Возникла ошибка при получении информации о лаунчере сервера.  Скорее всего, "
+"у вас проблемы с сетью/брандмауэром.  Более подробная информация доступна в "
+"файле с логами."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
 msgid "Checking account status"
@@ -436,7 +439,7 @@ msgstr "ЮЗ Америка"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:66
 msgctxt "Roleplay Level Filter"
 msgid "None"
-msgstr "Нет"
+msgstr "Нету"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:67
 msgctxt "Roleplay Level Filter"
@@ -699,7 +702,7 @@ msgstr "Подключение..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
 msgid "Loading..."
-msgstr ""
+msgstr "Загрузка..."
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
@@ -850,7 +853,7 @@ msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:147
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:150
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
@@ -859,7 +862,7 @@ msgstr "Открыть папку с логами"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:152
 msgid "Ok"
-msgstr ""
+msgstr "Ок"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:167
 msgctxt "Drag Drop Overlay"
