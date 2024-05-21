@@ -278,7 +278,6 @@ internal static class Program
         contentManager.Initialize();
         launcherInfo.Initialize();
         overrideAssets.Initialize();
-        launcherInfo.Initialize();
 
         var viewModel = new MainWindowViewModel();
         var window = new MainWindow
