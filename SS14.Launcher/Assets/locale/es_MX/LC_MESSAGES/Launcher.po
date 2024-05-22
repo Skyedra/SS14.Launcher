@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-20 20:47-0700\n"
-"PO-Revision-Date: 2023-12-22 20:59+0000\n"
+"PO-Revision-Date: 2024-05-23 06:00+0000\n"
 "Last-Translator: DEATHB4DEFEAT <DEATHB4DEFEAT@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
 "Language-Team: Spanish (Mexico) <http://weblate.spacestationmultiverse.com/"
@@ -80,6 +80,9 @@ msgid ""
 "have a network/firewall issue.  More information is available in the log "
 "file."
 msgstr ""
+"Se produjo un error al obtener información del servidor. Es probable que "
+"tenga un problema de red/cortafuegos. Más información está disponible en el "
+"archivo de registro."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
 msgid "Checking account status"
@@ -102,6 +105,12 @@ msgid ""
 "same game server the hub with the higher priority (higher in the list) will\n"
 "take precedence."
 msgstr ""
+"Aquí puede agregar hubs adicionales para buscar servidores.\n"
+"Solo debes agregar hubs en los que confíes, ya que pueden pretender ser "
+"servidores de otros hubs.\n"
+"El orden de los hubs importa; si dos hubs anuncian el mismo servidor, el "
+"lanzador mostra la variación del servidor del hub con prioridad mayor (más "
+"alto en la lista)."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 msgctxt "Tab"
@@ -111,7 +120,7 @@ msgstr "Servidores"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:46
 msgctxt "Server List Status Text"
 msgid "There was an error fetching the master server lists."
-msgstr ""
+msgstr "Se produjo un error al obtener las listas de servidores."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:48
 msgctxt "Server List Status Text"
@@ -119,26 +128,29 @@ msgid ""
 "Failed to fetch some or all server lists. Ensure your hub configuration is "
 "correct."
 msgstr ""
+"No se puede obtener algunas o todas las listas de servidores. Asegúrese que "
+"la configuración de su concentrador sé correcta."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:50
 msgctxt "Server List Status Text"
 msgid "Fetching master server list..."
-msgstr ""
+msgstr "Buscando la lista de servidores..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:52
 msgctxt "Server List Status Text"
 msgid "Discovering servers..."
-msgstr ""
+msgstr "Descubriendo servidores..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:59
 msgctxt "Server List Status Text"
 msgid "No servers match your search or filter settings."
-msgstr ""
+msgstr "Ningún servidor coincide con la configuración de su filtro o ajustes."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:62
 msgctxt "Server List Status Text"
 msgid "There are no public servers. Ensure your hub configuration is correct."
 msgstr ""
+"No hay servidores. Asegúrese que la configuración de su hub sé correcta."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
 #, csharp-format
@@ -566,7 +578,7 @@ msgstr ""
 #, csharp-format
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
-msgstr ""
+msgstr "Iniciando conexión... {0}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:164
 msgctxt "Connecting"
@@ -574,100 +586,102 @@ msgid ""
 "There was an error while downloading server content. Please ask on Discord "
 "for support if the problem persists."
 msgstr ""
+"Se produjo un error al descargar el contenido del servidor. Por favor, "
+"solicite soporte en Discord si el problema persiste."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:167
 msgctxt "Connecting"
 msgid "Checking for server content update..."
-msgstr ""
+msgstr "Comprobando para una actualización del contenido del servidor..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:168
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:169
 msgctxt "Connecting"
 msgid "Downloading server content..."
-msgstr ""
+msgstr "Descargando contenido del servidor..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
 msgctxt "Connecting"
 msgid "Fetching server manifest..."
-msgstr ""
+msgstr "Obteniendo el manifiesto del servidor..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
 msgctxt "Connecting"
 msgid "Verifying download integrity..."
-msgstr ""
+msgstr "Verificando la integridad de la descarga..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
 msgctxt "Connecting"
 msgid "Clearing old content..."
-msgstr ""
+msgstr "Borrando contenidos antiguos..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:173
 msgctxt "Connecting"
 msgid "Clearing old server content..."
-msgstr ""
+msgstr "Borrando contenidos antiguos del servidor..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:174
 msgctxt "Connecting"
 msgid "Update done!"
-msgstr ""
+msgstr "¡Actualización hecha!"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:175
 msgctxt "Connecting"
 msgid "Checking for additional dependencies..."
-msgstr ""
+msgstr "Buscando dependencias adicionales..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:176
 msgctxt "Connecting"
 msgid "Downloading extra dependencies..."
-msgstr ""
+msgstr "Descargando dependencias adicionales..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:177
 msgctxt "Connecting"
 msgid "Synchronizing to disk..."
-msgstr ""
+msgstr "Sincronizando con el disco..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:178
 msgctxt "Connecting"
 msgid "Storing assets in database..."
-msgstr ""
+msgstr "Almacenando activos en la base de datos..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:179
 msgctxt "Connecting"
 msgid "Loading content bundle..."
-msgstr ""
+msgstr "Cargando paquete de contenido..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:180
 msgctxt "Connecting"
 msgid "You shouldn't see this"
-msgstr ""
+msgstr "No deberías ver esto"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
 #, csharp-format
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
-msgstr ""
+msgstr "Actualizando: {0} {1}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
 #, csharp-format
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
-msgstr ""
+msgstr "Obteniendo información de conexión del servidor... {0}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:183
 msgctxt "Connecting"
 msgid "Failed to connect to server!"
-msgstr ""
+msgstr "¡No se puede conectar al servidor!"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
 #, csharp-format
 msgctxt "Connecting"
 msgid "Starting client... {0}"
-msgstr ""
+msgstr "Iniciando el juego... {0}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:185
 msgctxt "Connecting"
 msgid "File is not a valid content bundle!"
-msgstr ""
+msgstr "¡El archivo no es un paquete de contenido válido!"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:187
 msgctxt "Connecting"
@@ -675,6 +689,8 @@ msgid ""
 "Client seems to have crashed while starting. If this persists, please ask on "
 "Discord or GitHub for support."
 msgstr ""
+"El juego parece haber cerrado durante iniciar. Si esto persiste, solicita "
+"soporte en Discord o GitHub."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:194
 msgid "Connecting..."
@@ -682,7 +698,7 @@ msgstr "Conectando..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
 msgid "Loading..."
-msgstr ""
+msgstr "Cargando..."
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
@@ -712,7 +728,7 @@ msgstr "Seleccionar cuenta:"
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 msgid "Done!"
-msgstr ""
+msgstr "¡Listo!"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
@@ -788,12 +804,12 @@ msgstr "Añadir Servidor Favorito"
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:21
 msgctxt "Add Favorite Server"
 msgid "Name:"
-msgstr ""
+msgstr "Nombre:"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:22
 msgctxt "Add Favorite Server"
 msgid "Address:"
-msgstr ""
+msgstr "Dirección:"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:23
 msgctxt "Example server name"
@@ -832,7 +848,7 @@ msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:147
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:150
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
@@ -841,7 +857,7 @@ msgstr "Abrir directorio de registro"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:152
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:167
 msgctxt "Drag Drop Overlay"
