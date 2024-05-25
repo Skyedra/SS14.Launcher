@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-20 20:47-0700\n"
-"PO-Revision-Date: 2023-10-29 04:59+0000\n"
+"PO-Revision-Date: 2024-05-26 16:00+0000\n"
 "Last-Translator: Snowy <SnowyFoxo@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
 "Language-Team: Italian <http://weblate.spacestationmultiverse.com/projects/"
@@ -80,6 +80,9 @@ msgid ""
 "have a network/firewall issue.  More information is available in the log "
 "file."
 msgstr ""
+"Si è verificato un errore durante il recupero delle informazioni del "
+"launcher dal server. Ciò è probabilmente dovuto da un problema di rete o "
+"firewall. Per ulteriori informazioni, consulta il file di log."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
 msgid "Checking account status"
@@ -102,14 +105,15 @@ msgid ""
 "same game server the hub with the higher priority (higher in the list) will\n"
 "take precedence."
 msgstr ""
-"Qui puoi aggiungere hub extra dai quali ottenere server di gioco.\n"
+"Qui puoi aggiungere hub extra, per accedere a server che potrebbero non "
+"essere disponibili in altri hub.\n"
 "È consigliato di aggiungere solamente hub ritenuti affidabili, dato che "
 "potrebbero 'falsificare' server\n"
 "provenienti da altri hub. L'ordine degli hub è importante; se due hub "
 "pubblicizzano\n"
-"lo stesso server, l'hub dalla priorità più alta (quello più in alto nella "
+"lo stesso server, l'hub con la priorità più alta (quello più in alto nella "
 "lista)\n"
-"avrà precedenza."
+"avrà la precedenza."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 msgctxt "Tab"
@@ -120,7 +124,7 @@ msgstr "Server"
 msgctxt "Server List Status Text"
 msgid "There was an error fetching the master server lists."
 msgstr ""
-"Si è verificato un errore nell'acquisizione delle liste principali dei "
+"Si è verificato un errore durante il recupero delle liste principali dei "
 "server."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:48
@@ -129,13 +133,13 @@ msgid ""
 "Failed to fetch some or all server lists. Ensure your hub configuration is "
 "correct."
 msgstr ""
-"Errore nell'acquisizione di alcune o tutte le liste dei server. Assicurati "
+"Errore durante il recupero di alcune o tutte le liste dei server. Assicurati "
 "che le tue configurazioni hub siano corrette."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:50
 msgctxt "Server List Status Text"
 msgid "Fetching master server list..."
-msgstr "Acquisizione liste principali dei server..."
+msgstr "Recupero liste principali dei server..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:52
 msgctxt "Server List Status Text"
@@ -151,8 +155,8 @@ msgstr "Nessun server corrisponde alla tua ricerca o ai tuoi filtri."
 msgctxt "Server List Status Text"
 msgid "There are no public servers. Ensure your hub configuration is correct."
 msgstr ""
-"Nessun server pubblico disponibile. Assicurati che le tue configurazioni "
-"degli hub siano corrette."
+"Nessun server pubblico disponibile. Assicurati che le tue configurazioni hub "
+"siano corrette."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
 #, csharp-format
@@ -185,7 +189,7 @@ msgstr "I server senza giocatori non verranno visualizzati"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
 msgctxt "Server Filters"
 msgid "Hide empty"
-msgstr "Nascondi vuoti"
+msgstr "Nascondi server senza giocatori"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
 msgctxt "Server Filters"
@@ -195,7 +199,7 @@ msgstr "I server al completo non verranno visualizzati"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
 msgctxt "Server Filters"
 msgid "Hide full"
-msgstr "Nascondi pieni"
+msgstr "Nascondi server al completo"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
 msgctxt "Server Filters"
@@ -235,12 +239,12 @@ msgstr "Africa Centrale"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:13
 msgctxt "Region - Long Name"
 msgid "Africa North"
-msgstr "Africa del Nord"
+msgstr "Nord Africa"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:14
 msgctxt "Region - Long Name"
 msgid "Africa South"
-msgstr "Africa del Sud"
+msgstr "Africa Sud"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:15
 msgctxt "Region - Long Name"
@@ -255,12 +259,12 @@ msgstr "Asia Orientale"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:17
 msgctxt "Region - Long Name"
 msgid "Asia North"
-msgstr "Asia del Nord"
+msgstr "Nord Asia"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:18
 msgctxt "Region - Long Name"
 msgid "Asia South East"
-msgstr "Asia Sud-Est"
+msgstr "Sud-Est Asiatico"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:19
 msgctxt "Region - Long Name"
@@ -270,7 +274,7 @@ msgstr "America Centrale"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:20
 msgctxt "Region - Long Name"
 msgid "Europe East"
-msgstr "Europa Orientale"
+msgstr "Est Europa"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:21
 msgctxt "Region - Long Name"
@@ -340,7 +344,7 @@ msgstr "Africa Centrale"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:40
 msgctxt "Region - Short Name"
 msgid "Africa North"
-msgstr "Africa del Nord"
+msgstr "Nord Africa"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:41
 msgctxt "Region - Short Name"
@@ -360,12 +364,12 @@ msgstr "Asia Orientale"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:44
 msgctxt "Region - Short Name"
 msgid "Asia North"
-msgstr "Asia del Nord"
+msgstr "Nord Asia"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:45
 msgctxt "Region - Short Name"
 msgid "Asia South East"
-msgstr "Asia Sud-Est"
+msgstr "Sud-Est Asiatico"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:46
 msgctxt "Region - Short Name"
@@ -375,7 +379,7 @@ msgstr "America Centrale"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:47
 msgctxt "Region - Short Name"
 msgid "Europe East"
-msgstr "Europa Orientale"
+msgstr "Est Europa"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:48
 msgctxt "Region - Short Name"
@@ -460,7 +464,7 @@ msgstr "Alto"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:58
 msgctxt "Tab"
 msgid "News"
-msgstr "Notizie"
+msgstr "Novità"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
 msgid "Remove Favorite"
@@ -476,7 +480,7 @@ msgstr "OFFLINE"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:94
 msgid "Fetching..."
-msgstr "Acquisizione..."
+msgstr "Recupero..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
 msgid "Unable to contact server"
@@ -484,16 +488,16 @@ msgstr "Impossibile contattare il server"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:110
 msgid "Fetching server status..."
-msgstr "Acquisizione stato del server..."
+msgstr "Recupero stato del server..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
 msgid "Fetching server description..."
-msgstr "Acquisizione descrizione del server..."
+msgstr "Recupero descrizione del server..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
 msgid "Error while fetching server description"
-msgstr "Errore durante l'acquisizione della descrizione del server"
+msgstr "Errore durante il recupero della descrizione del server"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:118
 msgid "No server description provided"
@@ -567,15 +571,16 @@ msgstr ""
 "Da questa schermata, puoi creare un account su uno dei provider di "
 "autenticazione prestabiliti, o semplicemente accedere come ospite.\n"
 "\n"
-"Ciascun server potrebbe accettare metodi diversi con i quali autenticarti, e "
-"quindi non tutti i server accetteranno tutti i provider di autenticazione.\n"
+"Ciascun server potrebbe richiedere metodi diversi con i quali autenticarti, "
+"e quindi non tutti i server accetteranno tutti i provider di autenticazione."
+"\n"
 "\n"
 "È possibile gestire più account utilizzando questo launcher, basta solamente "
 "rivisitare questa pagina per aggiungerne altri. (Anche se probabilmente non "
-"vorrai creare più di un'account per provider).\n"
+"vorrai creare più di un account per provider).\n"
 "\n"
 "Inizia scegliendo un provider di autenticazione sulla sinistra. Potrai "
-"rivisitare questa schermata in seguito per creare account presso altri "
+"rivisitare questa schermata in seguito per creare un account presso altri "
 "provider, se lo desideri."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
@@ -607,12 +612,12 @@ msgstr "Download contenuti del server..."
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
 msgctxt "Connecting"
 msgid "Fetching server manifest..."
-msgstr "Acquisizione manifesto server..."
+msgstr "Recupero manifesto server..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
 msgctxt "Connecting"
 msgid "Verifying download integrity..."
-msgstr "Verifica integrità del download..."
+msgstr "Verifica dell'integrità del download..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
 msgctxt "Connecting"
@@ -702,7 +707,7 @@ msgstr "Connessione..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
 msgid "Loading..."
-msgstr ""
+msgstr "Caricamento..."
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
 msgid "No account selected"
@@ -755,7 +760,7 @@ msgstr "Ripristina"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:36
 msgid "Reset to default settings"
-msgstr "Ripristina le impostazioni predefinite"
+msgstr "Ripristina impostazioni predefinite"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:38
 msgid "Add hub"
@@ -767,11 +772,11 @@ msgstr "Rimuovi hub"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:81
 msgid "Increase priority"
-msgstr "Aumenta la priorità"
+msgstr "Incrementa priorità"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:97
 msgid "Decrease priority"
-msgstr "Riduci la priorità"
+msgstr "Diminiusci priorità"
 
 #: ../SS14.Launcher/Views/AccountDropDown.xaml:21
 msgid "Add account"
@@ -853,7 +858,7 @@ msgstr ""
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:147
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:150
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
@@ -862,7 +867,7 @@ msgstr "Apri la cartella dei log"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:152
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:167
 msgctxt "Drag Drop Overlay"
@@ -971,8 +976,8 @@ msgid ""
 "the game server may not be able to track your playtime."
 msgstr ""
 "Un account ospite non richiede alcuna autenticazione centralizzata. "
-"Tuttavia, alcuni server potrebbero non essere in grado di tenere traccia del "
-"tuo tempo di gioco."
+"Tuttavia, alcuni server potrebbero non essere in grado di registrare il tuo "
+"tempo di gioco."
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:21
 msgctxt "Name entry field on guest tab"
@@ -990,7 +995,7 @@ msgstr "*gira"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:18
 msgid "Clear installed engines"
-msgstr "Elimina motori installati"
+msgstr "Elimina motori di gioco installati"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:20
 msgid "Clear installed server content"
@@ -1021,8 +1026,8 @@ msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
 msgstr ""
-"Cambia quale o quali server hub desideri utilizzare per ottenere l'elenco "
-"dei server."
+"Cambia quale o quali server hub desideri utilizzare dal quale o dai quali "
+"recuperare l'elenco dei server."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
 msgid "Compatibility Mode"
@@ -1035,7 +1040,7 @@ msgid ""
 "or crashes."
 msgstr ""
 "Utilizza OpenGL ES 2 (tramite ANGLE se necessario), che ha meno probabilità "
-"di soffrire di errori del driver. Prova questa impostazione se riscontri "
+"di incorrere in errori driver. Prova questa impostazione se riscontri "
 "problemi grafici o arresti anomali."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
@@ -1087,8 +1092,7 @@ msgstr "Logo stagionale"
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr ""
-"Qualsiasi icone e loghi rilevanti dal punto di vista temporale che ci "
-"possiamo inventare."
+"Qualsiasi icone e loghi temporalmente rilevanti che decidiamo di utilizzare."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
 msgid "Disable Engine Signature Checks"
@@ -1100,7 +1104,7 @@ msgid ""
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
 msgstr ""
 "[SOLO PER GLI SVILUPPATORI] Disabilita la verifica delle firme del motore. "
-"NON ABILITATELO A MENO CHE NON SAPETE ESATTAMENTE COSA STATE FACENDO."
+"NON ABILITARE A MENO CHE NON SAI ESATTAMENTE CHE COSA STAI FACENDO."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:19
 msgid "Favorite Servers:"
@@ -1135,7 +1139,7 @@ msgstr "Vai alla scheda server"
 #: ../SS14.Launcher/Views/MainWindowTabs/HomePageView.xaml:51
 msgid "Mark servers as favorite for easy access here."
 msgstr ""
-"Contrassegna un server come preferito per un rapido accesso da questa scheda."
+"Contrassegna un server come preferito per un accesso rapido da questa scheda."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
 msgid "Raise to top"
@@ -1159,7 +1163,7 @@ msgstr "Nome server"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/NewsTabView.xaml:16
 msgid "Recent News:"
-msgstr "Notizie recenti:"
+msgstr "Novità recenti:"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:27
 msgid "Filters"
