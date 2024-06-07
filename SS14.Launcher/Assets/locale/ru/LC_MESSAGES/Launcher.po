@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-20 20:47-0700\n"
-"PO-Revision-Date: 2024-05-23 06:00+0000\n"
+"PO-Revision-Date: 2024-06-08 07:02+0000\n"
 "Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
@@ -475,7 +475,7 @@ msgstr "Не в сети"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:94
 msgid "Fetching..."
-msgstr "Загрузка..."
+msgstr "Поиск..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
 msgid "Unable to contact server"
