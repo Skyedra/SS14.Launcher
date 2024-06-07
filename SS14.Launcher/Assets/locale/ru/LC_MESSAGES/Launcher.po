@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-20 20:47-0700\n"
 "PO-Revision-Date: 2024-06-08 07:02+0000\n"
-"Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
+"Last-Translator: Dalton <Dalton@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/ru/>\n"
@@ -299,17 +299,17 @@ msgstr "Луна"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:26
 msgctxt "Region - Long Name"
 msgid "North America Central"
-msgstr "Северо-Центральная Америка"
+msgstr "Северная Америка(Центральная)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:27
 msgctxt "Region - Long Name"
 msgid "North America East"
-msgstr "Северо-Восточная Америка"
+msgstr "Северная Америка(Восток)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:28
 msgctxt "Region - Long Name"
 msgid "North America West"
-msgstr "Северо-Западная Америка"
+msgstr "Северная Америка(Запад)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:29
 msgctxt "Region - Long Name"
@@ -319,17 +319,17 @@ msgstr "Океания"
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:30
 msgctxt "Region - Long Name"
 msgid "South America East"
-msgstr "Юго-Восточная Америка"
+msgstr "Южная Америка(Восток)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:31
 msgctxt "Region - Long Name"
 msgid "South America South"
-msgstr "Южная Америка"
+msgstr "Южная Америка(Юг)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:32
 msgctxt "Region - Long Name"
 msgid "South America West"
-msgstr "Юго-Западная Америка"
+msgstr "Южная Америка(Запад)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:39
 msgctxt "Region - Short Name"
