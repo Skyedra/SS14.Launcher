@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-20 20:47-0700\n"
-"PO-Revision-Date: 2024-06-08 07:02+0000\n"
-"Last-Translator: Dalton <Dalton@users.noreply.weblate.spacestationmultiverse."
+"PO-Revision-Date: 2024-06-10 16:02+0000\n"
+"Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/ru/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:71
 msgid "Specify at least one hub"
-msgstr "Укажите хотя бы один URL хаба"
+msgstr "Укажите хотя бы один хаб"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml.cs:73
 msgid "Invalid hub (don't forget http(s)://)"
