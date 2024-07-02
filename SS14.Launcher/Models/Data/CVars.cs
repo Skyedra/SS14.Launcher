@@ -120,6 +120,12 @@ public static class CVars
     /// Stores whether the user has seen the Wine warning.
     /// </summary>
     public static readonly CVarDef<bool> WineWarningShown = CVarDef.Create("WineWarningShown", false);
+
+    /// <summary>
+    /// Stores whether the user has seen the Wine warning.
+    /// Note - database doesn't seem to support datetime or dateonly, so falling back to saving this as string.
+    /// </summary>
+    public static readonly CVarDef<string> BirthDate = CVarDef.Create("BirthDate", "");
 }
 
 /// <summary>

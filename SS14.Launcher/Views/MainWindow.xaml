@@ -59,7 +59,7 @@
       <Panel DockPanel.Dock="Top" Classes="GoldLineHorizontal" />
       <Grid>
         <!-- Main tabbed layout when logged in -->
-        <TabControl IsVisible="{Binding LoggedIn}" Items="{Binding Tabs}" TabStripPlacement="Bottom"
+        <TabControl IsVisible="{Binding ShowMainWindow}" Items="{Binding Tabs}" TabStripPlacement="Bottom"
                     SelectedIndex="{Binding SelectedIndex,Mode=TwoWay}" Margin="0 4 0 0">
           <TabControl.ItemTemplate>
             <DataTemplate DataType="mainWindowTabs:MainWindowTabViewModel">
@@ -67,9 +67,14 @@
             </DataTemplate>
           </TabControl.ItemTemplate>
         </TabControl>
+        <!-- Age setup when no age known -->
+        <v:MainWindowAge
+          IsVisible="{Binding $parent.DataContext.ShowAgeWindow}"
+          DataContext="{Binding AgeViewModel}"
+         />
         <!-- Login interface when not logged in -->
         <v:MainWindowIdentity
-          IsVisible="{Binding !$parent.DataContext.LoggedIn}"
+          IsVisible="{Binding $parent.DataContext.ShowIdentityWindow}"
           DataContext="{Binding IdentityViewModel}"
          />
       </Grid>
@@ -150,6 +155,15 @@
         <Button Content="{loc:Get Open log directory}" DockPanel.Dock="Bottom" HorizontalAlignment="Center"
               Command="{Binding OnShowLauncherInfoErrorOpenLogDirectoryPressed}"/>
         <Button Content="{loc:Get Ok}" Command="{Binding OnShowLauncherInfoErrorPopupPressed}" HorizontalAlignment="Center" />
+      </StackPanel>
+    </ContentControl>
+
+    <ContentControl Classes="OverlayBox" IsVisible="{Binding ShowAgeError}">
+      <StackPanel Orientation="Vertical">
+        <TextBlock HorizontalAlignment="Center" Classes="NanoHeadingMedium" Text="{loc:Get Error}" />
+        <TextBlock Margin="0, 10" TextAlignment="Center" MaxWidth="450" TextWrapping="Wrap"
+                   Text="{Binding AgeErrorText}" />
+        <Button Content="{loc:Get Ok}" Command="{Binding OnShowAgeErrorPopupPressed}" HorizontalAlignment="Center" />
       </StackPanel>
     </ContentControl>
 

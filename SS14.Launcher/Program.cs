@@ -255,6 +255,7 @@ internal static class Program
         locator.RegisterConstant(overrideAssets);
         locator.RegisterConstant(new Localization.LocalizationManager());
         locator.RegisterConstant(launcherInfo);
+        locator.RegisterConstant(new AgeManager());
 
         return AppBuilder.Configure(() => new App(overrideAssets))
             .UsePlatformDetect()

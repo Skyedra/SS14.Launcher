@@ -20,6 +20,8 @@ using SS14.Launcher.ViewModels.IdentityTabs;
 using SS14.Launcher.ViewModels.Login;
 using SS14.Launcher.ViewModels.MainWindowTabs;
 using SS14.Launcher.Views;
+using Avalonia.Controls;
+
 
 namespace SS14.Launcher.ViewModels;
 
@@ -30,6 +32,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     private readonly HttpClient _http;
     private readonly LocalizationManager localizationManager;
     private readonly LauncherInfoManager _infoManager;
+    private readonly AgeManager ageManager;
 
     private int _selectedIndex;
 
@@ -50,6 +53,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         _loginMgr = Locator.Current.GetRequiredService<LoginManager>();
         _http = Locator.Current.GetRequiredService<HttpClient>();
         localizationManager = Locator.Current.GetRequiredService<LocalizationManager>();
+        ageManager = Locator.Current.GetRequiredService<AgeManager>();
 
         // Main Window Tabs
         _infoManager = Locator.Current.GetRequiredService<LauncherInfoManager>();
@@ -71,6 +75,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
         AccountDropDown = new AccountDropDownViewModel(this);
         IdentityViewModel = new MainWindowIdentityViewModel();
+        AgeViewModel = new MainWindowAgeViewModel(this);
 
         this.WhenAnyValue(x => x._loginMgr.ActiveAccount)
             .Subscribe(s =>
@@ -90,6 +95,8 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
             .DistinctUntilChanged() // Only when change.
             .Subscribe(x =>
             {
+                CalculateActiveMainWindow();
+
                 if (x)
                 {
                     // "Switch" to main window.
@@ -109,6 +116,8 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
                 this.RaisePropertyChanged(nameof(LanguageChangedPopupMessageText));
                 this.RaisePropertyChanged(nameof(LanguageChangedPopupButtonText));
             });
+
+        CalculateActiveMainWindow();
     }
 
     public MainWindow? Control { get; set; }
@@ -124,6 +133,9 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     public AccountDropDownViewModel AccountDropDown { get; }
 
     public MainWindowIdentityViewModel IdentityViewModel { get; }
+    public MainWindowAgeViewModel AgeViewModel { get; }
+
+    public bool AgeKnown => ageManager.AgeKnown;
 
     [Reactive] public ConnectingViewModel? ConnectingVM { get; set; }
 
@@ -135,6 +147,43 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     public string LanguageChangedPopupMessageText => localizationManager.GetParticularString("Language Changed Restart Popup - Message", "Language has been changed.  Please start the launcher again for changes to take effect.");
     public string LanguageChangedPopupButtonText => localizationManager.GetParticularString("Language Changed Restart Popup - Button", "Close Application");
 
+    [Reactive] public bool ShowMainWindow {get; set;} = false;
+    [Reactive] public bool ShowAgeWindow {get; set;} = false;
+    [Reactive] public bool ShowIdentityWindow {get; set;} = false;
+
+    /// <summary>
+    /// This function will check what main window should be shown (ex: main, age, identity, etc) and set properties so
+    /// it is shown.
+    /// </summary>
+    public void CalculateActiveMainWindow()
+    {
+        Type correctActiveWindowType = typeof(MainWindow);
+        if (!ageManager.AgeKnown)
+            correctActiveWindowType = typeof(MainWindowAge);
+        else if (!LoggedIn)
+            correctActiveWindowType = typeof(MainWindowIdentity);
+
+        if (correctActiveWindowType == _activeMainWindowType)
+            return;
+
+        ShowMainWindow = false;
+        ShowAgeWindow = false;
+        ShowIdentityWindow = false;
+
+        if (correctActiveWindowType == typeof(MainWindow))
+            ShowMainWindow = true;
+        else if (correctActiveWindowType == typeof(MainWindowAge))
+            ShowAgeWindow = true;
+        else if (correctActiveWindowType == typeof(MainWindowIdentity))
+            ShowIdentityWindow = true;
+
+        this.RaisePropertyChanged(nameof(ShowMainWindow));
+        this.RaisePropertyChanged(nameof(ShowAgeWindow));
+        this.RaisePropertyChanged(nameof(ShowIdentityWindow));
+
+        _activeMainWindowType = correctActiveWindowType;
+    }
+    private Type _activeMainWindowType = null;
 
     /// <summary>
     /// Whether to show modal popup about having difficulty getting launcher info file from server
@@ -351,5 +400,32 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
             UseShellExecute = true,
             FileName = LauncherPaths.DirLogs
         });
+    }
+
+       /// <summary>
+    /// Whether to show modal popup about age page entry error
+    /// </summary>
+    /// <value></value>
+    public bool ShowAgeError
+    {
+        get => _showAgeError;
+        set => this.RaiseAndSetIfChanged(ref _showAgeError, value);
+    }
+    private bool _showAgeError = false;
+
+    /// <summary>
+    /// Text to be displayed in the age error modal
+    /// </summary>
+    /// <value></value>
+    public string AgeErrorText
+    {
+        get => _ageErrorText;
+        set => this.RaiseAndSetIfChanged(ref _ageErrorText, value);
+    }
+    private string _ageErrorText;
+
+    public void OnShowAgeErrorPopupPressed()
+    {
+        ShowAgeError = false;
     }
 }

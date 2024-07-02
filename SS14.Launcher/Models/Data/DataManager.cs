@@ -17,6 +17,7 @@ using Microsoft.Toolkit.Mvvm.Messaging;
 using ReactiveUI;
 using Serilog;
 using SS14.Launcher.Utility;
+using System.Globalization;
 
 namespace SS14.Launcher.Models.Data;
 
@@ -140,6 +141,33 @@ public sealed class DataManager : ReactiveObject
                 SetCVar(CVars.Locale, "");
             else
                 SetCVar(CVars.Locale, value);
+            CommitConfig();
+        }
+    }
+
+    public DateOnly BirthDate
+    {
+        get
+        {
+            try
+            {
+                var dateString = GetCVar(CVars.BirthDate);
+                if (string.IsNullOrEmpty(dateString))
+                    return DateOnly.MaxValue;
+
+                return DateOnly.Parse(dateString, CultureInfo.InvariantCulture);
+
+            } catch (Exception e) {
+                Log.Warning("Could not read BirthDate from DB: " + e.Message);
+                return DateOnly.MaxValue;
+            }
+        }
+        set
+        {
+            if (value == null || value == DateOnly.MaxValue)
+                SetCVar(CVars.BirthDate, null);
+            else
+                SetCVar(CVars.BirthDate, value.ToString(CultureInfo.InvariantCulture));
             CommitConfig();
         }
     }
