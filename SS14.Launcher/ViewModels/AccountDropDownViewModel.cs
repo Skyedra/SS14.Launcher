@@ -72,7 +72,7 @@ public class AccountDropDownViewModel : ViewModelBase
         {
             if (_loginMgr.ActiveAccount != null)
             {
-                return _loginMgr.ActiveAccount.Username + " - " + _loginMgr.ActiveAccount.AuthServer;
+                return _loginMgr.ActiveAccount.Username + " [" + _loginMgr.ActiveAccount.LoginInfo.LoginTypeDisplaySuffix + "]";
             } else {
                 return EnableMultiAccounts ? Loc.GetString("No account selected") : Loc.GetString("Not logged in");
             }
@@ -93,7 +93,10 @@ public class AccountDropDownViewModel : ViewModelBase
 
         if (_loginMgr.ActiveAccount != null)
         {
-            await _authApi.LogoutTokenAsync(_loginMgr.ActiveAccount.LoginInfo.Token.Token);
+            if (_loginMgr.ActiveAccount.LoginInfo is LoginInfoAccount accountInfo)
+            {
+                await _authApi.LogoutTokenAsync(accountInfo.Token.Token);
+            }
             _cfg.RemoveLogin(_loginMgr.ActiveAccount.LoginInfo);
         }
     }
@@ -124,7 +127,7 @@ public sealed class AvailableAccountViewModel : ViewModelBase
     {
         Account = account;
 
-        this.WhenAnyValue<AvailableAccountViewModel, AccountLoginStatus, string, string>(p => p.Account.Status, p => p.Account.Username, p => p.Account.AuthServer)
+        this.WhenAnyValue<AvailableAccountViewModel, AccountLoginStatus, string, string>(p => p.Account.Status, p => p.Account.Username, p => p.Account.LoginInfo.LoginTypeDisplaySuffix)
             .Select(p => p.Item1 switch
             {
                 AccountLoginStatus.Available => $"{p.Item2} - {p.Item3}",

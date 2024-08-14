@@ -16,6 +16,7 @@ public class MainWindowIdentityViewModel : ViewModelBase
 
     // Identity Tabs
     public InformationTabViewModel InformationTab { get; }
+    public KeyNewTabViewModel KeyNewTab { get; }
     public GuestTabViewModel GuestTab { get; }
     public LoginTabViewModel WizardsDenLoginTab { get; }
 
@@ -30,12 +31,14 @@ public class MainWindowIdentityViewModel : ViewModelBase
         // Identity Tabs
 
         InformationTab = new InformationTabViewModel();
+        KeyNewTab = new KeyNewTabViewModel();
         GuestTab = new GuestTabViewModel();
         WizardsDenLoginTab = new LoginTabViewModel();
 
         IdentityTabs = new IdentityTabViewModel[]
         {
             InformationTab,
+            KeyNewTab,
             GuestTab,
             WizardsDenLoginTab
         };

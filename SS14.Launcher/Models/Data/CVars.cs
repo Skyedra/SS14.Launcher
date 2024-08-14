@@ -80,6 +80,7 @@ public static class CVars
     /// Currently selected login in the drop down.
     /// </summary>
     public static readonly CVarDef<string> SelectedLogin = CVarDef.Create("SelectedLogin", "");
+    public static readonly CVarDef<string> SelectedLoginMethod = CVarDef.Create("SelectedLoginMethod", "");
 
     public static readonly CVarDef<string> Fingerprint = CVarDef.Create("Fingerprint", "");
 

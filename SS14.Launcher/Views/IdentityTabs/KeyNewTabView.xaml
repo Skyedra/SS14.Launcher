@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.IdentityTabs.KeyNewTabView"
+             Name="KeyNewTab">
+  <Design.DataContext>
+    <identityTabs:KeyNewTabViewModel />
+  </Design.DataContext>
+
+  <DockPanel LastChildFill="False">
+    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get MV Key Auth, Context=Key Tab Header}" Classes="NanoHeadingMedium" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get ⭐ This is the recommended way to play! ⭐, Context=Key Tab}" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get Multiverse publickey/privatekey identity does not require any centralized authentication and allows for you to save your playtime on servers that support it.}" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get This option will generate a NEW keypair.  If you are new to Multiverse or have otherwise not previously generated a keypair\, this is the right option.  If you already have an existing Multiverse keypair\, use the import tab instead. }" />
+
+     <TextBox  DockPanel.Dock="Top" Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
+             Watermark="{loc:Get Name, Context=Name entry field on key tab}"
+             Text="{Binding EditingUsername, Mode=TwoWay}" IsEnabled="{Binding !Busy}" />
+
+      <Button DockPanel.Dock="Top" Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get Continue, Context=Button on key tab}" Command="{Binding ContinuePressed}">
+        <Button.IsEnabled>
+          <MultiBinding Converter="{x:Static BoolConverters.And}">
+            <Binding Path="IsInputValid" />
+            <Binding Path="!Busy" />
+          </MultiBinding>
+        </Button.IsEnabled>
+      </Button>
+
+
+
+  </DockPanel>
+</UserControl>
