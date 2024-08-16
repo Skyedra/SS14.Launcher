@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Avalonia.Controls;
 using DynamicData;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
@@ -11,6 +12,7 @@ using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
+using SS14.Launcher.Views;
 
 namespace SS14.Launcher.ViewModels;
 
@@ -20,6 +22,8 @@ public class ConfigureKeyViewModel : ViewModelBase
     [Reactive] public string PublicKeyText { get; set; } = "";
     private readonly LoginManager _loginMgr;
     private readonly DataManager _cfg;
+    [Reactive] public bool ConfirmDeleteButtonEnabled { get; set; } = false;
+    public ConfigureKeyDialog Dialog { get; set; }
 
     public ConfigureKeyViewModel()
         :base()
@@ -106,5 +110,23 @@ public class ConfigureKeyViewModel : ViewModelBase
         RenameResultText = Loc.GetParticularString("Key Configuration", "Rename was successful.");
         RenameResultText += "  " + Loc.GetParticularString("Key Configuration", "(UI may not reflect the rename until next restart of Multiverse.)"); // Temporary workaround, sorry
         this.RaisePropertyChanged(nameof(RenameButtonEnabled));
+    }
+
+    public void DeletePressed()
+    {
+        if (LoginInfoKey == null)
+            return;
+
+        ConfirmDeleteButtonEnabled = true;
+    }
+
+    public void DeleteConfirmPressed()
+    {
+        if (LoginInfoKey == null)
+            return;
+
+        _cfg.RemoveLogin(LoginInfoKey);
+
+        Dialog.Close();
     }
 }

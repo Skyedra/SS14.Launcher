@@ -64,6 +64,15 @@
 
       <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get This will delete your key.  There is no way to undo it!  You will be locked out of your user profile on all servers if you do this., Context=Configure Key}" />
 
+      <Button Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get Delete Key, Context=Configure Key}" Command="{Binding DeletePressed}" IsEnabled="{Binding !ConfirmDeleteButtonEnabled}" >
+        </Button>
+
+      <Button Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get CONFIRM DELETE -- There is no undo!!, Context=Configure Key}" Command="{Binding DeleteConfirmPressed}"
+              IsVisible="{Binding ConfirmDeleteButtonEnabled}">
+        </Button>
+
       <!-- Export Private/Public Key Pair -->
 
       <TextBlock Margin="4, 0" Text="{loc:Get Export Private + Public Key, Context=Configure Key}" Classes="NanoHeadingMedium" />

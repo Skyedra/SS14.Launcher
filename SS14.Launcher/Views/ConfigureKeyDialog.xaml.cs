@@ -39,7 +39,10 @@ public partial class ConfigureKeyDialog : Window
         :this()
     {
         if (_viewModel != null)
+        {
             _viewModel.LoginInfoKey = loginInfoKey;
+            _viewModel.Dialog = this;
+        }
     }
 
     protected override void OnOpened(EventArgs e)
