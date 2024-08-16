@@ -17,6 +17,7 @@ namespace SS14.Launcher.ViewModels;
 public class ConfigureKeyViewModel : ViewModelBase
 {
     [Reactive] public string EditingUsername { get; set; } = "";
+    [Reactive] public string PublicKeyText { get; set; } = "";
     private readonly LoginManager _loginMgr;
     private readonly DataManager _cfg;
 
@@ -59,9 +60,15 @@ public class ConfigureKeyViewModel : ViewModelBase
         {
             _loginInfoKey = value;
             if (_loginInfoKey == null)
+            {
                 EditingUsername = "";
+                PublicKeyText = "";
+            }
             else
+            {
                 EditingUsername = _loginInfoKey.Username;
+                PublicKeyText = _loginInfoKey.PublicKey;
+            }
             this.RaisePropertyChanged(nameof(RenameButtonEnabled));
         }
     }

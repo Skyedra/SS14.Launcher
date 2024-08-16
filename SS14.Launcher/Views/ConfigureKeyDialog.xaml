@@ -55,6 +55,9 @@
 
       <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get Sometimes\, server staff may request you to share your *public* key.  This is safe.  You may copy/paste it from below.  It is safe to give the *public* key to anyone who asks -- even other players., Context=Configure Key}" />
 
+      <TextBox Name="PublicKeyBox" Width="500" MaxWidth="500" MaxHeight="150" Margin="5, 5, 5, 5"
+               IsReadOnly="true" Text="{Binding PublicKeyText}" />
+
       <!-- Delete Key Pair -->
 
       <TextBlock Margin="4, 0" Text="{loc:Get Delete Keypair, Context=Configure Key}" Classes="NanoHeadingMedium" />
