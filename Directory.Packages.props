@@ -23,6 +23,7 @@
     <PackageVersion Include="DynamicData" Version="7.13.1"/>
     <PackageVersion Include="JWT" Version="10.1.1" />
     <PackageVersion Include="Microsoft.Toolkit.Mvvm" Version="7.1.2"/>
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageVersion Include="NGettext" Version="0.6.7" />
     <PackageVersion Include="ReactiveUI" Version="18.4.26" />
     <PackageVersion Include="ReactiveUI.Fody" Version="18.4.26" />

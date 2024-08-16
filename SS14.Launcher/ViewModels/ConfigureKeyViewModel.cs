@@ -2,9 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using Avalonia.Controls;
 using DynamicData;
+using Newtonsoft.Json;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 using Splat;
@@ -39,6 +42,11 @@ public class ConfigureKeyViewModel : ViewModelBase
         this.WhenAnyValue(x => x.RenameResultText)
             .Subscribe(s => {
                 this.RaisePropertyChanged(nameof(ShowRenameResultText));
+            });
+
+        this.WhenAnyValue(x => x.ExportResultText)
+            .Subscribe(s => {
+                this.RaisePropertyChanged(nameof(ShowExportResultText));
             });
     }
 
@@ -128,5 +136,47 @@ public class ConfigureKeyViewModel : ViewModelBase
         _cfg.RemoveLogin(LoginInfoKey);
 
         Dialog.Close();
+    }
+
+    private async void ExportPressed()
+    {
+        if (LoginInfoKey == null || Dialog == null)
+            return;
+
+        var saveFileDialog = new SaveFileDialog();
+        saveFileDialog.InitialFileName = "SSMV Key - THIS IS YOUR PASSWORD.key";
+        saveFileDialog.Directory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        if (saveFileDialog.Directory == "") // Fallback
+            saveFileDialog.Directory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        if (saveFileDialog.Directory == "") // Fallback
+            saveFileDialog.Directory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        string? selectedPath = await saveFileDialog.ShowAsync(Dialog);
+
+        if (selectedPath == null)
+        {
+            ExportResultText = Loc.GetParticularString("Key Configuration", "No path selected.");
+            return;
+        }
+
+        try
+        {
+            //string serializedForm = JsonSerializer.Serialize<LoginInfoKey>(LoginInfoKey);
+            // ^ Built in .net serialization tries to serialize out Reactive fields.  Using json.net instead.
+            string serializedForm = JsonConvert.SerializeObject(LoginInfoKey, Formatting.Indented);
+            await File.WriteAllTextAsync(selectedPath, serializedForm);
+            ExportResultText = Loc.GetParticularString("Key Configuration", "Export succeeded.");
+        } catch (Exception e)
+        {
+            ExportResultText = Loc.GetParticularString("Key Configuration", "Error during export: ") + e.Message;
+        }
+    }
+
+    [Reactive] public string ExportResultText { get; set; } = "";
+    public bool ShowExportResultText
+    {
+        get
+        {
+            return ExportResultText != "";
+        }
     }
 }
