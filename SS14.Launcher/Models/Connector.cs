@@ -258,7 +258,6 @@ public class Connector : ReactiveObject
                     .AddClaim("preferredUserName", keyInfo.Username)
                     .Encode();
 
-
                 cVars.Add(("ROBUST_USER_JWT", jwt));
                 cVars.Add(("ROBUST_USER_PUBLIC_KEY", keyInfo.PublicKey));
                 cVars.Add(("ROBUST_AUTH_PUBKEY", info.AuthInformation.PublicKey));
