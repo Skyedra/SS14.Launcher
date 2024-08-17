@@ -1,0 +1,27 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.IdentityTabs.KeyImportTabView"
+             Name="KeyImportTab">
+  <Design.DataContext>
+    <identityTabs:KeyImportTabViewModel />
+  </Design.DataContext>
+  <!-- <UserControl._viewModel.>
+    <identityTabs:KeyImportTabViewModel />
+  </UserControl.DataContext>  -->
+
+  <DockPanel LastChildFill="False">
+    <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Import Existing MV Key, Context=Key Tab Header}" Classes="NanoHeadingMedium" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get If you previously made a keypair\, you can import it here., Context=Key Tab}" />
+
+      <Button DockPanel.Dock="Top" Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get Import..., Context=Button on key tab}" Command="{Binding ImportPressed}">
+      </Button>
+  </DockPanel>
+</UserControl>
