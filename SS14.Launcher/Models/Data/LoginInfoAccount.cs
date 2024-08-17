@@ -9,8 +9,6 @@ public class LoginInfoAccount : LoginInfo
     [Reactive]
     public Guid UserId { get; set; }
     [Reactive]
-    public string Username { get; set; } = default!;
-    [Reactive]
     public LoginToken Token { get; set; }
 
     public enum CommonAuthServers
