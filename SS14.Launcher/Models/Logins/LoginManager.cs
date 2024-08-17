@@ -237,4 +237,15 @@ public sealed class LoginManager : ReactiveObject
             Log.Debug("Setting status for login {account} to {status}", LoginInfo, status);
         }
     }
+
+    public bool HasAccountOfType(Type type)
+    {
+        foreach (var account in Logins.Items)
+        {
+            if (account != null && account.LoginInfo?.GetType() == type)
+                return true;
+        }
+
+        return false;
+    }
 }

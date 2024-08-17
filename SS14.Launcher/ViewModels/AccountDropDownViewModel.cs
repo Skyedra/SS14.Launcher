@@ -30,7 +30,6 @@ public class AccountDropDownViewModel : ViewModelBase
 
     public ReadOnlyObservableCollection<AvailableAccountViewModel> Accounts => _accounts;
 
-    public bool EnableMultiAccounts => _cfg.ActuallyMultiAccounts;
     public Control? Control { get; set; }
 
     public AccountDropDownViewModel(MainWindowViewModel mainVm)
@@ -86,7 +85,7 @@ public class AccountDropDownViewModel : ViewModelBase
             {
                 return _loginMgr.ActiveAccount.Username + " [" + _loginMgr.ActiveAccount.LoginInfo.LoginTypeDisplaySuffix + "]";
             } else {
-                return EnableMultiAccounts ? Loc.GetString("No account selected") : Loc.GetString("Not logged in");
+                return Loc.GetString("No account selected");
             }
         }
     }

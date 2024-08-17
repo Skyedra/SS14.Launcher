@@ -222,14 +222,12 @@ public sealed class DataManager : ReactiveObject
     public ICollection<ServerFilter> Filters { get; }
     public ICollection<Hub> Hubs { get; }
 
-    public bool ActuallyMultiAccounts => true;
+    public bool MultiAccountsPerProvider => GetCVar(CVars.MultiAccountsPerProvider);
     /*
-        I should probably change this to be a default on but cvar'able off, I guess.
-        But just doing this quick for now.
 #if DEBUG
         true;
 #else
-            GetCVar(CVars.MultiAccounts);
+            GetCVar(CVars.MultiAccountsPerProvider);
 #endif
 */
 
