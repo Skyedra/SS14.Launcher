@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 21:57-0700\n"
+"POT-Creation-Date: 2024-08-17 22:06-0700\n"
 "PO-Revision-Date: 2023-10-18 11:55+0000\n"
 "Last-Translator: Selis <Selis@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
@@ -854,6 +854,16 @@ msgstr "Konto wechseln:"
 msgid "Select account:"
 msgstr "Konto auswählen:"
 
+#: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+msgctxt "Account Type"
+msgid "MV Key Auth"
+msgstr ""
+
+#: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+msgctxt "Account Type"
+msgid "Guest"
+msgstr ""
+
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 msgid "Done!"
 msgstr "Fertig!"
@@ -1182,7 +1192,7 @@ msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
-"tab instead. "
+"tab instead."
 msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25

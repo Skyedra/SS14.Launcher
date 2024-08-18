@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 21:57-0700\n"
+"POT-Creation-Date: 2024-08-17 22:06-0700\n"
 "PO-Revision-Date: 2024-08-18 05:02+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -89,7 +89,8 @@ msgid ""
 "There was an error getting launcher information from server.  You likely "
 "have a network/firewall issue.  More information is available in the log "
 "file."
-msgstr "从服务器获取启动器信息时出错。你可能遇到了网络/防火墙问题。更多信息可在日志文"
+msgstr ""
+"从服务器获取启动器信息时出错。你可能遇到了网络/防火墙问题。更多信息可在日志文"
 "件中找到。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
@@ -767,7 +768,7 @@ msgid "Invalid SSMV JSON keypair file."
 msgstr "SSMV JSON 密钥对文件无效。"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
@@ -794,7 +795,7 @@ msgid "⭐ Key Auth (New) ⭐"
 msgstr "⭐ 密钥认证（新增）⭐"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
 msgstr "正在开始连接... {0}"
@@ -887,13 +888,13 @@ msgid "You shouldn't see this"
 msgstr "你不应该看到这个"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
 msgstr "更新中：{0} {1}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
 msgstr "正在从服务器获取连接信息... {0}"
@@ -905,7 +906,7 @@ msgid "Failed to connect to server!"
 msgstr "无法连接到服务器！"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Starting client... {0}"
 msgstr "正在启动客户端... {0}"
@@ -922,8 +923,9 @@ msgctxt "Connecting"
 msgid ""
 "Client seems to have crashed while starting. If this persists, please ask on "
 "Discord or GitHub for support."
-msgstr "客户端在启动时似乎崩溃了。如果这种情况仍然存在，请在 Discord 或 GitHub "
-"上寻求支持。"
+msgstr ""
+"客户端在启动时似乎崩溃了。如果这种情况仍然存在，请在 Discord 或 GitHub 上寻求"
+"支持。"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:194
 #, fuzzy
@@ -958,7 +960,7 @@ msgid "Configure Key"
 msgstr "配置密钥"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Configure {0}"
 msgstr "配置 {0}"
 
@@ -971,6 +973,16 @@ msgstr "切换账户："
 #, fuzzy
 msgid "Select account:"
 msgstr "选择账户："
+
+#: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+msgctxt "Account Type"
+msgid "MV Key Auth"
+msgstr ""
+
+#: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+msgctxt "Account Type"
+msgid "Guest"
+msgstr ""
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 #, fuzzy
@@ -1120,7 +1132,8 @@ msgctxt "Configure Key"
 msgid ""
 "This will delete your key.  There is no way to undo it!  You will be locked "
 "out of your user profile on all servers if you do this."
-msgstr "这将删除您的密钥。没有办法撤消它！如果你这样做，你将被锁定在所有服务器上的用"
+msgstr ""
+"这将删除您的密钥。没有办法撤消它！如果你这样做，你将被锁定在所有服务器上的用"
 "户配置文件之外。"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:68
@@ -1358,19 +1371,17 @@ msgid ""
 "Multiverse publickey/privatekey identity does not require any centralized "
 "authentication and allows for you to save your playtime on servers that "
 "support it."
-msgstr "多元宇宙公钥/私钥身份不需要任何集中身份验证，可让您在支持它的服务器上节省游戏"
+msgstr ""
+"多元宇宙公钥/私钥身份不需要任何集中身份验证，可让您在支持它的服务器上节省游戏"
 "时间。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
-#, fuzzy
 msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
-"tab instead. "
+"tab instead."
 msgstr ""
-"此选项将生成一个新的密钥对。如果你是Multiverse的新手，或者之前没有生成过密钥"
-"对，那么这是正确的选择。如果您已经拥有多元宇宙密钥对，请改用导入选项卡。 "
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
 #, fuzzy
@@ -1409,7 +1420,8 @@ msgid ""
 "As of this writing, Wizard's Den is blocking the Space Station Multiverse "
 "launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
 "support any longer."
-msgstr "在撰写本文时，巫师之巢正在封锁空间站多元宇宙发射器。因此，很遗憾，我们无法再"
+msgstr ""
+"在撰写本文时，巫师之巢正在封锁空间站多元宇宙发射器。因此，很遗憾，我们无法再"
 "提供WizDen身份验证支持。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
@@ -1719,6 +1731,17 @@ msgstr "集线器"
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "发动机"
+
+#, fuzzy
+#~ msgid ""
+#~ "This option will generate a NEW keypair.  If you are new to Multiverse or "
+#~ "have otherwise not previously generated a keypair, this is the right "
+#~ "option.  If you already have an existing Multiverse keypair, use the "
+#~ "import tab instead. "
+#~ msgstr ""
+#~ "此选项将生成一个新的密钥对。如果你是Multiverse的新手，或者之前没有生成过密"
+#~ "钥对，那么这是正确的选择。如果您已经拥有多元宇宙密钥对，请改用导入选项"
+#~ "卡。 "
 
 #, fuzzy
 #~ msgid "Not logged in"

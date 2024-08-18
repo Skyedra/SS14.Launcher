@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 21:57-0700\n"
+"POT-Creation-Date: 2024-08-17 22:06-0700\n"
 "PO-Revision-Date: 2024-08-18 05:02+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Portuguese (Brazil) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -787,7 +787,7 @@ msgid "Invalid SSMV JSON keypair file."
 msgstr "Arquivo de par de chaves SSMV JSON inválido."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
@@ -818,7 +818,7 @@ msgid "⭐ Key Auth (New) ⭐"
 msgstr "⭐ Key Auth (novo) ⭐"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
 msgstr "Iniciando a conexão... {0}"
@@ -913,13 +913,13 @@ msgid "You shouldn't see this"
 msgstr "Você não deveria ver isso"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
 msgstr "Atualizando: {0} {1}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
 msgstr "Obtendo informações de conexão do servidor... {0}"
@@ -931,7 +931,7 @@ msgid "Failed to connect to server!"
 msgstr "Falha na conexão com o servidor!"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Starting client... {0}"
 msgstr "Cliente inicial... {0}"
@@ -985,7 +985,7 @@ msgid "Configure Key"
 msgstr "Configurar chave"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Configure {0}"
 msgstr "Configurar {0}"
 
@@ -998,6 +998,16 @@ msgstr "Trocar conta:"
 #, fuzzy
 msgid "Select account:"
 msgstr "Selecione a conta:"
+
+#: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+msgctxt "Account Type"
+msgid "MV Key Auth"
+msgstr ""
+
+#: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+msgctxt "Account Type"
+msgid "Guest"
+msgstr ""
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 #, fuzzy
@@ -1401,17 +1411,12 @@ msgstr ""
 "servidores que a suportam."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
-#, fuzzy
 msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
-"tab instead. "
+"tab instead."
 msgstr ""
-"Essa opção gerará um NOVO par de chaves. Se você é novo no Multiverse ou não "
-"gerou anteriormente um par de chaves, essa é a opção certa. Se você já tiver "
-"um par de chaves Multiverse existente, use a guia de importação em vez "
-"disso. "
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
 #, fuzzy
@@ -1780,6 +1785,18 @@ msgstr "Hub"
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "Motor"
+
+#, fuzzy
+#~ msgid ""
+#~ "This option will generate a NEW keypair.  If you are new to Multiverse or "
+#~ "have otherwise not previously generated a keypair, this is the right "
+#~ "option.  If you already have an existing Multiverse keypair, use the "
+#~ "import tab instead. "
+#~ msgstr ""
+#~ "Essa opção gerará um NOVO par de chaves. Se você é novo no Multiverse ou "
+#~ "não gerou anteriormente um par de chaves, essa é a opção certa. Se você "
+#~ "já tiver um par de chaves Multiverse existente, use a guia de importação "
+#~ "em vez disso. "
 
 #, fuzzy
 #~ msgid "Not logged in"

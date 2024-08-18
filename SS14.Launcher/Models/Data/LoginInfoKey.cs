@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
+using SS14.Launcher.Localization;
 
 namespace SS14.Launcher.Models.Data;
 
@@ -20,5 +21,5 @@ public class LoginInfoKey : LoginInfo
         return $"{Username} [Key Auth]";
     }
 
-    public override string LoginTypeDisplaySuffix => "MV Key Auth";
+    public override string LoginTypeDisplaySuffix => Loc.GetParticularString("Account Type", "MV Key Auth");
 }
