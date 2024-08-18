@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-17 22:06-0700\n"
-"PO-Revision-Date: 2024-08-18 05:02+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2024-08-18 05:13+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Spanish <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/es/>\n"
 "Language: es\n"
@@ -1006,14 +1006,16 @@ msgid "Select account:"
 msgstr "Selecciona la cuenta:"
 
 #: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+#, fuzzy
 msgctxt "Account Type"
 msgid "MV Key Auth"
-msgstr ""
+msgstr "Autenticación de clave MV"
 
 #: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+#, fuzzy
 msgctxt "Account Type"
 msgid "Guest"
-msgstr ""
+msgstr "Huésped"
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 #, fuzzy
@@ -1419,12 +1421,17 @@ msgstr ""
 "en servidores que la admiten."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
+#, fuzzy
 msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
 "tab instead."
 msgstr ""
+"Esta opción generará un NUEVO par de claves. Si es nuevo en Multiverse o no "
+"ha generado previamente un par de claves, esta es la opción correcta. Si ya "
+"tienes un par de claves de Multiverse, usa la pestaña de importación en su "
+"lugar."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
 #, fuzzy
