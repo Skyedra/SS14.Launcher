@@ -1,11 +1,13 @@
 using System;
 using System.ComponentModel;
+using System.Linq;
 using Avalonia.Input;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using Microsoft.Toolkit.Mvvm.Messaging;
 using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.ServerStatus;
+using static SS14.Launcher.Api.ServerApi;
 
 namespace SS14.Launcher.ViewModels.MainWindowTabs;
 
@@ -71,6 +73,39 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
     private bool IsFavorite => _cfg.FavoriteServers.Lookup(Address).HasValue;
 
     public bool ViewedInFavoritesPane { get; set; }
+
+    public bool UnsupportedEngine
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(_cacheData.Engine))
+                return true;
+
+            return false;
+        }
+    }
+
+    public bool MVKeyAuthSupported
+    {
+        get
+        {
+            if (_cacheData.AuthMethods == null)
+                return false;
+
+            return _cacheData.AuthMethods.Contains(AuthMethods.MVKeyAuth);
+        }
+    }
+
+    public bool GuestModeSupported
+    {
+        get
+        {
+            if (_cacheData.AuthMethods == null)
+                return false;
+
+            return _cacheData.AuthMethods.Contains(AuthMethods.Guest);
+        }
+    }
 
     public string ServerStatusString
     {
@@ -215,6 +250,15 @@ public sealed class ServerEntryViewModel : ObservableRecipient, IRecipient<Favor
             case nameof(IServerStatusData.Description):
             case nameof(IServerStatusData.StatusInfo):
                 OnPropertyChanged(nameof(Description));
+                break;
+
+            case nameof(IServerStatusData.Engine):
+                OnPropertyChanged(nameof(UnsupportedEngine));
+                break;
+
+            case nameof(IServerStatusData.AuthMethods):
+                OnPropertyChanged(nameof(GuestModeSupported));
+                OnPropertyChanged(nameof(MVKeyAuthSupported));
                 break;
         }
     }

@@ -11,9 +11,11 @@ public static class ServerApi
         [property: JsonPropertyName("name")] string? Name,
         [property: JsonPropertyName("players")]
         int PlayerCount,
+        [property: JsonPropertyName("engine")] string? Engine, // Provided by MV engine servers only
         [property: JsonPropertyName("soft_max_players")]
         int SoftMaxPlayerCount,
-        [property: JsonPropertyName("tags")] string[]? Tags);
+        [property: JsonPropertyName("tags")] string[]? Tags,
+        [property: JsonPropertyName("auth_methods")] string[]? AuthMethods); // Provided by MV engine servers only
 
     /// <summary>
     /// Contains definitions for standard tags returned by game servers.
@@ -86,4 +88,14 @@ public static class ServerApi
             return true;
         }
     }
+
+    /// <summary>
+    /// Contains definitions for known auth methods returned by game servers.  (Currently only MV supported)
+    /// </summary>
+    public static class AuthMethods
+    {
+        public const string Guest = "guest";
+        public const string MVKeyAuth = "mvKeyAuth";
+    }
+
 }

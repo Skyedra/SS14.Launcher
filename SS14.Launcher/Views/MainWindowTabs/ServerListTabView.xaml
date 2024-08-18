@@ -39,6 +39,7 @@
           <Button IsEnabled="false" DockPanel.Dock="Right" Content="{loc:Get Connect}" Margin="10, 0" Opacity="0" />
           <Rectangle DockPanel.Dock="Right" Classes="VerticalSeparator"/>
           <TextBlock DockPanel.Dock="Right" Text="{loc:Get Players}" Classes="SubText" TextAlignment="Center" MinWidth="80" Margin="10 0"/>
+          <TextBlock DockPanel.Dock="Right" Text="{loc:Get Info}" Classes="SubText" TextAlignment="Center" MinWidth="40" Margin="10 0"/>
           <Rectangle DockPanel.Dock="Right" Classes="VerticalSeparator" />
           <TextBlock Text="{loc:Get Server Name}" Classes="SubText"/>
         </DockPanel>

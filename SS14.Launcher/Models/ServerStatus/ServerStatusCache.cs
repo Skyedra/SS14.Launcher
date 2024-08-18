@@ -124,6 +124,13 @@ public sealed class ServerStatusCache : IServerSource
         data.PlayerCount = status.PlayerCount;
         data.SoftMaxPlayerCount = status.SoftMaxPlayerCount;
 
+        if (status.AuthMethods != null)
+            data.AuthMethods = status.AuthMethods;
+        else
+            data.AuthMethods = [];
+
+        data.Engine = status.Engine;
+
         var baseTags = status.Tags ?? Array.Empty<string>();
         var inferredTags = ServerTagInfer.InferTags(status);
 
