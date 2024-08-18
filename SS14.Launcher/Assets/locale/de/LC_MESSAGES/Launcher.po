@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 20:47-0700\n"
+"POT-Creation-Date: 2024-08-17 21:39-0700\n"
 "PO-Revision-Date: 2023-10-18 11:55+0000\n"
 "Last-Translator: Selis <Selis@users.noreply.weblate.spacestationmultiverse."
 "com>\n"
@@ -74,22 +74,22 @@ msgstr "Suche nach Launcher-Update..."
 msgid "Refreshing login status..."
 msgstr "Der Anmeldestatus wird aktualisiert..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:231
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
 msgid ""
 "There was an error getting launcher information from server.  You likely "
 "have a network/firewall issue.  More information is available in the log "
 "file."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
 msgid "Checking account status"
 msgstr "Prüfe Kontostatus"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:293
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:297
 msgid "Error connecting to authentication server"
 msgstr "Fehler beim Herstellen der Verbindung zum Authentifizierungsserver"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:296
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:300
 msgid "Unknown error occured"
 msgstr "Es ist ein unbekannter Fehler aufgetreten"
 
@@ -163,64 +163,85 @@ msgctxt "Tab"
 msgid "Options"
 msgstr "Optionen"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:59
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:60
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:62
 msgctxt "Server Filters"
 msgid "Yes"
 msgstr "Ja"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:64
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:65
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:66
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:67
 msgctxt "Server Filters"
 msgid "No"
 msgstr "Nein"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:69
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:71
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
 msgstr "Server ohne Spieler werden nicht angezeigt"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:72
 msgctxt "Server Filters"
 msgid "Hide empty"
 msgstr "Leer ausblenden"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
 msgstr "Volle Server werden nicht angezeigt"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
 msgctxt "Server Filters"
 msgid "Hide full"
 msgstr "Voll ausblenden"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
 msgstr "Server mit weniger Spielern werden nicht angezeigt"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:84
 msgctxt "Server Filters"
 msgid "Minimum: "
 msgstr "Mindestens: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:90
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
 msgstr "Server mit mehr Spielern werden nicht angezeigt"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:89
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:91
 msgctxt "Server Filters"
 msgid "Maximum: "
 msgstr "Maximal: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:189
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:190
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:193
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:194
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:197
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:198
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+msgctxt "Server Filters"
+msgid "Show servers that use the Multiverse engine"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+msgctxt "Server Filters"
+msgid "Multiverse engine"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+msgctxt "Server Filters"
+msgid ""
+"Show servers that use an unsupported engine (may cause connection failure)"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+msgctxt "Server Filters"
+msgid "Unsupported engines"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:207
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:208
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:211
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:212
 msgctxt "Server Filters"
 msgid "Unspecified"
 msgstr "Nicht spezifiziert"
@@ -466,40 +487,40 @@ msgctxt "Tab"
 msgid "News"
 msgstr "Neuigkeiten"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:72
 msgid "Remove Favorite"
 msgstr "Favorit entfernen"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:72
 msgid "Add Favorite"
 msgstr "Favorit hinzufügen"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
 msgid "OFFLINE"
 msgstr "OFFLINE"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:94
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:129
 msgid "Fetching..."
 msgstr "Wird abgerufen..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:143
 msgid "Unable to contact server"
 msgstr "Server konnte nicht kontaktiert werden"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:110
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:145
 msgid "Fetching server status..."
 msgstr "Serverstatus wird abgerufen..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:150
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:151
 msgid "Fetching server description..."
 msgstr "Serverbeschreibung wird abgerufen..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:152
 msgid "Error while fetching server description"
 msgstr "Fehler beim Abrufen der Serverbeschreibung"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:118
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:153
 msgid "No server description provided"
 msgstr "Keine Serverbeschreibung angegeben"
 
@@ -508,12 +529,61 @@ msgctxt "Tab"
 msgid "Home"
 msgstr "Home"
 
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
+msgctxt "Key Auth Error - Description"
+msgid ""
+"Servers will need a username to call you by.  Please enter a username in the "
+"username field."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:62
+msgctxt "Guest Mode Auth Error - Description"
+msgid "Username can only contain 0-9 a-z A-Z and _"
+msgstr "Der Benutzername darf nur 0-9 a-z A-Z und _ enthalten"
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:118
+msgctxt "Key Configuration"
+msgid "Rename was successful."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:119
+msgctxt "Key Configuration"
+msgid "(UI may not reflect the rename until next restart of Multiverse.)"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:157
+msgctxt "Key Configuration"
+msgid "No path selected."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:167
+msgctxt "Key Configuration"
+msgid "Export succeeded."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:170
+msgctxt "Key Configuration"
+msgid "Error during export: "
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/AlreadyMadeTabViewModel.cs:36
+msgid ""
+"You've already made an account of this type.  Select it at the top right."
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
 msgstr "Wizard's Den"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:107
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:54
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
 msgstr "Benutzername erforderlich"
@@ -529,16 +599,13 @@ msgstr ""
 "Benutzernamen in das Feld Benutzername ein."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:61
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
 msgstr "Benutzername: schlechte Zeichen"
 
-#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
-msgctxt "Guest Mode Auth Error - Description"
-msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr "Der Benutzername darf nur 0-9 a-z A-Z und _ enthalten"
-
-#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:83
 msgctxt "Create Identity Tab"
 msgid "Guest"
 msgstr "Gast"
@@ -584,6 +651,50 @@ msgstr ""
 "Wähle zunächst links einen Identitätsanbieter aus. Du kannst diesen "
 "Bildschirm später erneut aufrufen, um Identitäten bei anderen Anbietern zu "
 "erstellen, falls du dies wünschst."
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:84
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:98
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:132
+msgctxt "Key Auth Error - Header"
+msgid "Error"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:62
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:71
+msgctxt "Key Auth Error - Description"
+msgid "Please select exactly one keypair file to load."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:85
+msgctxt "Key Auth Error - Description"
+msgid "Invalid SSMV JSON keypair file."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
+#, csharp-format
+msgctxt "Key Auth Error - Description"
+msgid ""
+"You already have this key loaded ({0}).  Select it in top right account "
+"dropdown menu."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:133
+msgctxt "Key Auth Error - Description"
+msgid ""
+"Exception during import.  Did you select the right SSMV JSON keypair file?"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:148
+msgctxt "Create Identity Tab"
+msgid "Key Auth (Import)"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:91
+msgctxt "Create Identity Tab"
+msgid "⭐ Key Auth (New) ⭐"
+msgstr ""
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
 #, csharp-format
@@ -711,29 +822,35 @@ msgstr "Verbindung wird hergestellt..."
 msgid "Loading..."
 msgstr ""
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:88
 msgid "No account selected"
 msgstr "Kein Konto ausgewählt"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
-msgid "Not logged in"
-msgstr "Nicht eingeloggt"
-
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:93
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:32
 msgid "Log out"
 msgstr "Abmelden"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:93
 #, csharp-format
 msgid "Log out of {0}"
 msgstr "Von {0} abmelden"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:12
+msgid "Configure Key"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
+#, csharp-format
+msgid "Configure {0}"
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:111
 msgid "Switch account:"
 msgstr "Konto wechseln:"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:111
 msgid "Select account:"
 msgstr "Konto auswählen:"
 
@@ -780,7 +897,7 @@ msgstr "Priorität erhöhen"
 msgid "Decrease priority"
 msgstr "Priorität verringern"
 
-#: ../SS14.Launcher/Views/AccountDropDown.xaml:21
+#: ../SS14.Launcher/Views/AccountDropDown.xaml:22
 msgid "Add account"
 msgstr "Konto hinzufügen"
 
@@ -807,6 +924,90 @@ msgstr "Verbinden"
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
 msgid "Address is invalid"
 msgstr "Ungültige Adresse"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
+msgctxt "Configure Key"
+msgid "Change Preferred Username"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:39
+msgctxt "Configure Key"
+msgid ""
+"You can change your requested username by using this section.  It will not "
+"take effect on any servers you've already connected to, only on new servers "
+"you have not yet connected to.  If you wish to change your username on a "
+"server you previously connected to, ask that server's staff to help you "
+"(perhaps via ahelp)."
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:42
+msgctxt "Configure Key"
+msgid "Name"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:46
+msgctxt "Configure Key"
+msgid "Rename"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:54
+msgctxt "Configure Key"
+msgid "View/Share Public Key"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:56
+msgctxt "Configure Key"
+msgid ""
+"Sometimes, server staff may request you to share your *public* key.  This is "
+"safe.  You may copy/paste it from below.  It is safe to give the *public* "
+"key to anyone who asks -- even other players."
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:63
+msgctxt "Configure Key"
+msgid "Delete Keypair"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:65
+msgctxt "Configure Key"
+msgid ""
+"This will delete your key.  There is no way to undo it!  You will be locked "
+"out of your user profile on all servers if you do this."
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:68
+msgctxt "Configure Key"
+msgid "Delete Key"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:72
+msgctxt "Configure Key"
+msgid "CONFIRM DELETE -- There is no undo!!"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:78
+msgctxt "Configure Key"
+msgid "Export Private + Public Key"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:80
+msgctxt "Configure Key"
+msgid ""
+"It is a good idea to back up your private/public keypair somewhere safe "
+"(like a password manager).  You may do so using the below button.  Please be "
+"sure not to give/share this file to anyone else as it includes your "
+"*private* key.  Treat it like a password!"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:83
+msgctxt "Configure Key"
+msgid "Export Key Pair"
+msgstr ""
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:92
+msgctxt "Configure Key Close Button"
+msgid "Close"
+msgstr ""
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
 msgid "Add Favorite Server"
@@ -841,7 +1042,7 @@ msgctxt "Header Buttons"
 msgid "Website"
 msgstr "Webseite"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:117
+#: ../SS14.Launcher/Views/MainWindow.xaml:129
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
@@ -849,7 +1050,7 @@ msgstr ""
 "Dieser Launcher ist veraltet. Bitte lade eine neue Version von unserer "
 "Website herunter."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:131
+#: ../SS14.Launcher/Views/MainWindow.xaml:143
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
@@ -858,20 +1059,20 @@ msgstr ""
 "gefällt, was du siehst, aber bitte halte deine Erwartungen vorerst "
 "bescheiden."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:147
+#: ../SS14.Launcher/Views/MainWindow.xaml:159
 msgid "Error"
 msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:150
+#: ../SS14.Launcher/Views/MainWindow.xaml:162
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
 msgstr "Log-Verzeichnis öffnen"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:152
+#: ../SS14.Launcher/Views/MainWindow.xaml:164
 msgid "Ok"
 msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:167
+#: ../SS14.Launcher/Views/MainWindow.xaml:179
 #, fuzzy
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
@@ -959,6 +1160,41 @@ msgstr "Registrieren"
 msgid "Don't have an account? Register!"
 msgstr "Du hast noch kein Konto? Registriere dich!"
 
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:16
+msgctxt "Key Tab Header"
+msgid "MV Key Auth"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:18
+msgctxt "Key Tab"
+msgid "⭐ This is the recommended way to play! ⭐"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:20
+msgid ""
+"Multiverse publickey/privatekey identity does not require any centralized "
+"authentication and allows for you to save your playtime on servers that "
+"support it."
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
+msgid ""
+"This option will generate a NEW keypair.  If you are new to Multiverse or "
+"have otherwise not previously generated a keypair, this is the right "
+"option.  If you already have an existing Multiverse keypair, use the import "
+"tab instead. "
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
+msgctxt "Name entry field on key tab"
+msgid "Name"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:29
+msgctxt "Button on key tab"
+msgid "Continue"
+msgstr ""
+
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
 msgid "Welcome"
@@ -968,6 +1204,38 @@ msgstr "Willkommen"
 msgctxt "Header for wizden login tab"
 msgid "Wizard's Den"
 msgstr "Wizard's Den"
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:19
+msgid ""
+"⚠️ No longer available -- please use Key Auth instead. ⚠️,Context=Wizden login "
+"tab "
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:22
+msgid ""
+"As of this writing, Wizard's Den is blocking the Space Station Multiverse "
+"launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
+"support any longer.,Context=Wizden login tab "
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
+msgid "For more details, see the SSMV website.,Context=Wizden login tab "
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:19
+msgctxt "Key Tab Header"
+msgid "Import Existing MV Key"
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:21
+msgctxt "Key Tab"
+msgid "If you previously made a keypair, you can import it here."
+msgstr ""
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:24
+msgctxt "Button on key tab"
+msgid "Import..."
+msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
 msgctxt "Guest Tab Header"
@@ -1147,7 +1415,19 @@ msgid "Mark servers as favorite for easy access here."
 msgstr ""
 "Markiere Server als Favoriten, damit du hier leicht darauf zugreifen kannst."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:28
+msgid "This server uses WizDen Engine - connect may not work."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:31
+msgid "This server supports MV Key Authentication."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:34
+msgid "This server supports Guest mode."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:54
 msgid "Raise to top"
 msgstr "Nach oben"
 
@@ -1163,7 +1443,11 @@ msgstr "Nach Servern suchen..."
 msgid "Players"
 msgstr "Spieler"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:42
+msgid "Info"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:44
 msgid "Server Name"
 msgstr "Servername"
 
@@ -1204,3 +1488,11 @@ msgstr "18+"
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "Hub"
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+msgctxt "Server Filters"
+msgid "Engine"
+msgstr ""
+
+#~ msgid "Not logged in"
+#~ msgstr "Nicht eingeloggt"
