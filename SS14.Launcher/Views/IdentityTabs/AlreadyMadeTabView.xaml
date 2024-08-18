@@ -14,7 +14,7 @@
 
   <DockPanel>
     <Panel Background="{DynamicResource StripeBackBrush}">
-      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{Binding WelcomeText}"></TextBlock>
+      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{Binding WelcomeText}" FontWeight="Bold" Foreground="Green"></TextBlock>
     </Panel>
   </DockPanel>
 </UserControl>
