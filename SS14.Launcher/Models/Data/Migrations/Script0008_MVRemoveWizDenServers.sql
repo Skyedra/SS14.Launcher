@@ -9,3 +9,4 @@ DELETE FROM Login;
 -- Remove wizden hubs
 DELETE FROM Hub WHERE Address="https://hub.spacestation14.com/";
 DELETE FROM Hub WHERE Address="https://cdn.spacestationmultiverse.com/wizden-hub-mirror/";
+DELETE FROM Hub WHERE Address="https://central.spacestation14.io/hub/";
