@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-17 22:06-0700\n"
-"PO-Revision-Date: 2024-08-18 05:02+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2024-08-18 05:08+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -975,14 +975,16 @@ msgid "Select account:"
 msgstr "选择账户："
 
 #: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+#, fuzzy
 msgctxt "Account Type"
 msgid "MV Key Auth"
-msgstr ""
+msgstr "MV 密钥认证"
 
 #: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+#, fuzzy
 msgctxt "Account Type"
 msgid "Guest"
-msgstr ""
+msgstr "客人"
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 #, fuzzy
@@ -1376,12 +1378,15 @@ msgstr ""
 "时间。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
+#, fuzzy
 msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
 "tab instead."
 msgstr ""
+"此选项将生成一个新的密钥对。如果你是Multiverse的新手，或者之前没有生成过密钥"
+"对，那么这是正确的选择。如果您已经拥有多元宇宙密钥对，请改用导入选项卡。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
 #, fuzzy
