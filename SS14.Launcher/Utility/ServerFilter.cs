@@ -60,5 +60,5 @@ public enum ServerFilterCategory : byte
     EighteenPlus = 4,
     Hub = 5,
     PlayerCount = 6,
-    Engine = 7
+    Engine = 100 // MV added filter
 }

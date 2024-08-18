@@ -26,12 +26,13 @@ internal static class HttpSelfTest
 
     private static readonly string[] SelfTestUrls =
     {
-        "http://central.spacestation14.io/launcher_version.txt",
+        "https://cdn.blepstation.com/launcher_version.txt",
+        /*"http://central.spacestation14.io/launcher_version.txt",
         "https://central.spacestation14.io/launcher_version.txt",
         "http://cdn.centcomm.spacestation14.com/launcher_version.txt",
         "https://cdn.centcomm.spacestation14.com/launcher_version.txt",
         "http://moon.spacestation14.com/replays/",
-        "https://moon.spacestation14.com/replays/"
+        "https://moon.spacestation14.com/replays/"*/
     };
 
     public static void StartSelfTest()
