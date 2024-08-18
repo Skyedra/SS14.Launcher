@@ -64,6 +64,12 @@
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource WideFilterTemplate}">
           </ItemsControl>
         </DockPanel>
+
+        <DockPanel Classes="ServerFilterGroup">
+          <TextBlock MinWidth="150" DockPanel.Dock="Left" Classes="SubText" Text="{loc:Get Engine, Context=Server Filters}" />
+          <ItemsControl Items="{Binding FiltersEngine}"
+                        ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
+        </DockPanel>
       </StackPanel>
     </ScrollViewer>
   </DockPanel>
