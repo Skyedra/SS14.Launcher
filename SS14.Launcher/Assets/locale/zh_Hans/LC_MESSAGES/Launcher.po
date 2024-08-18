@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-17 21:57-0700\n"
-"PO-Revision-Date: 2023-10-02 03:19+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2024-08-18 05:02+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -84,11 +84,13 @@ msgid "Refreshing login status..."
 msgstr "正在刷新登录状态..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
+#, fuzzy
 msgid ""
 "There was an error getting launcher information from server.  You likely "
 "have a network/firewall issue.  More information is available in the log "
 "file."
-msgstr ""
+msgstr "从服务器获取启动器信息时出错。你可能遇到了网络/防火墙问题。更多信息可在日志文"
+"件中找到。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
 #, fuzzy
@@ -106,6 +108,7 @@ msgid "Unknown error occured"
 msgstr "发生了未知错误"
 
 #: ../SS14.Launcher/ViewModels/HubSettingsViewModel.cs:89
+#, fuzzy
 msgctxt "Hub Settings Info Tooltip"
 msgid ""
 "Here you can add extra hubs to fetch game servers from.\n"
@@ -114,6 +117,11 @@ msgid ""
 "same game server the hub with the higher priority (higher in the list) will\n"
 "take precedence."
 msgstr ""
+"在这里，你可以添加额外的集线器来获取游戏服务器。\n"
+"你应该只添加你信任的集线器，因为它们可以 “欺骗” 游戏服务器\n"
+"来自其他枢纽。集线器的顺序很重要；如果两个集线器做广告\n"
+"同一个游戏服务器优先级较高的集线器（列表中更高）将\n"
+"优先。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:23
 #, fuzzy
@@ -122,36 +130,42 @@ msgid "Servers"
 msgstr "服务器"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:46
+#, fuzzy
 msgctxt "Server List Status Text"
 msgid "There was an error fetching the master server lists."
-msgstr ""
+msgstr "获取主服务器列表时出错。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:48
+#, fuzzy
 msgctxt "Server List Status Text"
 msgid ""
 "Failed to fetch some or all server lists. Ensure your hub configuration is "
 "correct."
-msgstr ""
+msgstr "无法获取部分或全部服务器列表。确保您的集线器配置正确。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:50
+#, fuzzy
 msgctxt "Server List Status Text"
 msgid "Fetching master server list..."
-msgstr ""
+msgstr "正在获取主服务器列表..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:52
+#, fuzzy
 msgctxt "Server List Status Text"
 msgid "Discovering servers..."
-msgstr ""
+msgstr "正在搜索服务器..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:59
+#, fuzzy
 msgctxt "Server List Status Text"
 msgid "No servers match your search or filter settings."
-msgstr ""
+msgstr "没有服务器与您的搜索或筛选器设置相匹配。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:62
+#, fuzzy
 msgctxt "Server List Status Text"
 msgid "There are no public servers. Ensure your hub configuration is correct."
-msgstr ""
+msgstr "没有公共服务器。确保您的集线器配置正确。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListTabViewModel.cs:78
 #, fuzzy, csharp-format
@@ -228,25 +242,29 @@ msgid "Maximum: "
 msgstr "最大值： "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
-msgstr ""
+msgstr "显示使用多元宇宙引擎的服务器"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Multiverse engine"
-msgstr ""
+msgstr "多元宇宙引擎"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#, fuzzy
 msgctxt "Server Filters"
 msgid ""
 "Show servers that use an unsupported engine (may cause connection failure)"
-msgstr ""
+msgstr "显示使用不支持的引擎的服务器（可能导致连接失败）"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Unsupported engines"
-msgstr ""
+msgstr "不支持的引擎"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
@@ -596,11 +614,12 @@ msgstr "主页"
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "Servers will need a username to call you by.  Please enter a username in the "
 "username field."
-msgstr ""
+msgstr "服务器需要一个用户名才能给你打电话。请在用户名字段中输入用户名。"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
@@ -612,34 +631,40 @@ msgid "Username can only contain 0-9 a-z A-Z and _"
 msgstr "用户名只能包含 0-9 a-z A-Z 和 _"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:118
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "Rename was successful."
-msgstr ""
+msgstr "重命名成功。"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:119
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "(UI may not reflect the rename until next restart of Multiverse.)"
-msgstr ""
+msgstr "（在下次重启多元宇宙之前，用户界面可能无法反映重命名。）"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:157
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "No path selected."
-msgstr ""
+msgstr "未选择任何路径。"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:167
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "Export succeeded."
-msgstr ""
+msgstr "导出成功。"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:170
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "Error during export: "
-msgstr ""
+msgstr "导出时出错： "
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/AlreadyMadeTabViewModel.cs:36
+#, fuzzy
 msgid ""
 "You've already made an account of this type.  Select it at the top right."
-msgstr ""
+msgstr "你已经创建了这种类型的账户。在右上角选择它。"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 #, fuzzy
@@ -723,158 +748,182 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:84
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:98
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:132
+#, fuzzy
 msgctxt "Key Auth Error - Header"
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:62
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:71
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid "Please select exactly one keypair file to load."
-msgstr ""
+msgstr "请只选择一个要加载的密钥对文件。"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:85
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid "Invalid SSMV JSON keypair file."
-msgstr ""
+msgstr "SSMV JSON 密钥对文件无效。"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
 "dropdown menu."
-msgstr ""
+msgstr "您已经加载了此密钥 ({0})。在右上角的账户下拉菜单中将其选中。"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:133
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "Exception during import.  Did you select the right SSMV JSON keypair file?"
-msgstr ""
+msgstr "导入期间出现异常。你选择了正确的 SSMV JSON 密钥对文件吗？"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:148
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "Key Auth (Import)"
-msgstr ""
+msgstr "密钥认证（导入）"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:91
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "⭐ Key Auth (New) ⭐"
-msgstr ""
+msgstr "⭐ 密钥认证（新增）⭐"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
-msgstr ""
+msgstr "正在开始连接... {0}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:164
+#, fuzzy
 msgctxt "Connecting"
 msgid ""
 "There was an error while downloading server content. Please ask on Discord "
 "for support if the problem persists."
-msgstr ""
+msgstr "下载服务器内容时出错。如果问题仍然存在，请在 Discord 上寻求支持。"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:167
+#, fuzzy
 msgctxt "Connecting"
 msgid "Checking for server content update..."
-msgstr ""
+msgstr "正在检查服务器内容更新..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:168
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:169
+#, fuzzy
 msgctxt "Connecting"
 msgid "Downloading server content..."
-msgstr ""
+msgstr "正在下载服务器内容..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:170
+#, fuzzy
 msgctxt "Connecting"
 msgid "Fetching server manifest..."
-msgstr ""
+msgstr "正在获取服务器清单..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:171
+#, fuzzy
 msgctxt "Connecting"
 msgid "Verifying download integrity..."
-msgstr ""
+msgstr "正在验证下载完整性..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:172
+#, fuzzy
 msgctxt "Connecting"
 msgid "Clearing old content..."
-msgstr ""
+msgstr "正在清除旧内容..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:173
+#, fuzzy
 msgctxt "Connecting"
 msgid "Clearing old server content..."
-msgstr ""
+msgstr "正在清除旧服务器内容..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:174
+#, fuzzy
 msgctxt "Connecting"
 msgid "Update done!"
-msgstr ""
+msgstr "更新完成！"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:175
+#, fuzzy
 msgctxt "Connecting"
 msgid "Checking for additional dependencies..."
-msgstr ""
+msgstr "正在检查其他依赖关系..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:176
+#, fuzzy
 msgctxt "Connecting"
 msgid "Downloading extra dependencies..."
-msgstr ""
+msgstr "正在下载额外的依赖项..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:177
+#, fuzzy
 msgctxt "Connecting"
 msgid "Synchronizing to disk..."
-msgstr ""
+msgstr "正在同步到磁盘..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:178
+#, fuzzy
 msgctxt "Connecting"
 msgid "Storing assets in database..."
-msgstr ""
+msgstr "将资产存储在数据库中..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:179
+#, fuzzy
 msgctxt "Connecting"
 msgid "Loading content bundle..."
-msgstr ""
+msgstr "正在加载内容包..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:180
+#, fuzzy
 msgctxt "Connecting"
 msgid "You shouldn't see this"
-msgstr ""
+msgstr "你不应该看到这个"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
-msgstr ""
+msgstr "更新中：{0} {1}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
-msgstr ""
+msgstr "正在从服务器获取连接信息... {0}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:183
+#, fuzzy
 msgctxt "Connecting"
 msgid "Failed to connect to server!"
-msgstr ""
+msgstr "无法连接到服务器！"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Connecting"
 msgid "Starting client... {0}"
-msgstr ""
+msgstr "正在启动客户端... {0}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:185
+#, fuzzy
 msgctxt "Connecting"
 msgid "File is not a valid content bundle!"
-msgstr ""
+msgstr "文件不是有效的内容包！"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:187
+#, fuzzy
 msgctxt "Connecting"
 msgid ""
 "Client seems to have crashed while starting. If this persists, please ask on "
 "Discord or GitHub for support."
-msgstr ""
+msgstr "客户端在启动时似乎崩溃了。如果这种情况仍然存在，请在 Discord 或 GitHub "
+"上寻求支持。"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:194
 #, fuzzy
@@ -882,8 +931,9 @@ msgid "Connecting..."
 msgstr "正在连接..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
+#, fuzzy
 msgid "Loading..."
-msgstr ""
+msgstr "加载中..."
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:88
 #, fuzzy
@@ -903,13 +953,14 @@ msgstr "登出 {0}"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:12
+#, fuzzy
 msgid "Configure Key"
-msgstr ""
+msgstr "配置密钥"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format
+#, csharp-format, fuzzy
 msgid "Configure {0}"
-msgstr ""
+msgstr "配置 {0}"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:111
 #, fuzzy
@@ -922,8 +973,9 @@ msgid "Select account:"
 msgstr "选择账户："
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
+#, fuzzy
 msgid "Done!"
-msgstr ""
+msgstr "完成了！"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
@@ -1008,11 +1060,13 @@ msgid "Address is invalid"
 msgstr "地址无效"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Change Preferred Username"
-msgstr ""
+msgstr "更改首选用户名"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:39
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "You can change your requested username by using this section.  It will not "
@@ -1021,58 +1075,74 @@ msgid ""
 "server you previously connected to, ask that server's staff to help you "
 "(perhaps via ahelp)."
 msgstr ""
+"您可以使用此部分更改您请求的用户名。它不会对你已经连接的任何服务器生效，只对"
+"你尚未连接的新服务器生效。如果您想更改之前连接过的服务器上的用户名，请该服务"
+"器的工作人员为您提供帮助（可能通过帮助）。"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:42
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:46
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Rename"
-msgstr ""
+msgstr "重命名"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:54
+#, fuzzy
 msgctxt "Configure Key"
 msgid "View/Share Public Key"
-msgstr ""
+msgstr "查看/共享公钥"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:56
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "Sometimes, server staff may request you to share your *public* key.  This is "
 "safe.  You may copy/paste it from below.  It is safe to give the *public* "
 "key to anyone who asks -- even other players."
 msgstr ""
+"有时，服务器工作人员可能会要求您共享您的*公共*密钥。这很安全。你可以从下面复"
+"制/粘贴它。将*公共*密钥交给任何提出要求的人，甚至是其他玩家，都是安全的。"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:63
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Delete Keypair"
-msgstr ""
+msgstr "删除密钥对"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:65
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "This will delete your key.  There is no way to undo it!  You will be locked "
 "out of your user profile on all servers if you do this."
-msgstr ""
+msgstr "这将删除您的密钥。没有办法撤消它！如果你这样做，你将被锁定在所有服务器上的用"
+"户配置文件之外。"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:68
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Delete Key"
-msgstr ""
+msgstr "删除密钥"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:72
+#, fuzzy
 msgctxt "Configure Key"
 msgid "CONFIRM DELETE -- There is no undo!!"
-msgstr ""
+msgstr "确认删除--无法撤消！！"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:78
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Export Private + Public Key"
-msgstr ""
+msgstr "导出私钥 + 公钥"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:80
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "It is a good idea to back up your private/public keypair somewhere safe "
@@ -1080,16 +1150,21 @@ msgid ""
 "sure not to give/share this file to anyone else as it includes your "
 "*private* key.  Treat it like a password!"
 msgstr ""
+"将您的私钥/公钥对备份到安全的地方（例如密码管理器）是个好主意。您可以使用下面"
+"的按钮执行此操作。请确保不要将此文件提供/共享给其他任何人，因为它包含您的*私"
+"有*密钥。像对待密码一样对待它！"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:83
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Export Key Pair"
-msgstr ""
+msgstr "导出密钥对"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:92
+#, fuzzy
 msgctxt "Configure Key Close Button"
 msgid "Close"
-msgstr ""
+msgstr "关闭"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
 #, fuzzy
@@ -1097,14 +1172,16 @@ msgid "Add Favorite Server"
 msgstr "添加最喜欢的服务器"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:21
+#, fuzzy
 msgctxt "Add Favorite Server"
 msgid "Name:"
-msgstr ""
+msgstr "姓名："
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:22
+#, fuzzy
 msgctxt "Add Favorite Server"
 msgid "Address:"
-msgstr ""
+msgstr "地址："
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:23
 #, fuzzy
@@ -1144,8 +1221,9 @@ msgid ""
 msgstr "空间站仍在开发中。我们希望你喜欢你所看到的，但请暂时保持适度的期望。"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:159
+#, fuzzy
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:162
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
@@ -1154,8 +1232,9 @@ msgid "Open log directory"
 msgstr "打开日志目录"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:164
+#, fuzzy
 msgid "Ok"
-msgstr ""
+msgstr "好吧"
 
 #: ../SS14.Launcher/Views/MainWindow.xaml:179
 #, fuzzy
@@ -1262,39 +1341,48 @@ msgid "Don't have an account? Register!"
 msgstr "还没有账号？注册！"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:16
+#, fuzzy
 msgctxt "Key Tab Header"
 msgid "MV Key Auth"
-msgstr ""
+msgstr "MV 密钥认证"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:18
+#, fuzzy
 msgctxt "Key Tab"
 msgid "⭐ This is the recommended way to play! ⭐"
-msgstr ""
+msgstr "⭐ 这是推荐的玩法！⭐"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:20
+#, fuzzy
 msgid ""
 "Multiverse publickey/privatekey identity does not require any centralized "
 "authentication and allows for you to save your playtime on servers that "
 "support it."
-msgstr ""
+msgstr "多元宇宙公钥/私钥身份不需要任何集中身份验证，可让您在支持它的服务器上节省游戏"
+"时间。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
+#, fuzzy
 msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
 "tab instead. "
 msgstr ""
+"此选项将生成一个新的密钥对。如果你是Multiverse的新手，或者之前没有生成过密钥"
+"对，那么这是正确的选择。如果您已经拥有多元宇宙密钥对，请改用导入选项卡。 "
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
+#, fuzzy
 msgctxt "Name entry field on key tab"
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:29
+#, fuzzy
 msgctxt "Button on key tab"
 msgid "Continue"
-msgstr ""
+msgstr "继续"
 
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 #, fuzzy
@@ -1309,37 +1397,44 @@ msgid "Wizard's Den"
 msgstr "巫师的巢穴"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:19
+#, fuzzy
 msgctxt "Wizden login tab"
 msgid "⚠️ No longer available -- please use Key Auth instead. ⚠️"
-msgstr ""
+msgstr "⚠️ 不再可用-请改用密钥身份验证。⚠️"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:22
+#, fuzzy
 msgctxt "Wizden login tab"
 msgid ""
 "As of this writing, Wizard's Den is blocking the Space Station Multiverse "
 "launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
 "support any longer."
-msgstr ""
+msgstr "在撰写本文时，巫师之巢正在封锁空间站多元宇宙发射器。因此，很遗憾，我们无法再"
+"提供WizDen身份验证支持。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
+#, fuzzy
 msgctxt "Wizden login tab"
 msgid "For more details, see the SSMV website."
-msgstr ""
+msgstr "有关更多详细信息，请参阅 SSMV 网站。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:19
+#, fuzzy
 msgctxt "Key Tab Header"
 msgid "Import Existing MV Key"
-msgstr ""
+msgstr "导入现有 MV 密钥"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:21
+#, fuzzy
 msgctxt "Key Tab"
 msgid "If you previously made a keypair, you can import it here."
-msgstr ""
+msgstr "如果您之前创建了密钥对，则可以将其导入到此处。"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:24
+#, fuzzy
 msgctxt "Button on key tab"
 msgid "Import..."
-msgstr ""
+msgstr "导入..."
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
 #, fuzzy
@@ -1529,16 +1624,19 @@ msgid "Mark servers as favorite for easy access here."
 msgstr "在此处将服务器标记为收藏，便于访问。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:28
+#, fuzzy
 msgid "This server uses WizDen Engine - connect may not work."
-msgstr ""
+msgstr "此服务器使用 WizDen 引擎-连接可能无法正常工作。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:31
+#, fuzzy
 msgid "This server supports MV Key Authentication."
-msgstr ""
+msgstr "此服务器支持 MV 密钥身份验证。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:34
+#, fuzzy
 msgid "This server supports Guest mode."
-msgstr ""
+msgstr "此服务器支持访客模式。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:54
 #, fuzzy
@@ -1561,8 +1659,9 @@ msgid "Players"
 msgstr "玩家"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:42
+#, fuzzy
 msgid "Info"
-msgstr ""
+msgstr "信息"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:44
 #, fuzzy
@@ -1616,9 +1715,10 @@ msgid "Hub"
 msgstr "集线器"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Engine"
-msgstr ""
+msgstr "发动机"
 
 #, fuzzy
 #~ msgid "Not logged in"
