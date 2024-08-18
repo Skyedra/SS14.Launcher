@@ -36,7 +36,7 @@
 
       <TextBlock Margin="4, 0" Text="{loc:Get Change Preferred Username, Context=Configure Key}" Classes="NanoHeadingMedium" />
 
-      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get You can change your requested username by using this section.  It will not take effect on any servers you\'ve already connected to\, only on new servers you have not yet connected to.  If you wish to change your username on a server you previously connected to\, ask that server\'s staff to help you \(perhaps via ahelp\)., Context=Configure Key}" />
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get You can change your requested username by using this section.  It will not take effect on any servers you\'ve already connected to\, only on new servers you have not yet connected to.  If you wish to change your username on a server you previously connected to\, ask that server\'s staff to help you (perhaps via ahelp)., Context=Configure Key}" />
 
       <TextBox Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
               Watermark="{loc:Get Name, Context=Configure Key}"
