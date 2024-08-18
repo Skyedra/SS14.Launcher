@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 21:39-0700\n"
+"POT-Creation-Date: 2024-08-17 21:49-0700\n"
 "PO-Revision-Date: 2024-08-18 04:44+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/fr/>\n"
 "Language: fr_FR\n"
@@ -795,7 +795,7 @@ msgid "Invalid SSMV JSON keypair file."
 msgstr "Fichier de paire de clés JSON SSMV non valide."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
@@ -826,7 +826,7 @@ msgid "⭐ Key Auth (New) ⭐"
 msgstr "⭐ Key Auth (Nouveau) ⭐"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Starting connection... {0}"
 msgstr "Démarrage de la connexion... {0}"
@@ -921,13 +921,13 @@ msgid "You shouldn't see this"
 msgstr "Tu ne devrais pas voir ça"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:165
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Updating: {0} {1}"
 msgstr "Mise à jour : {0} {1}"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:182
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Fetching connection info from server... {0}"
 msgstr "Récupération des informations de connexion depuis le serveur... {0}"
@@ -939,7 +939,7 @@ msgid "Failed to connect to server!"
 msgstr "Impossible de se connecter au serveur !"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:184
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Connecting"
 msgid "Starting client... {0}"
 msgstr "Client débutant... {0}"
@@ -993,7 +993,7 @@ msgid "Configure Key"
 msgstr "Configurez la clé"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Configure {0}"
 msgstr "Configurer {0}"
 
@@ -1452,32 +1452,22 @@ msgid "Wizard's Den"
 msgstr "Le repaire du magicien"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:19
-#, fuzzy
-msgid ""
-"⚠️ No longer available -- please use Key Auth instead. ⚠️,Context=Wizden login "
-"tab "
+msgctxt "Wizden login tab "
+msgid "⚠️ No longer available -- please use Key Auth instead. ⚠️"
 msgstr ""
-"⚠️ N'est plus disponible. Veuillez utiliser Key Auth à la place. ⚠️, "
-"Context=onglet de connexion Wizden "
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:22
-#, fuzzy
+msgctxt "Wizden login tab "
 msgid ""
 "As of this writing, Wizard's Den is blocking the Space Station Multiverse "
 "launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
-"support any longer.,Context=Wizden login tab "
+"support any longer."
 msgstr ""
-"Au moment d'écrire ces lignes, Wizard's Den bloque le lanceur multiverse de "
-"la station spatiale. Par conséquent, nous ne sommes malheureusement plus en "
-"mesure de proposer le support d'authentification WizDen. , Context=onglet de "
-"connexion Wizden "
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
-#, fuzzy
-msgid "For more details, see the SSMV website.,Context=Wizden login tab "
+msgctxt "Wizden login tab "
+msgid "For more details, see the SSMV website."
 msgstr ""
-"Pour plus de détails, consultez le site Web de la SSMV. , Context=onglet de "
-"connexion Wizden "
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:19
 #, fuzzy
@@ -1801,6 +1791,31 @@ msgstr "Hub"
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "Moteur"
+
+#, fuzzy
+#~ msgid ""
+#~ "⚠️ No longer available -- please use Key Auth instead. ⚠️,Context=Wizden "
+#~ "login tab "
+#~ msgstr ""
+#~ "⚠️ N'est plus disponible. Veuillez utiliser Key Auth à la place. ⚠️, "
+#~ "Context=onglet de connexion Wizden "
+
+#, fuzzy
+#~ msgid ""
+#~ "As of this writing, Wizard's Den is blocking the Space Station Multiverse "
+#~ "launcher.  Thus, we are unfortunately unable to offer WizDen "
+#~ "authentication support any longer.,Context=Wizden login tab "
+#~ msgstr ""
+#~ "Au moment d'écrire ces lignes, Wizard's Den bloque le lanceur multiverse "
+#~ "de la station spatiale. Par conséquent, nous ne sommes malheureusement "
+#~ "plus en mesure de proposer le support d'authentification WizDen. , "
+#~ "Context=onglet de connexion Wizden "
+
+#, fuzzy
+#~ msgid "For more details, see the SSMV website.,Context=Wizden login tab "
+#~ msgstr ""
+#~ "Pour plus de détails, consultez le site Web de la SSMV. , Context=onglet "
+#~ "de connexion Wizden "
 
 #, fuzzy
 #~ msgid "Not logged in"

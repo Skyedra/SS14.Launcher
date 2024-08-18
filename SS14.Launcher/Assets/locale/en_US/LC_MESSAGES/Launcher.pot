@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 21:39-0700\n"
+"POT-Creation-Date: 2024-08-17 21:49-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1150,20 +1150,21 @@ msgid "Wizard's Den"
 msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:19
-msgid ""
-"⚠️ No longer available -- please use Key Auth instead. ⚠️,Context=Wizden login "
-"tab "
+msgctxt "Wizden login tab "
+msgid "⚠️ No longer available -- please use Key Auth instead. ⚠️"
 msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:22
+msgctxt "Wizden login tab "
 msgid ""
 "As of this writing, Wizard's Den is blocking the Space Station Multiverse "
 "launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
-"support any longer.,Context=Wizden login tab "
+"support any longer."
 msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
-msgid "For more details, see the SSMV website.,Context=Wizden login tab "
+msgctxt "Wizden login tab "
+msgid "For more details, see the SSMV website."
 msgstr ""
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:19
