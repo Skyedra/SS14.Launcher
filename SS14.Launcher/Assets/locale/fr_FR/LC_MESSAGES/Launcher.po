@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-17 22:06-0700\n"
-"PO-Revision-Date: 2024-08-19 23:03+0000\n"
+"PO-Revision-Date: 2024-08-21 19:03+0000\n"
 "Last-Translator: piras314 <piras314@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
 "Language-Team: French <http://weblate.spacestationmultiverse.com/projects/"
@@ -358,209 +358,173 @@ msgid "South America West"
 msgstr "Amérique du Sud Ouest"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:39
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Africa Central"
-msgstr "Afrique centrale"
+msgstr "Afrique Centrale"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:40
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Africa North"
 msgstr "Afrique du Nord"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:41
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Africa South"
 msgstr "Afrique du Sud"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:42
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Antarctica"
 msgstr "Antarctique"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:43
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Asia East"
 msgstr "Asie de l'Est"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:44
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Asia North"
 msgstr "Asie du Nord"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:45
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Asia South East"
 msgstr "Asie du Sud-Est"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:46
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Central America"
-msgstr "Amérique centrale"
+msgstr "Amérique Centrale"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:47
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Europe East"
 msgstr "Europe de l'Est"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:48
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Europe West"
 msgstr "Europe de l'Ouest"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:49
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Greenland"
 msgstr "Groenland"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:50
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "India"
 msgstr "Inde"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:51
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Middle East"
 msgstr "Moyen-Orient"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:52
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "The Moon"
 msgstr "La Lune"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:53
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "NA Central"
 msgstr "Amérique du Nord Centrale"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:54
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "NA East"
-msgstr "NA Est"
+msgstr "Amérique du Nord Est"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:55
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "NA West"
 msgstr "Amérique du Nord Ouest"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:56
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "Oceania"
 msgstr "Océanie"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:57
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "SA East"
-msgstr "Afrique du Sud Est"
+msgstr "Amérique du Sud Est"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:58
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "SA South"
-msgstr "Sud de la SA"
+msgstr "Amérique du Sud Sud"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:59
-#, fuzzy
 msgctxt "Region - Short Name"
 msgid "SA West"
-msgstr "Afrique du Sud"
+msgstr "Amérique du Sud Ouest"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:66
-#, fuzzy
 msgctxt "Roleplay Level Filter"
 msgid "None"
 msgstr "Aucune"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:67
-#, fuzzy
 msgctxt "Roleplay Level Filter"
 msgid "Low"
 msgstr "Faible"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:68
-#, fuzzy
 msgctxt "Roleplay Level Filter"
 msgid "Medium"
 msgstr "Moyen"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.Tables.cs:69
-#, fuzzy
 msgctxt "Roleplay Level Filter"
 msgid "High"
 msgstr "Élevé"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/NewsTabViewModel.cs:58
-#, fuzzy
 msgctxt "Tab"
 msgid "News"
-msgstr "Actualités"
+msgstr "Nouvelles"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:72
-#, fuzzy
 msgid "Remove Favorite"
-msgstr "Supprimer le favori"
+msgstr "Enlever Favori"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:72
-#, fuzzy
 msgid "Add Favorite"
-msgstr "Ajouter un favori"
+msgstr "Ajouter Favori"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
-#, fuzzy
 msgid "OFFLINE"
 msgstr "HORS LIGNE"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:129
-#, fuzzy
 msgid "Fetching..."
-msgstr "Je vais chercher..."
+msgstr "Récupérer..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:143
-#, fuzzy
 msgid "Unable to contact server"
-msgstr "Impossible de contacter le serveur"
+msgstr "Problème de connexion au serveur"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:145
-#, fuzzy
 msgid "Fetching server status..."
 msgstr "Récupération de l'état du serveur..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:150
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:151
-#, fuzzy
 msgid "Fetching server description..."
 msgstr "Récupération de la description du serveur..."
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:152
-#, fuzzy
 msgid "Error while fetching server description"
-msgstr "Erreur lors de la récupération de la description du serveur"
+msgstr "Échec durant la récupération de la description du serveur"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:153
-#, fuzzy
 msgid "No server description provided"
-msgstr "Aucune description du serveur n'est fournie"
+msgstr "Aucune description"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/HomePageViewModel.cs:65
-#, fuzzy
 msgctxt "Tab"
 msgid "Home"
 msgstr "Accueil"
@@ -568,76 +532,66 @@ msgstr "Accueil"
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
-#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "Servers will need a username to call you by.  Please enter a username in the "
 "username field."
 msgstr ""
-"Les serveurs auront besoin d'un nom d'utilisateur pour vous appeler. Entrez "
-"un nom d'utilisateur dans le champ Nom d'utilisateur."
+"Les serveurs besoin d'un nom pour vous appeler. Entrez un nom dans le champ "
+"<<Nom>> ."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:115
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:62
-#, fuzzy
 msgctxt "Guest Mode Auth Error - Description"
 msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr "Le nom d'utilisateur ne peut contenir que 0-9 a-z, A-Z et _"
+msgstr "Le nom ne peut contenir que 0-9 a-z, A-Z et _"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:118
-#, fuzzy
 msgctxt "Key Configuration"
 msgid "Rename was successful."
-msgstr "Le changement de nom a été effectué avec succès."
+msgstr "Le changement de nom a été succés."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:119
-#, fuzzy
 msgctxt "Key Configuration"
 msgid "(UI may not reflect the rename until next restart of Multiverse.)"
 msgstr ""
 "(L'interface utilisateur risque de ne pas refléter le changement de nom "
-"avant le prochain redémarrage de Multiverse.)"
+"avant le prochain redémarrage du lanceur.)"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:157
-#, fuzzy
 msgctxt "Key Configuration"
 msgid "No path selected."
-msgstr "Aucun chemin n'a été sélectionné."
+msgstr "Aucun chemin sélectionné."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:167
-#, fuzzy
 msgctxt "Key Configuration"
 msgid "Export succeeded."
 msgstr "L'exportation a réussi."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:170
-#, fuzzy
 msgctxt "Key Configuration"
 msgid "Error during export: "
-msgstr "Erreur lors de l'export : "
+msgstr "Erreur durant l'export: "
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/AlreadyMadeTabViewModel.cs:36
-#, fuzzy
 msgid ""
 "You've already made an account of this type.  Select it at the top right."
 msgstr ""
 "Vous avez déjà créé un compte de ce type. Sélectionnez-le en haut à droite."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
-#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
-msgstr "Le repaire du magicien"
+msgstr "L'Antre du Sorcier"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:107
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:54
-#, fuzzy
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
-msgstr "Nom d'utilisateur nécessaire"
+msgstr "Nom nécessaire"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:54
 #, fuzzy
@@ -671,7 +625,6 @@ msgid "(Information)"
 msgstr "(Informations)"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/InformationTabViewModel.cs:27
-#, fuzzy
 msgid ""
 "Let's set up your identity!\n"
 "\n"
@@ -701,26 +654,24 @@ msgstr ""
 "\n"
 "Il est possible de gérer plusieurs identités à l'aide de ce lanceur, il "
 "suffit de consulter cette page pour les établir selon les besoins. (Bien que "
-"vous ne souhaitiez probablement pas créer plus d'une identité par "
+"vous ne souhaitiez probablement pas créer plus q'une identité par "
 "fournisseur).\n"
 "\n"
 "Commencez par choisir un fournisseur d'identité sur la gauche. Vous pouvez "
-"revenir sur cet écran ultérieurement pour créer des identités chez d'autres "
-"fournisseurs, si vous le souhaitez."
+"revenir sur cet écran pour créer des identités chez d'autres fournisseurs, "
+"si vous le souhaitez."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:61
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:70
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:84
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:98
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:132
-#, fuzzy
 msgctxt "Key Auth Error - Header"
 msgid "Error"
 msgstr "Erreur"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:62
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:71
-#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid "Please select exactly one keypair file to load."
 msgstr "Sélectionnez exactement un fichier de paire de clés à charger."
