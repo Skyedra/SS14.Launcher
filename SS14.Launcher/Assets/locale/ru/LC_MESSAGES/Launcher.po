@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-17 22:06-0700\n"
-"PO-Revision-Date: 2024-06-10 16:02+0000\n"
-"Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2024-08-20 00:16+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/ru/>\n"
 "Language: ru\n"
@@ -217,25 +217,31 @@ msgid "Maximum: "
 msgstr "Максимум: "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
-msgstr ""
+msgstr "Показать серверы, использующие движок Multiverse"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Multiverse engine"
-msgstr ""
+msgstr "Движок мультивселенной"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#, fuzzy
 msgctxt "Server Filters"
 msgid ""
 "Show servers that use an unsupported engine (may cause connection failure)"
 msgstr ""
+"Показать серверы, использующие неподдерживаемый движок (может привести к "
+"сбою соединения)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Unsupported engines"
-msgstr ""
+msgstr "Неподдерживаемые движки"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
@@ -527,11 +533,14 @@ msgstr "Избранное"
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "Servers will need a username to call you by.  Please enter a username in the "
 "username field."
 msgstr ""
+"Чтобы позвонить вам, серверам потребуется имя пользователя. Пожалуйста, "
+"введите имя пользователя в поле «Имя пользователя»."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
@@ -542,34 +551,42 @@ msgid "Username can only contain 0-9 a-z A-Z and _"
 msgstr "Имя пользователя может содержать только 0-9 a-z A-Z и _"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:118
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "Rename was successful."
-msgstr ""
+msgstr "Переименование прошло успешно."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:119
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "(UI may not reflect the rename until next restart of Multiverse.)"
 msgstr ""
+"(Пользовательский интерфейс может не отразить переименование до следующего "
+"перезапуска Multiverse.)"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:157
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "No path selected."
-msgstr ""
+msgstr "Путь не выбран."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:167
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "Export succeeded."
-msgstr ""
+msgstr "Экспорт выполнен успешно."
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:170
+#, fuzzy
 msgctxt "Key Configuration"
 msgid "Error during export: "
-msgstr ""
+msgstr "Ошибка при экспорте: "
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/AlreadyMadeTabViewModel.cs:36
+#, fuzzy
 msgid ""
 "You've already made an account of this type.  Select it at the top right."
-msgstr ""
+msgstr "Вы уже создали аккаунт такого типа. Выберите его в правом верхнем углу."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
@@ -650,44 +667,53 @@ msgstr ""
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:84
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:98
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:132
+#, fuzzy
 msgctxt "Key Auth Error - Header"
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:62
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:71
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid "Please select exactly one keypair file to load."
-msgstr ""
+msgstr "Выберите ровно один файл пары клавиш для загрузки."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:85
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid "Invalid SSMV JSON keypair file."
-msgstr ""
+msgstr "Неверный файл пары ключей SSMV JSON."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
 "dropdown menu."
 msgstr ""
+"Этот ключ уже загружен ({0}). Выберите его в раскрывающемся меню учетной "
+"записи в правом верхнем углу."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:133
+#, fuzzy
 msgctxt "Key Auth Error - Description"
 msgid ""
 "Exception during import.  Did you select the right SSMV JSON keypair file?"
 msgstr ""
+"Исключение при импорте. Вы выбрали правильный файл пары ключей SSMV JSON?"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:148
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "Key Auth (Import)"
-msgstr ""
+msgstr "Аутентификация по ключу (импорт)"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:91
+#, fuzzy
 msgctxt "Create Identity Tab"
 msgid "⭐ Key Auth (New) ⭐"
-msgstr ""
+msgstr "⭐ Аутентификация по ключу (новое) ⭐"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
 #, csharp-format
@@ -831,13 +857,14 @@ msgstr "Выход из {0}"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:12
+#, fuzzy
 msgid "Configure Key"
-msgstr ""
+msgstr "Настроить ключ"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format
+#, csharp-format, fuzzy
 msgid "Configure {0}"
-msgstr ""
+msgstr "Настроить {0}"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:111
 msgid "Switch account:"
@@ -848,14 +875,16 @@ msgid "Select account:"
 msgstr "Выберите аккаунт:"
 
 #: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+#, fuzzy
 msgctxt "Account Type"
 msgid "MV Key Auth"
-msgstr ""
+msgstr "Аутентификация по ключу MVC"
 
 #: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+#, fuzzy
 msgctxt "Account Type"
 msgid "Guest"
-msgstr ""
+msgstr "Гость"
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 msgid "Done!"
@@ -929,11 +958,13 @@ msgid "Address is invalid"
 msgstr "Адрес недействителен"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Change Preferred Username"
-msgstr ""
+msgstr "Изменить предпочтительное имя пользователя"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:39
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "You can change your requested username by using this section.  It will not "
@@ -942,58 +973,80 @@ msgid ""
 "server you previously connected to, ask that server's staff to help you "
 "(perhaps via ahelp)."
 msgstr ""
+"Вы можете изменить запрошенное имя пользователя в этом разделе. Оно не "
+"вступит в силу ни на каких серверах, к которым вы уже подключились, а только "
+"на новых серверах, к которым вы еще не подключились. Если вы хотите изменить "
+"имя пользователя на сервере, к которому вы ранее подключались, обратитесь за "
+"помощью к сотрудникам этого сервера (возможно, с помощью справки)."
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:42
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Name"
-msgstr ""
+msgstr "Ник"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:46
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Rename"
-msgstr ""
+msgstr "Переименовать"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:54
+#, fuzzy
 msgctxt "Configure Key"
 msgid "View/Share Public Key"
-msgstr ""
+msgstr "Просмотреть/поделиться публичным ключом"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:56
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "Sometimes, server staff may request you to share your *public* key.  This is "
 "safe.  You may copy/paste it from below.  It is safe to give the *public* "
 "key to anyone who asks -- even other players."
 msgstr ""
+"Иногда сотрудники сервера могут попросить вас предоставить свой *публичный "
+"ключ*. Это безопасно. Вы можете скопировать/вставить его снизу. "
+"Ключ*общедоступный* можно с уверенностью дать любому, кто спросит, даже "
+"другим игрокам."
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:63
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Delete Keypair"
-msgstr ""
+msgstr "Удалить пару клавиш"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:65
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "This will delete your key.  There is no way to undo it!  You will be locked "
 "out of your user profile on all servers if you do this."
 msgstr ""
+"Это приведет к удалению ключа. Отменить его невозможно! Если вы это "
+"сделаете, вы будете заблокированы в своем профиле пользователя на всех "
+"серверах."
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:68
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Delete Key"
-msgstr ""
+msgstr "Удалить ключ"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:72
+#, fuzzy
 msgctxt "Configure Key"
 msgid "CONFIRM DELETE -- There is no undo!!"
-msgstr ""
+msgstr "ПОДТВЕРДИТЕ УДАЛЕНИЕ -- Отменить действие невозможно!"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:78
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Export Private + Public Key"
-msgstr ""
+msgstr "Экспорт закрытого и публичного ключа"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:80
+#, fuzzy
 msgctxt "Configure Key"
 msgid ""
 "It is a good idea to back up your private/public keypair somewhere safe "
@@ -1001,16 +1054,23 @@ msgid ""
 "sure not to give/share this file to anyone else as it includes your "
 "*private* key.  Treat it like a password!"
 msgstr ""
+"Рекомендуется создать резервную копию пары закрытых/открытых ключей в "
+"безопасном месте (например, в менеджере паролей). Вы можете сделать это с "
+"помощью кнопки ниже. Пожалуйста, не передавайте и не передавайте этот файл "
+"кому-либо еще, так как в нем содержится ваш закрытый ключ*. Относитесь к "
+"этому как к паролю!"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:83
+#, fuzzy
 msgctxt "Configure Key"
 msgid "Export Key Pair"
-msgstr ""
+msgstr "Пара экспортных ключей"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:92
+#, fuzzy
 msgctxt "Configure Key Close Button"
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
 msgid "Add Favorite Server"
@@ -1163,39 +1223,52 @@ msgid "Don't have an account? Register!"
 msgstr "Нету учетной записи? Зарегистрируйтесь!"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:16
+#, fuzzy
 msgctxt "Key Tab Header"
 msgid "MV Key Auth"
-msgstr ""
+msgstr "Аутентификация по ключу MVC"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:18
+#, fuzzy
 msgctxt "Key Tab"
 msgid "⭐ This is the recommended way to play! ⭐"
-msgstr ""
+msgstr "⭐ Это рекомендуемый способ игры! ⭐"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:20
+#, fuzzy
 msgid ""
 "Multiverse publickey/privatekey identity does not require any centralized "
 "authentication and allows for you to save your playtime on servers that "
 "support it."
 msgstr ""
+"Идентификация публичного ключа или закрытого ключа Multiverse не требует "
+"централизованной аутентификации и позволяет экономить игровое время на "
+"серверах, которые ее поддерживают."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
+#, fuzzy
 msgid ""
 "This option will generate a NEW keypair.  If you are new to Multiverse or "
 "have otherwise not previously generated a keypair, this is the right "
 "option.  If you already have an existing Multiverse keypair, use the import "
 "tab instead."
 msgstr ""
+"Эта опция создаст НОВУЮ пару ключей. Если вы новичок в Multiverse или ранее "
+"не создавали пару клавиш, это правильный вариант. Если у вас уже есть "
+"существующая пара клавиш Multiverse, используйте вместо этого вкладку "
+"импорта."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
+#, fuzzy
 msgctxt "Name entry field on key tab"
 msgid "Name"
-msgstr ""
+msgstr "Ник"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:29
+#, fuzzy
 msgctxt "Button on key tab"
 msgid "Continue"
-msgstr ""
+msgstr "Продолжить"
 
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
@@ -1208,37 +1281,46 @@ msgid "Wizard's Den"
 msgstr "Wizard's Den"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:19
+#, fuzzy
 msgctxt "Wizden login tab"
 msgid "⚠️ No longer available -- please use Key Auth instead. ⚠️"
-msgstr ""
+msgstr "⚠️ Больше недоступно - вместо этого используйте Key Auth. ⚠️"
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:22
+#, fuzzy
 msgctxt "Wizden login tab"
 msgid ""
 "As of this writing, Wizard's Den is blocking the Space Station Multiverse "
 "launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
 "support any longer."
 msgstr ""
+"На момент написания этой статьи программа Wizard's Den блокирует ракету-"
+"носитель космической станции Multiverse. Поэтому, к сожалению, мы больше не "
+"можем предлагать поддержку аутентификации WizDen."
 
 #: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
+#, fuzzy
 msgctxt "Wizden login tab"
 msgid "For more details, see the SSMV website."
-msgstr ""
+msgstr "Дополнительные сведения см. на веб-сайте SSMV."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:19
+#, fuzzy
 msgctxt "Key Tab Header"
 msgid "Import Existing MV Key"
-msgstr ""
+msgstr "Импортировать существующий ключ MV"
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:21
+#, fuzzy
 msgctxt "Key Tab"
 msgid "If you previously made a keypair, you can import it here."
-msgstr ""
+msgstr "Если вы уже создали пару клавиш, вы можете импортировать ее здесь."
 
 #: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:24
+#, fuzzy
 msgctxt "Button on key tab"
 msgid "Import..."
-msgstr ""
+msgstr "Импортировать..."
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
 msgctxt "Guest Tab Header"
@@ -1414,16 +1496,20 @@ msgid "Mark servers as favorite for easy access here."
 msgstr "Пометьте серверы как избранные, чтобы иметь к ним удобный доступ."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:28
+#, fuzzy
 msgid "This server uses WizDen Engine - connect may not work."
 msgstr ""
+"На этом сервере используется WizDen Engine — подключение может не работать."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:31
+#, fuzzy
 msgid "This server supports MV Key Authentication."
-msgstr ""
+msgstr "Этот сервер поддерживает аутентификацию по ключу MV."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:34
+#, fuzzy
 msgid "This server supports Guest mode."
-msgstr ""
+msgstr "Этот сервер поддерживает гостевой режим."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:54
 msgid "Raise to top"
@@ -1442,8 +1528,9 @@ msgid "Players"
 msgstr "Игроков"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:42
+#, fuzzy
 msgid "Info"
-msgstr ""
+msgstr "Информация"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:44
 msgid "Server Name"
@@ -1488,9 +1575,10 @@ msgid "Hub"
 msgstr "Хаб"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#, fuzzy
 msgctxt "Server Filters"
 msgid "Engine"
-msgstr ""
+msgstr "Двигатель"
 
 #~ msgid "Not logged in"
 #~ msgstr "Не авторизован"
