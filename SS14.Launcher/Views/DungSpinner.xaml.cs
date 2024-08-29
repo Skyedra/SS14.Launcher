@@ -18,7 +18,7 @@ public sealed partial class DungSpinner : UserControl
 
     static DungSpinner()
     {
-        AffectsRender<DungSpinner>(AnimationProgressProperty, FillProperty);
+        AffectsRenderVisibleOnly<DungSpinner>(AnimationProgressProperty, FillProperty);
     }
 
     public DungSpinner()
@@ -77,5 +77,30 @@ public sealed partial class DungSpinner : UserControl
         DrawElectron(Math.PI / 3d, pathX, pathY, sizeElectron, 0.33, -1);
         DrawElectron(0, pathX, pathY, sizeElectron, 0.0);
         DrawElectron(0, 0, 0, sizeNucleus, 0);
+    }
+
+    /// <summary>
+    /// Customized version of Avalonia's AffectsRender() that also checks if the control is displayed before forcing
+    /// it to be re-rendered.  This is a workaround for the bug on linux (and maybe other platforms) where avalonia
+    /// is constantly re-rendering the animation, even if the animation is hidden.
+    /// </summary>
+    protected static void AffectsRenderVisibleOnly<T>(params AvaloniaProperty[] properties) where T : Visual
+    {
+        foreach (AvaloniaProperty avaloniaProperty in properties)
+        {
+            avaloniaProperty.Changed.Subscribe(delegate (AvaloniaPropertyChangedEventArgs e)
+            {
+                Invalidate(e);
+            });
+        }
+
+        static void Invalidate(AvaloniaPropertyChangedEventArgs e)
+        {
+            if (e.Sender is T val)
+            {
+                if (val.IsEffectivelyVisible)
+                    val.InvalidateVisual();
+            }
+        }
     }
 }

@@ -1,0 +1,97 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:SS14.Launcher.ViewModels"
+        xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="100"
+        MinWidth="600" MinHeight="130"
+        Width="600" Height="250"
+        x:Class="SS14.Launcher.Views.ConfigureKeyDialog"
+        Icon="{DynamicResource WindowIcon}"
+        Title="{loc:Get Configure Key}"
+        Padding="4"
+        WindowStartupLocation="CenterOwner">
+  <Design.DataContext>
+    <vm:ConfigureKeyViewModel />
+  </Design.DataContext>
+  <Window.DataContext>
+    <vm:ConfigureKeyViewModel />
+  </Window.DataContext>
+  <Window.Styles>
+    <Style Selector="TextBox.Duplicate /template/ Border#border">
+      <Setter Property="BorderBrush" Value="Orange" />
+    </Style>
+    <Style Selector="TextBox.Invalid /template/ Border#border">
+      <Setter Property="BorderBrush" Value="Red" />
+    </Style>
+    <Style Selector="Button.InfoButton:pointerover">
+      <Setter Property="Background" Value="{DynamicResource ThemeControlHighBrush}" />
+    </Style>
+  </Window.Styles>
+  <ScrollViewer MinHeight="150" HorizontalScrollBarVisibility="Disabled">
+    <StackPanel>
+
+      <!-- Rename Tool -->
+
+      <TextBlock Margin="4, 0" Text="{loc:Get Change Preferred Username, Context=Configure Key}" Classes="NanoHeadingMedium" />
+
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get You can change your requested username by using this section.  It will not take effect on any servers you\'ve already connected to\, only on new servers you have not yet connected to.  If you wish to change your username on a server you previously connected to\, ask that server\'s staff to help you (perhaps via ahelp)., Context=Configure Key}" />
+
+      <TextBox Name="NameBox" Width="300" MaxWidth="300" MaxHeight="30" Margin="5, 5, 5, 5"
+              Watermark="{loc:Get Name, Context=Configure Key}"
+              Text="{Binding EditingUsername, Mode=TwoWay}" />
+
+        <Button Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+                Content="{loc:Get Rename, Context=Configure Key}" Command="{Binding RenamePressed}"
+                IsEnabled="{Binding RenameButtonEnabled}">
+        </Button>
+
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{Binding RenameResultText}" IsVisible="{Binding ShowRenameResultText}" />
+
+      <!-- View Public Key -->
+
+      <TextBlock Margin="4, 0" Text="{loc:Get View/Share Public Key, Context=Configure Key}" Classes="NanoHeadingMedium" />
+
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get Sometimes\, server staff may request you to share your *public* key.  This is safe.  You may copy/paste it from below.  It is safe to give the *public* key to anyone who asks -- even other players., Context=Configure Key}" />
+
+      <TextBox Name="PublicKeyBox" Width="500" MaxWidth="500" MaxHeight="150" Margin="5, 5, 5, 5"
+               IsReadOnly="true" Text="{Binding PublicKeyText}" />
+
+      <!-- Delete Key Pair -->
+
+      <TextBlock Margin="4, 0" Text="{loc:Get Delete Keypair, Context=Configure Key}" Classes="NanoHeadingMedium" />
+
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get This will delete your key.  There is no way to undo it!  You will be locked out of your user profile on all servers if you do this., Context=Configure Key}" />
+
+      <Button Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get Delete Key, Context=Configure Key}" Command="{Binding DeletePressed}" IsEnabled="{Binding !ConfirmDeleteButtonEnabled}" >
+        </Button>
+
+      <Button Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get CONFIRM DELETE -- There is no undo!!, Context=Configure Key}" Command="{Binding DeleteConfirmPressed}"
+              IsVisible="{Binding ConfirmDeleteButtonEnabled}">
+        </Button>
+
+      <!-- Export Private/Public Key Pair -->
+
+      <TextBlock Margin="4, 0" Text="{loc:Get Export Private + Public Key, Context=Configure Key}" Classes="NanoHeadingMedium" />
+
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get It is a good idea to back up your private/public keypair somewhere safe (like a password manager).  You may do so using the below button.  Please be sure not to give/share this file to anyone else as it includes your *private* key.  Treat it like a password!, Context=Configure Key}" />
+
+      <Button Classes="Button" Margin="5, 5, 5, 5" MaxHeight="30" HorizontalAlignment="Center"
+              Content="{loc:Get Export Key Pair, Context=Configure Key}" Command="{Binding ExportPressed}">
+        </Button>
+
+      <TextBlock TextWrapping="Wrap" Margin="5 5 5 5" Text="{Binding ExportResultText}" IsVisible="{Binding ShowExportResultText}" />
+
+      <!-- Done -->
+
+      <TextBlock Margin="4, 0" Text="---" Classes="NanoHeadingMedium" />
+
+      <Button Content="{loc:Get Close, Context=Configure Key Close Button}" Margin="4"
+              Click="ClosePressed" />
+
+    </StackPanel>
+  </ScrollViewer>
+</Window>

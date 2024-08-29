@@ -238,9 +238,13 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         await CheckAccounts();
         BusyTask = null;
 
-        if (_cfg.SelectedLoginId is { } g && _loginMgr.Logins.TryLookup(g, out var login))
+        var selectedLoginInfo = _cfg.SelectedLoginInfo;
+
+        if (selectedLoginInfo != null)
         {
-            TrySwitchToAccount(login);
+            var loggedInAccount = _loginMgr.GetLoggedInAccountByLoginInfo(selectedLoginInfo);
+            if (loggedInAccount != null)
+                TrySwitchToAccount(loggedInAccount);
         }
 
         // We should now start reacting to commands.

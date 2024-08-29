@@ -1,6 +1,9 @@
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Reactive.Linq;
+using Avalonia.Controls;
+using Avalonia.VisualTree;
 using DynamicData;
 using JetBrains.Annotations;
 using ReactiveUI;
@@ -11,6 +14,8 @@ using SS14.Launcher.Localization;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
+using SS14.Launcher.Views;
+
 
 
 namespace SS14.Launcher.ViewModels;
@@ -25,7 +30,7 @@ public class AccountDropDownViewModel : ViewModelBase
 
     public ReadOnlyObservableCollection<AvailableAccountViewModel> Accounts => _accounts;
 
-    public bool EnableMultiAccounts => _cfg.ActuallyMultiAccounts;
+    public Control? Control { get; set; }
 
     public AccountDropDownViewModel(MainWindowViewModel mainVm)
     {
@@ -40,14 +45,20 @@ public class AccountDropDownViewModel : ViewModelBase
                 this.RaisePropertyChanged(nameof(LoginText));
                 this.RaisePropertyChanged(nameof(AccountSwitchText));
                 this.RaisePropertyChanged(nameof(LogoutText));
+                this.RaisePropertyChanged(nameof(ConfigureText));
                 this.RaisePropertyChanged(nameof(AccountControlsVisible));
                 this.RaisePropertyChanged(nameof(AccountSwitchVisible));
+                this.RaisePropertyChanged(nameof(LogoutButtonVisible));
+                this.RaisePropertyChanged(nameof(ConfigureButtonVisible));
             });
 
         _loginMgr.Logins.Connect().Subscribe(_ =>
         {
             this.RaisePropertyChanged(nameof(LogoutText));
+            this.RaisePropertyChanged(nameof(ConfigureText));
             this.RaisePropertyChanged(nameof(AccountSwitchVisible));
+            this.RaisePropertyChanged(nameof(LogoutButtonVisible));
+            this.RaisePropertyChanged(nameof(ConfigureButtonVisible));
         });
 
         var filterObservable = this.WhenAnyValue(x => x._loginMgr.ActiveAccount)
@@ -72,14 +83,29 @@ public class AccountDropDownViewModel : ViewModelBase
         {
             if (_loginMgr.ActiveAccount != null)
             {
-                return _loginMgr.ActiveAccount.Username + " - " + _loginMgr.ActiveAccount.AuthServer;
+                return _loginMgr.ActiveAccount.Username + " [" + _loginMgr.ActiveAccount.LoginInfo.LoginTypeDisplaySuffix + "]";
             } else {
-                return EnableMultiAccounts ? Loc.GetString("No account selected") : Loc.GetString("Not logged in");
+                return Loc.GetString("No account selected");
             }
         }
     }
 
     public string LogoutText => _cfg.Logins.Count == 1 ? Loc.GetString("Log out") : Loc.GetString("Log out of {0}", _loginMgr.ActiveAccount?.Username);
+    public string ConfigureText => _cfg.Logins.Count == 1 ? Loc.GetString("Configure Key") : Loc.GetString("Configure {0}", _loginMgr.ActiveAccount?.Username);
+    public bool LogoutButtonVisible
+    {
+        get
+        {
+            return !(_loginMgr.ActiveAccount?.LoginInfo is LoginInfoKey);
+        }
+    }
+    public bool ConfigureButtonVisible
+    {
+        get
+        {
+            return _loginMgr.ActiveAccount?.LoginInfo is LoginInfoKey;
+        }
+    }
 
     public bool AccountSwitchVisible => _cfg.Logins.Count > 1 || _loginMgr.ActiveAccount == null;
     public string AccountSwitchText => _loginMgr.ActiveAccount != null ? Loc.GetString("Switch account:") : Loc.GetString("Select account:");
@@ -93,8 +119,29 @@ public class AccountDropDownViewModel : ViewModelBase
 
         if (_loginMgr.ActiveAccount != null)
         {
-            await _authApi.LogoutTokenAsync(_loginMgr.ActiveAccount.LoginInfo.Token.Token);
+            if (_loginMgr.ActiveAccount.LoginInfo is LoginInfoAccount accountInfo)
+            {
+                await _authApi.LogoutTokenAsync(accountInfo.Token.Token);
+            }
             _cfg.RemoveLogin(_loginMgr.ActiveAccount.LoginInfo);
+        }
+    }
+
+    public async void ConfigurePressed()
+    {
+        IsDropDownOpen = false;
+
+        if (!TryGetWindow(out var window))
+        {
+            return;
+        }
+
+        if (_loginMgr.ActiveAccount != null)
+        {
+            if (_loginMgr.ActiveAccount.LoginInfo is LoginInfoKey keyInfo)
+            {
+                await new ConfigureKeyDialog(keyInfo).ShowDialog(window);
+            }
         }
     }
 
@@ -112,6 +159,13 @@ public class AccountDropDownViewModel : ViewModelBase
 
         _loginMgr.ActiveAccount = null;
     }
+
+    private bool TryGetWindow([NotNullWhen(true)] out Window? window)
+    {
+        window = Control?.GetVisualRoot() as Window;
+        return window != null;
+    }
+
 }
 
 public sealed class AvailableAccountViewModel : ViewModelBase
@@ -124,7 +178,7 @@ public sealed class AvailableAccountViewModel : ViewModelBase
     {
         Account = account;
 
-        this.WhenAnyValue<AvailableAccountViewModel, AccountLoginStatus, string, string>(p => p.Account.Status, p => p.Account.Username, p => p.Account.AuthServer)
+        this.WhenAnyValue<AvailableAccountViewModel, AccountLoginStatus, string, string>(p => p.Account.Status, p => p.Account.Username, p => p.Account.LoginInfo.LoginTypeDisplaySuffix)
             .Select(p => p.Item1 switch
             {
                 AccountLoginStatus.Available => $"{p.Item2} - {p.Item3}",

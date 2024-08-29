@@ -92,6 +92,18 @@
       <ContentControl Content="{Binding IdentityViewModel.GuestTab.OverlayControl}" />
     </ContentControl>
 
+    <!-- Key New tab overlay alert control (probably this and above should be combined somehow?)-->
+    <ContentControl Classes="OverlayBox"
+                    IsVisible="{Binding IdentityViewModel.KeyNewTab.OverlayControl, Converter={x:Static ObjectConverters.IsNotNull}}">
+      <ContentControl Content="{Binding IdentityViewModel.KeyNewTab.OverlayControl}" />
+    </ContentControl>
+
+    <!-- Key Import tab overlay alert control (probably this and above should be combined somehow?)-->
+    <ContentControl Classes="OverlayBox"
+                    IsVisible="{Binding IdentityViewModel.KeyImportTab.OverlayControl, Converter={x:Static ObjectConverters.IsNotNull}}">
+      <ContentControl Content="{Binding IdentityViewModel.KeyImportTab.OverlayControl}" />
+    </ContentControl>
+
     <ContentControl Classes="OverlayBox" IsVisible="{Binding IdentityViewModel.WizardsDenLoginTab.Screen.Busy}">
       <StackPanel Orientation="Vertical" VerticalAlignment="Center">
         <Viewbox Width="72" Height="72" HorizontalAlignment="Center">

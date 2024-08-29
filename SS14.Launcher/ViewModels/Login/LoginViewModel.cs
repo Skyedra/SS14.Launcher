@@ -67,24 +67,23 @@ public class LoginViewModel : BaseLoginViewModel
         if (resp.IsSuccess)
         {
             var loginInfo = resp.LoginInfo;
-            var oldLogin = loginMgr.Logins.Lookup(loginInfo.UserId);
-            if (oldLogin.HasValue)
+            var oldLogin = loginMgr.GetLoggedInAccountByAccountLoginGuid(loginInfo.UserId);
+            if (oldLogin != null && oldLogin.LoginInfo is LoginInfoAccount accountInfo)
             {
                 // Already had this login, apparently.
-                // Thanks user.
                 //
                 // Log the OLD token out since we don't need two of them.
                 // This also has the upside of re-available-ing the account
                 // if the user used the main login prompt on an account we already had, but as expired.
 
-                await authApi.LogoutTokenAsync(oldLogin.Value.LoginInfo.Token.Token);
-                loginMgr.ActiveAccountId = loginInfo.UserId;
-                loginMgr.UpdateToNewToken(loginMgr.ActiveAccount!, loginInfo.Token);
+                await authApi.LogoutTokenAsync(accountInfo.Token.Token);
+                loginMgr.ActiveAccount = loginMgr.GetLoggedInAccountByLoginInfo(accountInfo);
+                loginMgr.UpdateToNewToken(loginMgr.ActiveAccount!, accountInfo.Token);
                 return true;
             }
 
             loginMgr.AddFreshLogin(loginInfo);
-            loginMgr.ActiveAccountId = loginInfo.UserId;
+            loginMgr.ActiveAccount = loginMgr.GetLoggedInAccountByLoginInfo(loginInfo);
             return true;
         }
 

@@ -25,4 +25,6 @@ public interface IServerStatusData : INotifyPropertyChanged
     int PlayerCount { get; set; }
 
     int SoftMaxPlayerCount { get; set; }
+    string? Engine { get; set; }
+    public string[] AuthMethods { get; set; }
 }

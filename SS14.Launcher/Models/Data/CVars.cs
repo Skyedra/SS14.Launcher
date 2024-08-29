@@ -73,13 +73,16 @@ public static class CVars
 
     /// <summary>
     /// Enable multi-account support on release builds.
+    /// This works different from upstream, since SSMV supports multiple providers by default.  But multiple accounts
+    /// per-provider is a debug feature to help prevent new user confusion / mixing up keys.
     /// </summary>
-    public static readonly CVarDef<bool> MultiAccounts = CVarDef.Create("MultiAccounts", false);
+    public static readonly CVarDef<bool> MultiAccountsPerProvider = CVarDef.Create("MultiAccountsPerProvider", false);
 
     /// <summary>
     /// Currently selected login in the drop down.
     /// </summary>
     public static readonly CVarDef<string> SelectedLogin = CVarDef.Create("SelectedLogin", "");
+    public static readonly CVarDef<string> SelectedLoginMethod = CVarDef.Create("SelectedLoginMethod", "");
 
     public static readonly CVarDef<string> Fingerprint = CVarDef.Create("Fingerprint", "");
 

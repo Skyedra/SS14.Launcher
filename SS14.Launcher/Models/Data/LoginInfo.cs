@@ -1,29 +1,22 @@
 using System;
+using System.Runtime.Serialization;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 
 namespace SS14.Launcher.Models.Data;
 
-public class LoginInfo : ReactiveObject
+[DataContract]
+public abstract class LoginInfo : ReactiveObject
 {
     [Reactive]
-    public Guid UserId { get; set; }
-    [Reactive]
+    [DataMember] // (Serialize during JSON Export)
     public string Username { get; set; } = default!;
-    [Reactive]
-    public LoginToken Token { get; set; }
-
-    public enum CommonAuthServers
-    {
-        WizDen,
-        Guest
-    };
-
-    [Reactive]
-    public string AuthServer { get; set; }
 
     public override string ToString()
     {
-        return $"{Username}/{UserId}";
+        return $"{Username} [Unknown]";
     }
+
+    [IgnoreDataMember]
+    public virtual string LoginTypeDisplaySuffix => "Unknown";
 }

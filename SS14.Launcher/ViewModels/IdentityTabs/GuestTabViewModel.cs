@@ -62,21 +62,12 @@ public class GuestTabViewModel : IdentityTabViewModel, IErrorOverlayOwner
             return;
         }
 
-        var loginInfo = new LoginInfo();
-        loginInfo.UserId = Guid.NewGuid(); // Guid.Empty;
+        var loginInfo = new LoginInfoGuest();
         loginInfo.Username = EditingUsername;
-        loginInfo.Token = new Models.LoginToken("", DateTimeOffset.UtcNow.AddHours(2));
-        loginInfo.AuthServer = LoginInfo.CommonAuthServers.Guest.ToString();
 
-        var oldLogin = _loginMgr.Logins.Lookup(loginInfo.UserId);
-        if (oldLogin.HasValue)
-        {
-            _loginMgr.ActiveAccountId = loginInfo.UserId;
-            _loginMgr.UpdateToNewToken(_loginMgr.ActiveAccount!, loginInfo.Token);
-        } else {
-            _loginMgr.AddFreshLogin(loginInfo);
-            _loginMgr.ActiveAccountId = loginInfo.UserId;
-        }
+
+        _loginMgr.AddFreshLogin(loginInfo);
+        _loginMgr.ActiveAccount = _loginMgr.GetLoggedInAccountByLoginInfo(loginInfo);
     }
 
     public virtual void OverlayOk()

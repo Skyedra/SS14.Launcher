@@ -34,7 +34,7 @@ public sealed class AuthApi
             {
                 var respJson = await resp.Content.AsJson<AuthenticateResponse>();
                 var token = new LoginToken(respJson.Token, respJson.ExpireTime);
-                return new AuthenticateResult(new LoginInfo
+                return new AuthenticateResult(new LoginInfoAccount
                 {
                     UserId = respJson.UserId,
                     Token = token,
@@ -347,11 +347,11 @@ public sealed class AuthApi
 
 public readonly struct AuthenticateResult
 {
-    private readonly LoginInfo? _loginInfo;
+    private readonly LoginInfoAccount? _loginInfo;
     private readonly string[]? _errors;
     public AuthApi.AuthenticateDenyResponseCode Code { get; }
 
-    public AuthenticateResult(LoginInfo loginInfo)
+    public AuthenticateResult(LoginInfoAccount loginInfo)
     {
         _loginInfo = loginInfo;
         _errors = null;
@@ -367,7 +367,7 @@ public readonly struct AuthenticateResult
 
     public bool IsSuccess => _loginInfo != null;
 
-    public LoginInfo LoginInfo => _loginInfo
+    public LoginInfoAccount LoginInfo => _loginInfo
                                   ?? throw new InvalidOperationException(
                                       "This AuthenticateResult is not a success.");
 

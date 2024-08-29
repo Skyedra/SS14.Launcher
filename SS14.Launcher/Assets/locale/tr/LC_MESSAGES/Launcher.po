@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 20:47-0700\n"
-"PO-Revision-Date: 2024-03-14 14:00+0000\n"
-"Last-Translator: DogancanYr <DogancanYr@users.noreply.weblate."
-"spacestationmultiverse.com>\n"
+"POT-Creation-Date: 2024-08-17 22:06-0700\n"
+"PO-Revision-Date: 2024-08-20 00:16+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Turkish <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/tr/>\n"
 "Language: tr\n"
@@ -74,22 +74,25 @@ msgstr "Başlatıcı güncellemesi denetleniyor..."
 msgid "Refreshing login status..."
 msgstr "Oturum açma durumu yenileniyor..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:231
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
+#, fuzzy
 msgid ""
 "There was an error getting launcher information from server.  You likely "
 "have a network/firewall issue.  More information is available in the log "
 "file."
 msgstr ""
+"Sunucudan başlatıcı bilgileri alınırken bir hata oluştu. Muhtemelen bir ağ/"
+"güvenlik duvarı sorununuz var. Günlük dosyasında daha fazla bilgi mevcuttur."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:281
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
 msgid "Checking account status"
 msgstr "Hesap durumunu kontrol etme"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:293
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:297
 msgid "Error connecting to authentication server"
 msgstr "Sunucuya bağlanırken hata oluştu"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:296
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:300
 msgid "Unknown error occured"
 msgstr "Bilinmeyen bir hata oluştu"
 
@@ -161,64 +164,91 @@ msgctxt "Tab"
 msgid "Options"
 msgstr "Seçenekler"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:59
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:60
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:62
 msgctxt "Server Filters"
 msgid "Yes"
 msgstr "Evet"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:64
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:65
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:66
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:67
 msgctxt "Server Filters"
 msgid "No"
 msgstr "Hayır"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:69
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:71
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
 msgstr "Oyuncu olmayan sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:72
 msgctxt "Server Filters"
 msgid "Hide empty"
 msgstr "Boşları gizle"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:75
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
 msgstr "Dolu olan sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:76
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
 msgctxt "Server Filters"
 msgid "Hide full"
 msgstr "Sakla Dolu"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:81
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
 msgstr "Daha az oyuncuya sahip sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:84
 msgctxt "Server Filters"
 msgid "Minimum: "
 msgstr "Minimum: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:90
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
 msgstr "Daha fazla oyuncuya sahip sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:89
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:91
 msgctxt "Server Filters"
 msgid "Maximum: "
 msgstr "Maksimum: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:189
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:190
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:193
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:194
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:197
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:198
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#, fuzzy
+msgctxt "Server Filters"
+msgid "Show servers that use the Multiverse engine"
+msgstr "Multiverse motorunu kullanan sunucuları göster"
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#, fuzzy
+msgctxt "Server Filters"
+msgid "Multiverse engine"
+msgstr "Multiverse motoru"
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#, fuzzy
+msgctxt "Server Filters"
+msgid ""
+"Show servers that use an unsupported engine (may cause connection failure)"
+msgstr ""
+"Desteklenmeyen bir motor kullanan sunucuları göster (bağlantı arızasına "
+"neden olabilir)"
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#, fuzzy
+msgctxt "Server Filters"
+msgid "Unsupported engines"
+msgstr "Desteklenmeyen motorlar"
+
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:207
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:208
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:211
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:212
 msgctxt "Server Filters"
 msgid "Unspecified"
 msgstr "Belirtilmemiş"
@@ -458,40 +488,40 @@ msgctxt "Tab"
 msgid "News"
 msgstr "Haberler"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:72
 msgid "Remove Favorite"
 msgstr "Favori'yi Kaldır"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:72
 msgid "Add Favorite"
 msgstr "Favori Ekle"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
 msgid "OFFLINE"
 msgstr "ÇEVRİMDIŞI"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:94
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:129
 msgid "Fetching..."
 msgstr "Alınıyor..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:143
 msgid "Unable to contact server"
 msgstr "Sunucuya ulaşılamıyor"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:110
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:145
 msgid "Fetching server status..."
 msgstr "Sunucu durumu alınıyor..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:115
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:116
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:150
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:151
 msgid "Fetching server description..."
 msgstr "Sunucu açıklaması getiriliyor..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:117
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:152
 msgid "Error while fetching server description"
 msgstr "Sunucu açıklaması alınırken hata oluştu"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:118
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerEntryViewModel.cs:153
 msgid "No server description provided"
 msgstr "Sunucu açıklaması sağlanmadı"
 
@@ -500,12 +530,72 @@ msgctxt "Tab"
 msgid "Home"
 msgstr "Anasayfa"
 
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
+#, fuzzy
+msgctxt "Key Auth Error - Description"
+msgid ""
+"Servers will need a username to call you by.  Please enter a username in the "
+"username field."
+msgstr ""
+"Sunucuların sizi aramak için bir kullanıcı adına ihtiyacı olacaktır. Lütfen "
+"kullanıcı adı alanına bir kullanıcı adı girin."
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:108
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:115
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:62
+msgctxt "Guest Mode Auth Error - Description"
+msgid "Username can only contain 0-9 a-z A-Z and _"
+msgstr "Kullanıcı adı yalnızca 0 -9 a - z A - Z ve _içerebilir"
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:118
+#, fuzzy
+msgctxt "Key Configuration"
+msgid "Rename was successful."
+msgstr "Yeniden adlandırma başarılı oldu."
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:119
+#, fuzzy
+msgctxt "Key Configuration"
+msgid "(UI may not reflect the rename until next restart of Multiverse.)"
+msgstr ""
+"(UI, Multiverse'in bir sonraki yeniden başlatılmasına kadar yeniden "
+"adlandırmayı yansıtmayabilir.)"
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:157
+#, fuzzy
+msgctxt "Key Configuration"
+msgid "No path selected."
+msgstr "Yol seçilmedi."
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:167
+#, fuzzy
+msgctxt "Key Configuration"
+msgid "Export succeeded."
+msgstr "İhracat başarılı oldu."
+
+#: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:170
+#, fuzzy
+msgctxt "Key Configuration"
+msgid "Error during export: "
+msgstr "Dışa aktarma sırasında hata: "
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/AlreadyMadeTabViewModel.cs:36
+#, fuzzy
+msgid ""
+"You've already made an account of this type.  Select it at the top right."
+msgstr "Zaten bu tür bir hesap oluşturdunuz. Sağ üstten seçin."
+
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
 msgid "Wizard's Den"
 msgstr "Sihirbaz Yuvası"
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:53
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:107
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:54
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username needed"
 msgstr "Kullanıcı adı gerekli"
@@ -521,16 +611,13 @@ msgstr ""
 "girin."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:60
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:114
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:61
 msgctxt "Guest Mode Auth Error - Header"
 msgid "Username bad characters"
 msgstr "Kullanıcı adı kötü karakterler"
 
-#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:61
-msgctxt "Guest Mode Auth Error - Description"
-msgid "Username can only contain 0-9 a-z A-Z and _"
-msgstr "Kullanıcı adı yalnızca 0 -9 a - z A - Z ve _içerebilir"
-
-#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:92
+#: ../SS14.Launcher/ViewModels/IdentityTabs/GuestTabViewModel.cs:83
 msgctxt "Create Identity Tab"
 msgid "Guest"
 msgstr "Misafir"
@@ -575,6 +662,58 @@ msgstr ""
 "Sol taraftan bir kimlik sağlayıcı seçerek başlayın.   İsterseniz diğer "
 "sağlayıcılarda kimlik oluşturmak için bu ekranı daha sonra tekrar ziyaret "
 "edebilirsiniz."
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:61
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:70
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:84
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:98
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:132
+#, fuzzy
+msgctxt "Key Auth Error - Header"
+msgid "Error"
+msgstr "Hata"
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:62
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:71
+#, fuzzy
+msgctxt "Key Auth Error - Description"
+msgid "Please select exactly one keypair file to load."
+msgstr "Lütfen yüklemek için tam olarak bir anahtar çifti dosyası seçin."
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:85
+#, fuzzy
+msgctxt "Key Auth Error - Description"
+msgid "Invalid SSMV JSON keypair file."
+msgstr "Geçersiz SSMV JSON anahtar çifti dosyası."
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
+#, csharp-format, fuzzy
+msgctxt "Key Auth Error - Description"
+msgid ""
+"You already have this key loaded ({0}).  Select it in top right account "
+"dropdown menu."
+msgstr "Bu anahtar zaten yüklü ({0}). Sağ üst hesap açılır menüsünden seçin."
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:133
+#, fuzzy
+msgctxt "Key Auth Error - Description"
+msgid ""
+"Exception during import.  Did you select the right SSMV JSON keypair file?"
+msgstr ""
+"İçe aktarma sırasında istisna. Doğru SSMV JSON anahtar çifti dosyasını "
+"seçtiniz mi?"
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:148
+#, fuzzy
+msgctxt "Create Identity Tab"
+msgid "Key Auth (Import)"
+msgstr "Anahtar Kimlik Doğrulaması (İçe Aktar)"
+
+#: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:91
+#, fuzzy
+msgctxt "Create Identity Tab"
+msgid "⭐ Key Auth (New) ⭐"
+msgstr "⭐ Anahtar Kimlik Doğrulaması (Yeni) ⭐"
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:161
 #, csharp-format
@@ -699,34 +838,54 @@ msgid "Connecting..."
 msgstr "Bağlanıyor..."
 
 #: ../SS14.Launcher/ViewModels/ConnectingViewModel.cs:195
+#, fuzzy
 msgid "Loading..."
-msgstr ""
+msgstr "Yükleniyor..."
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:88
 msgid "No account selected"
 msgstr "Bir hesap seçilmedi"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:77
-msgid "Not logged in"
-msgstr "Giriş yapmadınız"
-
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:93
 #: ../SS14.Launcher/Views/Login/ExpiredLoginView.xaml:32
 msgid "Log out"
 msgstr "Oturumu kapat"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:93
 #, csharp-format
 msgid "Log out of {0}"
 msgstr "{0} hesabından çıkış yap"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:12
+#, fuzzy
+msgid "Configure Key"
+msgstr "Anahtarı Yapılandır"
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
+#, csharp-format, fuzzy
+msgid "Configure {0}"
+msgstr "Yapılandır {0}"
+
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:111
 msgid "Switch account:"
 msgstr "Hesap değiştir:"
 
-#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:85
+#: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:111
 msgid "Select account:"
 msgstr "Hesap seçin:"
+
+#: ../SS14.Launcher/Models/Data/LoginInfoKey.cs:24
+#, fuzzy
+msgctxt "Account Type"
+msgid "MV Key Auth"
+msgstr "MV Anahtarı Kimlik Doğrulaması"
+
+#: ../SS14.Launcher/Models/Data/LoginInfoGuest.cs:15
+#, fuzzy
+msgctxt "Account Type"
+msgid "Guest"
+msgstr "Misafir"
 
 #: ../SS14.Launcher/Utility/ButtonExtensions.cs:16
 msgid "Done!"
@@ -771,7 +930,7 @@ msgstr "Önceliği artır"
 msgid "Decrease priority"
 msgstr "Önceliği azalt"
 
-#: ../SS14.Launcher/Views/AccountDropDown.xaml:21
+#: ../SS14.Launcher/Views/AccountDropDown.xaml:22
 msgid "Add account"
 msgstr "Hesap ekle"
 
@@ -798,6 +957,118 @@ msgstr "Bağlan"
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
 msgid "Address is invalid"
 msgstr "Adres geçersiz"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Change Preferred Username"
+msgstr "Tercih Edilen Kullanıcı Adı Değiştir"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:39
+#, fuzzy
+msgctxt "Configure Key"
+msgid ""
+"You can change your requested username by using this section.  It will not "
+"take effect on any servers you've already connected to, only on new servers "
+"you have not yet connected to.  If you wish to change your username on a "
+"server you previously connected to, ask that server's staff to help you "
+"(perhaps via ahelp)."
+msgstr ""
+"İstediğiniz kullanıcı adını bu bölümü kullanarak değiştirebilirsiniz. "
+"Halihazırda bağlandığınız sunucularda geçerli olmayacak, yalnızca henüz "
+"bağlanmadığınız yeni sunucularda geçerli olacaktır. Daha önce bağlandığınız "
+"bir sunucuda kullanıcı adınızı değiştirmek istiyorsanız, o sunucunun "
+"personelinden size yardım etmesini isteyin (belki ahelp aracılığıyla)."
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:42
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Name"
+msgstr "Ad"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:46
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Rename"
+msgstr "Yeniden Adlandır"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:54
+#, fuzzy
+msgctxt "Configure Key"
+msgid "View/Share Public Key"
+msgstr "Genel Anahtarı Görüntüleme/Paylaş"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:56
+#, fuzzy
+msgctxt "Configure Key"
+msgid ""
+"Sometimes, server staff may request you to share your *public* key.  This is "
+"safe.  You may copy/paste it from below.  It is safe to give the *public* "
+"key to anyone who asks -- even other players."
+msgstr ""
+"Bazen sunucu personeli sizden* genel* anahtarınızı paylaşmanızı isteyebilir. "
+"Burası güvenlidir. Aşağıdan kopyalayabilir/yapıştırabilirsiniz. *Kamu* "
+"anahtarını soran herkese, hatta diğer oyunculara vermek güvenlidir."
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:63
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Delete Keypair"
+msgstr "Anahtar Çifti Sil"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:65
+#, fuzzy
+msgctxt "Configure Key"
+msgid ""
+"This will delete your key.  There is no way to undo it!  You will be locked "
+"out of your user profile on all servers if you do this."
+msgstr ""
+"Bu anahtarınızı silecektir. Bunu geri almanın bir yolu yok! Bunu yaparsanız, "
+"tüm sunuculardaki kullanıcı profilinizden kilitleneceksiniz."
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:68
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Delete Key"
+msgstr "Anahtarı Sil"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:72
+#, fuzzy
+msgctxt "Configure Key"
+msgid "CONFIRM DELETE -- There is no undo!!"
+msgstr "SILMEYI ONAYLA -- Geri alma yok!"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:78
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Export Private + Public Key"
+msgstr "Özel + Genel Anahtarı Dışa Aktar"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:80
+#, fuzzy
+msgctxt "Configure Key"
+msgid ""
+"It is a good idea to back up your private/public keypair somewhere safe "
+"(like a password manager).  You may do so using the below button.  Please be "
+"sure not to give/share this file to anyone else as it includes your "
+"*private* key.  Treat it like a password!"
+msgstr ""
+"Özel/genel anahtar çiftinizi güvenli bir yerde (şifre yöneticisi gibi) "
+"yedeklemek iyi bir fikirdir. Bunu aşağıdaki düğmeyi kullanarak "
+"yapabilirsiniz. *özel* anahtarınızı içerdiğinden lütfen bu dosyayı kimseye "
+"vermediğinizi/paylaşmadığınızdan emin olun. Şifre gibi davranın!"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:83
+#, fuzzy
+msgctxt "Configure Key"
+msgid "Export Key Pair"
+msgstr "Anahtar Çifti Dışa Aktar"
+
+#: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:92
+#, fuzzy
+msgctxt "Configure Key Close Button"
+msgid "Close"
+msgstr "Kapat"
 
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:11
 msgid "Add Favorite Server"
@@ -832,7 +1103,7 @@ msgctxt "Header Buttons"
 msgid "Website"
 msgstr "Web Sitesi"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:117
+#: ../SS14.Launcher/Views/MainWindow.xaml:129
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
@@ -840,7 +1111,7 @@ msgstr ""
 "Bu başlatıcı güncel değil .&#x0a; Lütfen web sitemizden yeni bir sürüm "
 "indirin."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:131
+#: ../SS14.Launcher/Views/MainWindow.xaml:143
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
@@ -848,20 +1119,22 @@ msgstr ""
 "Uzay İstasyonu hala geliştirilme aşamasında. Gördüklerinizi beğeneceğinizi "
 "umuyoruz, ancak lütfen şimdilik beklentilerinizi mütevazı tutun."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:147
+#: ../SS14.Launcher/Views/MainWindow.xaml:159
+#, fuzzy
 msgid "Error"
-msgstr ""
+msgstr "Hata"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:150
+#: ../SS14.Launcher/Views/MainWindow.xaml:162
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
 msgstr "Günlük dizinini aç"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:152
+#: ../SS14.Launcher/Views/MainWindow.xaml:164
+#, fuzzy
 msgid "Ok"
-msgstr ""
+msgstr "Tamam."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:167
+#: ../SS14.Launcher/Views/MainWindow.xaml:179
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Oyunu çalıştırmak için bırak"
@@ -947,6 +1220,54 @@ msgstr "Kayıt"
 msgid "Don't have an account? Register!"
 msgstr "Hesabınız yok mu? Kayıt!"
 
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:16
+#, fuzzy
+msgctxt "Key Tab Header"
+msgid "MV Key Auth"
+msgstr "MV Anahtarı Kimlik Doğrulaması"
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:18
+#, fuzzy
+msgctxt "Key Tab"
+msgid "⭐ This is the recommended way to play! ⭐"
+msgstr "⭐ Bu oynamanın önerilen yoludur! ⭐"
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:20
+#, fuzzy
+msgid ""
+"Multiverse publickey/privatekey identity does not require any centralized "
+"authentication and allows for you to save your playtime on servers that "
+"support it."
+msgstr ""
+"Multiverse publickey/privatekey kimliği herhangi bir merkezi kimlik "
+"doğrulama gerektirmez ve oyun sürenizi onu destekleyen sunucularda "
+"kaydetmenize olanak tanır."
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:22
+#, fuzzy
+msgid ""
+"This option will generate a NEW keypair.  If you are new to Multiverse or "
+"have otherwise not previously generated a keypair, this is the right "
+"option.  If you already have an existing Multiverse keypair, use the import "
+"tab instead."
+msgstr ""
+"Bu seçenek YENİ bir anahtar çifti oluşturacaktır. Multiverse'de yeniyseniz "
+"veya daha önce bir anahtar çifti oluşturmadıysanız, bu doğru seçenektir. "
+"Mevcut bir Multiverse anahtar çiftiniz varsa, bunun yerine içe aktarma "
+"sekmesini kullanın."
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:25
+#, fuzzy
+msgctxt "Name entry field on key tab"
+msgid "Name"
+msgstr "Ad"
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyNewTabView.xaml:29
+#, fuzzy
+msgctxt "Button on key tab"
+msgid "Continue"
+msgstr "Devamı"
+
 #: ../SS14.Launcher/Views/IdentityTabs/InformationTabView.xaml:16
 msgctxt "Greeting Header"
 msgid "Welcome"
@@ -956,6 +1277,48 @@ msgstr "Hoş geldiniz"
 msgctxt "Header for wizden login tab"
 msgid "Wizard's Den"
 msgstr "Sihirbaz Yuvası"
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:19
+#, fuzzy
+msgctxt "Wizden login tab"
+msgid "⚠️ No longer available -- please use Key Auth instead. ⚠️"
+msgstr "⚠️ Artık mevcut değil - lütfen bunun yerine Key Auth kullanın. ⚠️"
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:22
+#, fuzzy
+msgctxt "Wizden login tab"
+msgid ""
+"As of this writing, Wizard's Den is blocking the Space Station Multiverse "
+"launcher.  Thus, we are unfortunately unable to offer WizDen authentication "
+"support any longer."
+msgstr ""
+"Bu yazı itibariyle, Wizard's Den Uzay İstasyonu Multiverse fırlatıcısını "
+"engelliyor. Bu nedenle, ne yazık ki artık WizDen kimlik doğrulama desteği "
+"sunamıyoruz."
+
+#: ../SS14.Launcher/Views/IdentityTabs/LoginTabView.xaml:24
+#, fuzzy
+msgctxt "Wizden login tab"
+msgid "For more details, see the SSMV website."
+msgstr "Daha fazla ayrıntı için, SSMV web sitesine bakın."
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:19
+#, fuzzy
+msgctxt "Key Tab Header"
+msgid "Import Existing MV Key"
+msgstr "Mevcut MV Anahtarını İçe Aktar"
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:21
+#, fuzzy
+msgctxt "Key Tab"
+msgid "If you previously made a keypair, you can import it here."
+msgstr "Daha önce bir anahtar çifti yaptıysanız, buradan içe aktarabilirsiniz."
+
+#: ../SS14.Launcher/Views/IdentityTabs/KeyImportTabView.xaml:24
+#, fuzzy
+msgctxt "Button on key tab"
+msgid "Import..."
+msgstr "İçe Aktar..."
 
 #: ../SS14.Launcher/Views/IdentityTabs/GuestTabView.xaml:16
 msgctxt "Guest Tab Header"
@@ -1130,7 +1493,22 @@ msgstr "Sunucular sekmesine gidin"
 msgid "Mark servers as favorite for easy access here."
 msgstr "Burada kolay erişim için sunucuları favori olarak işaretleyin."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:28
+#, fuzzy
+msgid "This server uses WizDen Engine - connect may not work."
+msgstr "Bu sunucu WizDen Engine kullanıyor - bağlantı çalışmayabilir."
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:31
+#, fuzzy
+msgid "This server supports MV Key Authentication."
+msgstr "Bu sunucu MV Anahtar Kimlik Doğrulamasını destekler."
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:34
+#, fuzzy
+msgid "This server supports Guest mode."
+msgstr "Bu sunucu Misafir modunu destekler."
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerEntryView.xaml:54
 msgid "Raise to top"
 msgstr "En üste yükselt"
 
@@ -1146,7 +1524,12 @@ msgstr "Sunucu Ara..."
 msgid "Players"
 msgstr "Oyuncular"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:42
+#, fuzzy
+msgid "Info"
+msgstr "Bilgi"
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListTabView.xaml:44
 msgid "Server Name"
 msgstr "Sunucu Adı"
 
@@ -1187,3 +1570,12 @@ msgstr "18+"
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "Merkez"
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#, fuzzy
+msgctxt "Server Filters"
+msgid "Engine"
+msgstr "Motor"
+
+#~ msgid "Not logged in"
+#~ msgstr "Giriş yapmadınız"

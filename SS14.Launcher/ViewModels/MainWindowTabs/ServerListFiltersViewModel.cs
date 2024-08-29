@@ -25,12 +25,14 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
     private readonly FilterListCollection _filtersRolePlay = new();
     private readonly FilterListCollection _filtersEighteenPlus = new();
     private readonly FilterListCollection _filtersHub = new();
+    private readonly FilterListCollection _filtersEngine = new();
 
     public ObservableCollection<ServerFilterViewModel> FiltersLanguage => _filtersLanguage;
     public ObservableCollection<ServerFilterViewModel> FiltersRegion => _filtersRegion;
     public ObservableCollection<ServerFilterViewModel> FiltersRolePlay => _filtersRolePlay;
     public ObservableCollection<ServerFilterViewModel> FiltersEighteenPlus => _filtersEighteenPlus;
     public ObservableCollection<ServerFilterViewModel> FiltersHub => _filtersHub;
+    public ObservableCollection<ServerFilterViewModel> FiltersEngine => _filtersEngine;
 
     public ServerFilterViewModel FilterPlayerCountHideEmpty { get; }
     public ServerFilterViewModel FilterPlayerCountHideFull { get; }
@@ -90,6 +92,18 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
             ServerFilter.PlayerCountMax,
             _dataManager.GetCVarEntry(CVars.FilterPlayerCountMaxValue),
             this);
+
+        FiltersEngine.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "Show servers that use the Multiverse engine"),
+            Loc.GetParticularString("Server Filters", "Multiverse engine"),
+            ServerFilter.EngineMultiverse,
+            this));
+
+        FiltersEngine.Add(new ServerFilterViewModel(
+            Loc.GetParticularString("Server Filters", "Show servers that use an unsupported engine (may cause connection failure)"),
+            Loc.GetParticularString("Server Filters", "Unsupported engines"),
+            ServerFilter.EngineUnsupported,
+            this));
     }
 
     /// <summary>
@@ -247,6 +261,9 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
         var hideEmpty = GetFilter(ServerFilter.PlayerCountHideEmpty);
         var hideFull = GetFilter(ServerFilter.PlayerCountHideFull);
 
+        var engineMultiverse = GetFilter(ServerFilter.EngineMultiverse);
+        var engineUnsupported = GetFilter(ServerFilter.EngineUnsupported);
+
         int? minPlayerCount = null;
         int? maxPlayerCount = null;
         if (GetFilter(ServerFilter.PlayerCountMin))
@@ -317,6 +334,15 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
 
             if (maxPlayerCount != null && server.PlayerCount > maxPlayerCount)
                 return false;
+
+            if (engineMultiverse || engineUnsupported)
+            {
+                if (!engineMultiverse && (!String.IsNullOrEmpty(server.Engine) && server.Engine.ToUpperInvariant().StartsWith("MV")))
+                    return false;
+
+                if (!engineUnsupported && String.IsNullOrEmpty(server.Engine))
+                    return false;
+            }
 
             return true;
         }

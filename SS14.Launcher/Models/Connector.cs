@@ -7,11 +7,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using DynamicData;
+using JWT.Algorithms;
+using JWT.Builder;
 using ReactiveUI;
 using Serilog;
 using Splat;
@@ -227,10 +230,40 @@ public class Connector : ReactiveObject
         {
             var account = _loginManager.ActiveAccount;
 
-            cVars.Add(("ROBUST_AUTH_TOKEN", account.LoginInfo.Token.Token));
-            cVars.Add(("ROBUST_AUTH_USERID", account.LoginInfo.UserId.ToString()));
+            if (account.LoginInfo is LoginInfoAccount accountInfo)
+            {
+                cVars.Add(("ROBUST_AUTH_TOKEN", accountInfo.Token.Token));
+                cVars.Add(("ROBUST_AUTH_USERID", accountInfo.UserId.ToString()));
+                cVars.Add(("ROBUST_AUTH_SERVER", ConfigConstants.AuthUrl));
+            }
+
+            if (account.LoginInfo is LoginInfoKey keyInfo)
+            {
+                // Key auth, so create a JWT for the server.
+
+                // Load keys
+                var publicKey = ECDsa.Create();
+                publicKey.ImportFromPem(keyInfo.PublicKey);
+
+                var privateKey = ECDsa.Create();
+                privateKey.ImportFromPem(keyInfo.PrivateKey);
+
+                // Create JWT
+                var jwt = JwtBuilder.Create()
+                    .WithAlgorithm(new ES256Algorithm(publicKey, privateKey))
+                    .AddClaim("exp", DateTimeOffset.UtcNow.AddMinutes(5).ToUnixTimeSeconds()) // expiry
+                    .AddClaim("nbf", DateTimeOffset.UtcNow.AddMinutes(-5).ToUnixTimeSeconds()) // not before
+                    .AddClaim("iat", DateTimeOffset.UtcNow) // issued at
+                    .AddClaim("aud", info.AuthInformation.PublicKey)
+                    .AddClaim("preferredUserName", keyInfo.Username)
+                    .Encode();
+
+                cVars.Add(("ROBUST_USER_JWT", jwt));
+                cVars.Add(("ROBUST_USER_PUBLIC_KEY", keyInfo.PublicKey));
+                cVars.Add(("ROBUST_AUTH_PUBKEY", info.AuthInformation.PublicKey));
+            }
+
             cVars.Add(("ROBUST_AUTH_PUBKEY", info.AuthInformation.PublicKey));
-            cVars.Add(("ROBUST_AUTH_SERVER", ConfigConstants.AuthUrl));
         }
 
         try

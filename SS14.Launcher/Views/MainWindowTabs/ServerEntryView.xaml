@@ -22,6 +22,17 @@
                      TextAlignment="Center" Text="{Binding ServerStatusString}"
                      MinWidth="80"
                      Margin="10, 0" />
+          <StackPanel Width="40" Orientation="Horizontal" DockPanel.Dock="Right" Margin="10, 0">
+            <TextBlock VerticalAlignment="Center" Text="⚠️" HorizontalAlignment="Center"
+                       IsVisible="{Binding UnsupportedEngine}" Margin="0, 0"
+                       ToolTip.Tip="{loc:Get This server uses WizDen Engine - connect may not work.}" />
+            <TextBlock VerticalAlignment="Center" Text="🔑" HorizontalAlignment="Center"
+                       IsVisible="{Binding MVKeyAuthSupported}" Margin="2, 0"
+                       ToolTip.Tip="{loc:Get This server supports MV Key Authentication.}" />
+            <TextBlock VerticalAlignment="Center" Text="👤" HorizontalAlignment="Center"
+                       IsVisible="{Binding GuestModeSupported}" Margin="2, 0"
+                       ToolTip.Tip="{loc:Get This server supports Guest mode.}" />
+          </StackPanel>
           <Rectangle DockPanel.Dock="Right" Classes="VerticalSeparator" />
           <!-- TODO: Enable text trimming here when Avalonia 0.10 is out of preview and we switch to it. -->
           <TextBlock VerticalAlignment="Center" Text="{Binding Name}" />

@@ -47,6 +47,9 @@ public record struct ServerFilter(ServerFilterCategory Category, string Data)
     public static readonly ServerFilter PlayerCountHideEmpty = new(ServerFilterCategory.PlayerCount, "hide_empty");
     public static readonly ServerFilter PlayerCountMax = new(ServerFilterCategory.PlayerCount, "max");
     public static readonly ServerFilter PlayerCountMin = new(ServerFilterCategory.PlayerCount, "min");
+
+    public static readonly ServerFilter EngineMultiverse = new(ServerFilterCategory.PlayerCount, "multiverse_engine");
+    public static readonly ServerFilter EngineUnsupported = new(ServerFilterCategory.PlayerCount, "unsupported_engine");
 }
 
 public enum ServerFilterCategory : byte
@@ -57,4 +60,5 @@ public enum ServerFilterCategory : byte
     EighteenPlus = 4,
     Hub = 5,
     PlayerCount = 6,
+    Engine = 100 // MV added filter
 }

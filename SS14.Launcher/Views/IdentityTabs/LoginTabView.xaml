@@ -15,9 +15,17 @@
   <DockPanel>
     <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Wizard\'s Den, Context=Header for wizden login tab}" Classes="NanoHeadingMedium" />
 
-    <Panel Background="{DynamicResource StripeBackBrush}">
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" FontWeight="Bold" Foreground="Red"
+      Text="{loc:Get ⚠️ No longer available -- please use Key Auth instead. ⚠️, Context=Wizden login tab}" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5"
+      Text="{loc:Get As of this writing\, Wizard\'s Den is blocking the Space Station Multiverse launcher.  Thus\, we are unfortunately unable to offer WizDen authentication support any longer., Context=Wizden login tab}" />
+
+    <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" Margin="5 5 5 5" Text="{loc:Get For more details\, see the SSMV website., Context=Wizden login tab}" />
+
+    <!-- <Panel Background="{DynamicResource StripeBackBrush}">
       <ContentControl Content="{Binding Screen}" />
-    </Panel>
+    </Panel> -->
 
 
   </DockPanel>

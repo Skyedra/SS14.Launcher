@@ -17,8 +17,9 @@
       <v:AngleBox Fill="{DynamicResource ThemeBackgroundBrush}" SideStyle="OpenRight" />
       <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Vertical" IsVisible="{Binding AccountControlsVisible}">
-          <Button Content="{Binding LogoutText}" Command="{Binding LogoutPressed}" Margin="4" />
-          <Button Content="{loc:Get Add account}" IsVisible="{Binding EnableMultiAccounts}" Command="{Binding AddAccountPressed}" Margin="4" />
+          <Button Content="{Binding ConfigureText}" Command="{Binding ConfigurePressed}" Margin="4" IsVisible="{Binding ConfigureButtonVisible}" />
+          <Button Content="{Binding LogoutText}" Command="{Binding LogoutPressed}" Margin="4" IsVisible="{Binding LogoutButtonVisible}" />
+          <Button Content="{loc:Get Add account}" Command="{Binding AddAccountPressed}" Margin="4" />
         </StackPanel>
 
         <StackPanel Orientation="Vertical" IsVisible="{Binding AccountSwitchVisible}">

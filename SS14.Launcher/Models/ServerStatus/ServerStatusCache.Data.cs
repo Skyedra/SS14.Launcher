@@ -8,6 +8,7 @@ public class ServerStatusData : ObservableObject, IServerStatusData
 {
     private string? _name;
     private string? _desc;
+    private string? _engine;
     private TimeSpan? _ping;
     private int _playerCount;
     private int _softMaxPlayerCount;
@@ -15,6 +16,7 @@ public class ServerStatusData : ObservableObject, IServerStatusData
     private ServerStatusInfoCode _statusInfo = ServerStatusInfoCode.NotFetched;
     private ServerInfoLink[]? _links;
     private string[] _tags = Array.Empty<string>();
+    private string[] _authMethods = Array.Empty<string>();
 
     public ServerStatusData(string address)
     {
@@ -40,6 +42,12 @@ public class ServerStatusData : ObservableObject, IServerStatusData
     {
         get => _desc;
         set => SetProperty(ref _desc, value);
+    }
+
+    public string? Engine
+    {
+        get => _engine;
+        set => SetProperty(ref _engine, value);
     }
 
     // BUG: This ping stat is completely wrong currently.
@@ -87,6 +95,11 @@ public class ServerStatusData : ObservableObject, IServerStatusData
     {
         get => _tags;
         set => SetProperty(ref _tags, value);
+    }
+    public string[] AuthMethods
+    {
+        get => _authMethods;
+        set => SetProperty(ref _authMethods, value);
     }
 
     public CancellationTokenSource? InfoCancel;

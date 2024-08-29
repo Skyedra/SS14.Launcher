@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.IdentityTabs.AlreadyMadeTabView"
+             Name="AlreadyMadeTab">
+  <Design.DataContext>
+    <identityTabs:AlreadyMadeTabViewModel />
+  </Design.DataContext>
+
+  <DockPanel>
+    <Panel Background="{DynamicResource StripeBackBrush}">
+      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{Binding WelcomeText}" FontWeight="Bold" Foreground="Green"></TextBlock>
+    </Panel>
+  </DockPanel>
+</UserControl>

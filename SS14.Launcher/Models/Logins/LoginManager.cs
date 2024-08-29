@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Avalonia.Threading;
 using DynamicData;
 using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 using Serilog;
 using SS14.Launcher.Api;
 using SS14.Launcher.Models.Data;
@@ -26,38 +27,28 @@ public sealed class LoginManager : ReactiveObject
 
     private IDisposable? _timer;
 
-    private Guid? _activeLoginId;
-
-    private readonly IObservableCache<ActiveLoginData, Guid> _logins;
-
-    public Guid? ActiveAccountId
-    {
-        get => _activeLoginId;
-        set
-        {
-            if (value != null)
-            {
-                var lookup = _logins.Lookup(value.Value);
-
-                if (!lookup.HasValue)
-                {
-                    throw new ArgumentException("We do not have a login with that ID.");
-                }
-            }
-
-            this.RaiseAndSetIfChanged(ref _activeLoginId, value);
-            this.RaisePropertyChanged(nameof(ActiveAccount));
-            _cfg.SelectedLoginId = value;
-        }
-    }
+    private readonly IObservableList<ActiveLoginData> _logins;
 
     public LoggedInAccount? ActiveAccount
     {
-        get => _activeLoginId == null ? null : _logins.Lookup(_activeLoginId.Value).Value;
-        set => ActiveAccountId = value?.UserId;
-    }
+        get
+        {
+            return _activeAccount;
+        }
 
-    public IObservableCache<LoggedInAccount, Guid> Logins { get; }
+        set
+        {
+            this.RaiseAndSetIfChanged(ref _activeAccount, value);
+
+            if (value != null)
+                _cfg.SelectedLoginInfo = value.LoginInfo;
+            else
+                _cfg.SelectedLoginInfo = null;
+        }
+    }
+    private LoggedInAccount? _activeAccount;
+
+    public IObservableList<LoggedInAccount> Logins { get; }
 
     public LoginManager(DataManager cfg, AuthApi authApi)
     {
@@ -69,17 +60,17 @@ public sealed class LoginManager : ReactiveObject
             .Transform(p => new ActiveLoginData(p))
             .OnItemRemoved(p =>
             {
-                if (p.LoginInfo.UserId == _activeLoginId)
+                if (ActiveAccount != null && p.LoginInfo == ActiveAccount.LoginInfo)
                 {
                     ActiveAccount = null;
                 }
             })
-            .AsObservableCache();
+            .AsObservableList();
 
         Logins = _logins
             .Connect()
             .Transform((data, guid) => (LoggedInAccount) data)
-            .AsObservableCache();
+            .AsObservableList();
     }
 
     public async Task Initialize()
@@ -114,7 +105,7 @@ public sealed class LoginManager : ReactiveObject
                 return;
             }
 
-            if (l.LoginInfo.Token.IsTimeExpired())
+            if (l.LoginInfo is LoginInfoAccount accountInfo && accountInfo.Token.IsTimeExpired())
             {
                 // Oh hey, time expiry.
                 Log.Debug("Token for {login} expired due to time", l.LoginInfo);
@@ -135,18 +126,57 @@ public sealed class LoginManager : ReactiveObject
         }));
     }
 
+    /// <summary>
+    /// Queries active logins and returns the one that contains the LoginInfo.
+    /// Works for all login types.
+    /// </summary>
+    private ActiveLoginData? GetActiveLoginDataByLoginInfo(LoginInfo loginInfo)
+    {
+        return (ActiveLoginData?) GetLoggedInAccountByLoginInfo(loginInfo);
+    }
+
+    /// <summary>
+    /// Queries active logins and returns the one that contains the LoginInfo.
+    /// Works for all login types.
+    /// </summary>
+    public LoggedInAccount? GetLoggedInAccountByLoginInfo(LoginInfo loginInfo)
+    {
+        foreach (var activeLogin in _logins.Items)
+        {
+            if (activeLogin.LoginInfo == loginInfo)
+                return activeLogin;
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// Tries to find an existing LoginInfoAccount by guid.  Works ONLY for Account type logins.
+    /// </summary>
+    public LoggedInAccount? GetLoggedInAccountByAccountLoginGuid(Guid guid)
+    {
+        foreach (var activeLogin in _logins.Items)
+        {
+            if (activeLogin.LoginInfo is LoginInfoAccount accountInfo && accountInfo.UserId == guid)
+                return activeLogin;
+        }
+
+        return null;
+    }
+
     public void AddFreshLogin(LoginInfo info)
     {
         _cfg.AddLogin(info);
 
-        _logins.Lookup(info.UserId).Value.SetStatus(AccountLoginStatus.Available);
+       GetActiveLoginDataByLoginInfo(info)?.SetStatus(AccountLoginStatus.Available);
     }
 
     public void UpdateToNewToken(LoggedInAccount account, LoginToken token)
     {
         var cast = (ActiveLoginData) account;
         cast.SetStatus(AccountLoginStatus.Available);
-        account.LoginInfo.Token = token;
+        if (account.LoginInfo is LoginInfoAccount accountInfo)
+            accountInfo.Token = token;
     }
 
     /// <exception cref="AuthApiException">Thrown if an API error occured.</exception>
@@ -157,30 +187,37 @@ public sealed class LoginManager : ReactiveObject
 
     private async Task UpdateSingleAccountStatus(ActiveLoginData data)
     {
-        if (data.LoginInfo.Token.ShouldRefresh())
+        if (data.LoginInfo is LoginInfoAccount accountInfo)
         {
-            Log.Debug("Refreshing token for {login}", data.LoginInfo);
-            // If we need to refresh the token anyways we'll just
-            // implicitly do the "is it still valid" with the refresh request.
-            var newTokenHopefully = await _authApi.RefreshTokenAsync(data.LoginInfo.Token.Token);
-            if (newTokenHopefully == null)
+            if (accountInfo.Token.ShouldRefresh())
             {
-                // Token expired or whatever?
-                data.SetStatus(AccountLoginStatus.Expired);
-                Log.Debug("Token for {login} expired while refreshing it", data.LoginInfo);
+                Log.Debug("Refreshing token for {login}", data.LoginInfo);
+                // If we need to refresh the token anyways we'll just
+                // implicitly do the "is it still valid" with the refresh request.
+                var newTokenHopefully = await _authApi.RefreshTokenAsync(accountInfo.Token.Token);
+                if (newTokenHopefully == null)
+                {
+                    // Token expired or whatever?
+                    data.SetStatus(AccountLoginStatus.Expired);
+                    Log.Debug("Token for {login} expired while refreshing it", data.LoginInfo);
+                }
+                else
+                {
+                    Log.Debug("Refreshed token for {login}", data.LoginInfo);
+                    accountInfo.Token = newTokenHopefully.Value;
+                    data.SetStatus(AccountLoginStatus.Available);
+                }
             }
-            else
+            else if (data.Status == AccountLoginStatus.Unsure)
             {
-                Log.Debug("Refreshed token for {login}", data.LoginInfo);
-                data.LoginInfo.Token = newTokenHopefully.Value;
+                var valid = await _authApi.CheckTokenAsync(accountInfo.Token.Token);
+                Log.Debug("Token for {login} still valid? {valid}", data.LoginInfo, valid);
+                data.SetStatus(valid ? AccountLoginStatus.Available : AccountLoginStatus.Expired);
+            }
+        } else {
+            // Guest accounts & MV Key accounts we are always sure about (no server to verify against.)
+            if (data.Status != AccountLoginStatus.Available)
                 data.SetStatus(AccountLoginStatus.Available);
-            }
-        }
-        else if (data.Status == AccountLoginStatus.Unsure)
-        {
-            var valid = await _authApi.CheckTokenAsync(data.LoginInfo.Token.Token);
-            Log.Debug("Token for {login} still valid? {valid}", data.LoginInfo, valid);
-            data.SetStatus(valid ? AccountLoginStatus.Available : AccountLoginStatus.Expired);
         }
     }
 
@@ -199,5 +236,16 @@ public sealed class LoginManager : ReactiveObject
             this.RaiseAndSetIfChanged(ref _status, status, nameof(Status));
             Log.Debug("Setting status for login {account} to {status}", LoginInfo, status);
         }
+    }
+
+    public bool HasAccountOfType(Type type)
+    {
+        foreach (var account in Logins.Items)
+        {
+            if (account != null && account.LoginInfo?.GetType() == type)
+                return true;
+        }
+
+        return false;
     }
 }

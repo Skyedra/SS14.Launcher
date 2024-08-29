@@ -37,12 +37,15 @@ public class ExpiredLoginViewModel : BaseLoginViewModel
         Busy = true;
         try
         {
-            var request = new AuthApi.AuthenticateRequest(Account.UserId, EditingPassword);
-            var resp = await _authApi.AuthenticateAsync(request);
+            if (Account.LoginInfo is LoginInfoAccount accountInfo)
+            {
+                var request = new AuthApi.AuthenticateRequest(accountInfo.UserId, EditingPassword);
+                var resp = await _authApi.AuthenticateAsync(request);
 
-            await LoginViewModel.DoLogin(this, request, resp, _loginMgr, _authApi);
+                await LoginViewModel.DoLogin(this, request, resp, _loginMgr, _authApi);
 
-            _cfg.CommitConfig();
+                _cfg.CommitConfig();
+            }
         }
         finally
         {

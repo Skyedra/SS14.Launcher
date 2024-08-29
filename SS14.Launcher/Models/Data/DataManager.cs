@@ -44,7 +44,9 @@ public sealed class DataManager : ReactiveObject
 
     private readonly SourceCache<FavoriteServer, string> _favoriteServers = new(f => f.Address);
 
-    private readonly SourceCache<LoginInfo, Guid> _logins = new(l => l.UserId);
+    // I have changed this to a list instead of a dictionary, as it doesn't make sense to use guid as a key for non-guid
+    // auth systems.
+    private readonly SourceList<LoginInfo> _logins = new();
 
     // When using dynamic engine management, this is used to keep track of installed engine versions.
     private readonly SourceCache<InstalledEngineVersion, string> _engineInstallations = new(v => v.Version);
@@ -87,12 +89,12 @@ public sealed class DataManager : ReactiveObject
 
         // Logins
         _logins.Connect()
-            .ForEachChange(c => ChangeLogin(c.Reason, c.Current))
+            .ForEachChange(c => ChangeLogin(c.Reason, c.Item.Current)) // NOTE - does not handle range changes (do we need to?)
             .Subscribe();
 
         _logins.Connect()
             .WhenAnyPropertyChanged()
-            .Subscribe(c => ChangeLogin(ChangeReason.Update, c!));
+            .Subscribe(c => ChangeLogin(ListChangeReason.Replace, c!));
 
         // Engine installations. Doesn't need UPDATE because immutable.
         _engineInstallations.Connect()
@@ -102,26 +104,95 @@ public sealed class DataManager : ReactiveObject
 
     public Guid Fingerprint => Guid.Parse(GetCVar(CVars.Fingerprint));
 
-    public Guid? SelectedLoginId
+    /// <summary>
+    /// Remembers which login was last being used between sessions.
+    /// </summary> <summary>
+    public LoginInfo? SelectedLoginInfo
     {
         get
         {
-            var value = GetCVar(CVars.SelectedLogin);
-            if (value == "")
+            var loginMethod = GetCVar(CVars.SelectedLoginMethod);
+            if (loginMethod == "")
                 return null;
 
-            return Guid.Parse(value);
+            var key = GetCVar(CVars.SelectedLogin);
+            if (key == "")
+                return null;
+
+            var loginInfo = LookupLoginBasedOnMethodAndArbitraryKey(loginMethod, key);
+
+            return loginInfo;
         }
+
         set
         {
-            if (value != null && !_logins.Lookup(value.Value).HasValue)
+            if (value != null)
             {
-                throw new ArgumentException("We are not logged in for that user ID.");
+                string arbitraryKey = GetArbitraryKey(value);
+
+                SetCVar(CVars.SelectedLoginMethod, value.GetType().ToString());
+                SetCVar(CVars.SelectedLogin, arbitraryKey);
+            } else {
+                SetCVar(CVars.SelectedLoginMethod, "");
+                SetCVar(CVars.SelectedLogin, "");
             }
 
-            SetCVar(CVars.SelectedLogin, value.ToString()!);
             CommitConfig();
         }
+    }
+
+    /// <summary>
+    /// Get login info from in memory _logins cache object (not DB directly)
+    /// </summary>
+    /// <param name="method">Name of corresponding LoginInfo type</param>
+    /// <param name="key">Here this means an arbitrary key (ex: guid for accounts, public key for keyauth, etc)</param>
+    /// <returns></returns>
+    private LoginInfo? LookupLoginBasedOnMethodAndArbitraryKey(string method, string key)
+    {
+        foreach (var check in _logins.Items)
+        {
+            if (check.GetType().ToString() == method)
+            {
+                if (check is LoginInfoAccount accountInfo)
+                {
+                    if (accountInfo.UserId.ToString() == key)
+                        return accountInfo;
+                } else if (check is LoginInfoKey keyInfo)
+                {
+                    if (keyInfo.PublicKey == key)
+                        return keyInfo;
+                } else if (check is LoginInfoGuest guestInfo)
+                {
+                    if (guestInfo.Username == key)
+                        return guestInfo;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
+    /// Gets a string key for the selected login info type.  Keys are NOT unique across all login methods, but they are
+    /// unique for a specific login method.  (ie: different underlying tables for different login methods.)
+    /// </summary>
+    /// <param name="loginInfo"></param>
+    /// <returns></returns>
+    private string GetArbitraryKey(LoginInfo loginInfo)
+    {
+        // TODO - probably change this to be more OOPy?
+        if (loginInfo is LoginInfoAccount accountInfo)
+        {
+            return accountInfo.UserId.ToString();
+        } else if (loginInfo is LoginInfoKey keyInfo)
+        {
+            return keyInfo.PublicKey;
+        } else if (loginInfo is LoginInfoGuest guestInfo)
+        {
+            return guestInfo.Username;
+        }
+
+        throw new Exception("Unknown loginInfo type passed to GetArbitraryKey");
     }
 
     public string? Locale
@@ -173,20 +244,18 @@ public sealed class DataManager : ReactiveObject
     }
 
     public IObservableCache<FavoriteServer, string> FavoriteServers => _favoriteServers;
-    public IObservableCache<LoginInfo, Guid> Logins => _logins;
+    public IObservableList<LoginInfo> Logins => _logins;
     public IObservableCache<InstalledEngineVersion, string> EngineInstallations => _engineInstallations;
     public IEnumerable<InstalledEngineModule> EngineModules => _modules;
     public ICollection<ServerFilter> Filters { get; }
     public ICollection<Hub> Hubs { get; }
 
-    public bool ActuallyMultiAccounts => true;
+    public bool MultiAccountsPerProvider => GetCVar(CVars.MultiAccountsPerProvider);
     /*
-        I should probably change this to be a default on but cvar'able off, I guess.
-        But just doing this quick for now.
 #if DEBUG
         true;
 #else
-            GetCVar(CVars.MultiAccounts);
+            GetCVar(CVars.MultiAccountsPerProvider);
 #endif
 */
 
@@ -236,21 +305,50 @@ public sealed class DataManager : ReactiveObject
 
     public void AddLogin(LoginInfo login)
     {
-        if (_logins.Lookup(login.UserId).HasValue)
+        if (_logins.Items.Contains(login))
         {
-            throw new ArgumentException("A login with that UID already exists.");
+            throw new ArgumentException("That login already added.");
         }
 
-        _logins.AddOrUpdate(login);
+        // The above does the most basic of checks to see if the object was already added.  However, it's theoretically
+        // possible for the same login to be added twice.  Calling this should do a deep check based on what each
+        // account method keys off of.
+        if (HasLoginInfo(login))
+            return;
+
+        _logins.Add(login);
+    }
+
+    public bool HasLoginInfo(LoginInfo loginInfo)
+    {
+        string arbitraryKey = "";
+
+        if (loginInfo is LoginInfoAccount accountInfo)
+        {
+            arbitraryKey = accountInfo.UserId.ToString();
+        } else if (loginInfo is LoginInfoKey keyInfo)
+        {
+            arbitraryKey = keyInfo.PublicKey;
+        } else if (loginInfo is LoginInfoGuest guestInfo)
+        {
+            arbitraryKey = guestInfo.Username;
+        }
+
+        if (arbitraryKey == "")
+            throw new ArgumentException("Could not determine a unique key for provided LoginInfo");
+
+        var existingLogin = LookupLoginBasedOnMethodAndArbitraryKey(loginInfo.GetType().ToString(), arbitraryKey);
+
+        return existingLogin != null;
     }
 
     public void RemoveLogin(LoginInfo loginInfo)
     {
         _logins.Remove(loginInfo);
 
-        if (loginInfo.UserId == SelectedLoginId)
+        if (loginInfo == SelectedLoginInfo)
         {
-            SelectedLoginId = null;
+            SelectedLoginInfo = null;
         }
     }
 
@@ -333,16 +431,29 @@ public sealed class DataManager : ReactiveObject
 
     private void LoadSqliteConfig(SqliteConnection sqliteConnection)
     {
-        // Load logins.
-        _logins.AddOrUpdate(
-            sqliteConnection.Query<(Guid id, string name, string token, DateTimeOffset expires)>(
-                    "SELECT UserId, UserName, Token, Expires FROM Login")
-                .Select(l => new LoginInfo
-                {
-                    UserId = l.id,
-                    Username = l.name,
-                    Token = new LoginToken(l.token, l.expires)
-                }));
+        // Load account logins
+        foreach (var row in sqliteConnection.Query<(Guid id, string name, string token, DateTimeOffset expires)>(
+            "SELECT UserId, UserName, Token, Expires FROM Login"))
+        {
+            _logins.Add(new LoginInfoAccount
+            {
+                UserId = row.id,
+                Username = row.name,
+                Token = new LoginToken(row.token, row.expires)
+            });
+        }
+
+        // Load MV key pair logins
+        foreach (var row in sqliteConnection.Query<(string name, string publicKey, string privateKey)>(
+            "SELECT UserName, PublicKey, PrivateKey FROM LoginMVKey"))
+        {
+            _logins.Add(new LoginInfoKey
+            {
+                Username = row.name,
+                PublicKey = row.publicKey,
+                PrivateKey = row.privateKey
+            });
+        }
 
         // Favorites
         _favoriteServers.AddOrUpdate(
@@ -483,32 +594,65 @@ public sealed class DataManager : ReactiveObject
         });
     }
 
-    private void ChangeLogin(ChangeReason reason, LoginInfo login)
+    private void ChangeLogin(ListChangeReason reason, LoginInfo login)
     {
-        if (login.AuthServer == LoginInfo.CommonAuthServers.Guest.ToString())
+        // Might be better if LoginInfo objects had database access so this class didn't have to be aware of the
+        // particulars of each auth type, but exposing database access isn't currently done here so I'm going to
+        // keep to the existing pattern for now.
+
+        if (login is LoginInfoGuest)
             return; // TODO - saving/loading offline usernames
 
-        // Make immutable copy to avoid race condition bugs.
-        var data = new
+        if (login is LoginInfoKey key)
         {
-            login.UserId,
-            UserName = login.Username,
-            login.Token.Token,
-            Expires = login.Token.ExpireTime
-        };
-        AddDbCommand(con =>
+            // Make immutable copy to avoid race condition bugs.
+            var data = new
+            {
+                UserName = login.Username,
+                key.PublicKey,
+                key.PrivateKey
+            };
+            AddDbCommand(con =>
+            {
+                con.Execute(reason switch
+                    {
+                        ListChangeReason.Add =>
+                            "INSERT INTO LoginMVKey (UserName, PublicKey, PrivateKey) VALUES (@UserName, @PublicKey, @PrivateKey)",
+                        ListChangeReason.Replace =>
+                            "UPDATE LoginMVKey SET UserName = @UserName WHERE PublicKey = @PublicKey",
+                        ListChangeReason.Remove =>
+                            "DELETE FROM LoginMVKey WHERE PublicKey = @PublicKey",
+                        _ => throw new ArgumentOutOfRangeException(nameof(reason), reason, null)
+                    },
+                    data
+                );
+            });
+        }
+
+        if (login is LoginInfoAccount account)
         {
-            con.Execute(reason switch
-                {
-                    ChangeReason.Add => "INSERT INTO Login VALUES (@UserId, @UserName, @Token, @Expires)",
-                    ChangeReason.Update =>
-                        "UPDATE Login SET UserName = @UserName, Token = @Token, Expires = @Expires WHERE UserId = @UserId",
-                    ChangeReason.Remove => "DELETE FROM Login WHERE UserId = @UserId",
-                    _ => throw new ArgumentOutOfRangeException(nameof(reason), reason, null)
-                },
-                data
-            );
-        });
+            // Make immutable copy to avoid race condition bugs.
+            var data = new
+            {
+                account.UserId,
+                UserName = login.Username,
+                account.Token.Token,
+                Expires = account.Token.ExpireTime
+            };
+            AddDbCommand(con =>
+            {
+                con.Execute(reason switch
+                    {
+                        ListChangeReason.Add => "INSERT INTO Login VALUES (@UserId, @UserName, @Token, @Expires)",
+                        ListChangeReason.Replace =>
+                            "UPDATE Login SET UserName = @UserName, Token = @Token, Expires = @Expires WHERE UserId = @UserId",
+                        ListChangeReason.Remove => "DELETE FROM Login WHERE UserId = @UserId",
+                        _ => throw new ArgumentOutOfRangeException(nameof(reason), reason, null)
+                    },
+                    data
+                );
+            });
+        }
     }
 
     private void ChangeEngineInstallation(ChangeReason reason, InstalledEngineVersion engine)

@@ -30,10 +30,12 @@
                    Text="{loc:Get Set launcher language.  This does not affect in-game language\, which is up to the server you connect to.}"
                    Margin="8" />
 
-        <Button Content="{loc:Get Account Settings}" Margin="4" Command="{Binding OpenAccountSettings}" HorizontalAlignment="Left" />
+        <!--
+        <Button Content="{loc:Get WizDen Account Settings}" Margin="4" Command="{Binding OpenAccountSettings}" HorizontalAlignment="Left" />
         <TextBlock VerticalAlignment="Center" TextWrapping="Wrap"
-                   Text="{loc:Get You can manage your account settings\, such as changing email or password\, through our website.}"
+                   Text="{loc:Get You can manage your account settings\, such as changing email or password\, through WizDen\'s website.}"
                    Margin="8" />
+        -->
 
         <Button Click="OpenHubSettings" Content="{loc:Get Hub Settings}" Margin="4" HorizontalAlignment="Left" />
         <TextBlock VerticalAlignment="Center" TextWrapping="Wrap"
