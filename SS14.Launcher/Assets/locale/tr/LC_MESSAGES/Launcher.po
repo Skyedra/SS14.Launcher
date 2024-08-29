@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 22:06-0700\n"
+"POT-Creation-Date: 2024-08-29 04:03-0700\n"
 "PO-Revision-Date: 2024-08-20 00:16+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Turkish <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/tr/>\n"
 "Language: tr\n"
@@ -30,29 +30,29 @@ msgstr "Geçersiz merkez (http(s):// olarak yazmayı unutmayın)"
 msgid "Duplicate hubs"
 msgstr "Çift merkezler"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 #, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "\"{0}\" olarak giriş yapıldı."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 msgid "Not logged in."
 msgstr "Giriş yapmadınız."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgid "Change Account..."
 msgstr "Hesabı Değiştir..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgid "Log in..."
 msgstr "Oturum aç..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:134
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:148
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
 msgstr "Yeniden başlatma gerekli"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:135
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:149
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
@@ -61,20 +61,20 @@ msgstr ""
 "Diliniz değiştirildi.    Değişikliklerin geçerli olması için lütfen "
 "başlatıcıyı yeniden başlatın."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:136
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:150
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "Uygulamayı kapat"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:186
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:253
 msgid "Checking for launcher update..."
 msgstr "Başlatıcı güncellemesi denetleniyor..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:188
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:255
 msgid "Refreshing login status..."
 msgstr "Oturum açma durumu yenileniyor..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:302
 #, fuzzy
 msgid ""
 "There was an error getting launcher information from server.  You likely "
@@ -84,15 +84,15 @@ msgstr ""
 "Sunucudan başlatıcı bilgileri alınırken bir hata oluştu. Muhtemelen bir ağ/"
 "güvenlik duvarı sorununuz var. Günlük dosyasında daha fazla bilgi mevcuttur."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:352
 msgid "Checking account status"
 msgstr "Hesap durumunu kontrol etme"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:297
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:364
 msgid "Error connecting to authentication server"
 msgstr "Sunucuya bağlanırken hata oluştu"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:300
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:367
 msgid "Unknown error occured"
 msgstr "Bilinmeyen bir hata oluştu"
 
@@ -164,71 +164,71 @@ msgctxt "Tab"
 msgid "Options"
 msgstr "Seçenekler"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:61
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:62
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
 msgctxt "Server Filters"
 msgid "Yes"
 msgstr "Evet"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:66
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:67
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
 msgctxt "Server Filters"
 msgid "No"
 msgstr "Hayır"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:71
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:87
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
 msgstr "Oyuncu olmayan sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:72
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
 msgctxt "Server Filters"
 msgid "Hide empty"
 msgstr "Boşları gizle"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:93
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
 msgstr "Dolu olan sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:94
 msgctxt "Server Filters"
 msgid "Hide full"
 msgstr "Sakla Dolu"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:99
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
 msgstr "Daha az oyuncuya sahip sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:84
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:100
 msgctxt "Server Filters"
 msgid "Minimum: "
 msgstr "Minimum: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:90
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:106
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
 msgstr "Daha fazla oyuncuya sahip sunucular gösterilmeyecek"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:91
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:107
 msgctxt "Server Filters"
 msgid "Maximum: "
 msgstr "Maksimum: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:113
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
 msgstr "Multiverse motorunu kullanan sunucuları göster"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:114
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Multiverse engine"
 msgstr "Multiverse motoru"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:119
 #, fuzzy
 msgctxt "Server Filters"
 msgid ""
@@ -237,18 +237,18 @@ msgstr ""
 "Desteklenmeyen bir motor kullanan sunucuları göster (bağlantı arızasına "
 "neden olabilir)"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:120
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Unsupported engines"
 msgstr "Desteklenmeyen motorlar"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:207
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:208
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:211
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:212
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:225
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:226
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:229
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:230
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:233
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:234
 msgctxt "Server Filters"
 msgid "Unspecified"
 msgstr "Belirtilmemiş"
@@ -530,6 +530,18 @@ msgctxt "Tab"
 msgid "Home"
 msgstr "Anasayfa"
 
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:52
+#, csharp-format
+msgctxt "Age Entry Window"
+msgid "You are {0} year(s) old."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:73
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:80
+msgctxt "Age Entry Window"
+msgid "Please enter a valid birth date."
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
@@ -687,7 +699,7 @@ msgid "Invalid SSMV JSON keypair file."
 msgstr "Geçersiz SSMV JSON anahtar çifti dosyası."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
@@ -863,7 +875,7 @@ msgid "Configure Key"
 msgstr "Anahtarı Yapılandır"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Configure {0}"
 msgstr "Yapılandır {0}"
 
@@ -892,7 +904,7 @@ msgid "Done!"
 msgstr "Tamam!"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 msgid "Hub Settings"
 msgstr "Merkez Ayarları"
 
@@ -935,9 +947,36 @@ msgid "Add account"
 msgstr "Hesap ekle"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:28
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:28
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 msgid "Log Launcher"
 msgstr "Günlük Başlatıcı"
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:36
+msgctxt "EighteenPlus Default Setting Header"
+msgid "Welcome - Enable 18+ Servers?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:37
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Do you wish to enable 18+ servers in the server browser?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:39
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Yes, show ALL servers including ones with mature/18+ content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:42
+msgctxt "EighteenPlus Default Setting Window"
+msgid "No, do not show servers with mature content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:44
+msgctxt "EighteenPlus Default Setting"
+msgid "(You can change this setting at any time in the server filters)"
+msgstr ""
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
 msgid "Direct Connect..."
@@ -957,6 +996,30 @@ msgstr "Bağlan"
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
 msgid "Address is invalid"
 msgstr "Adres geçersiz"
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:36
+msgctxt "Age Header"
+msgid "Welcome - Age Setup"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:37
+msgctxt "Age Entry Window"
+msgid ""
+"Please enter your date of birth.  Your entered birthdate will not be "
+"uploaded or shared, it is only used to help ensure age-appropriate content "
+"is shown to you."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:40
+msgctxt "Age Entry Window"
+msgid ""
+"Kindly ensure this value is correct -- you will not be able to change it "
+"later."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:41
+msgid "Continue"
+msgstr ""
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
 #, fuzzy
@@ -1103,7 +1166,7 @@ msgctxt "Header Buttons"
 msgid "Website"
 msgstr "Web Sitesi"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:129
+#: ../SS14.Launcher/Views/MainWindow.xaml:139
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
@@ -1111,7 +1174,7 @@ msgstr ""
 "Bu başlatıcı güncel değil .&#x0a; Lütfen web sitemizden yeni bir sürüm "
 "indirin."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:143
+#: ../SS14.Launcher/Views/MainWindow.xaml:153
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
@@ -1119,22 +1182,24 @@ msgstr ""
 "Uzay İstasyonu hala geliştirilme aşamasında. Gördüklerinizi beğeneceğinizi "
 "umuyoruz, ancak lütfen şimdilik beklentilerinizi mütevazı tutun."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:159
+#: ../SS14.Launcher/Views/MainWindow.xaml:169
+#: ../SS14.Launcher/Views/MainWindow.xaml:180
 #, fuzzy
 msgid "Error"
 msgstr "Hata"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:162
+#: ../SS14.Launcher/Views/MainWindow.xaml:172
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
 msgstr "Günlük dizinini aç"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:164
+#: ../SS14.Launcher/Views/MainWindow.xaml:174
+#: ../SS14.Launcher/Views/MainWindow.xaml:183
 #, fuzzy
 msgid "Ok"
 msgstr "Tamam."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:179
+#: ../SS14.Launcher/Views/MainWindow.xaml:198
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Oyunu çalıştırmak için bırak"
@@ -1363,19 +1428,17 @@ msgstr ""
 "Başlatıcı dilini ayarlayın. Bu, bağlandığın sunucuya bağlı olan oyun içi "
 "dili etkilemez."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
-msgid "Account Settings"
-msgstr "Hesap Ayarları"
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:34
+msgid "WizDen Account Settings"
+msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:36
 msgid ""
 "You can manage your account settings, such as changing email or password, "
-"through our website."
+"through WizDen's website."
 msgstr ""
-"E - posta veya şifre değiştirme gibi hesap ayarlarınızı web sitemiz "
-"üzerinden yönetebilirsiniz."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:42
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
@@ -1383,11 +1446,11 @@ msgstr ""
 "Sunucu listesini almak için kullanmak istediğiniz merkez sunucusunu veya "
 "sunucuları değiştirin."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 msgid "Compatibility Mode"
 msgstr "Uyumluluk modu"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:47
 msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
@@ -1397,11 +1460,11 @@ msgstr ""
 "'yi (gerekirse AÇI yoluyla) kullanır. Grafiksel sorunlar veya çökmeler "
 "yaşıyorsanız bunu deneyin."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 msgid "Experimental Performance Options"
 msgstr "Deneysel Performans Seçenekleri"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:52
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
@@ -1409,17 +1472,17 @@ msgstr ""
 "Deneysel.Tam Dinamik PGO sağlayan NET 6 ortam değişkeni. Sorun yaşarsanız "
 "devre dışı bırakın."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 msgid "Log Client"
 msgstr "Günlük İstemcisi"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:57
 msgid "Enables logging of any game client output. Useful for developers."
 msgstr ""
 "Herhangi bir oyun istemcisi çıktısının günlüğe kaydedilmesini sağlar. "
 "Geliştiriciler için faydalıdır."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:62
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
@@ -1427,11 +1490,11 @@ msgstr ""
 "Başlatıcının günlüğe kaydedilmesini sağlar. Geliştiriciler için "
 "kullanışlıdır. (başlatıcının yeniden başlatılmasını gerektirir)"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 msgid "Verbose Launcher Logging"
 msgstr "Ayrıntılı Başlatıcı Günlüğü"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:67
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
@@ -1439,19 +1502,19 @@ msgstr ""
 "Geliştiricilerin sorununuzla *çok* şaşkına dönmesi durumunda. (Başlatıcının "
 "yeniden başlatılmasını gerektirir)"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Seasonal Branding"
 msgstr "Mevsimsel Markalama"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:72
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr "Geçici olarak alakalı simgeler ve logolar ne olursa olsun bulabiliriz."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
 msgid "Disable Engine Signature Checks"
 msgstr "Motor İmza Kontrollerini Devre Dışı Bırak"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:77
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
@@ -1566,16 +1629,31 @@ msgctxt "Server Filters"
 msgid "18+"
 msgstr "18+"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:60
+msgctxt "Server Filters"
+msgid "(18+ servers are hidden based on your entered birth date.)"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:65
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "Merkez"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:72
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "Motor"
+
+#~ msgid "Account Settings"
+#~ msgstr "Hesap Ayarları"
+
+#~ msgid ""
+#~ "You can manage your account settings, such as changing email or password, "
+#~ "through our website."
+#~ msgstr ""
+#~ "E - posta veya şifre değiştirme gibi hesap ayarlarınızı web sitemiz "
+#~ "üzerinden yönetebilirsiniz."
 
 #~ msgid "Not logged in"
 #~ msgstr "Giriş yapmadınız"

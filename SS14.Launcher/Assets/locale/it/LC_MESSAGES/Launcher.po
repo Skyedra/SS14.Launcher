@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 22:06-0700\n"
+"POT-Creation-Date: 2024-08-29 04:03-0700\n"
 "PO-Revision-Date: 2024-08-19 23:03+0000\n"
 "Last-Translator: Snowy <SnowyFoxo@users.noreply.weblate."
 "spacestationmultiverse.com>\n"
@@ -30,29 +30,29 @@ msgstr "Hub non valido (non dimenticare http(s)://)"
 msgid "Duplicate hubs"
 msgstr "Hub già esistente"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 #, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "Effettuato l'accesso come {0}."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 msgid "Not logged in."
 msgstr "Non hai effettuato l'accesso."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgid "Change Account..."
 msgstr "Cambia account..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgid "Log in..."
 msgstr "Accedi..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:134
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:148
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
 msgstr "Riavvio richiesto"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:135
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:149
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
@@ -61,20 +61,20 @@ msgstr ""
 "La lingua è stata cambiata. Riavvia il launcher per rendere effettive le "
 "modifiche."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:136
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:150
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "Chiudi l'applicazione"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:186
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:253
 msgid "Checking for launcher update..."
 msgstr "Verifica dell'aggiornamento del launcher..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:188
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:255
 msgid "Refreshing login status..."
 msgstr "Aggiornamento dello stato di accesso..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:302
 msgid ""
 "There was an error getting launcher information from server.  You likely "
 "have a network/firewall issue.  More information is available in the log "
@@ -84,15 +84,15 @@ msgstr ""
 "launcher dal server. Ciò è probabilmente dovuto da un problema di rete o "
 "firewall. Per ulteriori informazioni, consulta il file di log."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:352
 msgid "Checking account status"
 msgstr "Verifica dello stato dell'account"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:297
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:364
 msgid "Error connecting to authentication server"
 msgstr "Errore durante la connessione al server di autenticazione"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:300
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:367
 msgid "Unknown error occured"
 msgstr "Si è verificato un errore sconosciuto"
 
@@ -169,69 +169,69 @@ msgctxt "Tab"
 msgid "Options"
 msgstr "Opzioni"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:61
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:62
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
 msgctxt "Server Filters"
 msgid "Yes"
 msgstr "Sì"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:66
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:67
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
 msgctxt "Server Filters"
 msgid "No"
 msgstr "No"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:71
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:87
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
 msgstr "I server senza giocatori non verranno visualizzati"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:72
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
 msgctxt "Server Filters"
 msgid "Hide empty"
 msgstr "Nascondi server senza giocatori"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:93
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
 msgstr "I server al completo non verranno visualizzati"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:94
 msgctxt "Server Filters"
 msgid "Hide full"
 msgstr "Nascondi server al completo"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:99
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
 msgstr "I server con meno giocatori non verranno visualizzati"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:84
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:100
 msgctxt "Server Filters"
 msgid "Minimum: "
 msgstr "Minimo: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:90
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:106
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
 msgstr "I server con più giocatori non verranno visualizzati"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:91
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:107
 msgctxt "Server Filters"
 msgid "Maximum: "
 msgstr "Massimo: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:113
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
 msgstr "Mostra i server che utilizzano il motore Multiverse"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:114
 msgctxt "Server Filters"
 msgid "Multiverse engine"
 msgstr "Motore Multiverse"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:119
 msgctxt "Server Filters"
 msgid ""
 "Show servers that use an unsupported engine (may cause connection failure)"
@@ -239,17 +239,17 @@ msgstr ""
 "Mostra i server che utilizzano un motore non supportato (potresti non "
 "riuscire a connetterti)"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:120
 msgctxt "Server Filters"
 msgid "Unsupported engines"
 msgstr "Motori non supportati"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:207
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:208
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:211
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:212
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:225
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:226
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:229
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:230
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:233
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:234
 msgctxt "Server Filters"
 msgid "Unspecified"
 msgstr "Non specificato"
@@ -531,6 +531,18 @@ msgctxt "Tab"
 msgid "Home"
 msgstr "Home"
 
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:52
+#, csharp-format
+msgctxt "Age Entry Window"
+msgid "You are {0} year(s) old."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:73
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:80
+msgctxt "Age Entry Window"
+msgid "Please enter a valid birth date."
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
@@ -580,7 +592,8 @@ msgstr "Errore durante l'esportazione: "
 #: ../SS14.Launcher/ViewModels/IdentityTabs/AlreadyMadeTabViewModel.cs:36
 msgid ""
 "You've already made an account of this type.  Select it at the top right."
-msgstr "Hai già creato un account di questo tipo. Selezionalo in alto a destra."
+msgstr ""
+"Hai già creato un account di questo tipo. Selezionalo in alto a destra."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
@@ -877,7 +890,7 @@ msgid "Done!"
 msgstr "Fatto!"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 msgid "Hub Settings"
 msgstr "Impostazioni hub"
 
@@ -920,9 +933,36 @@ msgid "Add account"
 msgstr "Aggiungi account"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:28
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:28
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 msgid "Log Launcher"
 msgstr "Log del launcher"
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:36
+msgctxt "EighteenPlus Default Setting Header"
+msgid "Welcome - Enable 18+ Servers?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:37
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Do you wish to enable 18+ servers in the server browser?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:39
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Yes, show ALL servers including ones with mature/18+ content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:42
+msgctxt "EighteenPlus Default Setting Window"
+msgid "No, do not show servers with mature content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:44
+msgctxt "EighteenPlus Default Setting"
+msgid "(You can change this setting at any time in the server filters)"
+msgstr ""
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
 msgid "Direct Connect..."
@@ -942,6 +982,30 @@ msgstr "Connetti"
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
 msgid "Address is invalid"
 msgstr "L'indirizzo non è valido"
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:36
+msgctxt "Age Header"
+msgid "Welcome - Age Setup"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:37
+msgctxt "Age Entry Window"
+msgid ""
+"Please enter your date of birth.  Your entered birthdate will not be "
+"uploaded or shared, it is only used to help ensure age-appropriate content "
+"is shown to you."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:40
+msgctxt "Age Entry Window"
+msgid ""
+"Kindly ensure this value is correct -- you will not be able to change it "
+"later."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:41
+msgid "Continue"
+msgstr ""
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
 msgctxt "Configure Key"
@@ -1079,7 +1143,7 @@ msgctxt "Header Buttons"
 msgid "Website"
 msgstr "Sito Web"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:129
+#: ../SS14.Launcher/Views/MainWindow.xaml:139
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
@@ -1087,7 +1151,7 @@ msgstr ""
 "Questo launcher non è aggiornato. Scarica una nuova versione dal nostro sito "
 "Web."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:143
+#: ../SS14.Launcher/Views/MainWindow.xaml:153
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
@@ -1096,20 +1160,22 @@ msgstr ""
 "vedete vi piaccia, ma vi preghiamo di mantenere le vostre aspettative "
 "modeste per il momento."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:159
+#: ../SS14.Launcher/Views/MainWindow.xaml:169
+#: ../SS14.Launcher/Views/MainWindow.xaml:180
 msgid "Error"
 msgstr "Errore"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:162
+#: ../SS14.Launcher/Views/MainWindow.xaml:172
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
 msgstr "Apri la cartella dei log"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:164
+#: ../SS14.Launcher/Views/MainWindow.xaml:174
+#: ../SS14.Launcher/Views/MainWindow.xaml:183
 msgid "Ok"
 msgstr "Ok"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:179
+#: ../SS14.Launcher/Views/MainWindow.xaml:198
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Rilascia per avviare il gioco"
@@ -1328,19 +1394,17 @@ msgstr ""
 "Imposta la lingua del launcher. Ciò non influisce sulla lingua di gioco, che "
 "dipende dal server a cui ti connetti."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
-msgid "Account Settings"
-msgstr "Impostazioni account"
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:34
+msgid "WizDen Account Settings"
+msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:36
 msgid ""
 "You can manage your account settings, such as changing email or password, "
-"through our website."
+"through WizDen's website."
 msgstr ""
-"Puoi gestire le impostazioni del tuo account, come modificare l'e-mail o la "
-"password, tramite il nostro sito Web."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:42
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
@@ -1348,11 +1412,11 @@ msgstr ""
 "Cambia quale o quali server hub desideri utilizzare dal quale o dai quali "
 "recuperare l'elenco dei server."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 msgid "Compatibility Mode"
 msgstr "Modalità compatibilità"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:47
 msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
@@ -1362,11 +1426,11 @@ msgstr ""
 "di incorrere in errori driver. Prova questa impostazione se riscontri "
 "problemi grafici o arresti anomali."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 msgid "Experimental Performance Options"
 msgstr "Opzioni prestazioni sperimentali"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:52
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
@@ -1374,17 +1438,17 @@ msgstr ""
 "Variabili di ambiente .NET 6 sperimentali che abilitano il PGO dinamico "
 "completo. Deseleziona se riscontri problemi."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 msgid "Log Client"
 msgstr "Log del client"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:57
 msgid "Enables logging of any game client output. Useful for developers."
 msgstr ""
 "Abilita il logging di qualsiasi output del client di gioco. Utile per gli "
 "sviluppatori."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:62
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
@@ -1392,11 +1456,11 @@ msgstr ""
 "Abilita il logging del launcher. Utile per gli sviluppatori. (richiede il "
 "riavvio del launcher)"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 msgid "Verbose Launcher Logging"
 msgstr "Log dettagliato del launcher"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:67
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
@@ -1404,20 +1468,20 @@ msgstr ""
 "Per quando gli sviluppatori sono *molto* perplessi riguardo il tuo problema. "
 "(richiede il riavvio del launcher)"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Seasonal Branding"
 msgstr "Logo stagionale"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:72
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr ""
 "Qualsiasi icone e loghi temporalmente rilevanti che decidiamo di utilizzare."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
 msgid "Disable Engine Signature Checks"
 msgstr "Disabilita la verifica delle firme del motore"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:77
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
@@ -1530,15 +1594,30 @@ msgctxt "Server Filters"
 msgid "18+"
 msgstr "18+"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:60
+msgctxt "Server Filters"
+msgid "(18+ servers are hidden based on your entered birth date.)"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:65
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "Hub"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:72
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "Motore"
+
+#~ msgid "Account Settings"
+#~ msgstr "Impostazioni account"
+
+#~ msgid ""
+#~ "You can manage your account settings, such as changing email or password, "
+#~ "through our website."
+#~ msgstr ""
+#~ "Puoi gestire le impostazioni del tuo account, come modificare l'e-mail o "
+#~ "la password, tramite il nostro sito Web."
 
 #~ msgid "Not logged in"
 #~ msgstr "Non hai effettuato l'accesso"

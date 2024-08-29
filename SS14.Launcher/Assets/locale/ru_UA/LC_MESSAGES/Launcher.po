@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 22:06-0700\n"
+"POT-Creation-Date: 2024-08-29 04:03-0700\n"
 "PO-Revision-Date: 2024-08-20 00:16+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Russian (Ukraine) <http://weblate.spacestationmultiverse.com/"
 "projects/space-station-multiverse/launcher/ru_UA/>\n"
 "Language: ru_UA\n"
@@ -31,29 +31,29 @@ msgstr "Недопустимый URL хаба (не забудьте http(s)://)
 msgid "Duplicate hubs"
 msgstr "Дублирование URL хаба"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 #, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "'Вошли' как {0}."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 msgid "Not logged in."
 msgstr "Не авторизован."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgid "Change Account..."
 msgstr "Поменять аккаунт..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 msgid "Log in..."
 msgstr "Войти..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:134
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:148
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
 msgstr "Требуется перезапуск"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:135
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:149
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
 "Language has been changed.  Please start the launcher again for changes to "
@@ -61,20 +61,20 @@ msgid ""
 msgstr ""
 "Язык был изменен.  Чтобы изменения вступили в силу, перезапустите лаунчер."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:136
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:150
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "Закрыть программу"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:186
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:253
 msgid "Checking for launcher update..."
 msgstr "Проверка на обновления лаунчера..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:188
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:255
 msgid "Refreshing login status..."
 msgstr "Обновление статуса авторизации..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:302
 #, fuzzy
 msgid ""
 "There was an error getting launcher information from server.  You likely "
@@ -85,15 +85,15 @@ msgstr ""
 "Вероятно, у вас проблема с сетью/брандмауэром. Более подробная информация "
 "доступна в файле журнала."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:352
 msgid "Checking account status"
 msgstr "Проверка статуса аккаунта"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:297
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:364
 msgid "Error connecting to authentication server"
 msgstr "Ошибка при подключении к серверу аутентификации"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:300
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:367
 msgid "Unknown error occured"
 msgstr "Произошла неизвестная ошибка"
 
@@ -164,71 +164,71 @@ msgctxt "Tab"
 msgid "Options"
 msgstr "Настройки"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:61
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:62
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
 msgctxt "Server Filters"
 msgid "Yes"
 msgstr "Да"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:66
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:67
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
 msgctxt "Server Filters"
 msgid "No"
 msgstr "Нет"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:71
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:87
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
 msgstr "Серверы, на которых нет игроков, не будут показаны"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:72
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
 msgctxt "Server Filters"
 msgid "Hide empty"
 msgstr "Скрыть пустые"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:93
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
 msgstr "Серверы, которые заполнены, не будут показаны"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:94
 msgctxt "Server Filters"
 msgid "Hide full"
 msgstr "Скрыть заполненные"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:99
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
 msgstr "Серверы с меньшим количеством игроков не будут показаны"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:84
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:100
 msgctxt "Server Filters"
 msgid "Minimum: "
 msgstr "Минимум: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:90
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:106
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
 msgstr "Серверы с большим количеством игроков не будут показаны"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:91
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:107
 msgctxt "Server Filters"
 msgid "Maximum: "
 msgstr "Максимум: "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:113
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
 msgstr "Показать серверы, использующие движок Multiverse"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:114
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Multiverse engine"
 msgstr "Движок мультивселенной"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:119
 #, fuzzy
 msgctxt "Server Filters"
 msgid ""
@@ -237,18 +237,18 @@ msgstr ""
 "Показать серверы, использующие неподдерживаемый движок (может привести к "
 "сбою соединения)"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:120
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Unsupported engines"
 msgstr "Неподдерживаемые движки"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:207
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:208
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:211
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:212
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:225
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:226
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:229
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:230
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:233
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:234
 msgctxt "Server Filters"
 msgid "Unspecified"
 msgstr "Не указано"
@@ -530,6 +530,18 @@ msgctxt "Tab"
 msgid "Home"
 msgstr "Избранное"
 
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:52
+#, csharp-format
+msgctxt "Age Entry Window"
+msgid "You are {0} year(s) old."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:73
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:80
+msgctxt "Age Entry Window"
+msgid "Please enter a valid birth date."
+msgstr ""
+
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyNewTabViewModel.cs:55
@@ -586,7 +598,8 @@ msgstr "Ошибка при экспорте: "
 #, fuzzy
 msgid ""
 "You've already made an account of this type.  Select it at the top right."
-msgstr "Вы уже создали аккаунт такого типа. Выберите его в правом верхнем углу."
+msgstr ""
+"Вы уже создали аккаунт такого типа. Выберите его в правом верхнем углу."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/LoginTabViewModel.cs:39
 msgctxt "Create Identity Tab"
@@ -686,7 +699,7 @@ msgid "Invalid SSMV JSON keypair file."
 msgstr "Неверный файл пары ключей SSMV JSON."
 
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:99
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgctxt "Key Auth Error - Description"
 msgid ""
 "You already have this key loaded ({0}).  Select it in top right account "
@@ -863,7 +876,7 @@ msgid "Configure Key"
 msgstr "Настроить ключ"
 
 #: ../SS14.Launcher/ViewModels/AccountDropDownViewModel.cs:94
-#, csharp-format, fuzzy
+#, fuzzy, csharp-format
 msgid "Configure {0}"
 msgstr "Настроить {0}"
 
@@ -892,7 +905,7 @@ msgid "Done!"
 msgstr "Готово!"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 msgid "Hub Settings"
 msgstr "Настройки хаба"
 
@@ -935,9 +948,36 @@ msgid "Add account"
 msgstr "Добавить аккаунт"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:28
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:28
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 msgid "Log Launcher"
 msgstr "Логи лаунчера"
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:36
+msgctxt "EighteenPlus Default Setting Header"
+msgid "Welcome - Enable 18+ Servers?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:37
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Do you wish to enable 18+ servers in the server browser?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:39
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Yes, show ALL servers including ones with mature/18+ content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:42
+msgctxt "EighteenPlus Default Setting Window"
+msgid "No, do not show servers with mature content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:44
+msgctxt "EighteenPlus Default Setting"
+msgid "(You can change this setting at any time in the server filters)"
+msgstr ""
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
 msgid "Direct Connect..."
@@ -957,6 +997,30 @@ msgstr "Подключиться"
 #: ../SS14.Launcher/Views/AddFavoriteDialog.xaml:18
 msgid "Address is invalid"
 msgstr "Адрес недействителен"
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:36
+msgctxt "Age Header"
+msgid "Welcome - Age Setup"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:37
+msgctxt "Age Entry Window"
+msgid ""
+"Please enter your date of birth.  Your entered birthdate will not be "
+"uploaded or shared, it is only used to help ensure age-appropriate content "
+"is shown to you."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:40
+msgctxt "Age Entry Window"
+msgid ""
+"Kindly ensure this value is correct -- you will not be able to change it "
+"later."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:41
+msgid "Continue"
+msgstr ""
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
 #, fuzzy
@@ -1106,7 +1170,7 @@ msgctxt "Header Buttons"
 msgid "Website"
 msgstr "Сайт"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:129
+#: ../SS14.Launcher/Views/MainWindow.xaml:139
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
@@ -1114,7 +1178,7 @@ msgstr ""
 "Данный лаунчер устарел.&#x0a;Пожалуйста, загрузите новую версию с нашего "
 "сайта."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:143
+#: ../SS14.Launcher/Views/MainWindow.xaml:153
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
@@ -1123,22 +1187,24 @@ msgstr ""
 "понравится то, что вы увидите, но пока, пожалуйста, сдерживайте свои "
 "ожидания."
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:159
+#: ../SS14.Launcher/Views/MainWindow.xaml:169
+#: ../SS14.Launcher/Views/MainWindow.xaml:180
 #, fuzzy
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:162
+#: ../SS14.Launcher/Views/MainWindow.xaml:172
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 msgid "Open log directory"
 msgstr "Открыть папку с логами"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:164
+#: ../SS14.Launcher/Views/MainWindow.xaml:174
+#: ../SS14.Launcher/Views/MainWindow.xaml:183
 #, fuzzy
 msgid "Ok"
 msgstr "Ок"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:179
+#: ../SS14.Launcher/Views/MainWindow.xaml:198
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
 msgstr "Нажмите, чтобы запустить игру"
@@ -1368,19 +1434,17 @@ msgstr ""
 "Установить язык лаунчера.  Это не влияет на язык в игре, который зависит от "
 "сервера, к которому вы подключаетесь."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
-msgid "Account Settings"
-msgstr "Настройки аккаунта"
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:34
+msgid "WizDen Account Settings"
+msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:36
 msgid ""
 "You can manage your account settings, such as changing email or password, "
-"through our website."
+"through WizDen's website."
 msgstr ""
-"Вы можете управлять настройками своей учетной записи, например, изменить "
-"электронную почту или пароль, через официальный сайт."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:42
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
@@ -1388,11 +1452,11 @@ msgstr ""
 "Измените, какой сервер или серверы-хаба вы хотите использовать для получения "
 "списка игровых серверов."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 msgid "Compatibility Mode"
 msgstr "Режим совместимости"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:47
 msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
 "suffer from driver bugs. Try this if you are experiencing graphical issues "
@@ -1402,11 +1466,11 @@ msgstr ""
 "подвержен ошибкам драйверов. Попробуйте этот вариант, если у вас наблюдаются "
 "проблемы с графикой или вылеты."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 msgid "Experimental Performance Options"
 msgstr "Экспериментальные настройки производительности"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:52
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
@@ -1415,15 +1479,15 @@ msgstr ""
 "полностью динамический PGO. Отключите настройку, если у вас возникнут "
 "проблемы."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 msgid "Log Client"
 msgstr "Логи клиента игры"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:57
 msgid "Enables logging of any game client output. Useful for developers."
 msgstr "Включает логирование игрового клиента. Полезно для разработчиков."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:62
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
@@ -1431,11 +1495,11 @@ msgstr ""
 "Включает логирование лаунчера. Полезно для разработчиков. (требуется "
 "перезапуск лаунчера)"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 msgid "Verbose Launcher Logging"
 msgstr "Подробные логи лаунчера"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:67
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
@@ -1443,20 +1507,20 @@ msgstr ""
 "Для случаев, когда разработчики *очень* озадачены вашей проблемой. "
 "(требуется перезапуск лаунчера)"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 msgid "Seasonal Branding"
 msgstr "Сезонное брендирование"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:72
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr ""
 "Какие только иконки и логотипы мы не придумаем, соответствующие времени."
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
 msgid "Disable Engine Signature Checks"
 msgstr "Отключить проверку подписи движка"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:77
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
 "YOU KNOW EXACTLY WHAT YOU'RE DOING."
@@ -1572,16 +1636,31 @@ msgctxt "Server Filters"
 msgid "18+"
 msgstr "18+"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:60
+msgctxt "Server Filters"
+msgid "(18+ servers are hidden based on your entered birth date.)"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:65
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "Хаб"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:72
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "Двигатель"
+
+#~ msgid "Account Settings"
+#~ msgstr "Настройки аккаунта"
+
+#~ msgid ""
+#~ "You can manage your account settings, such as changing email or password, "
+#~ "through our website."
+#~ msgstr ""
+#~ "Вы можете управлять настройками своей учетной записи, например, изменить "
+#~ "электронную почту или пароль, через официальный сайт."
 
 #~ msgid "Not logged in"
 #~ msgstr "Не авторизован"

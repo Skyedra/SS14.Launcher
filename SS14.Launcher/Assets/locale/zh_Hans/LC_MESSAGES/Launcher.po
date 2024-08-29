@@ -5,10 +5,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-17 22:06-0700\n"
+"POT-Creation-Date: 2024-08-29 04:03-0700\n"
 "PO-Revision-Date: 2024-08-18 05:08+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -33,33 +33,33 @@ msgstr "集线器无效（别忘了 http (s) ://）"
 msgid "Duplicate hubs"
 msgstr "重复的集线器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 #, fuzzy, csharp-format
 msgid "'Logged in' as {0}."
 msgstr "以 {0} 的身份'登录'。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:119
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:129
 #, fuzzy
 msgid "Not logged in."
 msgstr "未登录。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 #, fuzzy
 msgid "Change Account..."
 msgstr "更改账户..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:120
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:130
 #, fuzzy
 msgid "Log in..."
 msgstr "登录..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:134
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:148
 #, fuzzy
 msgctxt "Language Changed Restart Popup - Header"
 msgid "Restart Required"
 msgstr "需要重新启动"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:135
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:149
 #, fuzzy
 msgctxt "Language Changed Restart Popup - Message"
 msgid ""
@@ -67,23 +67,23 @@ msgid ""
 "take effect."
 msgstr "语言已更改。请重新启动启动器以使更改生效。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:136
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:150
 #, fuzzy
 msgctxt "Language Changed Restart Popup - Button"
 msgid "Close Application"
 msgstr "关闭应用程序"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:186
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:253
 #, fuzzy
 msgid "Checking for launcher update..."
 msgstr "正在检查启动器更新..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:188
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:255
 #, fuzzy
 msgid "Refreshing login status..."
 msgstr "正在刷新登录状态..."
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:235
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:302
 #, fuzzy
 msgid ""
 "There was an error getting launcher information from server.  You likely "
@@ -93,17 +93,17 @@ msgstr ""
 "从服务器获取启动器信息时出错。你可能遇到了网络/防火墙问题。更多信息可在日志文"
 "件中找到。"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:285
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:352
 #, fuzzy
 msgid "Checking account status"
 msgstr "查看账户状态"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:297
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:364
 #, fuzzy
 msgid "Error connecting to authentication server"
 msgstr "连接到身份验证服务器时出错"
 
-#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:300
+#: ../SS14.Launcher/ViewModels/MainWindowViewModel.cs:367
 #, fuzzy
 msgid "Unknown error occured"
 msgstr "发生了未知错误"
@@ -180,99 +180,99 @@ msgctxt "Tab"
 msgid "Options"
 msgstr "选项"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:61
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:62
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Yes"
 msgstr "是的"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:66
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:67
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:82
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
 #, fuzzy
 msgctxt "Server Filters"
 msgid "No"
 msgstr "没有"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:71
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:87
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Servers with no players will not be shown"
 msgstr "不会显示没有玩家的服务器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:72
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:88
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Hide empty"
 msgstr "隐藏为空"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:77
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:93
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Servers that are full will not be shown"
 msgstr "将不会显示已满的服务器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:78
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:94
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Hide full"
 msgstr "隐藏全部"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:83
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:99
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Servers with less players will not be shown"
 msgstr "不会显示玩家较少的服务器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:84
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:100
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Minimum: "
 msgstr "最低限度： "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:90
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:106
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Servers with more players will not be shown"
 msgstr "不会显示拥有更多玩家的服务器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:91
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:107
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Maximum: "
 msgstr "最大值： "
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:97
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:113
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
 msgstr "显示使用多元宇宙引擎的服务器"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:98
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:114
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Multiverse engine"
 msgstr "多元宇宙引擎"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:103
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:119
 #, fuzzy
 msgctxt "Server Filters"
 msgid ""
 "Show servers that use an unsupported engine (may cause connection failure)"
 msgstr "显示使用不支持的引擎的服务器（可能导致连接失败）"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:104
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:120
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Unsupported engines"
 msgstr "不支持的引擎"
 
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:203
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:204
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:207
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:208
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:211
-#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:212
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:225
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:226
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:229
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:230
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:233
+#: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:234
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Unspecified"
@@ -611,6 +611,18 @@ msgstr "未提供服务器描述"
 msgctxt "Tab"
 msgid "Home"
 msgstr "主页"
+
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:52
+#, csharp-format
+msgctxt "Age Entry Window"
+msgid "You are {0} year(s) old."
+msgstr ""
+
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:73
+#: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:80
+msgctxt "Age Entry Window"
+msgid "Please enter a valid birth date."
+msgstr ""
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
@@ -992,7 +1004,7 @@ msgid "Done!"
 msgstr "完成了！"
 
 #: ../SS14.Launcher/Views/HubSettingsDialog.xaml:12
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:38
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
 #, fuzzy
 msgid "Hub Settings"
 msgstr "集线器设置"
@@ -1045,10 +1057,37 @@ msgid "Add account"
 msgstr "添加账户"
 
 #: ../SS14.Launcher/Views/MainWindowIdentity.xaml:28
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:58
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:28
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:28
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
 #, fuzzy
 msgid "Log Launcher"
 msgstr "日志启动器"
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:36
+msgctxt "EighteenPlus Default Setting Header"
+msgid "Welcome - Enable 18+ Servers?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:37
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Do you wish to enable 18+ servers in the server browser?"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:39
+msgctxt "EighteenPlus Default Setting Window"
+msgid "Yes, show ALL servers including ones with mature/18+ content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:42
+msgctxt "EighteenPlus Default Setting Window"
+msgid "No, do not show servers with mature content."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:44
+msgctxt "EighteenPlus Default Setting"
+msgid "(You can change this setting at any time in the server filters)"
+msgstr ""
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
 #, fuzzy
@@ -1072,6 +1111,30 @@ msgstr "连接"
 #, fuzzy
 msgid "Address is invalid"
 msgstr "地址无效"
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:36
+msgctxt "Age Header"
+msgid "Welcome - Age Setup"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:37
+msgctxt "Age Entry Window"
+msgid ""
+"Please enter your date of birth.  Your entered birthdate will not be "
+"uploaded or shared, it is only used to help ensure age-appropriate content "
+"is shown to you."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:40
+msgctxt "Age Entry Window"
+msgid ""
+"Kindly ensure this value is correct -- you will not be able to change it "
+"later."
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowAge.xaml:41
+msgid "Continue"
+msgstr ""
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
 #, fuzzy
@@ -1221,37 +1284,39 @@ msgctxt "Header Buttons"
 msgid "Website"
 msgstr "网站"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:129
+#: ../SS14.Launcher/Views/MainWindow.xaml:139
 #, fuzzy
 msgid ""
 "This launcher is out of date.&#x0a;Please download a new version from our "
 "website."
 msgstr "这个启动器已经过时了。请从我们的网站下载新版本。"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:143
+#: ../SS14.Launcher/Views/MainWindow.xaml:153
 #, fuzzy
 msgid ""
 "Space Station is still in development. We hope you like what you see, but "
 "please keep your expectations modest for the time being."
 msgstr "空间站仍在开发中。我们希望你喜欢你所看到的，但请暂时保持适度的期望。"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:159
+#: ../SS14.Launcher/Views/MainWindow.xaml:169
+#: ../SS14.Launcher/Views/MainWindow.xaml:180
 #, fuzzy
 msgid "Error"
 msgstr "错误"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:162
+#: ../SS14.Launcher/Views/MainWindow.xaml:172
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:22
 #, fuzzy
 msgid "Open log directory"
 msgstr "打开日志目录"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:164
+#: ../SS14.Launcher/Views/MainWindow.xaml:174
+#: ../SS14.Launcher/Views/MainWindow.xaml:183
 #, fuzzy
 msgid "Ok"
 msgstr "好吧"
 
-#: ../SS14.Launcher/Views/MainWindow.xaml:179
+#: ../SS14.Launcher/Views/MainWindow.xaml:198
 #, fuzzy
 msgctxt "Drag Drop Overlay"
 msgid "Drop to run game"
@@ -1501,31 +1566,29 @@ msgid ""
 "to the server you connect to."
 msgstr "设置启动器语言。这不会影响游戏内语言，这取决于你连接的服务器。"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:33
-#, fuzzy
-msgid "Account Settings"
-msgstr "账号设置"
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:34
+msgid "WizDen Account Settings"
+msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:35
-#, fuzzy
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:36
 msgid ""
 "You can manage your account settings, such as changing email or password, "
-"through our website."
-msgstr "您可以通过我们的网站管理您的账户设置，例如更改电子邮件或密码。"
+"through WizDen's website."
+msgstr ""
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:40
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:42
 #, fuzzy
 msgid ""
 "Change what hub server or servers you would like to use to fetch the server "
 "list."
 msgstr "更改要使用哪个或多个中心服务器来获取服务器列表。"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:43
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
 #, fuzzy
 msgid "Compatibility Mode"
 msgstr "兼容模式"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:45
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:47
 #, fuzzy
 msgid ""
 "This uses OpenGL ES 2 (via ANGLE if necessary), which is less likely to "
@@ -1535,63 +1598,63 @@ msgstr ""
 "它使用 OpenGL ES 2（必要时通过 ANGLE），它不太可能出现驱动程序错误。如果您遇"
 "到图形问题或崩溃，请尝试此方法。"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:48
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
 #, fuzzy
 msgid "Experimental Performance Options"
 msgstr "实验性能选项"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:50
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:52
 #, fuzzy
 msgid ""
 "Experimental .NET 6 environment variables that enable full Dynamic PGO. "
 "Disable if you experience issues."
 msgstr "启用完整动态 PGO 的实验性.NET 6 环境变量。如果您遇到问题，请禁用。"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:53
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
 #, fuzzy
 msgid "Log Client"
 msgstr "日志客户端"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:55
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:57
 #, fuzzy
 msgid "Enables logging of any game client output. Useful for developers."
 msgstr "允许记录任何游戏客户端输出。对开发者很有用。"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:60
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:62
 #, fuzzy
 msgid ""
 "Enables logging of the launcher. Useful for developers. (requires launcher "
 "restart)"
 msgstr "启用启动器日志记录。对开发者很有用。（需要重启启动器）"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:63
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
 #, fuzzy
 msgid "Verbose Launcher Logging"
 msgstr "Verbose 启动器日志"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:65
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:67
 #, fuzzy
 msgid ""
 "For when the developers are *very* stumped with your problem. (requires "
 "launcher restart)"
 msgstr "当开发人员*非常*为你的问题感到困惑时。（需要重启启动器）"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:68
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
 #, fuzzy
 msgid "Seasonal Branding"
 msgstr "季节性品牌"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:70
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:72
 #, fuzzy
 msgid "Whatever temporally relevant icons and logos we can come up with."
 msgstr "无论我们能想出什么与时间相关的图标和徽标。"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:73
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
 #, fuzzy
 msgid "Disable Engine Signature Checks"
 msgstr "禁用引擎签名检查"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:75
+#: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:77
 #, fuzzy
 msgid ""
 "[DEV ONLY] Disables verification of engine signatures. DO NOT ENABLE UNLESS "
@@ -1725,17 +1788,32 @@ msgctxt "Server Filters"
 msgid "18+"
 msgstr "18+"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:62
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:60
+msgctxt "Server Filters"
+msgid "(18+ servers are hidden based on your entered birth date.)"
+msgstr ""
+
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:65
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Hub"
 msgstr "集线器"
 
-#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:69
+#: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:72
 #, fuzzy
 msgctxt "Server Filters"
 msgid "Engine"
 msgstr "发动机"
+
+#, fuzzy
+#~ msgid "Account Settings"
+#~ msgstr "账号设置"
+
+#, fuzzy
+#~ msgid ""
+#~ "You can manage your account settings, such as changing email or password, "
+#~ "through our website."
+#~ msgstr "您可以通过我们的网站管理您的账户设置，例如更改电子邮件或密码。"
 
 #, fuzzy
 #~ msgid ""
