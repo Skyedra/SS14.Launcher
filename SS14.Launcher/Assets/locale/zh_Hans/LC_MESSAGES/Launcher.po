@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-29 04:03-0700\n"
-"PO-Revision-Date: 2024-08-18 05:08+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse."
-"com>\n"
+"PO-Revision-Date: 2024-08-29 11:36+0000\n"
+"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
+"\n"
 "Language-Team: Chinese (Simplified) <http://weblate.spacestationmultiverse."
 "com/projects/space-station-multiverse/launcher/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -613,16 +613,17 @@ msgid "Home"
 msgstr "主页"
 
 #: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:52
-#, csharp-format
+#, csharp-format, fuzzy
 msgctxt "Age Entry Window"
 msgid "You are {0} year(s) old."
-msgstr ""
+msgstr "您已经 {0} 岁了。"
 
 #: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:73
 #: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:80
+#, fuzzy
 msgctxt "Age Entry Window"
 msgid "Please enter a valid birth date."
-msgstr ""
+msgstr "请输入有效的出生日期。"
 
 #: ../SS14.Launcher/ViewModels/ConfigureKeyViewModel.cs:102
 #: ../SS14.Launcher/ViewModels/IdentityTabs/KeyImportTabViewModel.cs:108
@@ -1065,29 +1066,34 @@ msgid "Log Launcher"
 msgstr "日志启动器"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:36
+#, fuzzy
 msgctxt "EighteenPlus Default Setting Header"
 msgid "Welcome - Enable 18+ Servers?"
-msgstr ""
+msgstr "欢迎-启用 18 台以上的服务器？"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:37
+#, fuzzy
 msgctxt "EighteenPlus Default Setting Window"
 msgid "Do you wish to enable 18+ servers in the server browser?"
-msgstr ""
+msgstr "你想在服务器浏览器中启用 18 个以上的服务器吗？"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:39
+#, fuzzy
 msgctxt "EighteenPlus Default Setting Window"
 msgid "Yes, show ALL servers including ones with mature/18+ content."
-msgstr ""
+msgstr "是的，显示所有服务器，包括包含成熟/18岁以上内容的服务器。"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:42
+#, fuzzy
 msgctxt "EighteenPlus Default Setting Window"
 msgid "No, do not show servers with mature content."
-msgstr ""
+msgstr "不，不要显示包含成人内容的服务器。"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:44
+#, fuzzy
 msgctxt "EighteenPlus Default Setting"
 msgid "(You can change this setting at any time in the server filters)"
-msgstr ""
+msgstr "（您可以随时在服务器筛选器中更改此设置）"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
 #, fuzzy
@@ -1113,28 +1119,33 @@ msgid "Address is invalid"
 msgstr "地址无效"
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:36
+#, fuzzy
 msgctxt "Age Header"
 msgid "Welcome - Age Setup"
-msgstr ""
+msgstr "欢迎-年龄设置"
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:37
+#, fuzzy
 msgctxt "Age Entry Window"
 msgid ""
 "Please enter your date of birth.  Your entered birthdate will not be "
 "uploaded or shared, it is only used to help ensure age-appropriate content "
 "is shown to you."
-msgstr ""
+msgstr "请输入您的出生日期。您输入的出生日期不会被上传或共享，它仅用于帮助确保向您显"
+"示适合年龄的内容。"
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:40
+#, fuzzy
 msgctxt "Age Entry Window"
 msgid ""
 "Kindly ensure this value is correct -- you will not be able to change it "
 "later."
-msgstr ""
+msgstr "请确保此值正确——以后您将无法对其进行更改。"
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:41
+#, fuzzy
 msgid "Continue"
-msgstr ""
+msgstr "继续"
 
 #: ../SS14.Launcher/Views/ConfigureKeyDialog.xaml:37
 #, fuzzy
@@ -1567,14 +1578,16 @@ msgid ""
 msgstr "设置启动器语言。这不会影响游戏内语言，这取决于你连接的服务器。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:34
+#, fuzzy
 msgid "WizDen Account Settings"
-msgstr ""
+msgstr "WizDen 账户设置"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:36
+#, fuzzy
 msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through WizDen's website."
-msgstr ""
+msgstr "您可以通过WizDen的网站管理您的帐户设置，例如更改电子邮件或密码。"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:42
 #, fuzzy
@@ -1789,9 +1802,10 @@ msgid "18+"
 msgstr "18+"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:60
+#, fuzzy
 msgctxt "Server Filters"
 msgid "(18+ servers are hidden based on your entered birth date.)"
-msgstr ""
+msgstr "（根据您输入的出生日期，会隐藏 18 台以上的服务器。）"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:65
 #, fuzzy
