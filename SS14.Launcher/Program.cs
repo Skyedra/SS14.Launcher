@@ -261,7 +261,7 @@ internal static class Program
             .With(new FontManagerOptions
             {
                 // Necessary workaround for #84 on Linux
-                DefaultFamilyName = "avares://SS14.Launcher/Assets/Fonts/noto_sans/*.ttf#Noto Sans"
+                DefaultFamilyName = "avares://SSMV.Launcher/Assets/Fonts/noto_sans/*.ttf#Noto Sans"
             })
             .UseReactiveUI();
     }
