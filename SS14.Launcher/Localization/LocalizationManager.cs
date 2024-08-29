@@ -220,6 +220,12 @@ public class LocalizationManager : ReactiveObject
                     // if (OnTranslationChanged != null)
                     //     OnTranslationChanged();
 
+                    // Setting current culture helps built-in avalonia items such as datepicker to be localized
+                    if (cultureInfo != null)
+                    {
+                        Thread.CurrentThread.CurrentCulture = cultureInfo;
+                    }
+
                     return true;
                 }
                 else
