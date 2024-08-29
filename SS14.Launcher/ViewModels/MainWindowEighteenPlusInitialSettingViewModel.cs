@@ -12,12 +12,14 @@ using ReactiveUI.Fody.Helpers;
 using System;
 using SS14.Launcher.Localization;
 using SS14.Launcher.Models;
+using SS14.Launcher.Models.ServerStatus;
 
 namespace SS14.Launcher.ViewModels;
 
 public class MainWindowEighteenPlusInitialSettingViewModel : ViewModelBase
 {
     private readonly DataManager _cfg;
+    private readonly ServerListCache _serverListCache;
 
     public LanguageDropDownViewModel LanguageDropDown { get; }
     public AgeManager ageManager;
@@ -27,6 +29,7 @@ public class MainWindowEighteenPlusInitialSettingViewModel : ViewModelBase
     public MainWindowEighteenPlusInitialSettingViewModel(MainWindowViewModel mainWindowViewModel)
     {
         _cfg = Locator.Current.GetRequiredService<DataManager>();
+        _serverListCache = Locator.Current.GetRequiredService<ServerListCache>();
         ageManager = Locator.Current.GetRequiredService<AgeManager>();
 
         LanguageDropDown = new LanguageDropDownViewModel();
@@ -54,6 +57,8 @@ public class MainWindowEighteenPlusInitialSettingViewModel : ViewModelBase
         mainWindowViewModel.ServersTab.Filters.SetFilter(
             new ServerFilter(ServerFilterCategory.EighteenPlus, ServerFilter.DataFalse), false);
 
+        _serverListCache.RequestRefresh(); // Refresh servers to force new filters to be applied
+
         _cfg.SetCVar(CVars.InitialEighteenPlusPreferenceSet, true);
 
         mainWindowViewModel.CalculateActiveMainWindow();
@@ -67,6 +72,8 @@ public class MainWindowEighteenPlusInitialSettingViewModel : ViewModelBase
             new ServerFilter(ServerFilterCategory.EighteenPlus, ServerFilter.DataTrue), false);
         mainWindowViewModel.ServersTab.Filters.SetFilter(
             new ServerFilter(ServerFilterCategory.EighteenPlus, ServerFilter.DataFalse), true);
+
+        _serverListCache.RequestRefresh(); // Refresh servers to force new filters to be applied
 
         _cfg.SetCVar(CVars.InitialEighteenPlusPreferenceSet, true);
 
