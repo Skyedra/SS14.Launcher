@@ -60,6 +60,7 @@ public class MainWindowEighteenPlusInitialSettingViewModel : ViewModelBase
         _serverListCache.RequestRefresh(); // Refresh servers to force new filters to be applied
 
         _cfg.SetCVar(CVars.InitialEighteenPlusPreferenceSet, true);
+        _cfg.CommitConfig();
 
         mainWindowViewModel.CalculateActiveMainWindow();
 
@@ -76,6 +77,7 @@ public class MainWindowEighteenPlusInitialSettingViewModel : ViewModelBase
         _serverListCache.RequestRefresh(); // Refresh servers to force new filters to be applied
 
         _cfg.SetCVar(CVars.InitialEighteenPlusPreferenceSet, true);
+        _cfg.CommitConfig();
 
         mainWindowViewModel.CalculateActiveMainWindow();
     }
