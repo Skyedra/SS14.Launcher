@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-29 04:03-0700\n"
-"PO-Revision-Date: 2024-08-29 11:06+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"PO-Revision-Date: 2024-08-29 21:53+0000\n"
+"Last-Translator: Gados <Gados@users.noreply.weblate.spacestationmultiverse."
+"com>\n"
 "Language-Team: Russian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/ru/>\n"
 "Language: ru\n"
@@ -217,19 +217,16 @@ msgid "Maximum: "
 msgstr "Максимум: "
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:113
-#, fuzzy
 msgctxt "Server Filters"
 msgid "Show servers that use the Multiverse engine"
 msgstr "Показать серверы, использующие движок Multiverse"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:114
-#, fuzzy
 msgctxt "Server Filters"
 msgid "Multiverse engine"
-msgstr "Движок мультивселенной"
+msgstr "Движок Multiverse"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:119
-#, fuzzy
 msgctxt "Server Filters"
 msgid ""
 "Show servers that use an unsupported engine (may cause connection failure)"
@@ -238,7 +235,6 @@ msgstr ""
 "сбою соединения)"
 
 #: ../SS14.Launcher/ViewModels/MainWindowTabs/ServerListFiltersViewModel.cs:120
-#, fuzzy
 msgctxt "Server Filters"
 msgid "Unsupported engines"
 msgstr "Неподдерживаемые движки"
