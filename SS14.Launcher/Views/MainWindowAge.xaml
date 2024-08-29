@@ -34,7 +34,7 @@
 
     <StackPanel>
       <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Welcome - Age Setup, Context=Age Header}" Classes="NanoHeadingMedium" />
-      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{loc:Get Please enter your date of birth.  This information will not be uploaded or shared\, it is only used to help ensure age-appropriate content is shown to you., Context=Age Entry Window}"></TextBlock>
+      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{loc:Get Please enter your date of birth.  Your entered birthdate will not be uploaded or shared\, it is only used to help ensure age-appropriate content is shown to you., Context=Age Entry Window}"></TextBlock>
       <DatePicker Width="300" SelectedDate="{Binding EnteredBirthDate, Mode=TwoWay}" HorizontalAlignment="Center"/>
       <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{Binding CalculatedAgeText}" HorizontalAlignment="Center"></TextBlock>
       <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{loc:Get Kindly ensure this value is correct -- you will not be able to change it later., Context=Age Entry Window}"></TextBlock>

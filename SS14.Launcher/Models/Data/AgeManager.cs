@@ -12,6 +12,7 @@ using SS14.Launcher.Models.EngineManager;
 using SS14.Launcher.Models.Logins;
 using SS14.Launcher.Utility;
 using Splat;
+using ReactiveUI.Fody.Helpers;
 
 namespace SS14.Launcher.Models;
 
@@ -25,12 +26,12 @@ public sealed class AgeManager : ReactiveObject
     /// <summary>
     /// Below this is considered implausible for a user to have registered themselves.
     /// </summary>
-    private const int MINIMUM_DAYS_FOR_VALID_AGE = 3;
+    private const int MINIMUM_YEARS_FOR_VALID_AGE = 3;
 
     /// <summary>
     /// Above this is considered implausible for a user to have registered themselves.
     /// </summary>
-    private const int MAXIMUM_DAYS_FOR_VALID_AGE = 120;
+    private const int MAXIMUM_YEARS_FOR_VALID_AGE = 120;
 
     public AgeManager()
     {
@@ -54,6 +55,7 @@ public sealed class AgeManager : ReactiveObject
             this.RaiseAndSetIfChanged(ref _birthDate, value);
             this.RaisePropertyChanged(nameof(BirthDate));
             this.RaisePropertyChanged(nameof(AgeKnown));
+            this.RaisePropertyChanged(nameof(UserIs18Plus));
             _cfg.BirthDate = value;
         }
     }
@@ -64,8 +66,8 @@ public sealed class AgeManager : ReactiveObject
         int yearsOld = YearsOld(testAge);
 
         return
-            yearsOld >= MINIMUM_DAYS_FOR_VALID_AGE &&
-            yearsOld <= MAXIMUM_DAYS_FOR_VALID_AGE;
+            yearsOld >= MINIMUM_YEARS_FOR_VALID_AGE &&
+            yearsOld <= MAXIMUM_YEARS_FOR_VALID_AGE;
     }
 
     public int YearsOld(DateOnly testAge)
@@ -89,5 +91,13 @@ public sealed class AgeManager : ReactiveObject
         int years = (zeroTime + span).Year - 1;
 
         return years;
+    }
+
+    public bool UserIs18Plus
+    {
+        get
+        {
+            return AgeKnown && YearsOld(BirthDate) >= 18;
+        }
     }
 }

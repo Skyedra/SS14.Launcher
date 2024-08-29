@@ -5,7 +5,12 @@ using System.Collections.Specialized;
 using System.Globalization;
 using System.Linq;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.DependencyInjection;
+using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
+using Splat;
 using SS14.Launcher.Localization;
+using SS14.Launcher.Models;
 using SS14.Launcher.Models.Data;
 using SS14.Launcher.Models.ServerStatus;
 using SS14.Launcher.Utility;
@@ -13,7 +18,7 @@ using static SS14.Launcher.Api.ServerApi;
 
 namespace SS14.Launcher.ViewModels.MainWindowTabs;
 
-public sealed partial class ServerListFiltersViewModel : ObservableObject
+public sealed partial class ServerListFiltersViewModel : ViewModelBase
 {
     private readonly DataManager _dataManager;
 
@@ -41,21 +46,32 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
 
     public event Action? FiltersUpdated;
 
+    private readonly AgeManager _ageManager;
+
     public int TotalServers
     {
         get => _totalServers;
-        set => SetProperty(ref _totalServers, value);
+        set => this.RaiseAndSetIfChanged(ref _totalServers, value);
     }
 
     public int FilteredServers
     {
         get => _filteredServers;
-        set => SetProperty(ref _filteredServers, value);
+        set => this.RaiseAndSetIfChanged(ref _filteredServers, value);
+    }
+
+    public bool EighteenPlusFilterForcedDisabled
+    {
+        get
+        {
+            return !_ageManager.UserIs18Plus;
+        }
     }
 
     public ServerListFiltersViewModel(DataManager dataManager)
     {
         _dataManager = dataManager;
+        _ageManager = Locator.Current.GetRequiredService<AgeManager>();
 
         FiltersEighteenPlus.Add(new ServerFilterViewModel(
             Loc.GetParticularString("Server Filters", "Yes"),
@@ -104,6 +120,12 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
             Loc.GetParticularString("Server Filters", "Unsupported engines"),
             ServerFilter.EngineUnsupported,
             this));
+
+        this.WhenAnyValue(x => x._ageManager.UserIs18Plus)
+            .Subscribe(_ =>
+            {
+                this.RaisePropertyChanged(nameof(EighteenPlusFilterForcedDisabled));
+            });
     }
 
     /// <summary>
@@ -303,12 +325,14 @@ public sealed partial class ServerListFiltersViewModel : ObservableObject
         bool DoesServerMatch(ServerStatusData server)
         {
             // 18+ checks
-            if (eighteenPlus != null)
+            var serverEighteenPlus = server.Tags.Contains(Tags.TagEighteenPlus);
+            if (eighteenPlus != null && eighteenPlus != serverEighteenPlus) // 18+ filter setting check
             {
-                var serverEighteenPlus = server.Tags.Contains(Tags.TagEighteenPlus);
-                if (eighteenPlus != serverEighteenPlus)
-                    return false;
+                return false;
             }
+            // Also force hide all 18+ servers if user is underage
+            if (serverEighteenPlus && !_ageManager.UserIs18Plus)
+                return false;
 
             if (!CheckCategoryFilterSet(categorySetLanguage, server.Tags, Tags.TagLanguage, PrimaryLanguageTag))
                 return false;

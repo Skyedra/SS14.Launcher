@@ -55,7 +55,10 @@
         <DockPanel Classes="ServerFilterGroup">
           <TextBlock MinWidth="150" DockPanel.Dock="Left" VerticalAlignment="Center" Classes="SubText" Text="{loc:Get 18+, Context=Server Filters}" />
           <ItemsControl Items="{Binding FiltersEighteenPlus}"
+                        IsVisible="{Binding !EighteenPlusFilterForcedDisabled}"
                         ItemsPanel="{StaticResource PanelTemplate}" ItemTemplate="{StaticResource FilterTemplate}"/>
+          <TextBlock Text="{loc:Get (18+ servers are hidden based on your entered birth date.), Context=Server Filters}"
+                     TextWrapping="Wrap" IsVisible="{Binding EighteenPlusFilterForcedDisabled}" />
         </DockPanel>
 
         <DockPanel Classes="ServerFilterGroup">
