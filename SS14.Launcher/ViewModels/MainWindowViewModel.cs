@@ -76,6 +76,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         AccountDropDown = new AccountDropDownViewModel(this);
         IdentityViewModel = new MainWindowIdentityViewModel();
         AgeViewModel = new MainWindowAgeViewModel(this);
+        MainWindowEighteenPlusInitialSettingViewModel = new MainWindowEighteenPlusInitialSettingViewModel(this);
 
         this.WhenAnyValue(x => x._loginMgr.ActiveAccount)
             .Subscribe(s =>
@@ -133,6 +134,7 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
     public AccountDropDownViewModel AccountDropDown { get; }
 
     public MainWindowIdentityViewModel IdentityViewModel { get; }
+    public MainWindowEighteenPlusInitialSettingViewModel MainWindowEighteenPlusInitialSettingViewModel { get; }
     public MainWindowAgeViewModel AgeViewModel { get; }
 
     public bool AgeKnown => ageManager.AgeKnown;
@@ -149,7 +151,17 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
 
     [Reactive] public bool ShowMainWindow {get; set;} = false;
     [Reactive] public bool ShowAgeWindow {get; set;} = false;
+    [Reactive] public bool ShowEighteenPlusInitialSettingWindow {get; set;} = false;
     [Reactive] public bool ShowIdentityWindow {get; set;} = false;
+
+    private bool ShouldAskAboutInitialEighteenPlusFilter
+    {
+        get
+        {
+            // Don't ask underage users if they want to see 18+ servers, but do ask adults if they want to see 18+ servers.
+            return ageManager.UserIs18Plus && !Cfg.GetCVar(CVars.InitialEighteenPlusPreferenceSet);
+        }
+    }
 
     /// <summary>
     /// This function will check what main window should be shown (ex: main, age, identity, etc) and set properties so
@@ -160,6 +172,8 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         Type correctActiveWindowType = typeof(MainWindow);
         if (!ageManager.AgeKnown)
             correctActiveWindowType = typeof(MainWindowAge);
+        else if (ShouldAskAboutInitialEighteenPlusFilter)
+            correctActiveWindowType = typeof(MainWindowEighteenPlusInitialSetting);
         else if (!LoggedIn)
             correctActiveWindowType = typeof(MainWindowIdentity);
 
@@ -169,16 +183,20 @@ public sealed class MainWindowViewModel : ViewModelBase, IErrorOverlayOwner
         ShowMainWindow = false;
         ShowAgeWindow = false;
         ShowIdentityWindow = false;
+        ShowEighteenPlusInitialSettingWindow = false;
 
         if (correctActiveWindowType == typeof(MainWindow))
             ShowMainWindow = true;
         else if (correctActiveWindowType == typeof(MainWindowAge))
             ShowAgeWindow = true;
+        else if (correctActiveWindowType == typeof(MainWindowEighteenPlusInitialSetting))
+            ShowEighteenPlusInitialSettingWindow = true;
         else if (correctActiveWindowType == typeof(MainWindowIdentity))
             ShowIdentityWindow = true;
 
         this.RaisePropertyChanged(nameof(ShowMainWindow));
         this.RaisePropertyChanged(nameof(ShowAgeWindow));
+        this.RaisePropertyChanged(nameof(ShowEighteenPlusInitialSettingWindow));
         this.RaisePropertyChanged(nameof(ShowIdentityWindow));
 
         _activeMainWindowType = correctActiveWindowType;

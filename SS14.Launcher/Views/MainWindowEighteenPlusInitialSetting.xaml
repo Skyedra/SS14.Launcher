@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:SS14.Launcher.ViewModels;assembly=SS14.Launcher"
+             xmlns:vl="clr-namespace:SS14.Launcher.Views.Login;assembly=SS14.Launcher"
+             xmlns:views="clr-namespace:SS14.Launcher.Views"
+             xmlns:identityTabs="clr-namespace:SS14.Launcher.ViewModels.IdentityTabs"
+             xmlns:loc="clr-namespace:SS14.Launcher.Localization.Xaml"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SS14.Launcher.Views.MainWindowEighteenPlusInitialSetting">
+  <Design.DataContext>
+    <vm:MainWindowEighteenPlusInitialSettingViewModel />
+  </Design.DataContext>
+
+  <DockPanel LastChildFill="True">
+    <!-- The bottom -->
+    <DockPanel Background="{DynamicResource ThemeStripeBackBrush}" DockPanel.Dock="Bottom"
+               LastChildFill="False">
+
+      <!-- Languages drop down -->
+      <views:LanguageDropDown
+                          Margin="10 0 0 0"
+                          DataContext="{Binding LanguageDropDown}"
+                          DockPanel.Dock="Right"
+                          />
+
+      <CheckBox DockPanel.Dock="Left" VerticalAlignment="Center" Margin="4" IsChecked="{Binding LogLauncher}" Content="{loc:Get Log Launcher}" />
+
+      <TextBlock Text="{Binding Version}" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="4"
+                 Classes="SubText" />
+    </DockPanel>
+    <Panel Background="{DynamicResource ThemeStripebackEdgeBrush}" MinHeight="2" DockPanel.Dock="Bottom" />
+
+    <StackPanel>
+      <TextBlock DockPanel.Dock="Top" Margin="4, 0" Text="{loc:Get Welcome - Enable 18+ Servers?, Context=EighteenPlus Default Setting Header}" Classes="NanoHeadingMedium" />
+      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{loc:Get Do you wish to enable 18+ servers in the server browser?, Context=EighteenPlus Default Setting Window}"></TextBlock>
+      <Button DockPanel.Dock="Right" Name="YesButton" Width="500" Command="{Binding YesButtonPressed}" Margin="10 10 10 10">
+        <TextBlock TextWrapping="Wrap" Text="{loc:Get Yes\, show ALL servers including ones with mature/18+ content., Context=EighteenPlus Default Setting Window}"/>
+      </Button>
+      <Button DockPanel.Dock="Right" Name="NoButton" Width="500" Command="{Binding NoButtonPressed}" Margin="10 10 10 10">
+         <TextBlock TextWrapping="Wrap" Text="{loc:Get No\, do not show servers with mature content., Context=EighteenPlus Default Setting Window}"  />
+      </Button>
+      <TextBlock TextWrapping="Wrap" Margin="4, 4" Text="{loc:Get (You can change this setting at any time in the server filters), Context=EighteenPlus Default Setting}"></TextBlock>
+    </StackPanel>
+
+  </DockPanel>
+
+</UserControl>

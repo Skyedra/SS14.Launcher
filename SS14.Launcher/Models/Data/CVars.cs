@@ -129,6 +129,12 @@ public static class CVars
     /// Note - database doesn't seem to support datetime or dateonly, so falling back to saving this as string.
     /// </summary>
     public static readonly CVarDef<string> BirthDate = CVarDef.Create("BirthDate", "");
+
+    /// <summary>
+    /// Adult users should be prompted whether they wish to see 18+ content by default or not (initial filter setup)
+    /// </summary>
+    /// <returns></returns>
+    public static readonly CVarDef<bool> InitialEighteenPlusPreferenceSet = CVarDef.Create("InitialEighteenPlusPreferenceSet", false);
 }
 
 /// <summary>

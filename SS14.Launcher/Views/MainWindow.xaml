@@ -72,6 +72,11 @@
           IsVisible="{Binding $parent.DataContext.ShowAgeWindow}"
           DataContext="{Binding AgeViewModel}"
          />
+        <!-- Help user set initial 18+ filter setting -->
+        <v:MainWindowEighteenPlusInitialSetting
+          IsVisible="{Binding $parent.DataContext.ShowEighteenPlusInitialSettingWindow}"
+          DataContext="{Binding MainWindowEighteenPlusInitialSettingViewModel}"
+         />
         <!-- Login interface when not logged in -->
         <v:MainWindowIdentity
           IsVisible="{Binding $parent.DataContext.ShowIdentityWindow}"
