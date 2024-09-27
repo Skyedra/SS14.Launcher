@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: Space Station Multiverse Launcher\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-29 04:03-0700\n"
-"PO-Revision-Date: 2024-08-29 11:36+0000\n"
-"Last-Translator: Skye <Skye@users.noreply.weblate.spacestationmultiverse.com>"
-"\n"
+"PO-Revision-Date: 2024-09-21 18:03+0000\n"
+"Last-Translator: Snowy <SnowyFoxo@users.noreply.weblate."
+"spacestationmultiverse.com>\n"
 "Language-Team: Italian <http://weblate.spacestationmultiverse.com/projects/"
 "space-station-multiverse/launcher/it/>\n"
 "Language: it\n"
@@ -532,14 +532,13 @@ msgid "Home"
 msgstr "Home"
 
 #: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:52
-#, csharp-format, fuzzy
+#, csharp-format
 msgctxt "Age Entry Window"
 msgid "You are {0} year(s) old."
 msgstr "Hai {0} anno/i."
 
 #: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:73
 #: ../SS14.Launcher/ViewModels/MainWindowAgeViewModel.cs:80
-#, fuzzy
 msgctxt "Age Entry Window"
 msgid "Please enter a valid birth date."
 msgstr "Inserisci una data di nascita valida."
@@ -941,37 +940,31 @@ msgid "Log Launcher"
 msgstr "Log del launcher"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:36
-#, fuzzy
 msgctxt "EighteenPlus Default Setting Header"
 msgid "Welcome - Enable 18+ Servers?"
-msgstr "Benvenuto: abilita più di 18 server?"
+msgstr "Benvenuto - visualizza server 18+?"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:37
-#, fuzzy
 msgctxt "EighteenPlus Default Setting Window"
 msgid "Do you wish to enable 18+ servers in the server browser?"
-msgstr "Desideri abilitare più di 18 server nel browser del server?"
+msgstr "Desideri visualizzare server 18+ nel server browser?"
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:39
-#, fuzzy
 msgctxt "EighteenPlus Default Setting Window"
 msgid "Yes, show ALL servers including ones with mature/18+ content."
 msgstr ""
-"Sì, mostra TUTTI i server, inclusi quelli con contenuti per adulti o con più "
-"di 18 anni."
+"Sì, mostra TUTTI i server, inclusi quelli con contenuti per adulti e 18+."
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:42
-#, fuzzy
 msgctxt "EighteenPlus Default Setting Window"
 msgid "No, do not show servers with mature content."
 msgstr "No, non mostrare server con contenuti per adulti."
 
 #: ../SS14.Launcher/Views/MainWindowEighteenPlusInitialSetting.xaml:44
-#, fuzzy
 msgctxt "EighteenPlus Default Setting"
 msgid "(You can change this setting at any time in the server filters)"
 msgstr ""
-"(Puoi modificare questa impostazione in qualsiasi momento nei filtri del "
+"(Puoi modificare questa impostazione in qualsiasi momento nei filtri dei "
 "server)"
 
 #: ../SS14.Launcher/Views/DirectConnectDialog.xaml:11
@@ -994,13 +987,11 @@ msgid "Address is invalid"
 msgstr "L'indirizzo non è valido"
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:36
-#, fuzzy
 msgctxt "Age Header"
 msgid "Welcome - Age Setup"
-msgstr "Benvenuto - Impostazione dell'età"
+msgstr "Benvenuto - Imposta la tua età"
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:37
-#, fuzzy
 msgctxt "Age Entry Window"
 msgid ""
 "Please enter your date of birth.  Your entered birthdate will not be "
@@ -1012,16 +1003,15 @@ msgstr ""
 "mostrati contenuti adatti all'età."
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:40
-#, fuzzy
 msgctxt "Age Entry Window"
 msgid ""
 "Kindly ensure this value is correct -- you will not be able to change it "
 "later."
 msgstr ""
-"Assicurati che questo valore sia corretto: non potrai modificarlo in seguito."
+"Assicurati che la data inserita sia corretta: non potrai modificarla in "
+"seguito."
 
 #: ../SS14.Launcher/Views/MainWindowAge.xaml:41
-#, fuzzy
 msgid "Continue"
 msgstr "Continua"
 
@@ -1413,18 +1403,16 @@ msgstr ""
 "dipende dal server a cui ti connetti."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:34
-#, fuzzy
 msgid "WizDen Account Settings"
-msgstr "Impostazioni dell'account WizDen"
+msgstr "Impostazioni Account WizDen"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:36
-#, fuzzy
 msgid ""
 "You can manage your account settings, such as changing email or password, "
 "through WizDen's website."
 msgstr ""
-"Puoi gestire le impostazioni del tuo account, come la modifica dell'email o "
-"della password, tramite il sito Web di WizDen."
+"Puoi gestire le impostazioni del tuo account, come modificare l'email o la "
+"password, tramite il sito Web di WizDen."
 
 #: ../SS14.Launcher/Views/MainWindowTabs/OptionsTabView.xaml:42
 msgid ""
@@ -1617,10 +1605,11 @@ msgid "18+"
 msgstr "18+"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:60
-#, fuzzy
 msgctxt "Server Filters"
 msgid "(18+ servers are hidden based on your entered birth date.)"
-msgstr "(Più di 18 server sono nascosti in base alla data di nascita inserita.)"
+msgstr ""
+"(I server 18+ sono automaticamente nascosti in base alla data di nascita "
+"inserita.)"
 
 #: ../SS14.Launcher/Views/MainWindowTabs/ServerListFiltersView.xaml:65
 msgctxt "Server Filters"
