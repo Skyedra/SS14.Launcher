@@ -248,6 +248,9 @@ public class Connector : ReactiveObject
                 var privateKey = ECDsa.Create();
                 privateKey.ImportFromPem(keyInfo.PrivateKey);
 
+                // Generate shared secret for encrypted communication
+                (string authHash, string sharedSecret) = SharedAuthCrypto.GenerateSharedSecret(info);
+
                 // Create JWT
                 var jwt = JwtBuilder.Create()
                     .WithAlgorithm(new ES256Algorithm(publicKey, privateKey))
@@ -256,11 +259,13 @@ public class Connector : ReactiveObject
                     .AddClaim("iat", DateTimeOffset.UtcNow) // issued at
                     .AddClaim("aud", info.AuthInformation.PublicKey)
                     .AddClaim("preferredUserName", keyInfo.Username)
+                    .AddClaim("authhash", authHash)
                     .Encode();
 
                 cVars.Add(("ROBUST_USER_JWT", jwt));
                 cVars.Add(("ROBUST_USER_PUBLIC_KEY", keyInfo.PublicKey));
                 cVars.Add(("ROBUST_AUTH_PUBKEY", info.AuthInformation.PublicKey));
+                cVars.Add(("ROBUST_SHARED_SECRET", sharedSecret));
             }
 
             cVars.Add(("ROBUST_AUTH_PUBKEY", info.AuthInformation.PublicKey));
@@ -717,7 +722,7 @@ public class Connector : ReactiveObject
         NotAContentBundle
     }
 
-    private sealed class ConnectException : Exception
+    internal sealed class ConnectException : Exception
     {
         public ConnectionStatus Status { get; }
 
