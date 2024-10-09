@@ -29,11 +29,6 @@ public static class SharedAuthCrypto
             throw new ConnectException(ConnectionStatus.ConnectionFailed);
         }
 
-        // Data is [shared]+[verify]
-        // var data = new byte[sharedSecret.Length + encRequest.VerifyToken.Length];
-        // sharedSecret.CopyTo(data.AsSpan());
-        // encRequest.VerifyToken.CopyTo(data.AsSpan(sharedSecret.Length));
-
         var authHashBytes = MakeAuthHash(sharedSecret, serverPublicKeyBytes!);
         var authHash = ConvertToBase64Url(authHashBytes);
 
