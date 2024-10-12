@@ -254,8 +254,8 @@ public class Connector : ReactiveObject
                 // Create JWT
                 var jwt = JwtBuilder.Create()
                     .WithAlgorithm(new ES256Algorithm(publicKey, privateKey))
-                    .AddClaim("exp", DateTimeOffset.UtcNow.AddMinutes(5).ToUnixTimeSeconds()) // expiry
-                    .AddClaim("nbf", DateTimeOffset.UtcNow.AddMinutes(-5).ToUnixTimeSeconds()) // not before
+                    .AddClaim("exp", DateTimeOffset.UtcNow.AddMinutes(90).ToUnixTimeSeconds()) // expiry
+                    .AddClaim("nbf", DateTimeOffset.UtcNow.AddMinutes(-90).ToUnixTimeSeconds()) // not before
                     .AddClaim("iat", DateTimeOffset.UtcNow) // issued at
                     .AddClaim("aud", info.AuthInformation.PublicKey)
                     .AddClaim("preferredUserName", keyInfo.Username)
