@@ -80,6 +80,7 @@ public class ConnectingViewModel : ViewModelBase
                 this.RaisePropertyChanged(nameof(StatusText));
                 this.RaisePropertyChanged(nameof(ProgressBarVisible));
                 this.RaisePropertyChanged(nameof(IsErrored));
+                this.RaisePropertyChanged(nameof(IsAskingPrivacyPolicy));
 
                 if (val == Connector.ConnectionStatus.ClientRunning
                     || val == Connector.ConnectionStatus.Cancelled
@@ -87,6 +88,13 @@ public class ConnectingViewModel : ViewModelBase
                 {
                     CloseOverlay();
                 }
+            });
+
+        this.WhenAnyValue(x => x._connector.PrivacyPolicyDifferentVersion)
+            .ObserveOn(RxApp.MainThreadScheduler)
+            .Subscribe(_ =>
+            {
+                this.RaisePropertyChanged(nameof(PrivacyPolicyText));
             });
 
         this.WhenAnyValue(x => x._connector.ClientExitedBadly)
@@ -196,6 +204,12 @@ public class ConnectingViewModel : ViewModelBase
         _ => ""
     };
 
+    public bool IsAskingPrivacyPolicy => _connectorStatus == Connector.ConnectionStatus.AwaitingPrivacyPolicyAcceptance;
+
+    public string PrivacyPolicyText => _connector.PrivacyPolicyDifferentVersion
+        ? Loc.GetString("This server has updated its privacy policy since the last time you played. You must accept the new version before connecting.")
+        : Loc.GetString("This server requires that you accept its privacy policy before connecting.");
+
     public static void StartConnect(MainWindowViewModel windowVm, string address, string? givenReason = null)
     {
         var connector = new Connector();
@@ -235,6 +249,21 @@ public class ConnectingViewModel : ViewModelBase
     public void Cancel()
     {
         _cancelSource.Cancel();
+    }
+
+    public void PrivacyPolicyView()
+    {
+        Helpers.SafeOpenServerUri(_connector.PrivacyPolicyInfo!.Link);
+    }
+
+    public void PrivacyPolicyAccept()
+    {
+        _connector.ConfirmPrivacyPolicy(PrivacyPolicyAcceptResult.Accepted);
+    }
+
+    public void PrivacyPolicyDeny()
+    {
+        _connector.ConfirmPrivacyPolicy(PrivacyPolicyAcceptResult.Denied);
     }
 
     public enum ConnectionType
