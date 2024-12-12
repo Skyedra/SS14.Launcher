@@ -15,7 +15,7 @@ Differences versus current upstream version:
  * **Key Auth** - New, decentralized publickey/privatekey authentication.
  * **Translation** - Translated into multiple languages ([contribute translation](https://spacestationmultiverse.com/contribute-translation/)).
  * **Guest mode** - No auth server / registration required (for servers that support it).
- * **Offline support** - Ability to view & connect to servers as guest, even when WizDen auth server is down.
+ * **Offline support** - Ability to view & connect to servers even when central services are down.
  * **Engine build mirror** - Engine downloads in this build are routed through a global CDN service, making them faster, more scalable, and less likely to have downtime.  These builds are populated by a simple script on BlepStation.com, which mirrors recent engine builds.  (This means you should still be able to connect to servers, even if you do not have engines already downloaded and the central server is down).
  * **Timeouts** - Set to faster values so you don't sit waiting for a full minute (!) during downtime.
  * **Multihub** - Manage multiple hubs, adding more reliability.  (Borrowed from [Visne's branch](https://github.com/Visne/SS14.Launcher/tree/multihub).)
