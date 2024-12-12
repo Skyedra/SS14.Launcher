@@ -12,14 +12,15 @@ Community-driven launcher for Space Station 14 forks.
 ## Features
 Differences versus current upstream version:
 
+ * **Key Auth** - New, decentralized publickey/privatekey authentication
  * **Translation** - Translated into multiple languages ([contribute translation](https://spacestationmultiverse.com/contribute-translation/)).
  * **Guest mode** - No auth server / registration required, but also compatible with WizDen accounts.  (Plans for more account providers in future)
  * **Offline support** - Ability to view & connect to servers as guest, even when WizDen auth server is down.
  * **Engine build mirror** - Engine downloads in this build are routed through a global CDN service, making them faster, more scalable, and less likely to have downtime.  These builds are populated by a simple script on BlepStation.com, which mirrors recent engine builds.  (This means you should still be able to connect to servers, even if you do not have engines already downloaded and the central server is down).
  * **Timeouts** - Set to faster values so you don't sit waiting for a full minute (!) during downtime.
  * **Multihub** - Manage multiple hubs, adding more reliability.  (Borrowed from [Visne's branch](https://github.com/Visne/SS14.Launcher/tree/multihub).)
- * **Hub mirror** - Mirrors WizDen hub's primary API call so you can get a list of servers, even if WizDen is down (this is also routed through a real CDN for reliability & scalability.)
  * **Manage multiple identities** - By default it is set up to allow you to manage multiple identities.
+ * **Age Gate** - Enter age before you can join 18+ servers (only stored locally, not shared).
  * **Multiverse Engine** - Supports servers that run our [Multiverse engine fork](https://github.com/Space-Station-Multiverse/RobustToolbox).
  
 ## Limitations
@@ -33,6 +34,8 @@ Differences versus current upstream version:
 ## Screenshots of Identity Setup
 
 ![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/bc6a9c80-278d-4e2b-b2af-450645a3c0b4)
+
+![image](https://github.com/user-attachments/assets/ad5aa7d5-9562-40a3-b825-53090288f66c)
 
 ![image](https://github.com/Skyedra/SS14.Launcher/assets/22365940/abebd5ee-1898-4d44-b2f5-7fdaa6f17409)
 
