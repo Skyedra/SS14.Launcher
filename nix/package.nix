@@ -29,9 +29,14 @@
 , zlib
 , glib
 , gdk-pixbuf
+, soundfont-fluid
+
+# Path to set ROBUST_SOUNDFONT_OVERRIDE to, essentially the default soundfont used.
+, soundfont-path ? "${soundfont-fluid}/share/soundfonts/FluidR3_GM2-2.sf2"
+
 }:
 let
-  version = "0.22.1";
+  version = "0.30.2";
   pname = "space-station-14-launcher";
 in
 buildDotnetModule rec {
@@ -45,7 +50,7 @@ buildDotnetModule rec {
     owner = "space-wizards";
     repo = "SS14.Launcher";
     rev = "v${version}";
-    hash = "sha256-I+Kj8amgFxT6yEXI5s1y0n1rgfzIrLtMOkYjguu6wpo=";
+    hash = "sha256-Rx39FuDPh5sGVjcKjCo4mTQ8Z/x9PD1CvBQh5ICES9Q=";
     fetchSubmodules = true;
   };
 
@@ -57,14 +62,15 @@ buildDotnetModule rec {
     "SS14.Launcher/SS14.Launcher.csproj"
   ];
 
-  nugetDeps = ./deps.nix;
+  nugetDeps = ./deps.json;
 
   passthru = {
     inherit version;
   };
 
-  dotnet-sdk = with dotnetCorePackages; combinePackages [ sdk_7_0 sdk_6_0 ];
-  dotnet-runtime = dotnetCorePackages.runtime_7_0;
+  # SDK 8.0 required for Robust.LoaderApi
+  dotnet-sdk = with dotnetCorePackages; combinePackages [ sdk_9_0 sdk_8_0 ];
+  dotnet-runtime = dotnetCorePackages.runtime_9_0;
 
   dotnetFlags = [
     "-p:FullRelease=true"
@@ -72,7 +78,30 @@ buildDotnetModule rec {
     "-nologo"
   ];
 
-  nativeBuildInputs = [ wrapGAppsHook iconConvTools copyDesktopItems ];
+  nativeBuildInputs = [
+    wrapGAppsHook
+    iconConvTools
+    copyDesktopItems
+  ];
+
+  LD_LIBRARY_PATH = lib.makeLibraryPath [
+    fontconfig
+    libX11
+    libICE
+    libSM
+    libXi
+    libXcursor
+    libXext
+    libXrandr
+
+    glfw
+    SDL2
+    glibc
+    libGL
+    openal
+    freetype
+    fluidsynth
+  ];
 
   runtimeDeps = [
     # Required by the game.
@@ -107,6 +136,11 @@ buildDotnetModule rec {
     # TODO: Figure out dependencies for CEF support.
   ];
 
+  # ${soundfont-path} is escaped here:
+  # https://github.com/NixOS/nixpkgs/blob/d29975d32b1dc7fe91d5cb275d20f8f8aba399ad/pkgs/build-support/setup-hooks/make-wrapper.sh#L126C35-L126C45
+  # via https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html under ${parameter@operator}
+  makeWrapperArgs = [ ''--set ROBUST_SOUNDFONT_OVERRIDE ${soundfont-path}'' ];
+
   executables = [ "SS14.Launcher" ];
 
   desktopItems = [
@@ -123,7 +157,7 @@ buildDotnetModule rec {
 
   postInstall = ''
     mkdir -p $out/lib/space-station-14-launcher/loader
-    cp -r SS14.Loader/bin/${buildType}/*/* $out/lib/space-station-14-launcher/loader/
+    cp -r SS14.Loader/bin/${buildType}/*/*/* $out/lib/space-station-14-launcher/loader/
 
     icoFileToHiColorTheme SS14.Launcher/Assets/icon.ico space-station-14-launcher $out
   '';
