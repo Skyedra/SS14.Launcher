@@ -1,9 +1,14 @@
 {
   description = "Flake providing a package for the Space Station 14 Launcher.";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/release-23.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
+  inputs.flake-compat = {
+    url = "github:edolstra/flake-compat";
+    flake = false;
+  };
 
-  outputs = { self, nixpkgs }:
+
+  outputs = { self, nixpkgs, ... }:
     let
       forAllSystems = function:
         nixpkgs.lib.genAttrs [ "x86_64-linux" ] # TODO: aarch64-linux support
@@ -14,7 +19,7 @@
       packages = forAllSystems (pkgs: {
         default = self.packages.${pkgs.system}.space-station-14-launcher;
         space-station-14-launcher =
-          pkgs.callPackage ./nix/wrapper.nix { };
+          pkgs.callPackage ./nix/package.nix { };
       });
 
       overlays = {
