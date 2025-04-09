@@ -10,14 +10,14 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/SS14.Launcher/bin/Debug/net8.0/SSMV.Launcher.dll",
+            "program": "${workspaceFolder}/SS14.Launcher/bin/Debug/net9.0/SSMV.Launcher.dll",
             "args": [],
             "cwd": "${workspaceFolder}/SS14.Launcher",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false,
             "env": {
-                "SS14_LAUNCHER_APPDATA_NAME": "Test55"
+                "SS14_LAUNCHER_APPDATA_NAME": "Test80"
             }
         },
         {
