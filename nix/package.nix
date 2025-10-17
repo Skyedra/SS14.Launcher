@@ -1,35 +1,46 @@
-{ lib
-, buildDotnetModule
-, dotnetCorePackages
-, fetchFromGitHub
-, wrapGAppsHook
-, iconConvTools
-, copyDesktopItems
-, makeDesktopItem
-, libX11
-, libICE
-, libSM
-, libXi
-, libXcursor
-, libXext
-, libXrandr
-, fontconfig
-, glew
-, SDL2
-, glfw
-, glibc
-, libGL
-, freetype
-, openal
-, fluidsynth
-, gtk3
-, pango
-, atk
-, cairo
-, zlib
-, glib
-, gdk-pixbuf
-, soundfont-fluid
+{
+  lib,
+  stdenv,
+  config,
+  buildDotnetModule,
+  dotnetCorePackages,
+  fetchFromGitHub,
+  wrapGAppsHook4,
+  iconConvTools,
+  copyDesktopItems,
+  makeDesktopItem,
+  libX11,
+  libICE,
+  libSM,
+  libXi,
+  libXcursor,
+  libXext,
+  libXrandr,
+  fontconfig,
+  glew,
+  glfw,
+  glibc,
+  libGL,
+  freetype,
+  openal,
+  fluidsynth,
+  gtk3,
+  pango,
+  atk,
+  cairo,
+  zlib,
+  glib,
+  gdk-pixbuf,
+  alsa-lib,
+  libjack2,
+  pipewire,
+  libpulseaudio,
+  alsaSupport ? stdenv.hostPlatform.isLinux && !stdenv.hostPlatform.isAndroid,
+  jackSupport ? stdenv.hostPlatform.isLinux && !stdenv.hostPlatform.isAndroid,
+  pipewireSupport ? stdenv.hostPlatform.isLinux && !stdenv.hostPlatform.isAndroid,
+  pulseaudioSupport ?
+    config.pulseaudio or stdenv.hostPlatform.isLinux && !stdenv.hostPlatform.isAndroid,
+  soundfont-fluid,
 
 # Path to set ROBUST_SOUNDFONT_OVERRIDE to, essentially the default soundfont used.
 , soundfont-path ? "${soundfont-fluid}/share/soundfonts/FluidR3_GM2-2.sf2"
@@ -95,7 +106,6 @@ buildDotnetModule rec {
     libXrandr
 
     glfw
-    SDL2
     glibc
     libGL
     openal
@@ -106,7 +116,6 @@ buildDotnetModule rec {
   runtimeDeps = [
     # Required by the game.
     glfw
-    SDL2
     glibc
     libGL
     openal
@@ -134,7 +143,11 @@ buildDotnetModule rec {
     glew
 
     # TODO: Figure out dependencies for CEF support.
-  ];
+  ]
+  ++ lib.optional alsaSupport alsa-lib
+  ++ lib.optional jackSupport libjack2
+  ++ lib.optional pipewireSupport pipewire
+  ++ lib.optional pulseaudioSupport libpulseaudio;
 
   # ${soundfont-path} is escaped here:
   # https://github.com/NixOS/nixpkgs/blob/d29975d32b1dc7fe91d5cb275d20f8f8aba399ad/pkgs/build-support/setup-hooks/make-wrapper.sh#L126C35-L126C45
