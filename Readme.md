@@ -2,7 +2,7 @@
 
 Community-driven launcher for Space Station 14 forks.
 
-[![](https://dcbadge.vercel.app/api/server/x88ymx6vBx?compact=true&style=plastic)](https://discord.gg/x88ymx6vBx) <- Discord if you would like to discuss alternate infrastructure projects or fork development :)
+[![](https://dcbadge.limes.pink/api/server/x88ymx6vBx)](https://discord.gg/x88ymx6vBx) <- Discord if you would like to discuss alternate infrastructure projects or fork development :)
 
 ## Download
 [Download binaries for Windows, Mac, and Linux](https://blepstation.com/download/)
@@ -22,7 +22,7 @@ Differences versus current upstream version:
  * **Manage multiple identities** - By default it is set up to allow you to manage multiple identities.
  * **Age Gate** - Enter age before you can join 18+ servers (only stored locally, not shared).
  * **Multiverse Engine** - Supports servers that run our [Multiverse engine fork](https://github.com/Space-Station-Multiverse/RobustToolbox).
- 
+
 ## Limitations
 
  * To connect to a server without an account, the server must be configured for auth to be optional.  (At some point, I may try to figure out multi-auth).  This should work on blep and a few others.
