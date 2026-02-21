@@ -27,6 +27,12 @@ cp SS14.Launcher/bin/Release/net9.0/win-x64/publish/* bin/publish/Windows/bin
 cp SS14.Loader/bin/Release/net9.0/win-x64/publish/* bin/publish/Windows/bin/loader
 cp LICENSE.txt bin/publish/Windows/
 
+# Old Fluidsynth:
+# This is only needed temporarily -- it appears upstream's native update doesn't consider old robusts
+# that are on old versions.  Not a concern for recent robust, but a problem for Blep, until Blep
+# upgrades.  Once this is complete, should remove this.  -- Skye
+cp PublishFiles/OldSynth/windows/* bin/publish/Windows/bin/loader
+
 pushd bin/publish/Windows
 zip -r ../../../SSMV.Launcher_Windows.zip *
 popd
