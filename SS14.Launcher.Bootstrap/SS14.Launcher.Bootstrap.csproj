@@ -3,21 +3,16 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
-    <PublishAot>true</PublishAot>
+    <TargetFramework>net45</TargetFramework>
     <TargetName>Space Station Multiverse Launcher</TargetName>
     <ApplicationIcon>../SS14.Launcher/Assets/icon.ico</ApplicationIcon>
     <LangVersion>11</LangVersion>
-
-    <!-- Make AOT small -->
-    <OptimizationPreference>Size</OptimizationPreference>
-    <StackTraceSupport>false</StackTraceSupport>
-    <InvariantGlobalization>true</InvariantGlobalization>
-    <UseSystemResourceKeys>true</UseSystemResourceKeys>
-    <IlcDisableReflection>true</IlcDisableReflection>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Remove="Microsoft.NET.ILLink.Tasks" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>
