@@ -10,6 +10,8 @@ rm SSMV.Launcher_Windows.zip
 
 dotnet publish SS14.Launcher/SS14.Launcher.csproj /p:FullRelease=True -c Release --no-self-contained -r win-x64 /nologo /p:RobustILLink=true
 dotnet publish SS14.Loader/SS14.Loader.csproj -c Release --no-self-contained -r win-x64 /nologo
+
+dotnet build SS14.Launcher.Bootstrap/SS14.Launcher.Bootstrap.csproj -r win-x64 -c Release /nologo
 dotnet publish SS14.Launcher.Bootstrap/SS14.Launcher.Bootstrap.csproj -r win-x64 -c Release /nologo
 
 ./exe_set_subsystem.py "SS14.Launcher/bin/Release/net9.0/win-x64/publish/SSMV.Launcher.exe" 2
