@@ -11,7 +11,8 @@ namespace SS14.Launcher.Bootstrap
         {
             UnfuckDotnetRoot();
 
-            var path = System.AppContext.BaseDirectory;
+            //var path = System.AppContext.BaseDirectory;
+            var path = typeof(Program).Assembly.Location;
             var ourDir = Path.GetDirectoryName(path);
             Debug.Assert(ourDir != null);
 

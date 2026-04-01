@@ -21,7 +21,8 @@ mkdir -p bin/publish/Windows/bin/loader
 mkdir -p bin/publish/Windows/dotnet
 
 cp -r Dependencies/dotnet/windows/* bin/publish/Windows/dotnet
-cp "SS14.Launcher.Bootstrap/bin/Release/net9.0/win-x64/publish/SS14.Launcher.Bootstrap.exe" "bin/publish/Windows/Space Station Multiverse Launcher.exe"
+#cp "SS14.Launcher.Bootstrap/bin/Release/net9.0/win-x64/publish/SS14.Launcher.Bootstrap.exe" "bin/publish/Windows/Space Station Multiverse Launcher.exe"
+cp "SS14.Launcher.Bootstrap/bin/Release/net45/win-x64/publish/Space Station Multiverse Launcher.exe" bin/publish/Windows
 cp "SS14.Launcher.Bootstrap/console.bat" "bin/publish/Windows/Run Space Station Multiverse with console output.bat"
 cp SS14.Launcher/bin/Release/net9.0/win-x64/publish/* bin/publish/Windows/bin
 cp SS14.Loader/bin/Release/net9.0/win-x64/publish/* bin/publish/Windows/bin/loader
