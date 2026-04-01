@@ -6,11 +6,11 @@
     <TargetFramework>net9.0</TargetFramework>
     <TargetName>Space Station Multiverse Launcher</TargetName>
     <ApplicationIcon>../SS14.Launcher/Assets/icon.ico</ApplicationIcon>
-    <!-- <SelfContained>true</SelfContained>
+    <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <PublishSingleFile>true</PublishSingleFile> -->
-    <AppHostDotNetSearch>AppRelative</AppHostDotNetSearch>
-    <AppHostRelativeDotNet>./dotnet/shared/Microsoft.NETCore.App/9.0.0</AppHostRelativeDotNet>
+    <PublishSingleFile>true</PublishSingleFile>
+    <!-- <AppHostDotNetSearch>AppRelative</AppHostDotNetSearch>
+    <AppHostRelativeDotNet>./dotnet/shared/Microsoft.NETCore.App/9.0.0</AppHostRelativeDotNet> -->
     <LangVersion>11</LangVersion>
   </PropertyGroup>
 
