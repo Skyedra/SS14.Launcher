@@ -10,7 +10,7 @@
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <PublishSingleFile>true</PublishSingleFile> -->
     <AppHostDotNetSearch>AppRelative</AppHostDotNetSearch>
-    <AppHostRelativeDotNet>./dotnet</AppHostRelativeDotNet>
+    <AppHostRelativeDotNet>./dotnet/shared/Microsoft.NETCore.App/9.0.0</AppHostRelativeDotNet>
     <LangVersion>11</LangVersion>
   </PropertyGroup>
 
