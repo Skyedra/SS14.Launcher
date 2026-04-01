@@ -6,19 +6,20 @@
     <TargetFramework>net9.0</TargetFramework>
     <TargetName>Space Station Multiverse Launcher</TargetName>
     <ApplicationIcon>../SS14.Launcher/Assets/icon.ico</ApplicationIcon>
-    <SelfContained>true</SelfContained>
+    <!-- <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <PublishSingleFile>true</PublishSingleFile>
+    <PublishSingleFile>true</PublishSingleFile> -->
+
     <!-- <AppHostDotNetSearch>AppRelative</AppHostDotNetSearch>
     <AppHostRelativeDotNet>./dotnet/shared/Microsoft.NETCore.App/9.0.0</AppHostRelativeDotNet> -->
     <LangVersion>11</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference> -->
-    <PackageVersion Remove="Microsoft.NET.ILLink.Tasks" />
+    </PackageReference>
+    <!-- <PackageVersion Remove="Microsoft.NET.ILLink.Tasks" /> -->
   </ItemGroup>
 </Project>
